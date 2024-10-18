@@ -1,0 +1,2979 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "NightBelowIDC",
+				"abbreviation": "NBIDC",
+				"full": "Night Below Icewind Dale Conversion",
+				"url": "",
+				"authors": [
+					"James Young"
+				],
+				"convertedBy": []
+			}
+		]
+	},
+	"monster": [
+		{
+			"name": "Vellynne Harpell",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Human",
+						"prefix": "Illuskan"
+					}
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item bracers of defense}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 27",
+				"average": 67
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 17,
+			"int": 18,
+			"wis": 15,
+			"cha": 13,
+			"passive": 12,
+			"cr": "4",
+			"languages": [
+				"Common",
+				"Draconic",
+				"Dwarvish",
+				"Elvish",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"D",
+				"E",
+				"O"
+			],
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Vellynne is an 8th-level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, +6 to hit with spell attacks). She has the following wizard spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|XPHB}",
+								"{@spell light|XPHB}",
+								"{@spell mage hand|XPHB}",
+								"{@spell message|XPHB}",
+								"{@spell prestidigitation|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell comprehend languages|XPHB}",
+								"{@spell detect magic|XPHB}",
+								"{@spell ray of sickness|XPHB}",
+								"{@spell Tasha's hideous laughter|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell darkvision|XPHB}",
+								"{@spell hold person|XPHB}",
+								"{@spell ray of enfeeblement|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|XPHB}",
+								"{@spell Leomund's tiny hut|XPHB}",
+								"{@spell vampiric touch|XPHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell arcane eye|XPHB}",
+								"{@spell blight|XPHB}"
+							],
+							"slots": 0
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CW"
+			],
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"Vellynne wears bracers of defense and carries a wand of magic missiles (see “Actions” below)."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Chill Touch (Cantrip)",
+					"entries": [
+						"{@atk rs} {@hit 3} to hit, range 120/120 ft., one target. {@h}10 ({@damage 2d8 + 1}) necrotic damage."
+					]
+				},
+				{
+					"name": "Vampiric Touch",
+					"entries": [
+						"{@atk ms} {@hit 2} to hit, reach 5 ft., one target. {@h}10 ({@damage 3d6}) necrotic damage and Vellynne regains hit points equal to half the necrotic damage dealt. If Vellynne casts this spell using a spell slot of 4th level or higher, the necrotic damage increases by {@dice 1d6} for each slot level above 3rd."
+					]
+				},
+				{
+					"name": "Wand of Magic Missiles",
+					"entries": [
+						"While holding this wand, Vellynne can expend 1 or more of its 7 charges to cast the magic missile spell from it. She can expend 1 charge to cast the 1st-level version of the spell. She can increase the spell slot level by one for each additional charge she expends. The wand regains {@dice 1d6 + 1} expended charges daily at dawn. If the wand’s last charge is expended, roll a {@dice d20}; on a 1, the wand crumbles into ashes and is destroyed."
+					]
+				}
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"damageTags": [
+				"N"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Kuiper",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Human",
+						"prefix": "Illuskan"
+					},
+					"Ranger"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "15d8 + 30",
+				"average": 97
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 17,
+			"con": 15,
+			"int": 16,
+			"wis": 14,
+			"cha": 13,
+			"passive": 15,
+			"cr": "5",
+			"languages": [
+				"Common",
+				"Draconic",
+				"Elvish"
+			],
+			"languageTags": [
+				"C",
+				"DR",
+				"E"
+			],
+			"save": {
+				"str": "+5",
+				"dex": "+6"
+			},
+			"skill": {
+				"survival": "+5",
+				"perception": "+5"
+			},
+			"trait": [
+				{
+					"name": "Special Equipment",
+					"entries": [
+						"+1 Longsword, Ring of Free Action and a Potion of Greater Healing (see “Actions” below)"
+					]
+				},
+				{
+					"name": "Ring of Free Action",
+					"entries": [
+						"While Kuiper wear this ring, difficult terrain doesn’t cost him extra movement. In addition, magic can neither reduce his speed nor cause him to be {@condition paralyzed} or {@condition restrained}."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Kuiper is an 6th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). He has the following ranger spells prepared:"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell animal friendship|XPHB}",
+								"{@spell cure wounds|XPHB}",
+								"{@spell fog cloud|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell darkvision|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CR"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Kuiper makes two longsword or shortbow attacks."
+					]
+				},
+				{
+					"name": "+1 Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit 6} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) damage."
+					]
+				},
+				{
+					"name": "Potion of Greater Healing (once)",
+					"entries": [
+						"Kuiper regain 14 ({@dice 4d4 + 4}) hit points when you drink this potion. The potion’s red liquid glimmers when agitated."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"attachedItems": [
+				"+1 longsword|dmg",
+				"shortbow|phb"
+			],
+			"damageTags": [
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Oleanne the Feral Druid",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Human",
+						"prefix": "Illuskan"
+					},
+					"Druid"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "15d8 + 30",
+				"average": 97
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 14,
+			"int": 10,
+			"wis": 18,
+			"cha": 16,
+			"passive": 17,
+			"cr": "5",
+			"shortName": "Oleanne",
+			"languages": [
+				"Common",
+				"Druidic",
+				"Elvish"
+			],
+			"languageTags": [
+				"C",
+				"DU",
+				"E"
+			],
+			"save": {
+				"con": "+5",
+				"wis": "+7",
+				"int": "+3"
+			},
+			"skill": {
+				"animal handling": "+7",
+				"nature": "+3",
+				"survival": "+7",
+				"perception": "+7"
+			},
+			"trait": [
+				{
+					"name": "Pack Tactics. (Beast Form Only)",
+					"entries": [
+						"Oleanne has advantage on an attack roll against a creature if at least one of the her allies is within 5 feet of the creature and the ally isn’t {@condition incapacitated}."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Oleanne is an 6th-level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 13}, +5 to hit with spell attacks). He has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft|XPHB}",
+								"{@spell shillelagh|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell animal friendship|XPHB}",
+								"{@spell entangle|XPHB}",
+								"{@spell goodberry|XPHB}",
+								"{@spell speak with animals|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell barkskin|XPHB}",
+								"{@spell pass without trace|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell sleet storm|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Oleanne makes two melee attacks."
+					]
+				},
+				{
+					"name": "Quarterstaff.",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit ( {@hit 7} to hit with shillelagh) , reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) bludgeoning damage, or 5 ({@damage 1d8 + 1}) bludgeoning damage if used with both hands, or  8 ({@damage 1d8 + 4}) bludgeoning damage if shillelagh."
+					]
+				},
+				{
+					"name": "Bite. (Beast Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 ({@damage 2d4 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 11} Strength saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Change Shape",
+					"entries": [
+						"Oleanne can magically polymorphs into a beast form, almost always preferring a dire wolf, or back into her humanoid form. Any equipment it is wearing or carrying is absorbed or borne by the beast form. She reverts to its humanoid form when she dies. Oleanna's statistics are the same in each form, except where noted in this stat block."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Shiraz the Swanmay",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Human",
+					"shapeshifter"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item +2 ring of protection|tdcsr}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d8 + 32",
+				"average": 104
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(fly 40 ft., swim 30 ft. in swam form)"
+				}
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 12,
+			"wis": 16,
+			"cha": 18,
+			"passive": 16,
+			"cr": "7",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Sylvan",
+				"Elven"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"save": {
+				"wis": "+6",
+				"con": "+5",
+				"dex": "+6"
+			},
+			"skill": {
+				"survival": "+6",
+				"nature": "+4",
+				"persuasion": "+7",
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren’t silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				{
+					"immune": [
+						"poison"
+					],
+					"note": "({@item periapt of proof against poison})"
+				}
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The shiraz the swanmay has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"The shiraz the swanmay has advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Speak with Beasts and Plants",
+					"entries": [
+						"The shiraz the swanmay can communicate with beasts and plants as if they shared a language."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Magic Resistance"
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The swanmays’s innate spellcasting ability is Charisma (spell save {@dc 15}). The swanmay can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell speak with animals|XPHB}"
+					],
+					"daily": {
+						"3e": [
+							"{@spell charm person|XPHB}",
+							"{@spell dominate beast|XPHB}"
+						],
+						"1e": [
+							"{@spell beast sense|XPHB}",
+							"{@spell charm monster|XGE}",
+							"{@spell commune with nature|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"In swan form the Swanmay makes two attacks with its beak."
+					]
+				},
+				{
+					"name": "Longsword +2.",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) damage, or 8 ({@damage 1d8 + 4}) damage if used with both hands."
+					]
+				},
+				{
+					"name": "Short Bow.",
+					"entries": [
+						"{@atk rw} {@hit 6} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) damage, or 9 ({@damage 1d8 + 5}) damage if used with both hands."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4({@damage 1d6 + 1}) damage"
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"bonus": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The swanmay can use its action to polymorph into a giant swan. Her statistics, other than its size, are the same in each form. It reverts to its true form if it dies."
+					]
+				}
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Bloodskull Orc",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Brute"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 12",
+				"average": 30
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 7,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"cr": "1/2",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"str": "+5"
+			},
+			"skill": {
+				"athletics": "+5"
+			},
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"action": [
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 3} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"bonus": [
+				{
+					"name": "Healing Rally (1/Day)",
+					"entries": [
+						"The Bloodskull Orc regains 5 hit points."
+					]
+				}
+			]
+		},
+		{
+			"name": "Bloodskull Orc Shielder",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Soldier"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 12",
+				"average": 30
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 16,
+			"int": 7,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"cr": "1/2",
+			"save": {
+				"str": "+4"
+			},
+			"skill": {
+				"athletics": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 3} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"reaction": [
+				{
+					"name": "No!",
+					"entries": [
+						"When an enemy within 5 feet of the rampart targets another creature with an attack, reduce the damage by {@dice 1d4 + 3}."
+					]
+				}
+			],
+			"savingThrowForcedLegendary": [
+				"charisma"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Bloodskull Orc Sounder Leader",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Leader"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 27",
+				"average": 67
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 7,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"cr": "2",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"str": "+5"
+			},
+			"skill": {
+				"athletics": "+7"
+			},
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Sounder Leader makes two Battle axe attacks or two Short Bow attacks."
+					]
+				},
+				{
+					"name": "Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"attachedItems": [
+				"battleaxe|phb"
+			],
+			"bonus": [
+				{
+					"name": "Healing Rally (1/Day)",
+					"entries": [
+						"The Bloodskull Orc regains 10 hit points."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sounder Leader's command",
+					"entries": [
+						"When a creature Raskovar can see within 30 feet of him fails an ability check or misses with an attack roll, that creature can reroll the check or attack, choosing either result."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Carlanis",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"Human",
+					"Leader"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 14",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 10,
+			"cha": 12,
+			"passive": 10,
+			"cr": "1/2",
+			"skill": {
+				"intimidation": "+3"
+			},
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"Carlanis has advantage on an attack roll against a creature if at least one of the his allies is within 5 feet of the creature and the ally isn’t {@condition incapacitated}."
+					]
+				}
+			],
+			"traitTags": [
+				"Pack Tactics"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Carlanis makes two melee attacks."
+					]
+				},
+				{
+					"name": "Grab",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 12}). Until this grapple ends, the Carlanis can't grab another creature."
+					]
+				},
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"attachedItems": [
+				"club|phb"
+			],
+			"reaction": [
+				{
+					"name": "Meat Shield",
+					"entries": [
+						"When the Carlanis is grappling a target and is hit by a ranged attack made by another creature he can see, the brawler gains a +2 bonus to AC against the triggering attack. If this bonus causes the attack to miss the brawler, it hits the {@condition grappled} target instead."
+					]
+				}
+			],
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Bandit",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race",
+					"Soldier"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8 + 3",
+				"average": 16
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "1/8",
+			"action": [
+				{
+					"name": "Club",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d4 + 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 3} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"desert",
+				"forest",
+				"hill",
+				"urban"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/bandit.mp3"
+			},
+			"attachedItems": [
+				"club|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"hasFluff": true,
+			"token": {
+				"name": "Bandit",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Bandit",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Bandits rove in gangs and are sometimes led by thugs, veterans, or spellcasters. Not all bandits are evil. Oppression, drought, disease, or famine can often drive otherwise honest folk to a life of banditry.",
+									"Pirates are bandits of the high seas. They might be freebooters interested only in treasure and murder, or they might be privateers sanctioned by the crown to attack and plunder an enemy nation's vessels."
+								]
+							}
+						]
+					}
+				]
+			},
+			"trait": [
+				{
+					"name": "Exploit Opening (3/Day)",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll"
+					]
+				}
+			],
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Bandit Archer",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race",
+					"Skirmisher"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d8 + 5",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 11,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "dagger",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3({@damage 1d4 + 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}5 ({@damage 1d6 + 2}) damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"desert",
+				"forest",
+				"hill",
+				"urban"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/bandit.mp3"
+			},
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"hasFluff": true,
+			"token": {
+				"name": "Bandit",
+				"source": "MM"
+			},
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frost Goblin Warrior",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid",
+					"Skirmisher"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d6 + 3",
+				"average": 13
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 8,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"acrobatics": "+4",
+				"survival": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1/4",
+			"trait": [
+				{
+					"name": "Nimble Escape",
+					"entries": [
+						"The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
+					]
+				}
+			],
+			"environment": [
+				"arctic"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Goblin",
+				"source": "MM"
+			},
+			"resist": [
+				"cold"
+			],
+			"action": [
+				{
+					"name": "Hand Axe",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}3 ({@damage 1d6}) damage in melee, or 3 ({@damage 1d6}) damage at range."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"reaction": [
+				{
+					"name": "Fleet Foot",
+					"entries": [
+						"When a creature within 5 feet of the Frost Goblin Warrior misses them with a melee attack, the warrior can move up to half their speed."
+					]
+				}
+			]
+		},
+		{
+			"name": "Frost Goblin Fodder",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid",
+					"Minion"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d6 + 2",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 13,
+			"con": 12,
+			"int": 8,
+			"wis": 8,
+			"cha": 8,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"trait": [
+				{
+					"name": "Crafty",
+					"entries": [
+						"The Frost Goblin Warrior doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+					]
+				},
+				{
+					"name": "Minion",
+					"entries": [
+						"If the Frost Goblin Fodder takes damage from an attack or as the result of a failed saving throw, their hit points are reduced to 0. If the lackey takes damage from another effect, they die if the damage equals or exceeds their hit point maximum; otherwise they take no damage."
+					]
+				},
+				{
+					"name": "Tiny Cuts",
+					"entries": [
+						"If an enemy starts their turn within 5 feet of three or more Frost Goblin Fodder who can see them, the enemy must succeed on a Dexterity saving throw or take 1 slashing damage for each Frost Goblin Fodder within 5 feet. The DC for this saving throw equals 10 + the number of Frost Goblin Fodders within 5 feet of the enemy."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Goblin",
+				"source": "MM"
+			},
+			"cr": {
+				"cr": "1/4",
+				"xp": 10
+			},
+			"resist": [
+				"cold"
+			],
+			"action": [
+				{
+					"name": "Hand Axe (Group Attack)",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}1 slashing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"environment": [
+				"arctic"
+			],
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Frost Goblin Brute",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid",
+					"Brute"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d6 + 20",
+				"average": 55
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 14,
+			"int": 8,
+			"wis": 8,
+			"cha": 8,
+			"skill": {
+				"stealth": "+6",
+				"intimidation": "+1",
+				"athletics": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Crafty",
+					"entries": [
+						"The Frost Goblin Brute doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+					]
+				},
+				{
+					"name": "Strong Grip",
+					"entries": [
+						"Wielding a heavy weapon doesn’t impose disadvantage on the Frost Goblin Brute's attack rolls."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"action": [
+				{
+					"name": "Great Axe",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d12 + 2}) damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"reaction": [
+				{
+					"name": "Frenzied Warrior",
+					"entries": [
+						"When a creature within 5 feet of the Frost Goblin Brute misses them with an attack, the Brute can make a melee attack against the creature with disadvantage."
+					]
+				}
+			],
+			"environment": [
+				"arctic"
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			}
+		},
+		{
+			"name": "Frost Goblin Boss",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid",
+					"Support"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item hide armor|xphb}",
+						"{@item shield|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d6 + 10",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 8,
+			"wis": 8,
+			"cha": 10,
+			"skill": {
+				"stealth": "+5",
+				"acrobatics": "+5",
+				"survival": "+1",
+				"intimidation": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Crafty",
+					"entries": [
+						"The Frost Goblin Boss doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Frost Goblin Boss makes two attacks with it's axe. The second attack has disadvantage. Alternatively one attack with hand axe and one command."
+					]
+				},
+				{
+					"name": "Hand Axe",
+					"entries": [
+						"{@atk mw,rw} {@hit 2} to hit, reach 5 ft. or {@hit 5} to hit range 30/120 ft., one target. {@h}3 ({@damage 1d6}) damage in melee, or 3 ({@damage 1d6}) damage at range."
+					]
+				},
+				{
+					"name": "Command",
+					"entries": [
+						"The boss chooses one ally they can see within 30 feet of them. If the target can hear the boss, the target can use their reaction to move up to their speed or make one weapon attack."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Cowardly Commander",
+					"entries": [
+						"When a creature the underboss can see hits them with an attack, the underboss chooses a willing ally within 5 feet of them. The attack hits the ally instead."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"miscTags": [
+				"RW",
+				"MW"
+			],
+			"bonusHeader": [
+				"Each willing ally within 30 feet of the underboss who can hear them becomes reckless until the start of the underboss's next turn. While reckless, a creature has advantage on attack rolls, and attack rolls against the creature have advantage."
+			],
+			"environment": [
+				"arctic"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			}
+		},
+		{
+			"name": "Frost Goblin Shaman",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"goblinoid",
+					"Support"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d6 + 14",
+				"average": 63
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 20
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 12,
+			"int": 8,
+			"wis": 14,
+			"cha": 10,
+			"skill": {
+				"intimidation": "+2",
+				"acrobatics": "+5",
+				"stealth": "+5",
+				"survival": "+4"
+			},
+			"passive": 12,
+			"languages": [
+				"Common",
+				"Goblin"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The Frost Goblin Shaman is a 5th-level spellcaster. It's spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). The Frost Goblin Shaman has the following druid spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell druidcraft}",
+								"{@spell frostbite|XGE}",
+								"{@spell produce flame}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell fog cloud|XPHB}",
+								"{@spell ice knife|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell heat metal}",
+								"{@spell spike growth}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell sleet storm|XPHB}",
+								"{@spell summon fey|TCE}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"traitTags": [
+				"Hold Breath"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Shapechanger"
+			],
+			"languageTags": [
+				"C",
+				"GO"
+			],
+			"spellcastingTags": [
+				"CD"
+			],
+			"conditionInflictSpell": [
+				"restrained"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"environment": [
+				"arctic"
+			],
+			"tokenHref": {
+				"type": "internal",
+				"path": ""
+			},
+			"resist": [
+				"cold"
+			],
+			"trait": [
+				{
+					"name": "Crafty",
+					"entries": [
+						"The Frost Goblin Shaman doesn't provoke opportunity attacks when they move through or out of an enemy's reach."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Staff",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) damage, or 4 ({@damage 1d8}) damage if used with both hands."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"bonus": [
+				{
+					"name": "Aid Me!",
+					"entries": [
+						"The Frost Goblin Shaman shouts for aid and {@dice 1d4} Frost Goblin Fodder appear in unoccupied spaces within 60 feet of the Frost Goblin Shaman."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "No Dying!",
+					"entries": [
+						"When an ally the Frost Goblin Shaman can see within 30 feet of her is reduced to 0 hit points, they are reduced to 1 hit point instead."
+					]
+				}
+			],
+			"legendaryHeader": [
+				"The Frost Goblin Shaman has three Villainous actions. They can take each action once during an encounter after an enemy's turn.",
+				"They can take these actions in any order but can use only one per round."
+			],
+			"legendary": [
+				{
+					"name": "Action 1: Let No Food Escape!",
+					"entries": [
+						"Each ally within 60 feet of the Frost Goblin Shaman who can hear them can move up to their speed or make a melee weapon attack (no action required)."
+					]
+				},
+				{
+					"name": "Action 2: Focus Fire.",
+					"entries": [
+						"The Frost Goblin Shaman chooses an enemy they can see with 60 feet of her. The Frost Goblin Shaman and each ally within 60 feet of them who can hear them can move up to their speed toward the target."
+					]
+				},
+				{
+					"name": "Action 3: Kill!.",
+					"entries": [
+						"Each ally within 60 feet of the Frost Goblin Shaman who can hear her can make a weapon attack with advantage (no action required). If the attack hits, it deals an extra 3 ({@damage 1d6}) damage."
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"P"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Ogre",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"Brute"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 11,
+					"from": [
+						"{@item hide armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d10 + 18",
+				"average": 51
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 8,
+			"con": 16,
+			"int": 5,
+			"wis": 7,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The ogre makes one Spiked Club attack and one Fist attack."
+					]
+				},
+				{
+					"name": "Spiked Club",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d4 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Fist",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d4 + 4}) bludgeoning damage. If the target is Medium or smaller, they are {@condition grappled} (escape {@dc 13}). Until this grapple ends, the ogre can’t use this fist to attack other targets. The ogre has two fists, one of which holds their club."
+					]
+				},
+				{
+					"name": "People-Bowling",
+					"entries": [
+						"The ogre throws one Medium or smaller creature they are grappling up to 30 feet horizontally. Each creature in the thrown creature’s path must succeed on a {@dc 13} Dexterity saving throw or take 3 ({@damage 1d6}) bludgeoning damage and be knocked {@condition prone}. After this throw, the thrown creature takes 7 ({@damage 2d6}) bludgeoning damage and falls {@condition prone}."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"desert",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain",
+				"swamp",
+				"underdark"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflict": [
+				"frightened",
+				"prone"
+			],
+			"bonus": [
+				{
+					"name": "Bellow (1/Day)",
+					"entries": [
+						"The ogre yells in the face of one creature within 10 feet of them. The target must succeed on a {@dc 13} Wisdom saving throw or be {@condition frightened} of the ogre until the end of the ogre’s next turn. A creature who succeeds on their saving throw is immune to all ogres’ Bellow for 24 hours."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Violent Focus (1/Day)",
+					"entries": [
+						"If the ogre takes damage while {@condition blinded}, {@condition charmed}, {@condition frightened}, or {@condition poisoned}, they end these conditions on themself."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Ogre Hunter",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "giant",
+				"tags": [
+					"Skirmisher"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "typically ",
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"average": 42,
+				"formula": "5d10 + 15"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 16,
+			"int": 5,
+			"wis": 7,
+			"cha": 7,
+			"skill": {
+				"athletics": "+5",
+				"perception": "+4"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Giant"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Defiant Anger",
+					"entries": [
+						"When the ogre hunter has half their hit points or fewer, they are resistant to mundane bludgeoning, piercing, and slashing damage."
+					]
+				},
+				{
+					"name": "Unimpeded",
+					"entries": [
+						"The ogre hunter can occupy a {@condition prone} creature’s space. The first time the ogre hunter enters a {@condition prone} creature’s space on the ogre hunter's turn, the {@condition prone} creature takes 3 ({@damage 1d6}) bludgeoning damage. When a {@condition prone} creature in the ogre hunter's space stands up, the creature enters the nearest unoccupied space of their choice."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Great Club",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}9 ({@damage 2d8 + 4}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "People-Bowling",
+					"entries": [
+						"The ogre throws one Medium or smaller creature they are grappling up to 30 feet horizontally. Each creature in the thrown creature's path must succeed on a {@dc 13} Dexterity saving throw or take 3 ({@damage 1d6}) bludgeoning damage and be knocked {@condition prone}. After this throw, the thrown creature takes 7 ({@damage 2d6}) bludgeoning damage and falls {@condition prone}."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk rw} {@hit 2} to hit, range 30/120 ft., one target. {@h}7 ({@damage 2d6}) damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Moving through!",
+					"entries": [
+						"The ogre hunter can attempt to run through a small or medium target. The target must succeed on a {@dc 14} strength saving throw or take 7 ({@damage 1d6 + 4}) bludgeoning damage and be knocked {@condition prone}. If the target is knocked {@condition prone} the ogre hunter gains the benefit of the disengage action."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Violent Focus (1/Day)",
+					"entries": [
+						"If the ogre takes damage while {@condition blinded}, {@condition charmed}, {@condition frightened}, or {@condition poisoned}, they end these conditions on themself."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"GI"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"THW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"attachedItems": [
+				"javelin|phb"
+			],
+			"damageTags": [
+				"B"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			]
+		},
+		{
+			"name": "Saber-Toothed Tiger",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "beast",
+				"tags": [
+					"Ambusher"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "6d10 + 12",
+				"average": 45
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 14,
+			"int": 3,
+			"wis": 12,
+			"cha": 8,
+			"skill": {
+				"stealth": "+6",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The tiger has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Pounce",
+					"entries": [
+						"If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a {@dc 14} Strength saving throw or be knocked {@condition prone}. If the target is {@condition prone}, the tiger can make one bite attack against it as a bonus action."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 5}) piercing damage."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}12 ({@damage 2d6 + 5}) slashing damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"mountain"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/saber-toothed-tiger.mp3"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Pounce"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"token": {
+				"name": "Saber-Toothed Tiger",
+				"source": "MM"
+			},
+			"bonus": [
+				{
+					"name": "Sneak",
+					"entries": [
+						"The tiger takes the Hide action."
+					]
+				}
+			],
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"strength"
+			]
+		},
+		{
+			"name": "Swanmay",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race",
+					"shapechanger",
+					"Support"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item leather armor|xphb}"
+					],
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 16",
+				"average": 70
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(fly 40 ft., swim 30 ft. in swam form)"
+				}
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 14,
+			"int": 12,
+			"wis": 16,
+			"cha": 18,
+			"skill": {
+				"survival": "+5",
+				"nature": "+3",
+				"perception": "+5",
+				"persuasion": "+6",
+				"stealth": "+5"
+			},
+			"passive": 15,
+			"languages": [
+				"Common",
+				"Sylvan"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The swanmays's innate spellcasting ability is Charisma (spell save {@dc 14}). The swanmay can innately cast the following spells, requiring no material components:"
+					],
+					"daily": {
+						"3e": [
+							"{@spell charm person|XPHB}",
+							"{@spell dominate beast|XPHB}"
+						],
+						"1e": [
+							"{@spell beast sense|XPHB}",
+							"{@spell charm monster|XPHB}",
+							"{@spell commune with nature|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"In swan form the Swanmay makes two attacks with its beak."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d4 + 3}) damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, unlimited range, one target. {@h}6 ({@damage 1d6 + 3}) damage."
+					]
+				},
+				{
+					"name": "Beak (Swan form only)",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain"
+			],
+			"languageTags": [
+				"C",
+				"S"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"fluff": {
+				"entries": [
+					"Swanmays are an enigmatic order of women, known for their unique ability to transform between human and swan forms. Swanmays gain their shape-shifting powers through magical tokens, often a cloak of swan feathers. These tokens are vital to their transformation, and without them, a swanmay loses her ability to change shape and becomes vulnerable, sometimes even fatally so if the cloak is destroyed. This dependency makes swanmays fiercely protective of their cloaks, and they may go to great lengths to recover them if stolen.",
+					"Swanmays are deeply connected to nature and the protection of the wilderness. They often reside in temperate wetlands or near bodies of water, where they watch over and care for local wildlife, particularly swans. Their role as guardians extends to opposing evil forces that threaten their natural environments. Although they are reclusive and prefer to remain hidden, swanmays may ally with adventurers who share their commitment to preserving nature. In combat, they employ stealth and evasion, striking from the shadows and utilizing their keen senses.",
+					"The swanmay’s magical abilities include communication with avian creatures especially swans. They are known for their enchanting presence. While they value their solitude, swanmays can be formidable allies to those who prove themselves trustworthy and dedicated to the cause of protecting the natural world."
+				]
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"resist": [
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The swanmay has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Keen Sight",
+					"entries": [
+						"The swanmay has advantage on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Speak with Beasts and Plants",
+					"entries": [
+						"The swanmay can communicate with beasts and plants as if they shared a language."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Magic Resistance"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"bonus": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The swanmay can use its action to polymorph into a giant swan. Her statistics, other than its size, are the same in each form. It reverts to its true form if it dies."
+					]
+				}
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Werebear",
+			"group": [
+				"Lycanthropes"
+			],
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"shapechanger",
+					"Brute"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 10,
+					"condition": "in humanoid form"
+				},
+				{
+					"ac": 11,
+					"from": [
+						"natural armor"
+					],
+					"condition": "in bear or hybrid form"
+				}
+			],
+			"hp": {
+				"average": 135,
+				"formula": "18d8 + 54"
+			},
+			"speed": {
+				"walk": {
+					"number": 30,
+					"condition": "(40 ft., climb 30 ft. in bear or hybrid form)"
+				}
+			},
+			"str": 19,
+			"dex": 10,
+			"con": 17,
+			"int": 11,
+			"wis": 12,
+			"cha": 12,
+			"skill": {
+				"perception": "+7"
+			},
+			"passive": 17,
+			"immune": [
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"languages": [
+				"Common (can't speak in bear form)"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Shapechanger",
+					"entries": [
+						"The werebear can use its action to polymorph into a Large bear-humanoid hybrid or into a Large bear, or back into its true form, which is humanoid. Its statistics, other than its size and AC, are the same in each form. Any equipment it is wearing or carrying isn't transformed. It reverts to its true form if it dies."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The werebear has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"In bear form, the werebear makes two claw attacks. In humanoid form, it makes two greataxe attacks. In hybrid form, it can attack like a bear or a humanoid."
+					]
+				},
+				{
+					"name": "Bite (Bear or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}15 ({@damage 2d10 + 4}) piercing damage. If the target is a humanoid, it must succeed on a {@dc 14} Constitution saving throw or be cursed with werebear lycanthropy."
+					]
+				},
+				{
+					"name": "Claw (Bear or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}13 ({@damage 2d8 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Greataxe (Humanoid or Hybrid Form Only)",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) slashing damage."
+					]
+				}
+			],
+			"variant": [
+				{
+					"type": "variant",
+					"name": "Nonhuman Lycanthropes",
+					"entries": [
+						"The statistics presented in this section assume a base creature of human. However, you can also use the statistics to represent nonhuman lycanthropes, adding verisimilitude by allowing a nonhuman lycanthrope to retain one or more of its humanoid racial traits. For example, an elf werewolf might have the Fey Ancestry trait."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"hill"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/werebear.mp3"
+			},
+			"attachedItems": [
+				"greataxe|phb"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Shapechanger"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"miscTags": [
+				"MW",
+				"CUR",
+				"MLW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://5e.tools/img/bestiary/MM/Werebear.webp"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Ranchefus",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Human",
+					"Leader"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d8 + 48",
+				"average": 120
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 60,
+					"condition": "with Wings of Flying"
+				}
+			},
+			"str": 17,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 17,
+			"cha": 11,
+			"passive": 16,
+			"cr": "5",
+			"languages": [
+				"Common",
+				"Infernal",
+				"Abyssal",
+				"Celestial"
+			],
+			"languageTags": [
+				"C",
+				"I",
+				"AB",
+				"CE"
+			],
+			"save": {
+				"wis": "+6"
+			},
+			"skill": {
+				"religion": "+6",
+				"persuasion": "+3",
+				"arcana": "+3",
+				"perception": "+6"
+			},
+			"trait": [
+				{
+					"name": "Dirty Fighter",
+					"entries": [
+						"Once per turn, if Ranchefus makes a weapon attack with advantage, he inflicts an extra 7 ({@damage 2d6}) damage on a hit."
+					]
+				},
+				{
+					"name": "Ring of Free Action",
+					"entries": [
+						"While Ranchefus wears the {@item ring of free action}, difficult terrain doesn't cost him extra movement. In addition, magic can neither reduce his speed nor cause him to be {@condition paralyzed} or {@condition restrained}."
+					]
+				},
+				{
+					"name": "Cyric's Favor",
+					"entries": [
+						"Ranchefus's holy symbol allows him a blessing that doubles the number of skeletons and zombies he can animate and control using the Animate Dead spell."
+					]
+				}
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Ranchefus is a 5th level spellcaster. His spellcasting ability is Wisdom (spell save {@dc 14}, +6 to hit with spell attacks). He has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|XPHB}",
+								"{@spell light|XPHB}",
+								"{@spell thaumaturgy|XPHB}",
+								"{@spell toll the dead|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|XPHB}",
+								"{@spell cure wounds|XPHB}",
+								"{@spell disguise self|XPHB}",
+								"{@spell guiding bolt|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell aid|XPHB}",
+								"{@spell hold person|XPHB}",
+								"{@spell mirror image|XPHB}",
+								"{@spell pass without trace|XPHB}",
+								"{@spell silence|XPHB}",
+								"{@spell spiritual weapon|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|XPHB}",
+								"{@spell blink|XPHB}",
+								"{@spell dispel magic|XPHB}",
+								"{@spell spirit guardians|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ranchefus makes two {@item flail +2} attacks, or one flail attack and casts a spell."
+					]
+				},
+				{
+					"name": "Flail +2",
+					"entries": [
+						"{@atk mw} {@hit 8} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) damage."
+					]
+				},
+				{
+					"name": "Wings of Flying",
+					"entries": [
+						"As an action, Ranchefus can activate the {@item wings of flying} to gain a fly speed of 60 feet. The wings stay active for one hour, after which they can't be used again for {@dice 1d12} hours."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"+2 flail|dmg"
+			],
+			"reaction": [
+				{
+					"name": "Flying Retreat",
+					"entries": [
+						"Ranchefus can use his reaction to Disengage and move up to his fly speed, but only if his wings of flying are active."
+					]
+				}
+			],
+			"isNamedCreature": true,
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Bandit Swordsman",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race",
+					"Soldier"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item chain mail|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 13,
+			"con": 14,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"skill": {
+				"perception": "+2",
+				"athletics": "+5"
+			},
+			"passive": 12,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Swordsman makes two longsword attacks."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+					]
+				},
+				{
+					"name": "Heavy Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 3} to hit, range 100/400 ft., one target. {@h}6 ({@damage 1d10 + 1}) piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain",
+				"underdark",
+				"urban"
+			],
+			"attachedItems": [
+				"heavy crossbow|phb",
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"hasFluff": true,
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The swordsman adds 2 to its AC against one melee attack that would hit it. To do so, the swordsman must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"damageTags": [
+				"P",
+				"S"
+			]
+		}
+	]
+}
