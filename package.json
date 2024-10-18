@@ -1,0 +1,17 @@
+{
+	"name": "homebrew",
+	"version": "1.0.0",
+	"description": "Night Below Icewind Dale Conversion",
+	"type": "module",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jamesyoung79/5eTools_NightBelow.git"
+	},
+	"author": "TheGiddyLimit + Friends",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/jamesyoung79/5eTools_NightBelow/issues"
+	},
+	"homepage": "https://github.com/jamesyoung79/5eTools_NightBelow"
+}
