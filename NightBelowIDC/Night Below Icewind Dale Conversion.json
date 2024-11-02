@@ -2974,6 +2974,234 @@
 				"P",
 				"S"
 			]
+		},
+		{
+			"name": "Skeleton Soldiers",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"Soldier"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 16,
+			"con": 15,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Shortsword",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atkr r} {@hit 5}, range 80/320 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RA",
+				"RNG"
+			],
+			"hasFluffImages": true,
+			"resist": [
+				{
+					"resist": [
+						"piercing",
+						"slashing"
+					],
+					"preNote": "non-magical"
+				}
+			],
+			"trait": [
+				{
+					"name": "Skeletal Resilience",
+					"entries": [
+						"Due to its lack of flesh or vital organs, the Skeleton Soldier is resistant to non-magical piercing and slashing damage, as its bones only crack under heavier impact."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "internal",
+				"path": ""
+			},
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Brittle Skeleton",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "undead",
+				"tags": [
+					"Minion"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"special": "6"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 6,
+			"wis": 8,
+			"cha": 5,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"immune": [
+				"poison"
+			],
+			"vulnerable": [
+				"bludgeoning"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"poisoned"
+			],
+			"languages": [
+				"understands the languages it knew in life but can't speak"
+			],
+			"action": [
+				{
+					"name": "Shortsword (Group Attack)",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Slashing damage."
+					]
+				},
+				{
+					"name": "Shortbow (Group Attack)",
+					"entries": [
+						"{@atkr r} {@hit 4}, range 80/320 ft. one target. {@h}1 Piercing damage. If the target is a creature and three or more skeleton minions joined the attack, the skeletons can choose another creature they can see within 5 feet of the original target. The second target takes 2 piercing damage."
+					]
+				}
+			],
+			"attachedItems": [
+				"shortbow|phb",
+				"shortsword|phb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"CS",
+				"LF"
+			],
+			"miscTags": [
+				"MA",
+				"MLW",
+				"RA",
+				"RNG"
+			],
+			"hasFluffImages": true,
+			"trait": [
+				{
+					"name": "Skeletal Resilience",
+					"entries": [
+						"Due to its lack of flesh or vital organs, the Skeleton Soldier is resistant to non-magical piercing and slashing damage, as its bones only crack under heavier impact."
+					]
+				},
+				{
+					"name": "Minion",
+					"entries": [
+						"If the skeleton takes damage from an attack or as the result of a failed saving throw, their hit points are reduced to 0. If the skeleton takes damage from another effect, they die if the damage equals or exceeds their hit point maximum; otherwise they take no damage."
+					]
+				}
+			],
+			"resist": [
+				{
+					"resist": [
+						"piercing",
+						"slashing"
+					],
+					"preNote": "non-magical"
+				}
+			],
+			"tokenHref": {
+				"type": "internal",
+				"path": ""
+			},
+			"cr": {
+				"cr": "1/4",
+				"xp": 10
+			},
+			"damageTags": [
+				"P",
+				"S"
+			]
 		}
 	]
 }
