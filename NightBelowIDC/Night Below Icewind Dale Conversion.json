@@ -1179,10 +1179,6 @@
 				"hill",
 				"urban"
 			],
-			"soundClip": {
-				"type": "external",
-				"url": "https://5e.tools/audio/bestiary/bandit.mp3"
-			},
 			"attachedItems": [
 				"club|phb"
 			],
@@ -1196,36 +1192,18 @@
 				"RW"
 			],
 			"hasFluff": true,
-			"token": {
-				"name": "Bandit",
-				"source": "MM"
-			},
-			"fluff": {
-				"name": "Bandit",
-				"source": "MM",
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									"Bandits rove in gangs and are sometimes led by thugs, veterans, or spellcasters. Not all bandits are evil. Oppression, drought, disease, or famine can often drive otherwise honest folk to a life of banditry.",
-									"Pirates are bandits of the high seas. They might be freebooters interested only in treasure and murder, or they might be privateers sanctioned by the crown to attack and plunder an enemy nation's vessels."
-								]
-							}
-						]
-					}
-				]
-			},
 			"trait": [
 				{
-					"name": "Exploit Opening (3/Day)",
+					"name": "Exploit Opening (1/Day)",
 					"entries": [
 						"When the bandit makes an attack, they have advantage on the attack roll"
 					]
 				}
 			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
 			"damageTags": [
 				"S"
 			]
@@ -1298,10 +1276,6 @@
 				"hill",
 				"urban"
 			],
-			"soundClip": {
-				"type": "external",
-				"url": "https://5e.tools/audio/bestiary/bandit.mp3"
-			},
 			"attachedItems": [
 				"dagger|phb"
 			],
@@ -1315,10 +1289,6 @@
 				"RW"
 			],
 			"hasFluff": true,
-			"token": {
-				"name": "Bandit",
-				"source": "MM"
-			},
 			"trait": [
 				{
 					"name": "Exploit Opening (1/Day)",
@@ -1326,7 +1296,11 @@
 						"When the bandit makes an attack, they have advantage on the attack roll."
 					]
 				}
-			]
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			}
 		},
 		{
 			"name": "Frost Goblin Warrior",
@@ -1401,10 +1375,6 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true,
-			"token": {
-				"name": "Goblin",
-				"source": "MM"
-			},
 			"resist": [
 				"cold"
 			],
@@ -1427,7 +1397,11 @@
 						"When a creature within 5 feet of the Frost Goblin Warrior misses them with a melee attack, the warrior can move up to half their speed."
 					]
 				}
-			]
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			}
 		},
 		{
 			"name": "Frost Goblin Fodder",
@@ -1508,10 +1482,6 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true,
-			"token": {
-				"name": "Goblin",
-				"source": "MM"
-			},
 			"cr": {
 				"cr": "1/4",
 				"xp": 10
@@ -1534,6 +1504,10 @@
 			"environment": [
 				"arctic"
 			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
 			"damageTags": [
 				"S"
 			]
@@ -2970,6 +2944,14 @@
 					]
 				}
 			],
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day).",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll."
+					]
+				}
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -3198,6 +3180,579 @@
 				"cr": "1/4",
 				"xp": 10
 			},
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Lyntern Parlfray",
+			"source": "NightBelowIDC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Human",
+						"prefix": "Illuskan"
+					}
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain shirt|xphb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 13,
+			"con": 14,
+			"int": 12,
+			"wis": 12,
+			"cha": 12,
+			"skill": {
+				"athletics": "+3",
+				"perception": "+3",
+				"religion": "+3",
+				"medicine": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lyntern makes two Longsword attacks."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h} 5 ({@damage 1d8 + 1}) slashing damage, or  6 ({@damage 1d10 + 1}) slashing damage if used with two hands."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"hasFluff": true,
+			"trait": [
+				{
+					"name": "Adventurous Spirit",
+					"entries": [
+						"Lyntern Parlfray has advantage on saving throws against being {@condition charmed}, {@condition frightened}, {@condition grappled}, or {@condition restrained} while it is within 5 feet of at least one ally."
+					]
+				}
+			],
+			"save": {
+				"wis": "+3"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Lyntern casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 11}):"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light|XPHB}",
+								"{@spell spare the dying|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Sneaky Bandit",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"any race",
+					"Ambusher"
+				]
+			},
+			"alignment": [
+				"NX",
+				"C",
+				"G",
+				"NY",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 4",
+				"average": 22
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 10,
+			"passive": 10,
+			"languages": [
+				"any one language (usually Common)"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Short Bow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"coastal",
+				"desert",
+				"forest",
+				"hill",
+				"urban"
+			],
+			"attachedItems": [
+				"scimitar|phb"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW"
+			],
+			"hasFluff": true,
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day).",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll."
+					]
+				},
+				{
+					"name": "Sneak Attack.",
+					"entries": [
+						"Once per turn, if the sneaky bandit makes a weapon attack with advantage or flanking, it inflicts an extra 3 ({@damage 1d6}) damage on a hit."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action.",
+					"entries": [
+						"May Dash, Disengage, or Hide as a bonus action."
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "internal",
+				"path": ""
+			},
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "War Dog",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"source": "NightBelowIDC",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item spiked armor|scag}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "2d8 + 2",
+				"average": 11
+			},
+			"speed": {
+				"walk": 35
+			},
+			"str": 12,
+			"dex": 15,
+			"con": 12,
+			"int": 3,
+			"wis": 12,
+			"cha": 6,
+			"passive": 13,
+			"cr": "1/4",
+			"skill": {
+				"stealth": "+4",
+				"perception": "+3"
+			},
+			"languages": [
+				"can understand limited commands in Common",
+				"but can't speak"
+			],
+			"languageTags": [
+				"C",
+				"CS"
+			],
+			"trait": [
+				{
+					"name": "Keen Hearing and Smell",
+					"entries": [
+						"The war dog has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The war dog has advantage on an attack roll against a creature if at least one of the war dog's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Spiked Armor",
+					"entries": [
+						"Any creature attacked by the war dog must make a {@dc 12} Dexterity saving throw or take 3 ({@damage 1d6}) piercing damage from the spikes on the armor. Additionally, any creature grappling the war dog automatically takes 3 ({@damage 1d6}) piercing damage at the beginning of the war dog's turn."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"actionTags": [
+				"Swallow"
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) piercing damage damage. If the target is a creature, it must succeed on a {@dc 11} Strength saving throw or be knocked {@condition prone}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"dexterity",
+				"strength"
+			]
+		},
+		{
+			"name": "Balrat",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Human",
+					"Ambusher"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item studded leather armor|xphb}",
+						"{@item ring of protection}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 14,
+			"int": 12,
+			"wis": 14,
+			"cha": 8,
+			"passive": 16,
+			"cr": "2",
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"save": {
+				"dex": "+7",
+				"str": "+3",
+				"con": "+3",
+				"int": "+2",
+				"wis": "+3",
+				"cha": "+0"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+6"
+			},
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day).",
+					"entries": [
+						"When the bandit makes an attack, they have advantage on the attack roll"
+					]
+				},
+				{
+					"name": "Assassinate.",
+					"entries": [
+						"On his first turn, Balrat has advantage on attack rolls against any foe that hasn't taken a turn yet. Any hit scored on a {@status surprised|XPHB} foe is a critical hit."
+					]
+				},
+				{
+					"name": "Sneak Attack.",
+					"entries": [
+						"Once per turn, if Balrat makes a weapon attack with advantage or flanking, he inflicts an extra 7 ({@damage 2d6}) damage on a hit."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action.",
+					"entries": [
+						"Balrat may Dash, Disengage, or Hide as a bonus action."
+					]
+				},
+				{
+					"name": "Potion of Healing (1 use).",
+					"entries": [
+						"As an action, Balrat can heal 7 ({@dice 2d4 + 2}) hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Scimitar +1",
+					"entries": [
+						"{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) Slashing damage."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit +6} to hit, range 80/320 ft., one target. {@h}7 ({@damage 1d6 + 4}) Piercing damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"attachedItems": [
+				"+1 scimitar|dmg",
+				"shortbow|phb"
+			],
+			"isNpc": true,
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Wilmors",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Human",
+					"Ambusher"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item bracers of defense}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 30",
+				"average": 75
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 17,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 8,
+			"passive": 16,
+			"cr": "2",
+			"languages": [
+				"Common"
+			],
+			"languageTags": [
+				"C"
+			],
+			"save": {
+				"dex": "+5"
+			},
+			"skill": {
+				"perception": "+6",
+				"stealth": "+5"
+			},
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"trait": [
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"The Wilmors deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the Wilmors that isn't {@condition incapacitated} and the Wilmors doesn't have disadvantage on the attack roll."
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 scimitar|dmg",
+				"shortbow|phb"
+			],
+			"bonus": [
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+					]
+				},
+				{
+					"name": "Cunning Action.",
+					"entries": [
+						"Wilmors may Dash, Disengage, or Hide as a bonus action."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG",
+				"THW"
+			],
+			"action": [
+				{
+					"name": "Scimitar +1",
+					"entries": [
+						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) Slashing damage."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit +5} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry.",
+					"entries": [
+						"Wilmors adds 2 to its AC against one melee attack that would hit it. To do so, Wilmors must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"isNpc": true,
 			"damageTags": [
 				"P",
 				"S"
