@@ -4126,12 +4126,119 @@
 				{
 					"name": "Unarmed Strike",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) damage."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h} 8({@damage 1d6 + 5}) bludgeoning damage."
 					]
 				}
 			],
 			"miscTags": [
 				"MW"
+			]
+		},
+		{
+			"name": "Marly",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"Ambusher"
+				]
+			},
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|PHB|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 8",
+				"average": 44
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 18,
+			"con": 12,
+			"int": 10,
+			"wis": 10,
+			"cha": 12,
+			"skill": {
+				"deception": "+3",
+				"sleight of hand": "+6",
+				"stealth": "+8",
+				"insight": "+2"
+			},
+			"passive": 10,
+			"languages": [
+				"Common"
+			],
+			"trait": [
+				{
+					"name": "Ambusher",
+					"entries": [
+						"In the first round of combat, the scoundrel has advantage on attack rolls against any {@status surprised|XPHB} creature."
+					]
+				},
+				{
+					"name": "Exploit Opening (3/Day)",
+					"entries": [
+						"When the scoundrel makes an attack, they have advantage on the attack roll."
+					]
+				},
+				{
+					"name": "Hit 'Em Where It Hurts",
+					"entries": [
+						"When the scoundrel has advantage on a weapon attack roll, the attack deals an extra 7 ({@damage 2d6}) damage on a hit."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Locking Garrote",
+					"entries": [
+						"{@atk mw} {@hit +3} to hit, reach 5 ft., one Medium or Small creature against which Marly has advantage on the attack roll. {@h}4 ({@damage 1d4 + 1}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 14} with disadvantage). Until this grapple ends, the target can't breathe, and the marly has advantage on attack rolls against it."
+					]
+				},
+				{
+					"name": "Dagger",
+					"entries": [
+						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Ambusher"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"RW",
+				"MLW",
+				"THW"
+			],
+			"cr": "2",
+			"isNpc": true,
+			"conditionInflict": [
+				"grappled"
+			],
+			"attachedItems": [
+				"dagger|phb"
+			],
+			"damageTags": [
+				"B",
+				"P"
 			]
 		}
 	]
