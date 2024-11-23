@@ -4206,7 +4206,8 @@
 				{
 					"name": "Locking Garrote",
 					"entries": [
-						"{@atk mw} {@hit +3} to hit, reach 5 ft., one Medium or Small creature against which Marly has advantage on the attack roll. {@h}4 ({@damage 1d4 + 1}) bludgeoning damage, and the target is {@condition grappled} (escape {@dc 14} with disadvantage). Until this grapple ends, the target can't breathe, and the marly has advantage on attack rolls against it."
+						"{@atk mw} {@hit +3} to hit, reach 5 ft., one Medium or Small creature against which Marly has advantage on the attack roll. {@h}4 ({@damage 1d4 + 1}) bludgeoning damage. ",
+						"On a hit, she locks the garrote around the character's neck. The character begins to choke and, after a number of rounds equal to their Constitution bonus, will drop to 0 Hit Points and start dying. Anyone can use an action to unlock the garrote and stop the choking by making a {@dc 14} Intelligence check. Rogues with the Assassin archetype add their proficiency bonus and roll with advantage. The victim can try to remove it, but rolls with disadvantage. A choking character can't be stabilized until the garrote is removed."
 					]
 				},
 				{
@@ -4230,15 +4231,381 @@
 			],
 			"cr": "2",
 			"isNpc": true,
-			"conditionInflict": [
-				"grappled"
-			],
 			"attachedItems": [
 				"dagger|phb"
 			],
 			"damageTags": [
 				"B",
 				"P"
+			]
+		},
+		{
+			"name": "Giant Rat",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "3d6",
+				"average": 10
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 7,
+			"dex": 15,
+			"con": 11,
+			"int": 2,
+			"wis": 10,
+			"cha": 4,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"cr": "1/8",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The rat has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d4 + 2}) piercing damage. If the target is a creature, it must succeed on a {@dc 12} Constitution saving throw or contract Blood Rot. Incubation period of {@dice 1d4} days afer infection. The infected creature's constitution score decreases by 1 point each week until cured. If the target's constitution drops to 0 as a result of this disease, the target dies."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"swamp",
+				"underdark",
+				"urban"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"D"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluffImages": true,
+			"skill": {
+				"stealth": "+4",
+				"survival": "+2"
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Carrion Crawler",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d10 + 27",
+				"average": 76
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 14,
+			"dex": 13,
+			"con": 16,
+			"int": 1,
+			"wis": 12,
+			"cha": 5,
+			"skill": {
+				"perception": "+3",
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 13,
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The carrion crawler has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The carrion crawler can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The carrion crawler makes nine attacks: Eight, one for each of it's tentacles and one with it's bite."
+					]
+				},
+				{
+					"name": "Tentacles",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 10 ft., one creature. {@h}4 ({@damage 1d4 + 2}) poison damage, and the target must succeed on a {@dc 13} Constitution saving throw or be {@condition poisoned} for 1 minute. Until this poison ends, the target is {@condition paralyzed}. The target can repeat the saving throw at the end of each of its turns, ending the poison on itself on a success."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 2d4 + 2}) piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Carrion crawlers scour putrid flesh from carcasses and gobble the slimy bones that remain. They aggressively attack any creature that trespasses on their territory or disturbs their feasting.",
+									{
+										"name": "Carrion Eaters",
+										"type": "entries",
+										"entries": [
+											"A carrion crawler follows the scent of death to its food, but it prefers not to compete with other scavengers. These foul creatures thus hunker down in territories where death is plentiful and other carrion eaters have limited mobility. Caves, sewers, dungeons, and forested marshes are their favored lairs, but carrion crawlers are also drawn to battlefields and cemeteries. A carrion crawler roams on the hunt, its tentacles probing the air for the scent of blood or decay. In tunnels or ruins, carrion crawlers scurry across the ceiling as they move toward food. In this way, they avoid contact with oozes, otyughs, and other dangerous inhabitants of the darkness, even as they surprise potential meals that don't think to look up."
+										]
+									},
+									{
+										"name": "Patient Predators",
+										"type": "entries",
+										"entries": [
+											"Whether in subterranean darkness or while hunting at night, light signals a potential meal. A carrion crawler might follow a light source from a distance for hours, hoping to pick up the scent of blood. Despite their great size, carrion crawlers can also easily set up ambushes by waiting around blind corners for prey to come to them. When facing potential prey or intruders, a carrion crawler lets its poison do the work. Once a victim goes rigid with paralysis, the carrion crawler wraps it with its tentacles and drags it away to a high ledge or isolated passageway, where it can be killed safely. The monster then resumes patrolling its territory while waiting for its meal to ripen."
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Wraith",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 0,
+				"fly": {
+					"number": 60,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 6,
+			"dex": 16,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 15,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder",
+				{
+					"resist": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks that aren't silvered",
+					"cond": true
+				}
+			],
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"languages": [
+				"the languages it knew in life"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Agonizing Phasing.",
+					"entries": [
+						"The wraith can move through other creatures and objects as if they were difficult terrain. The wraith takes 5 ({@damage 1d10}) force damage if they end their turn inside an object. A creature must make a {@dc 14} Constitution saving throw or takes 5 ({@damage 1d10}) psychic damage the first time a wraith passes through them on a turn or half as much on a successful save."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Agonizing Touch.",
+					"entries": [
+						"Agonizing Touch. Melee Spell Attack: {@hit 6} to hit, reach 5 ft., one creature. {@h}14 ({@damage 4d6}) psychic damage, and the target must succeed on a {@dc 14} Wisdom saving throw or be {@condition dazed|FleeMortals} (save ends at end of turn).",
+						"Each time a target {@condition dazed|FleeMortals} in this way fails a saving throw to end the condition, their hit point maximum is halved. This effect is cumulative, and the reduction lasts until the target finishes a short or long rest.",
+						"If a Humanoid dies within 1 minute of being hit by this attack, their spirit rises as a {@creature specter}  under the wraith's control in an unoccupied space nearest to where that Humanoid died"
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"LF"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://5e.tools/img/bestiary/MM/Wraith.webp"
+						}
+					}
+				]
+			},
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"reaction": [
+				{
+					"name": "Denied Vitality.",
+					"entries": [
+						"When a creature who the wraith can see within 30 feet of them regains hit points, the wraith can attempt to sap the life energy restoring the creature. The creature must succeed on a {@dc 14} Constitution saving throw or only regain half the number of hit points they otherwise would regain."
+					]
+				}
+			],
+			"conditionInflict": [
+				"dazed|fleemortals"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
 			]
 		}
 	]
