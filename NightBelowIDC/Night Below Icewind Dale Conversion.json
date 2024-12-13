@@ -250,6 +250,12 @@
 					"entries": [
 						"While Kuiper wear this ring, difficult terrain doesn’t cost him extra movement. In addition, magic can neither reduce his speed nor cause him to be {@condition paralyzed} or {@condition restrained}."
 					]
+				},
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When Kuiper makes an attack, they have advantage on the attack roll."
+					]
 				}
 			],
 			"spellcasting": [
@@ -1053,7 +1059,7 @@
 				{
 					"name": "Exploit Opening (1/Day)",
 					"entries": [
-						"When the bandit makes an attack, they have advantage on the attack roll."
+						"When Carlanis makes an attack, they have advantage on the attack roll."
 					]
 				},
 				{
@@ -2735,6 +2741,12 @@
 					"entries": [
 						"Ranchefus's holy symbol allows him a blessing that doubles the number of skeletons and zombies he can animate and control using the Animate Dead spell."
 					]
+				},
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When the Ranchefus makes an attack, they have advantage on the attack roll."
+					]
 				}
 			],
 			"spellcasting": [
@@ -3186,7 +3198,7 @@
 			]
 		},
 		{
-			"name": "Lyntern Parlfray",
+			"name": "Lyntern Parlfray (Healer)",
 			"source": "NightBelowIDC",
 			"size": [
 				"S",
@@ -3215,8 +3227,8 @@
 				}
 			],
 			"hp": {
-				"formula": "3d8 + 6",
-				"average": 19
+				"formula": "4d8 + 8",
+				"average": 26
 			},
 			"speed": {
 				"walk": 30
@@ -3228,16 +3240,15 @@
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+3",
-				"perception": "+3",
-				"religion": "+3",
-				"medicine": "+3"
+				"athletics": "+1",
+				"perception": "+1",
+				"religion": "+1",
+				"medicine": "+1"
 			},
-			"passive": 13,
+			"passive": 11,
 			"languages": [
 				"Common"
 			],
-			"cr": "1/2",
 			"action": [
 				{
 					"name": "Multiattack",
@@ -3275,7 +3286,7 @@
 				}
 			],
 			"save": {
-				"wis": "+3"
+				"wis": "+1"
 			},
 			"spellcasting": [
 				{
@@ -3308,6 +3319,8 @@
 				"type": "external",
 				"url": ""
 			},
+			"cr": "1/2",
+			"level": 2,
 			"damageTags": [
 				"S"
 			]
@@ -3703,6 +3716,12 @@
 					"entries": [
 						"The Wilmors deals an extra 7 ({@dice 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the Wilmors that isn't {@condition incapacitated} and the Wilmors doesn't have disadvantage on the attack roll."
 					]
+				},
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When Wilmors makes an attack, they have advantage on the attack roll."
+					]
 				}
 			],
 			"attachedItems": [
@@ -4046,7 +4065,7 @@
 			]
 		},
 		{
-			"name": "Ranchefus Zombie",
+			"name": "Cultist's Zombie",
 			"size": [
 				"M"
 			],
@@ -4160,8 +4179,8 @@
 				}
 			],
 			"hp": {
-				"formula": "8d8 + 8",
-				"average": 44
+				"formula": "9d8 + 9",
+				"average": 49
 			},
 			"speed": {
 				"walk": 30
@@ -4186,34 +4205,34 @@
 				{
 					"name": "Ambusher",
 					"entries": [
-						"In the first round of combat, the scoundrel has advantage on attack rolls against any {@status surprised|XPHB} creature."
+						"In the first round of combat, Marly has advantage on attack rolls against any {@status surprised|XPHB} creature."
 					]
 				},
 				{
-					"name": "Exploit Opening (3/Day)",
+					"name": "Exploit Opening (1/Day)",
 					"entries": [
-						"When the scoundrel makes an attack, they have advantage on the attack roll."
+						"When Marly makes an attack, they have advantage on the attack roll."
 					]
 				},
 				{
 					"name": "Hit 'Em Where It Hurts",
 					"entries": [
-						"When the scoundrel has advantage on a weapon attack roll, the attack deals an extra 7 ({@damage 2d6}) damage on a hit."
+						"When Marly has advantage on a weapon attack roll or flanking, the attack deals an extra 7 ({@damage 2d6}) damage on a hit."
 					]
 				}
 			],
 			"action": [
 				{
-					"name": "Locking Garrote",
+					"name": "Dagger",
 					"entries": [
-						"{@atk mw} {@hit +3} to hit, reach 5 ft., one Medium or Small creature against which Marly has advantage on the attack roll. {@h}4 ({@damage 1d4 + 1}) bludgeoning damage. ",
-						"On a hit, she locks the garrote around the character's neck. The character begins to choke and, after a number of rounds equal to their Constitution bonus, will drop to 0 Hit Points and start dying. Anyone can use an action to unlock the garrote and stop the choking by making a {@dc 14} Intelligence check. Rogues with the Assassin archetype add their proficiency bonus and roll with advantage. The victim can try to remove it, but rolls with disadvantage. A choking character can't be stabilized until the garrote is removed."
+						"{@atk mw,rw} {@hit +6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d4 + 4}) Piercing damage."
 					]
 				},
 				{
-					"name": "Dagger",
+					"name": "Locking Garrote",
 					"entries": [
-						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+						"{@atk mw} {@hit +6} to hit, reach 5 ft., one Medium or Small creature against which Marly must be stealthed and catch a target unaware to use this action. ",
+						"On a hit, she locks the garrote around the character's neck. The character begins to choke and, after a number of rounds equal to their Constitution bonus, will drop to 0 Hit Points and start dying. Anyone can use an action to unlock the garrote and stop the choking by making a {@dc 14} Intelligence check. Rogues with the Assassin archetype add their proficiency bonus and roll with advantage. The victim can try to remove it, but rolls with disadvantage. A choking character can't be stabilized until the garrote is removed."
 					]
 				}
 			],
@@ -4224,8 +4243,8 @@
 				"C"
 			],
 			"miscTags": [
-				"MW",
 				"RW",
+				"MW",
 				"MLW",
 				"THW"
 			],
@@ -4235,7 +4254,6 @@
 				"dagger|phb"
 			],
 			"damageTags": [
-				"B",
 				"P"
 			]
 		},
@@ -4606,6 +4624,1050 @@
 			"savingThrowForced": [
 				"constitution",
 				"wisdom"
+			]
+		},
+		{
+			"name": "Lyntern Parlfray",
+			"source": "NightBelowIDC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Illuskan",
+					"human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain shirt|xphb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 14,
+			"int": 12,
+			"wis": 12,
+			"cha": 12,
+			"skill": {
+				"athletics": "+3",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lyntern makes two Longsword attacks."
+					]
+				},
+				{
+					"name": "Longsword",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 1}) slashing damage, or 7 ({@damage 1d10 + 1}) slashing damage if used with two hands."
+					]
+				}
+			],
+			"attachedItems": [
+				"longsword|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"hasFluff": true,
+			"trait": [
+				{
+					"name": "Adventurous Spirit",
+					"entries": [
+						"Lyntern Parlfray has advantage on saving throws against being {@condition charmed}, {@condition frightened}, {@condition grappled}, or {@condition restrained} while it is within 5 feet of at least one ally."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Lyntern Parlfray (Warrior)",
+			"source": "NightBelowIDC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Illuskan",
+					"Human"
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain shirt|xphb}",
+						"{@item shield|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 8",
+				"average": 26
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 14,
+			"int": 12,
+			"wis": 12,
+			"cha": 12,
+			"skill": {
+				"athletics": "+3",
+				"perception": "+3",
+				"nature": "+3",
+				"animal handling": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Lyntern makes two Longsword attacks or Longbow attacks."
+					]
+				},
+				{
+					"name": "Longsword +1",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
+					]
+				},
+				{
+					"name": "Longbow",
+					"entries": [
+						"{@atk rw} {@hit +3} to hit, range 150/600 ft., one target. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"hasFluff": true,
+			"cr": "1/2",
+			"save": {
+				"dex": "+3"
+			},
+			"trait": [
+				{
+					"name": "Adventurous Spirit",
+					"entries": [
+						"Lyntern Parlfray has advantage on saving throws against being {@condition charmed}, {@condition frightened}, {@condition grappled}, or {@condition restrained} while it is within 5 feet of at least one ally."
+					]
+				}
+			],
+			"level": 2,
+			"attachedItems": [
+				"+1 longsword|dmg",
+				"longbow|phb"
+			],
+			"bonus": [
+				{
+					"name": "Second Wind",
+					"entries": [
+						"The sidekick can use a bonus action on its turn to regain hit points equal to {@dice 1d10} + its level in this class. Once it uses this feature, it must finish a short or long rest before it can use it again."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Giant Bombardier Beetle",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d6 + 6",
+				"average": 9
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 10,
+			"con": 14,
+			"int": 1,
+			"wis": 7,
+			"cha": 3,
+			"senses": [
+				"blindsight 30 ft."
+			],
+			"passive": 8,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) slashing damage."
+					]
+				},
+				{
+					"name": "Acid Spray {@recharge 5}",
+					"entries": [
+						"The giant bombardier beetle spits acid in a line that is 15 foot cone. Each creature in that area must make a {@dc 12} Dexterity saving throw, taking 10 ({@damage 3d6}) acid damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"forest",
+				"underdark"
+			],
+			"traitTags": [
+				"Camouflage",
+				"Illumination"
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"trait": [
+				{
+					"name": "Camouflage",
+					"entries": [
+						"The giant bombardier beetle has advantage on Dexterity ({@skill Stealth}) checks made while in it's natural terrain."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"A",
+				"S"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Piercer",
+			"source": "NightBelowIDC",
+			"page": 252,
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 22,
+				"formula": "3d8 + 9"
+			},
+			"speed": {
+				"walk": 5,
+				"climb": 5
+			},
+			"str": 10,
+			"dex": 13,
+			"con": 16,
+			"int": 1,
+			"wis": 7,
+			"cha": 3,
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 8,
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"While the piercer remains motionless on the ceiling, it is indistinguishable from a normal stalactite. Granting it advantage on the Drop action."
+					]
+				},
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The piercer can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Drop",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, one creature directly underneath the piercer. {@h}3 ({@damage 1d6}) piercing damage per 10 feet fallen, up to 21 ({@dice 6d6}). The piercer attaches to the target.   While attached, the target takes 2 ({@damage 1d4})  bludgeoning damage at the start of each of the piercer's turns.  A creature, including the target, can take its action to detach the piercer by succeeding on a {@dc 10} strength check.",
+						"Miss: The piercer takes half the normal falling damage for the distance fallen."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/piercer.mp3"
+			},
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Piercer",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Piercer",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Clinging to the ceilings of caverns and large subterranean passages, piercers blend in perfectly with natural rock, dropping in silence to impale unsuspecting foes on the ground below.",
+									"A piercer is the larval form of a roper, and the two creatures often attack in tandem. A rock-like shell encases a piercer's body, giving it the look and texture of a stalactite. That shell protects a soft, slug-like upper body that lets the piercer move across cavern walls and ceilings to position itself for prey. With its eye and mouth closed, the piercer is difficult to distinguish from ordinary rock formations.",
+									{
+										"name": "Patient Hunters",
+										"type": "entries",
+										"entries": [
+											"Piercers can see, but they can also respond to noise and heat, waiting for living creatures to pass beneath them, then falling to attack. A piercer that misses its chance to kill must make its slow way back to the ceiling. A fallen piercer excretes a foul-smelling slime when attacked, making most predators think twice about eating it.",
+											"Piercers gather in colonies to maximize the effectiveness of their attacks, dropping simultaneously to increase the odds of striking prey. After a piercer successfully slays a creature, the others slowly creep toward the corpse to join in the feast."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Piercer.webp"
+						}
+					}
+				]
+			},
+			"skill": {
+				"stealth": "+5"
+			},
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Giant Albino Eel",
+			"source": "NightBelowIDC",
+			"speed": {
+				"walk": 0,
+				"swim": 40
+			},
+			"skill": {
+				"perception": "+2",
+				"stealth": "+6"
+			},
+			"traitTags": [
+				"Water Breathing"
+			],
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "10d10 + 10",
+				"average": 65
+			},
+			"str": 19,
+			"dex": 14,
+			"con": 12,
+			"int": 1,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"blindsight 10 ft."
+			],
+			"passive": 12,
+			"cr": "3",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 10 ft., one creature. {@h}11 ({@damage 2d6 + 4}) piercing damage, and the target is {@condition grappled} (escape {@dc 14}). Until this grapple ends, the target is {@condition restrained} and takes an addition 7 ({@damage 1d6 + 4}) piercing damage at the start of the eels turn."
+					]
+				}
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MW",
+				"RCH"
+			],
+			"trait": [
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"The eel can breathe only underwater."
+					]
+				}
+			],
+			"token": {
+				"name": "Giant White Moray Eel",
+				"source": "GoS"
+			},
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Giant Catfish",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"formula": "5d10 + 10",
+				"average": 37
+			},
+			"speed": {
+				"swim": 40
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 15,
+			"int": 2,
+			"wis": 10,
+			"cha": 3,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 14,
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Water Breathing",
+					"entries": [
+						"The giant catfish can breathe only underwater."
+					]
+				},
+				{
+					"name": "Sensory Whiskers",
+					"entries": [
+						"In water the giant catfish effectively has blindsight 10 ft. and can sense and attack stealthed and {@condition invisible} targets with no penalty."
+					]
+				}
+			],
+			"traitTags": [
+				"Water Breathing"
+			],
+			"senseTags": [
+				"D"
+			],
+			"token": {
+				"name": "Fish",
+				"source": "GoS"
+			},
+			"skill": {
+				"perception": "+4",
+				"stealth": "+3"
+			},
+			"actionTags": [
+				"Swallow"
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage. If the target is a Medium or smaller creature {@condition grappled}  (escape {@dc 15}). Until this grapple ends, the target is {@condition restrained}, and the catfish can't bite another target. "
+					]
+				},
+				{
+					"name": "Swallow",
+					"entries": [
+						"The giant catfish can swallow a {@condition grappled} creature, that creature is swallowed, and the grapple ends. While swallowed, the creature is {@condition blinded} and {@condition restrained}, it has {@quickref Cover||3||total cover} against attacks and other effects outside the giant catfish, and it takes 3 ({@damage 1d6}) acid damage at the start of each of the giant catfish's turns. If the giant catfish takes 10 damage or more on a single turn from a creature inside it, the giant catfish must succeed on a {@dc 12} constitution saving throw at the end of that turn or regurgitate the swallowed creature, which fall {@condition prone} in a space within 10 feet of the giant catfish. If the giant catfish dies, a swallowed creature is no longer {@condition restrained} by it and can escape from the corpse using 10 feet of movement, exiting {@condition prone}."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"blinded",
+				"restrained"
+			],
+			"damageTags": [
+				"A",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Shilek",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human",
+					"support"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item +2 chain mail|xdmg}",
+						"{@item boots of levitation|xdmg}",
+						"{@item +2 sickle|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 27",
+				"average": 67
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 16,
+			"con": 16,
+			"int": 11,
+			"wis": 17,
+			"cha": 15,
+			"save": {
+				"wis": "+5",
+				"cha": "+4"
+			},
+			"skill": {
+				"deception": "+6",
+				"insight": "+5",
+				"stealth": "+5",
+				"religion": "+2",
+				"persuasion": "+4"
+			},
+			"passive": 13,
+			"languages": [
+				"Common"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Shilek",
+					"headerEntries": [
+						"Shilek casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell chill touch|XPHB}",
+						"{@spell light|XPHB}",
+						"{@spell resistance|XPHB}",
+						"{@spell thaumaturgy|XPHB}",
+						"{@spell toll the dead|XPHB}"
+					],
+					"spells": {
+						"1": {
+							"spells": [
+								"{@spell command|XPHB}",
+								"{@spell cure wounds|XPHB}",
+								"{@spell false life|XPHB}",
+								"{@spell inflict wounds|XPHB}",
+								"{@spell ray of sickness|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell aid|XPHB}",
+								"{@spell blindness/deafness|XPHB}",
+								"{@spell darkvision|XPHB}",
+								"{@spell hold person|XPHB}",
+								"{@spell silence|XPHB}",
+								"{@spell spiritual weapon|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell animate dead|XPHB}",
+								"{@spell speak with dead|XPHB}",
+								"{@spell vampiric touch|XPHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Touch of Death (1 use, Recharges on short rest)",
+					"entries": [
+						"When Shilek hits with a melee attack, she can deal 13 extra necrotic damage."
+					]
+				},
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When Shilek makes an attack, they have advantage on the attack roll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Sickle",
+					"entries": [
+						"{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d4 + 5}) Slashing damage."
+					]
+				},
+				{
+					"name": "Levitate",
+					"entries": [
+						"Shilek uses {@item boots of levitation|xdmg} to cast {@spell Levitate|xphb} on herself."
+					]
+				}
+			],
+			"attachedItems": [
+				"sickle|phb"
+			],
+			"languageTags": [
+				"C"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflictSpell": [
+				"deafened",
+				"paralyzed",
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"On each of her turns, Shilek can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				},
+				{
+					"name": "Bolster Necromancy (3/Day)",
+					"entries": [
+						"An undead creature of Shilek choice within 60 feet of her regains 15 ({@dice 3d4 + 8}) hit points."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"S"
+			],
+			"damageTagsSpell": [
+				"I",
+				"N",
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Imrin",
+			"isNpc": true,
+			"isNamedCreature": true,
+			"source": "NightBelowIDC",
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"human"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"hasFluff": true,
+			"size": [
+				"M"
+			],
+			"ac": [
+				{
+					"ac": 20,
+					"from": [
+						"{@item +1 chain mail|xdmg}",
+						"{@item +1 shield|xdmg}",
+						"{@item +1 mace|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 14",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 12,
+			"con": 14,
+			"int": 10,
+			"wis": 16,
+			"cha": 8,
+			"skill": {
+				"medicine": "+5",
+				"perception": "+5",
+				"survival": "+5",
+				"athletics": "+4"
+			},
+			"passive": 15,
+			"languages": [
+				"Common"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Imrin casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell chill touch|XPHB}",
+								"{@spell guidance|XPHB}",
+								"{@spell light|XPHB}",
+								"{@spell sacred flame|XPHB}",
+								"{@spell thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cause fear|XGE}",
+								"{@spell command|XPHB}",
+								"{@spell cure wounds|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell darkness|XPHB}",
+								"{@spell lesser restoration|XPHB}",
+								"{@spell silence|XPHB}",
+								"{@spell spiritual weapon|XPHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"attachedItems": [
+				"+1 mace|dmg"
+			],
+			"languageTags": [
+				"C"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"save": {
+				"cha": "+1",
+				"wis": "+5"
+			},
+			"trait": [
+				{
+					"name": "Touch of Death (1 use, Recharges on short rest).",
+					"entries": [
+						"When Imrin hits with a melee attack, she can deal 13 extra necrotic damage."
+					]
+				},
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When the Imrin makes an attack, they have advantage on the attack roll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Mace +1",
+					"entries": [
+						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) Magical Bludgeoning damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"reaction": [
+				{
+					"name": "Bolstering Pride.",
+					"entries": [
+						"When another creature within 60 feet of Imrin who can hear and understand them makes a saving throw, Imrin can give that creature advantage on the saving throw."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"On each of her turns, Imrin can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				}
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Ramor",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Human",
+					"Soldier"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"L",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +2 splint armor|xdmg}",
+						"{@item +2 longsword|xdmg}",
+						"{@item boots of speed|xdmg}",
+						"{@item potion of superior healing|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 17,
+			"dex": 11,
+			"con": 15,
+			"int": 8,
+			"wis": 9,
+			"cha": 12,
+			"passive": 9,
+			"cr": "3",
+			"save": {
+				"str": "+5",
+				"con": "+4"
+			},
+			"skill": {
+				"athletics": "+5",
+				"intimidation": "+3"
+			},
+			"trait": [
+				{
+					"name": "Exploit Opening (1/Day)",
+					"entries": [
+						"When Ramor makes an attack, they have advantage on the attack roll."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ramor makes two two-handed longsword attacks."
+					]
+				},
+				{
+					"name": "Longsword +2",
+					"entries": [
+						"{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d10 + 5}) Slashing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"+2 longsword|dmg"
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The swordsman adds 2 to its AC against one melee attack that would hit it. To do so, the swordsman must see the attacker and be wielding a melee weapon."
+					]
+				},
+				{
+					"name": "Trained Guard",
+					"entries": [
+						"When an ally that Ramor can see within 5 feet of them is hit by an attack, Ramor forces the attacker to reroll the attack and to instead target Ramor."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Potion of Superior (1 use)",
+					"entries": [
+						"You regain {@dice 8d4 + 8} Hit Points when you drink this potion. The potion's red liquid glimmers when agitated."
+					]
+				}
+			],
+			"damageTags": [
+				"S"
 			]
 		}
 	]
