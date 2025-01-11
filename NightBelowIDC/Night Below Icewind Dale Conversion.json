@@ -752,7 +752,7 @@
 				{
 					"name": "Relentless (1/turn)",
 					"entries": [
-						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orc drops to 1 hit point instead of 0 hit points."
 					]
 				}
 			],
@@ -852,7 +852,7 @@
 				{
 					"name": "Relentless (1/turn)",
 					"entries": [
-						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orc drops to 1 hit point instead of 0 hit points."
 					]
 				}
 			],
@@ -957,7 +957,7 @@
 				{
 					"name": "Relentless (1/turn)",
 					"entries": [
-						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the fury drops to 1 hit point instead of 0 hit points."
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orc  drops to 1 hit point instead of 0 hit points."
 					]
 				}
 			],
@@ -1004,7 +1004,7 @@
 				{
 					"name": "Sounder Leader's command",
 					"entries": [
-						"When a creature Raskovar can see within 30 feet of him fails an ability check or misses with an attack roll, that creature can reroll the check or attack, choosing either result."
+						"When a creature the Bloodskull Orc can see within 30 feet of him fails an ability check or misses with an attack roll, that creature can reroll the check or attack, choosing either result."
 					]
 				}
 			],
@@ -5666,6 +5666,796 @@
 					]
 				}
 			],
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Giant Cave Lizard",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 19,
+				"formula": "3d10 + 3"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"passive": 10,
+			"cr": "1/4",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage. Deals an additional {@damage 1d8} damage on a critical hit and is eligible to use Locked Jaw Thrash against the same target next round."
+					]
+				},
+				{
+					"name": "Locked Jaw Thrash",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target previously hit by Locked Jaw Thrash or eligible critical hit . {@h}10 ({@damage 2d8 + 2}) piercing damage. "
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"desert",
+				"forest",
+				"swamp",
+				"underdark"
+			],
+			"senseTags": [
+				"D"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The lizard can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Bloodskull Orog",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"orc",
+					"brute"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item plate armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 28",
+				"average": 59
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 18,
+			"int": 11,
+			"wis": 11,
+			"cha": 12,
+			"skill": {
+				"intimidation": "+5",
+				"survival": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The orog makes two greataxe attacks."
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Javelin",
+					"entries": [
+						"{@atk mw,rw} {@hit 6} to hit, reach 5 ft. or range 30/120 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"forest",
+				"grassland",
+				"hill",
+				"mountain",
+				"underdark"
+			],
+			"attachedItems": [
+				"greataxe|phb",
+				"javelin|phb"
+			],
+			"traitTags": [
+				"Aggressive"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"THW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"bonus": [
+				{
+					"name": "Healing Rally (1/Day)",
+					"entries": [
+						"The orog regains 10 hit points."
+					]
+				},
+				{
+					"name": "Aggressive Charge",
+					"entries": [
+						"As a bonus action, the orog can move up to its speed toward a hostile creature that it can see."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When the Bloodskull Orog isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orog drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"damageTags": [
+				"P",
+				"S"
+			]
+		},
+		{
+			"name": "Garundaryek Claw of Luthic",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"orc",
+					"support"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item hide armor|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 14",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 14,
+			"con": 14,
+			"int": 8,
+			"wis": 16,
+			"cha": 11,
+			"passive": 12,
+			"cr": "2",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"skill": {
+				"intimidation": "+2",
+				"medicine": "+5",
+				"survival": "+5"
+			},
+			"save": {
+				"wis": "+5"
+			},
+			"trait": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Garundaryek is a 5th-level spellcaster. Her spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). Garundaryek has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|XPHB}",
+								"{@spell mending|XPHB}",
+								"{@spell resistance|XPHB}",
+								"{@spell thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bane|XPHB}",
+								"{@spell cure wounds|XPHB}",
+								"{@spell guiding bolt|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury|XPHB}",
+								"{@spell warding bond|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell bestow curse|XPHB}",
+								"{@spell create food and water|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Garundaryek makes two claw attacks.",
+						"If she has fewer than half of its hit points remaining she can make four claw attacks.",
+						"She can forgo one attack to cast a spell."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"charisma",
+				"wisdom"
+			],
+			"miscTags": [
+				"MW"
+			]
+		},
+		{
+			"name": "Bloodskull Chief Ogurkek",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"orc",
+					"leader"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item +1 chain mail|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 48",
+				"average": 102
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 16,
+			"con": 18,
+			"int": 10,
+			"wis": 10,
+			"cha": 12,
+			"passive": 10,
+			"cr": "4",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"str": "+6",
+				"con": "+6"
+			},
+			"skill": {
+				"survival": "+2",
+				"intimidation": "+3",
+				"athletics": "+6"
+			},
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When Ogurkek isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, Ogurkek drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Ogurkek makes two great axe attacks."
+					]
+				},
+				{
+					"name": "Battleaxe +1",
+					"entries": [
+						"{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"+1 battleaxe|dmg"
+			],
+			"bonus": [
+				{
+					"name": "Healing Rally (1/Day)",
+					"entries": [
+						"The Ogurkek regains 10 hit points."
+					]
+				},
+				{
+					"name": "Aggressive Charge",
+					"entries": [
+						"As a bonus action, the Ogurkek can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Sounder Leader's command",
+					"entries": [
+						"When a creature Ogurkek can see within 30 feet of him fails an ability check or misses with an attack roll, that creature can reroll the check or attack, choosing either result."
+					]
+				}
+			],
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Bloodskull Eye of Gruumsh",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Support"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item ring mail|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "9d8 + 27",
+				"average": 67
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 14,
+			"cha": 12,
+			"passive": 12,
+			"cr": "3",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"religion": "+1",
+				"intimidation": "+3"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The orc is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). The orc has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|XPHB}",
+								"{@spell resistance|XPHB}",
+								"{@spell thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bless|XPHB}",
+								"{@spell command|XPHB}",
+								"{@spell cure wounds|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury|XPHB}",
+								"{@spell heat metal|XPHB}",
+								"{@spell spiritual weapon|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Eye of Gruumsh makes two Spear attacks or one attack and one spell."
+					]
+				},
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"MLW",
+				"THW"
+			],
+			"attachedItems": [
+				"spear|phb"
+			],
+			"trait": [
+				{
+					"name": "Gruumsh's Fury",
+					"entries": [
+						"The orc deals an extra 4 ({@damage 1d8}) damage when it hits with a weapon attack (included in the attacks)."
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive"
+			],
+			"bonus": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Rallying Chant (1/Day)",
+					"entries": [
+						"The Eye of Gruumsh and up to three allies within 60 feet of them who can hear them regain 20 hit points, and these creatures ignore difficult terrain for 1 minute."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Snagger",
+			"source": "NightBelowIDC",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"X",
+				"D"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "dwarf",
+						"prefix": "Mountain"
+					}
+				]
+			},
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +1 chain mail|xdmg}",
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "3d8 + 6",
+				"average": 19
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 17,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 11,
+			"cha": 13,
+			"skill": {
+				"perception": "+4",
+				"nature": "+4",
+				"stealth": "+2",
+				"survival": "+2",
+				"athletics": "+5"
+			},
+			"passive": 14,
+			"languages": [
+				"any one language (usually Common)",
+				"Dwarvish"
+			],
+			"trait": [
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"The dwarf has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or sight."
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"The battlehammer dwarf has advantage on saving throws against poison, and has resistance against poison damage."
+					]
+				},
+				{
+					"name": "Warrior Sidekick (Attacker)",
+					"entries": [
+						"Snagger gains a +2 bonus to all attack rolls."
+					]
+				},
+				{
+					"name": "Improved Critical",
+					"entries": [
+						"Snagger's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dwarf makes two melee attacks or two ranged attacks."
+					]
+				},
+				{
+					"name": "+1 Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit +8} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 battleaxe|dmg"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"resist": [
+				"poison"
+			],
+			"token": {
+				"name": "Battlehammer Dwarf",
+				"source": "IDRotF"
+			},
+			"save": {
+				"con": "+4"
+			},
+			"bonus": [
+				{
+					"name": "Second Wind",
+					"entries": [
+						"Snagger can use a bonus action on its turn to regain hit points equal to {@dice 1d10} + its level in this class. Once it uses this feature, it must finish a short or long rest before it can use it again."
+					]
+				}
+			],
+			"level": 3,
+			"cr": "1/2",
 			"damageTags": [
 				"S"
 			]
