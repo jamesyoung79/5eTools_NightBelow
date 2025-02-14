@@ -165,6 +165,10 @@
 				"RA",
 				"MA"
 			],
+			"isNpc": true,
+			"group": [
+				"Arcane Brotherhood"
+			],
 			"damageTags": [
 				"N"
 			],
@@ -326,6 +330,7 @@
 				"+1 longsword|dmg",
 				"shortbow|phb"
 			],
+			"isNpc": true,
 			"damageTags": [
 				"S"
 			],
@@ -485,6 +490,7 @@
 			"conditionInflict": [
 				"prone"
 			],
+			"isNpc": true,
 			"damageTags": [
 				"B",
 				"P"
@@ -683,6 +689,7 @@
 					]
 				}
 			],
+			"isNpc": true,
 			"savingThrowForcedSpell": [
 				"wisdom"
 			]
@@ -696,7 +703,7 @@
 				"type": "humanoid",
 				"tags": [
 					"Orc",
-					"Brute"
+					"Soldier"
 				]
 			},
 			"source": "NightBelowIDC",
@@ -719,6 +726,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 16,
 			"dex": 12,
@@ -785,6 +795,9 @@
 						"The Bloodskull Orc regains 5 hit points."
 					]
 				}
+			],
+			"group": [
+				"Bloodskull Orc"
 			]
 		},
 		{
@@ -819,6 +832,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 15,
 			"dex": 12,
@@ -889,6 +905,9 @@
 			"savingThrowForcedLegendary": [
 				"charisma"
 			],
+			"group": [
+				"Bloodskull Orcs"
+			],
 			"damageTags": [
 				"P"
 			]
@@ -924,6 +943,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 16,
 			"dex": 14,
@@ -1008,6 +1030,9 @@
 					]
 				}
 			],
+			"group": [
+				"Bloodskull Orcs"
+			],
 			"damageTags": [
 				"P"
 			]
@@ -1038,11 +1063,14 @@
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "5d8 + 10",
+				"average": 32
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 15,
 			"dex": 12,
@@ -1112,6 +1140,9 @@
 						"When the Carlanis is grappling a target and is hit by a ranged attack made by another creature he can see, the brawler gains a +2 bonus to AC against the triggering attack. If this bonus causes the attack to miss the brawler, it hits the {@condition grappled} target instead."
 					]
 				}
+			],
+			"group": [
+				"Broken Spire Bandits"
 			],
 			"damageTags": [
 				"B"
@@ -1197,7 +1228,6 @@
 				"MLW",
 				"RW"
 			],
-			"hasFluff": true,
 			"trait": [
 				{
 					"name": "Exploit Opening (1/Day)",
@@ -1206,10 +1236,9 @@
 					]
 				}
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
+			"group": [
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"S"
 			]
@@ -1243,8 +1272,8 @@
 				}
 			],
 			"hp": {
-				"formula": "5d8 + 5",
-				"average": 27
+				"formula": "4d8 + 4",
+				"average": 22
 			},
 			"speed": {
 				"walk": 30
@@ -1262,7 +1291,7 @@
 			"cr": "1/4",
 			"action": [
 				{
-					"name": "dagger",
+					"name": "Dagger",
 					"entries": [
 						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}3({@damage 1d4 + 1}) slashing damage."
 					]
@@ -1294,19 +1323,23 @@
 				"MLW",
 				"RW"
 			],
-			"hasFluff": true,
 			"trait": [
 				{
 					"name": "Exploit Opening (1/Day)",
 					"entries": [
 						"When the bandit makes an attack, they have advantage on the attack roll."
 					]
+				},
+				{
+					"name": "Careful Withdraw",
+					"entries": [
+						"The bandit archer can move up to half their speed without provoking opportunity attacks."
+					]
 				}
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			}
+			"group": [
+				"Broken Spire Bandits"
+			]
 		},
 		{
 			"name": "Frost Goblin Warrior",
@@ -1341,6 +1374,9 @@
 			"speed": {
 				"walk": 30
 			},
+			"initiative": {
+				"proficiency": 1
+			},
 			"str": 10,
 			"dex": 14,
 			"con": 12,
@@ -1361,14 +1397,6 @@
 				"Goblin"
 			],
 			"cr": "1/4",
-			"trait": [
-				{
-					"name": "Nimble Escape",
-					"entries": [
-						"The goblin can take the Disengage or Hide action as a bonus action on each of its turns."
-					]
-				}
-			],
 			"environment": [
 				"arctic"
 			],
@@ -1379,8 +1407,6 @@
 				"C",
 				"GO"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"resist": [
 				"cold"
 			],
@@ -1404,10 +1430,22 @@
 					]
 				}
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			}
+			"bonus": [
+				{
+					"name": "Stealthy",
+					"entries": [
+						"The goblin can take the Hide action as a bonus action on each of its turns."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Crafty",
+					"entries": [
+						"The goblin doesn't provoke opportunity attacks."
+					]
+				}
+			]
 		},
 		{
 			"name": "Frost Goblin Fodder",
@@ -1436,11 +1474,14 @@
 				}
 			],
 			"hp": {
-				"formula": "2d6 + 2",
-				"average": 9
+				"formula": "2 + 4 + 1",
+				"average": 7
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 10,
 			"dex": 13,
@@ -1463,7 +1504,7 @@
 				{
 					"name": "Crafty",
 					"entries": [
-						"The Frost Goblin Warrior doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+						"The goblin doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
 					]
 				},
 				{
@@ -1486,8 +1527,6 @@
 				"C",
 				"GO"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"cr": {
 				"cr": "1/4",
 				"xp": 10
@@ -1510,10 +1549,6 @@
 			"environment": [
 				"arctic"
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"damageTags": [
 				"S"
 			]
@@ -1544,11 +1579,14 @@
 				}
 			],
 			"hp": {
-				"formula": "10d6 + 20",
-				"average": 55
+				"formula": "7d6 + 14",
+				"average": 38
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 14,
 			"dex": 14,
@@ -1574,7 +1612,7 @@
 				{
 					"name": "Crafty",
 					"entries": [
-						"The Frost Goblin Brute doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+						"The goblin doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
 					]
 				},
 				{
@@ -1591,8 +1629,6 @@
 				"C",
 				"GO"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"action": [
 				{
 					"name": "Great Axe",
@@ -1614,11 +1650,7 @@
 			],
 			"environment": [
 				"arctic"
-			],
-			"token": {
-				"name": "",
-				"source": ""
-			}
+			]
 		},
 		{
 			"name": "Frost Goblin Boss",
@@ -1653,6 +1685,9 @@
 			"speed": {
 				"walk": 30
 			},
+			"initiative": {
+				"proficiency": 2
+			},
 			"str": 10,
 			"dex": 16,
 			"con": 12,
@@ -1678,7 +1713,7 @@
 				{
 					"name": "Crafty",
 					"entries": [
-						"The Frost Goblin Boss doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
+						"The goblin doesn’t provoke opportunity attacks when they move through or out of an enemy’s reach."
 					]
 				}
 			],
@@ -1720,8 +1755,6 @@
 				"C",
 				"GO"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"miscTags": [
 				"RW",
 				"MW"
@@ -1731,11 +1764,7 @@
 			],
 			"environment": [
 				"arctic"
-			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			}
+			]
 		},
 		{
 			"name": "Frost Goblin Shaman",
@@ -1763,12 +1792,15 @@
 				}
 			],
 			"hp": {
-				"formula": "14d6 + 14",
-				"average": 63
+				"formula": "12d6 + 12",
+				"average": 54
 			},
 			"speed": {
 				"walk": 30,
 				"climb": 20
+			},
+			"initiative": {
+				"proficiency": 2
 			},
 			"str": 10,
 			"dex": 16,
@@ -1845,15 +1877,9 @@
 			"conditionInflictSpell": [
 				"restrained"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"environment": [
 				"arctic"
 			],
-			"tokenHref": {
-				"type": "internal",
-				"path": ""
-			},
 			"resist": [
 				"cold"
 			],
@@ -1861,7 +1887,7 @@
 				{
 					"name": "Crafty",
 					"entries": [
-						"The Frost Goblin Shaman doesn't provoke opportunity attacks when they move through or out of an enemy's reach."
+						"The goblin doesn't provoke opportunity attacks."
 					]
 				}
 			],
@@ -1957,6 +1983,9 @@
 			"speed": {
 				"walk": 40
 			},
+			"initiative": {
+				"proficiency": 1
+			},
 			"str": 19,
 			"dex": 8,
 			"con": 16,
@@ -2016,12 +2045,6 @@
 				"C",
 				"GI"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"actionTags": [
 				"Multiattack"
 			],
@@ -2089,6 +2112,9 @@
 			},
 			"speed": {
 				"walk": 40
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 19,
 			"dex": 10,
@@ -2214,6 +2240,9 @@
 			"speed": {
 				"walk": 40
 			},
+			"initiative": {
+				"proficiency": 2
+			},
 			"str": 17,
 			"dex": 14,
 			"con": 14,
@@ -2272,10 +2301,6 @@
 			"conditionInflict": [
 				"prone"
 			],
-			"token": {
-				"name": "Saber-Toothed Tiger",
-				"source": "MM"
-			},
 			"bonus": [
 				{
 					"name": "Sneak",
@@ -2328,6 +2353,9 @@
 					"number": 30,
 					"condition": "(fly 40 ft., swim 30 ft. in swam form)"
 				}
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 12,
 			"dex": 16,
@@ -2412,10 +2440,6 @@
 			],
 			"hasFluff": true,
 			"hasFluffImages": true,
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"fluff": {
 				"entries": [
 					"Swanmays are an enigmatic order of women, known for their unique ability to transform between human and swan forms. Swanmays gain their shape-shifting powers through magical tokens, often a cloak of swan feathers. These tokens are vital to their transformation, and without them, a swanmay loses her ability to change shape and becomes vulnerable, sometimes even fatally so if the cloak is destroyed. This dependency makes swanmays fiercely protective of their cloaks, and they may go to great lengths to recover them if stolen.",
@@ -2531,6 +2555,9 @@
 					"condition": "(40 ft., climb 30 ft. in bear or hybrid form)"
 				}
 			},
+			"initiative": {
+				"proficiency": 1
+			},
 			"str": 19,
 			"dex": 10,
 			"con": 17,
@@ -2633,23 +2660,6 @@
 				"CUR",
 				"MLW"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://5e.tools/img/bestiary/MM/Werebear.webp"
-						}
-					}
-				]
-			},
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"damageTags": [
 				"P",
 				"S"
@@ -2693,6 +2703,9 @@
 					"number": 60,
 					"condition": "with Wings of Flying"
 				}
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 17,
 			"dex": 16,
@@ -2840,6 +2853,10 @@
 				}
 			],
 			"isNamedCreature": true,
+			"group": [
+				"Villians",
+				"Broken Spire Bandits"
+			],
 			"damageTagsSpell": [
 				"N",
 				"O",
@@ -2943,11 +2960,6 @@
 				"RW",
 				"RNG"
 			],
-			"hasFluff": true,
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"reaction": [
 				{
 					"name": "Parry",
@@ -2963,6 +2975,9 @@
 						"When the bandit makes an attack, they have advantage on the attack roll."
 					]
 				}
+			],
+			"group": [
+				"Broken Spire Bandits"
 			],
 			"damageTags": [
 				"P",
@@ -2999,6 +3014,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 10,
 			"dex": 16,
@@ -3055,7 +3073,6 @@
 				"RA",
 				"RNG"
 			],
-			"hasFluffImages": true,
 			"resist": [
 				{
 					"resist": [
@@ -3073,10 +3090,6 @@
 					]
 				}
 			],
-			"tokenHref": {
-				"type": "internal",
-				"path": ""
-			},
 			"damageTags": [
 				"P"
 			]
@@ -3101,10 +3114,14 @@
 				13
 			],
 			"hp": {
-				"special": "6"
+				"formula": "2 + 4 + 1",
+				"average": 7
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 10,
 			"dex": 14,
@@ -3160,7 +3177,6 @@
 				"RA",
 				"RNG"
 			],
-			"hasFluffImages": true,
 			"trait": [
 				{
 					"name": "Skeletal Resilience",
@@ -3184,10 +3200,6 @@
 					"preNote": "non-magical"
 				}
 			],
-			"tokenHref": {
-				"type": "internal",
-				"path": ""
-			},
 			"cr": {
 				"cr": "1/4",
 				"xp": 10
@@ -3211,6 +3223,10 @@
 						"tag": "Human",
 						"prefix": "Illuskan"
 					}
+				],
+				"sidekickType": "spellcaster",
+				"sidekickTags": [
+					"healer"
 				]
 			},
 			"alignment": [
@@ -3219,16 +3235,24 @@
 			],
 			"ac": [
 				{
-					"ac": 17,
+					"ac": 14,
 					"from": [
 						"{@item chain shirt|xphb}",
-						"{@item shield|PHB}"
+						"{@item +1 battleaxe|xdmg}"
 					]
+				},
+				{
+					"ac": 16,
+					"from": [
+						"{@item shield|xphb}"
+					],
+					"condition": "equipped",
+					"braces": true
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 8",
-				"average": 26
+				"formula": "5d8 + 10",
+				"average": 32
 			},
 			"speed": {
 				"walk": 30
@@ -3253,18 +3277,25 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Lyntern makes two Longsword attacks."
+						"Lyntern makes two battleaxe or short bow attacks."
 					]
 				},
 				{
-					"name": "Longsword",
+					"name": "+1 Battleaxe",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h} 5 ({@damage 1d8 + 1}) slashing damage, or  6 ({@damage 1d10 + 1}) slashing damage if used with two hands."
+						"{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
+					]
+				},
+				{
+					"name": "Shortbow",
+					"entries": [
+						"{@atk rw} {@hit +3} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
 					]
 				}
 			],
 			"attachedItems": [
-				"longsword|phb"
+				"+1 battleaxe|dmg",
+				"shortbow|phb"
 			],
 			"actionTags": [
 				"Multiattack"
@@ -3274,9 +3305,10 @@
 			],
 			"miscTags": [
 				"MW",
-				"MLW"
+				"MLW",
+				"RW",
+				"RNG"
 			],
-			"hasFluff": true,
 			"trait": [
 				{
 					"name": "Adventurous Spirit",
@@ -3303,9 +3335,11 @@
 						},
 						"1": {
 							"spells": [
-								"{@spell cure wounds|XPHB}"
+								"{@spell bless|XPHB}",
+								"{@spell cure wounds|XPHB}",
+								"{@spell sanctuary|XPHB}"
 							],
-							"slots": 2
+							"slots": 3
 						}
 					},
 					"ability": "wis",
@@ -3315,14 +3349,15 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"cr": "1/2",
-			"level": 2,
+			"level": 3,
+			"isNpc": true,
 			"damageTags": [
+				"P",
 				"S"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
 			]
 		},
 		{
@@ -3359,6 +3394,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 10,
 			"dex": 14,
@@ -3405,7 +3443,6 @@
 				"MLW",
 				"RW"
 			],
-			"hasFluff": true,
 			"trait": [
 				{
 					"name": "Exploit Opening (1/Day).",
@@ -3428,10 +3465,9 @@
 					]
 				}
 			],
-			"tokenHref": {
-				"type": "internal",
-				"path": ""
-			},
+			"group": [
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -3442,7 +3478,7 @@
 			"size": [
 				"M"
 			],
-			"type": "aberration",
+			"type": "beast",
 			"source": "NightBelowIDC",
 			"alignment": [
 				"U"
@@ -3461,6 +3497,9 @@
 			},
 			"speed": {
 				"walk": 35
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 12,
 			"dex": 15,
@@ -3506,9 +3545,6 @@
 				"Keen Senses",
 				"Pack Tactics"
 			],
-			"actionTags": [
-				"Swallow"
-			],
 			"action": [
 				{
 					"name": "Bite",
@@ -3522,6 +3558,9 @@
 			],
 			"conditionInflict": [
 				"prone"
+			],
+			"group": [
+				"Broken Spire Bandits"
 			],
 			"damageTags": [
 				"P"
@@ -3558,11 +3597,14 @@
 				}
 			],
 			"hp": {
-				"formula": "10d8 + 20",
-				"average": 65
+				"formula": "8d8 + 16",
+				"average": 52
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 2
 			},
 			"str": 14,
 			"dex": 18,
@@ -3648,7 +3690,10 @@
 				"+1 scimitar|dmg",
 				"shortbow|phb"
 			],
-			"isNpc": true,
+			"group": [
+				"Villains",
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -3680,11 +3725,14 @@
 				}
 			],
 			"hp": {
-				"formula": "10d8 + 30",
-				"average": 75
+				"formula": "8d8 + 24",
+				"average": 60
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 2
 			},
 			"str": 10,
 			"dex": 17,
@@ -3772,6 +3820,10 @@
 				}
 			],
 			"isNpc": true,
+			"group": [
+				"Villians",
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -3803,15 +3855,18 @@
 				}
 			],
 			"hp": {
-				"average": 65,
-				"formula": "10d8 + 20"
+				"formula": "11d8 + 33",
+				"average": 82
 			},
 			"speed": {
 				"walk": 30
 			},
+			"initiative": {
+				"proficiency": 1
+			},
 			"str": 16,
 			"dex": 13,
-			"con": 15,
+			"con": 16,
 			"int": 12,
 			"wis": 13,
 			"cha": 16,
@@ -3847,19 +3902,20 @@
 				{
 					"name": "Longsword",
 					"entries": [
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage."
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage plus 4 ({@damage 1d8}) Necrotic damage."
 					]
 				},
 				{
 					"name": "Heavy Crossbow",
 					"entries": [
-						"{@atk rw} {@hit 3} to hit, range 100/400 ft., one target. {@h}6 ({@damage 1d10 + 1}) piercing damage."
+						"{@atk rw} {@hit 3} to hit, range 100/400 ft., one target. {@h}6 ({@damage 1d10 + 1}) piercing damage plus 4 ({@damage 1d8}) Necrotic damage.."
 					]
 				},
 				{
-					"name": "Vitality Theft",
+					"name": "Life Drain",
 					"entries": [
-						"{@atk ms} {@hit 5} to hit, reach 5 ft., one creature. {@h}9 ({@damage 2d8}) necrotic damage, and the wight regains a number of hit points equal to half the damage dealt. Until the start of the wight's next turn, the target has disadvantage on attack rolls made against creatures other than the wight."
+						"{@actSave con} {@dc 13}, one creature within 5 feet. {@actSaveFail} 9 ({@damage 2d8}) Necrotic damage, and the target's Hit Point maximum decreases by an amount equal to the damage taken. Until the start of the wight's next turn, the target has disadvantage on attack rolls made against creatures other than the wight.",
+						"A Humanoid slain by this attack rises 24 hours later as a Zombie under the wight's control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time."
 					]
 				}
 			],
@@ -3888,96 +3944,23 @@
 				"MW",
 				"MLW",
 				"RW",
-				"RNG",
-				"MA"
+				"RNG"
+			],
+			"trait": [
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the wight has Disadvantage on ability checks and attack rolls."
+					]
+				}
+			],
+			"traitTags": [
+				"Sunlight Sensitivity"
 			],
 			"damageTags": [
 				"N",
 				"P",
 				"S"
-			]
-		},
-		{
-			"name": "Wight",
-			"source": "NightBelowIDC",
-			"size": [
-				"M"
-			],
-			"type": {
-				"type": "undead",
-				"tags": [
-					"Minion"
-				]
-			},
-			"alignment": [
-				"N",
-				"E"
-			],
-			"alignmentPrefix": "typically ",
-			"ac": [
-				{
-					"ac": 14,
-					"from": [
-						"natural armor"
-					]
-				}
-			],
-			"hp": {
-				"special": "10"
-			},
-			"speed": {
-				"walk": 30
-			},
-			"str": 14,
-			"dex": 13,
-			"con": 14,
-			"int": 12,
-			"wis": 12,
-			"cha": 15,
-			"senses": [
-				"darkvision 60 ft."
-			],
-			"passive": 11,
-			"immune": [
-				"poison"
-			],
-			"conditionImmune": [
-				"poisoned"
-			],
-			"languages": [
-				"the languages they knew in life"
-			],
-			"cr": {
-				"cr": "3",
-				"xp": 140
-			},
-			"trait": [
-				{
-					"name": "Minion",
-					"entries": [
-						"If the siphoner takes damage from an attack or as the result of a failed saving throw, their hit points are reduced to 0. If the siphoner takes damage from another effect, they die if the damage equals or exceeds their hit point maximum; otherwise they take no damage."
-					]
-				}
-			],
-			"action": [
-				{
-					"name": "Grasping Resurrection (Group Attack)",
-					"entries": [
-						"{@atk ms} {@hit 4} to hit, reach 5 ft., one target. {@h}3 necrotic damage. If three or more siphoners joined the attack, they can restore the remains of a destroyed Undead minion within 15 feet of the target. That Undead minion returns to life with all their hit points. If five or more siphoners joined the group attack, they can either choose to increase the range of this effect from 15 to 30 feet or to restore two Undead minions instead of one."
-					]
-				}
-			],
-			"senseTags": [
-				"D"
-			],
-			"languageTags": [
-				"LF"
-			],
-			"miscTags": [
-				"MA"
-			],
-			"damageTags": [
-				"N"
 			]
 		},
 		{
@@ -4007,10 +3990,14 @@
 				}
 			],
 			"hp": {
-				"special": "10"
+				"formula": "2 + 12 + 2",
+				"average": 16
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 14,
 			"dex": 13,
@@ -4090,6 +4077,9 @@
 			"speed": {
 				"walk": 20
 			},
+			"initiative": {
+				"proficiency": 1
+			},
 			"str": 15,
 			"dex": 6,
 			"con": 16,
@@ -4151,6 +4141,9 @@
 			],
 			"miscTags": [
 				"MW"
+			],
+			"group": [
+				"Broken Spire Bandits"
 			]
 		},
 		{
@@ -4184,6 +4177,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 2
 			},
 			"str": 10,
 			"dex": 18,
@@ -4249,9 +4245,12 @@
 				"THW"
 			],
 			"cr": "2",
-			"isNpc": true,
 			"attachedItems": [
 				"dagger|phb"
+			],
+			"group": [
+				"Villians",
+				"Broken Spire Bandits"
 			],
 			"damageTags": [
 				"P"
@@ -4276,6 +4275,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 7,
 			"dex": 15,
@@ -4326,14 +4328,9 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluffImages": true,
 			"skill": {
 				"stealth": "+4",
 				"survival": "+2"
-			},
-			"tokenHref": {
-				"type": "external",
-				"url": ""
 			},
 			"damageTags": [
 				"P"
@@ -4367,6 +4364,9 @@
 			"speed": {
 				"walk": 30,
 				"climb": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 14,
 			"dex": 13,
@@ -4439,41 +4439,6 @@
 				"paralyzed",
 				"poisoned"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"fluff": {
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									"Carrion crawlers scour putrid flesh from carcasses and gobble the slimy bones that remain. They aggressively attack any creature that trespasses on their territory or disturbs their feasting.",
-									{
-										"name": "Carrion Eaters",
-										"type": "entries",
-										"entries": [
-											"A carrion crawler follows the scent of death to its food, but it prefers not to compete with other scavengers. These foul creatures thus hunker down in territories where death is plentiful and other carrion eaters have limited mobility. Caves, sewers, dungeons, and forested marshes are their favored lairs, but carrion crawlers are also drawn to battlefields and cemeteries. A carrion crawler roams on the hunt, its tentacles probing the air for the scent of blood or decay. In tunnels or ruins, carrion crawlers scurry across the ceiling as they move toward food. In this way, they avoid contact with oozes, otyughs, and other dangerous inhabitants of the darkness, even as they surprise potential meals that don't think to look up."
-										]
-									},
-									{
-										"name": "Patient Predators",
-										"type": "entries",
-										"entries": [
-											"Whether in subterranean darkness or while hunting at night, light signals a potential meal. A carrion crawler might follow a light source from a distance for hours, hoping to pick up the scent of blood. Despite their great size, carrion crawlers can also easily set up ambushes by waiting around blind corners for prey to come to them. When facing potential prey or intruders, a carrion crawler lets its poison do the work. Once a victim goes rigid with paralysis, the carrion crawler wraps it with its tentacles and drags it away to a high ledge or isolated passageway, where it can be killed safely. The monster then resumes patrolling its territory while waiting for its meal to ripen."
-										]
-									}
-								]
-							}
-						]
-					}
-				]
-			},
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"damageTags": [
 				"I",
 				"P"
@@ -4507,6 +4472,9 @@
 					"condition": "(hover)"
 				},
 				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 6,
 			"dex": 16,
@@ -4589,23 +4557,6 @@
 			"languageTags": [
 				"LF"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"fluff": {
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "external",
-							"url": "https://5e.tools/img/bestiary/MM/Wraith.webp"
-						}
-					}
-				]
-			},
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"reaction": [
 				{
 					"name": "Denied Vitality.",
@@ -4636,8 +4587,11 @@
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					"Illuskan",
-					"human"
+					{
+						"tag": "human",
+						"prefix": "Illuskan"
+					},
+					"Sidekick"
 				]
 			},
 			"alignment": [
@@ -4646,11 +4600,18 @@
 			],
 			"ac": [
 				{
-					"ac": 17,
+					"ac": 14,
 					"from": [
-						"{@item chain shirt|xphb}",
-						"{@item shield|PHB}"
+						"{@item chain shirt|xphb}"
 					]
+				},
+				{
+					"ac": 16,
+					"from": [
+						"{@item shield|PHB}"
+					],
+					"condition": "equiped",
+					"braces": true
 				}
 			],
 			"hp": {
@@ -4702,7 +4663,6 @@
 				"MW",
 				"MLW"
 			],
-			"hasFluff": true,
 			"trait": [
 				{
 					"name": "Adventurous Spirit",
@@ -4711,10 +4671,7 @@
 					]
 				}
 			],
-			"token": {
-				"name": "",
-				"source": ""
-			},
+			"isNpc": true,
 			"damageTags": [
 				"S"
 			]
@@ -4729,8 +4686,18 @@
 			"type": {
 				"type": "humanoid",
 				"tags": [
-					"Illuskan",
-					"Human"
+					{
+						"tag": "Human",
+						"prefix": "Illuskan"
+					},
+					{
+						"tag": "Warrior",
+						"prefix": "Sidekick"
+					}
+				],
+				"sidekickType": "warrior",
+				"sidekickTags": [
+					"attacker"
 				]
 			},
 			"alignment": [
@@ -4739,16 +4706,24 @@
 			],
 			"ac": [
 				{
-					"ac": 17,
+					"ac": 14,
 					"from": [
 						"{@item chain shirt|xphb}",
-						"{@item shield|PHB}"
+						"{@item +1 longsword|xdmg}"
 					]
+				},
+				{
+					"ac": 16,
+					"from": [
+						"{@item shield|xphb}"
+					],
+					"condition": "equipped",
+					"braces": true
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 8",
-				"average": 26
+				"formula": "5d8 + 10",
+				"average": 32
 			},
 			"speed": {
 				"walk": 30
@@ -4801,7 +4776,6 @@
 				"RW",
 				"RNG"
 			],
-			"hasFluff": true,
 			"cr": "1/2",
 			"save": {
 				"dex": "+3"
@@ -4814,7 +4788,7 @@
 					]
 				}
 			],
-			"level": 2,
+			"level": 3,
 			"attachedItems": [
 				"+1 longsword|dmg",
 				"longbow|phb"
@@ -4827,10 +4801,7 @@
 					]
 				}
 			],
-			"token": {
-				"name": "",
-				"source": ""
-			},
+			"isNpc": true,
 			"damageTags": [
 				"P",
 				"S"
@@ -4860,6 +4831,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 8,
 			"dex": 10,
@@ -4900,8 +4874,6 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"trait": [
 				{
 					"name": "Camouflage",
@@ -4910,10 +4882,6 @@
 					]
 				}
 			],
-			"token": {
-				"name": "",
-				"source": ""
-			},
 			"damageTags": [
 				"A",
 				"S"
@@ -4925,7 +4893,6 @@
 		{
 			"name": "Piercer",
 			"source": "NightBelowIDC",
-			"page": 252,
 			"size": [
 				"M"
 			],
@@ -4948,6 +4915,9 @@
 			"speed": {
 				"walk": 5,
 				"climb": 5
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 10,
 			"dex": 13,
@@ -4977,10 +4947,15 @@
 			],
 			"action": [
 				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit +3}, reach 5 ft. {@h}5 ({@damage  1d8}) Piercing damage."
+					]
+				},
+				{
 					"name": "Drop",
 					"entries": [
-						"{@atk mw} {@hit 3} to hit, one creature directly underneath the piercer. {@h}3 ({@damage 1d6}) piercing damage per 10 feet fallen, up to 21 ({@dice 6d6}). The piercer attaches to the target.   While attached, the target takes 2 ({@damage 1d4})  bludgeoning damage at the start of each of the piercer's turns.  A creature, including the target, can take its action to detach the piercer by succeeding on a {@dc 10} strength check.",
-						"Miss: The piercer takes half the normal falling damage for the distance fallen."
+						"The piercer falls. {@actSave dex} {@dc 11}, one creature directly underneath the piercer. {@actSaveFail} 10 ({@damage 3d6}) Piercing damage. {@actSaveSuccessOrFail} The piercer reduces any damage it takes from the fall by 20."
 					]
 				}
 			],
@@ -4999,53 +4974,12 @@
 				"B",
 				"D"
 			],
-			"miscTags": [
-				"MW"
-			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"token": {
-				"name": "Piercer",
-				"source": "MM"
-			},
-			"fluff": {
-				"name": "Piercer",
-				"source": "MM",
-				"entries": [
-					{
-						"type": "entries",
-						"entries": [
-							{
-								"type": "entries",
-								"entries": [
-									"Clinging to the ceilings of caverns and large subterranean passages, piercers blend in perfectly with natural rock, dropping in silence to impale unsuspecting foes on the ground below.",
-									"A piercer is the larval form of a roper, and the two creatures often attack in tandem. A rock-like shell encases a piercer's body, giving it the look and texture of a stalactite. That shell protects a soft, slug-like upper body that lets the piercer move across cavern walls and ceilings to position itself for prey. With its eye and mouth closed, the piercer is difficult to distinguish from ordinary rock formations.",
-									{
-										"name": "Patient Hunters",
-										"type": "entries",
-										"entries": [
-											"Piercers can see, but they can also respond to noise and heat, waiting for living creatures to pass beneath them, then falling to attack. A piercer that misses its chance to kill must make its slow way back to the ceiling. A fallen piercer excretes a foul-smelling slime when attacked, making most predators think twice about eating it.",
-											"Piercers gather in colonies to maximize the effectiveness of their attacks, dropping simultaneously to increase the odds of striking prey. After a piercer successfully slays a creature, the others slowly creep toward the corpse to join in the feast."
-										]
-									}
-								]
-							}
-						]
-					}
-				],
-				"images": [
-					{
-						"type": "image",
-						"href": {
-							"type": "internal",
-							"path": "bestiary/MM/Piercer.webp"
-						}
-					}
-				]
-			},
 			"skill": {
 				"stealth": "+5"
 			},
+			"miscTags": [
+				"MW"
+			],
 			"damageTags": [
 				"P"
 			]
@@ -5077,6 +5011,9 @@
 			"hp": {
 				"formula": "10d10 + 10",
 				"average": 65
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 19,
 			"dex": 14,
@@ -5112,10 +5049,6 @@
 					]
 				}
 			],
-			"token": {
-				"name": "Giant White Moray Eel",
-				"source": "GoS"
-			},
 			"conditionInflict": [
 				"grappled",
 				"restrained"
@@ -5143,6 +5076,9 @@
 			},
 			"speed": {
 				"swim": 40
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 17,
 			"dex": 12,
@@ -5175,10 +5111,6 @@
 			"senseTags": [
 				"D"
 			],
-			"token": {
-				"name": "Fish",
-				"source": "GoS"
-			},
 			"skill": {
 				"perception": "+4",
 				"stealth": "+3"
@@ -5250,6 +5182,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 16,
 			"dex": 16,
@@ -5367,8 +5302,6 @@
 				"paralyzed",
 				"prone"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
 			"bonus": [
 				{
 					"name": "Cunning Action",
@@ -5383,10 +5316,10 @@
 					]
 				}
 			],
-			"token": {
-				"name": "",
-				"source": ""
-			},
+			"group": [
+				"Villians",
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"S"
 			],
@@ -5435,6 +5368,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 14,
 			"dex": 12,
@@ -5530,10 +5466,6 @@
 				"MW",
 				"MLW"
 			],
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"reaction": [
 				{
 					"name": "Bolstering Pride.",
@@ -5549,6 +5481,9 @@
 						"On each of her turns, Imrin can use a bonus action to take the Dash, Disengage, or Hide action."
 					]
 				}
+			],
+			"group": [
+				"Broken Spire Bandits"
 			],
 			"damageTagsSpell": [
 				"N",
@@ -5594,6 +5529,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 17,
 			"dex": 11,
@@ -5666,6 +5604,10 @@
 					]
 				}
 			],
+			"group": [
+				"Villians",
+				"Broken Spire Bandits"
+			],
 			"damageTags": [
 				"S"
 			]
@@ -5695,6 +5637,9 @@
 			"speed": {
 				"walk": 30,
 				"climb": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 15,
 			"dex": 12,
@@ -5734,11 +5679,6 @@
 			"miscTags": [
 				"MW"
 			],
-			"hasFluff": true,
-			"tokenHref": {
-				"type": "external",
-				"url": ""
-			},
 			"trait": [
 				{
 					"name": "Spider Climb",
@@ -5749,6 +5689,9 @@
 			],
 			"traitTags": [
 				"Spider Climb"
+			],
+			"group": [
+				"Bloodskull Orcs"
 			],
 			"damageTags": [
 				"P"
@@ -5785,6 +5728,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 18,
 			"dex": 12,
@@ -5856,12 +5802,6 @@
 				"RW",
 				"THW"
 			],
-			"hasFluff": true,
-			"hasFluffImages": true,
-			"token": {
-				"name": "",
-				"source": ""
-			},
 			"bonus": [
 				{
 					"name": "Healing Rally (1/Day)",
@@ -5883,6 +5823,9 @@
 						"When the Bloodskull Orog isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orog drops to 1 hit point instead of 0 hit points."
 					]
 				}
+			],
+			"group": [
+				"Bloodskull Orcs"
 			],
 			"damageTags": [
 				"P",
@@ -5920,6 +5863,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 14,
 			"dex": 14,
@@ -6026,6 +5972,13 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"miscTags": [
+				"MW"
+			],
+			"group": [
+				"Villians",
+				"Bloodskull Orcs"
+			],
 			"damageTagsSpell": [
 				"N",
 				"R"
@@ -6033,9 +5986,6 @@
 			"savingThrowForcedSpell": [
 				"charisma",
 				"wisdom"
-			],
-			"miscTags": [
-				"MW"
 			]
 		},
 		{
@@ -6069,6 +6019,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 2
 			},
 			"str": 18,
 			"dex": 16,
@@ -6153,6 +6106,10 @@
 					]
 				}
 			],
+			"group": [
+				"Villians",
+				"Bloodskull Orcs"
+			],
 			"damageTags": [
 				"S"
 			]
@@ -6188,6 +6145,9 @@
 			},
 			"speed": {
 				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
 			},
 			"str": 16,
 			"dex": 12,
@@ -6307,6 +6267,9 @@
 					]
 				}
 			],
+			"group": [
+				"Bloodskull Orcs"
+			],
 			"damageTags": [
 				"P"
 			],
@@ -6347,7 +6310,8 @@
 					{
 						"tag": "dwarf",
 						"prefix": "Mountain"
-					}
+					},
+					"Sidekick"
 				]
 			},
 			"ac": [
@@ -6439,10 +6403,6 @@
 			"resist": [
 				"poison"
 			],
-			"token": {
-				"name": "Battlehammer Dwarf",
-				"source": "IDRotF"
-			},
 			"save": {
 				"con": "+4"
 			},
@@ -6456,8 +6416,251 @@
 			],
 			"level": 3,
 			"cr": "1/2",
+			"isNpc": true,
 			"damageTags": [
 				"S"
+			]
+		},
+		{
+			"name": "Ice Troll",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d10 + 40",
+				"average": 84
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 20,
+			"int": 8,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"perception": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Giant"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The ice troll has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The ice troll regains 15 Hit Points at the start of each of its turns. If the ice troll takes Acid or Fire damage, this trait doesn't function on the troll's next turn. The ice troll dies only if it starts its turn with 0 Hit Points and doesn't regenerate."
+					]
+				},
+				{
+					"name": "Bitter Cold",
+					"entries": [
+						"If the target takes any cold damage from the ice trolls attack, the target must succeed on a {@dc 15} Constitution saving throw or have disadvantage on its attack rolls until the end of its next turn."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The ice troll makes three attacks: one with its bite and two with a Rimehammer or Rhimeaxe. The ice troll will only result to using claws if unarmed."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+					]
+				},
+				{
+					"name": "Rimehammer",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) bludgeoning damage plus 3 ({@damage 1d6}) cold damage. On successful hit the target must succeed on a {@dc 15} Constitution saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Rimeaxe",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) slashing damage, plus 3 ({@damage 1d6}) cold damage. On successful hit the ice troll can make an addition {@atk mw} {@hit 7} to hit, reach 5 ft., one additional different target. {@h}6 ({@damage 1d12 }) slashing damage, plus 3 ({@damage 1d6}) cold damage. "
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Frozen Slime Spit {@recharge 5}",
+					"entries": [
+						"The ice troll spits frozen slime at one creature it can see within 15 feet of it. The target must make a {@dc 12} Dexterity saving throw, taking 7 ({@damage 2d6 + 1}) cold damage on failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"resist": [
+				"cold"
+			],
+			"actionHeader": [
+				"An Ice troll either carries a Rimehammer or Rhimeaxe."
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"damageTags": [
+				"B",
+				"C",
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Bloodskull Orc Piker",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Controller"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item breastplate|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "4d8 + 12",
+				"average": 30
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 16,
+			"int": 7,
+			"wis": 11,
+			"cha": 10,
+			"passive": 10,
+			"cr": "1/2",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"str": "+5"
+			},
+			"skill": {
+				"athletics": "+5"
+			},
+			"trait": [
+				{
+					"name": "Relentless (1/turn)",
+					"entries": [
+						"When the Bloodskull Orc isn’t {@condition incapacitated} and they are reduced to 0 hit points but not killed outright, they can make an attack against an enemy (no action required) before the hit point reduction is resolved. If the attack hits and its damage reduces the target to 0 hit points, the Bloodskull Orc drops to 1 hit point instead of 0 hit points."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pike",
+					"entries": [
+						"{@atk mw} {@hit +5} to hit, reach 10 ft., one target. {@h}8 ({@damage 1d10 + 3}) Piercing damage. On successful hit the bloodskull orc piker can push the target up to 10 feet away if it is Large or smaller."
+					]
+				}
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"MLW"
+			],
+			"attachedItems": [
+				"pike|phb"
+			],
+			"bonus": [
+				{
+					"name": "Healing Rally (1/Day)",
+					"entries": [
+						"The Bloodskull Orc regains 5 hit points."
+					]
+				}
+			],
+			"group": [
+				"Bloodskull Orcs"
+			],
+			"damageTags": [
+				"P"
 			]
 		}
 	]
