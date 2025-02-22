@@ -721,8 +721,8 @@
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 12",
-				"average": 30
+				"formula": "3d8 + 9",
+				"average": 22
 			},
 			"speed": {
 				"walk": 30
@@ -827,8 +827,8 @@
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 12",
-				"average": 30
+				"formula": "3d8 + 9",
+				"average": 22
 			},
 			"speed": {
 				"walk": 30
@@ -938,14 +938,14 @@
 				}
 			],
 			"hp": {
-				"formula": "9d8 + 27",
-				"average": 67
+				"formula": "7d8 + 21",
+				"average": 52
 			},
 			"speed": {
 				"walk": 30
 			},
 			"initiative": {
-				"proficiency": 1
+				"proficiency": 2
 			},
 			"str": 16,
 			"dex": 14,
@@ -5723,8 +5723,8 @@
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 28",
-				"average": 59
+				"formula": "6d8 + 24",
+				"average": 51
 			},
 			"speed": {
 				"walk": 30
@@ -6140,8 +6140,8 @@
 				}
 			],
 			"hp": {
-				"formula": "9d8 + 27",
-				"average": 67
+				"formula": "7d8 + 21",
+				"average": 52
 			},
 			"speed": {
 				"walk": 30
@@ -6587,8 +6587,8 @@
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 12",
-				"average": 30
+				"formula": "3d8 + 9",
+				"average": 22
 			},
 			"speed": {
 				"walk": 30
