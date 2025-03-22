@@ -1177,8 +1177,8 @@
 				}
 			],
 			"hp": {
-				"formula": "3d8 + 3",
-				"average": 16
+				"formula": "2d8 + 2",
+				"average": 11
 			},
 			"speed": {
 				"walk": 30
@@ -1272,8 +1272,8 @@
 				}
 			],
 			"hp": {
-				"formula": "4d8 + 4",
-				"average": 22
+				"formula": "3d8 + 3",
+				"average": 16
 			},
 			"speed": {
 				"walk": 30
@@ -2891,8 +2891,8 @@
 				}
 			],
 			"hp": {
-				"formula": "8d8 + 16",
-				"average": 52
+				"formula": "7d8 + 14",
+				"average": 45
 			},
 			"speed": {
 				"walk": 30
@@ -6661,6 +6661,180 @@
 			],
 			"damageTags": [
 				"P"
+			]
+		},
+		{
+			"name": "Argripyek Bloodskull Eye of Gruumsh",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Orc",
+					"Support"
+				]
+			},
+			"source": "NightBelowIDC",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item ring mail|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 21",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 17,
+			"int": 9,
+			"wis": 14,
+			"cha": 12,
+			"passive": 12,
+			"cr": "3",
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"languages": [
+				"Common",
+				"Orc"
+			],
+			"languageTags": [
+				"C",
+				"O"
+			],
+			"save": {
+				"wis": "+4"
+			},
+			"skill": {
+				"religion": "+1",
+				"intimidation": "+3"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The orc is a 3rd-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 12}, +4 to hit with spell attacks). The orc has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell guidance|XPHB}",
+								"{@spell resistance|XPHB}",
+								"{@spell thaumaturgy|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell bless|XPHB}",
+								"{@spell command|XPHB}",
+								"{@spell cure wounds|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell augury|XPHB}",
+								"{@spell heat metal|XPHB}",
+								"{@spell spiritual weapon|XPHB}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"CC"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Eye of Gruumsh makes two Spear attacks or one attack and one spell."
+					]
+				},
+				{
+					"name": "Pike +1 (Deep Whisper)",
+					"entries": [
+						"{@atk mw,rw} {@hit +6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}9 ({@damage 1d10 + 4}) Piercing damage.",
+						"When you roll a 20 on your attack roll with Deep Whisper, the target takes an extra {@damage 1d10} acid damage."
+					]
+				}
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"RW",
+				"MW",
+				"MLW"
+			],
+			"attachedItems": [
+				"+1 pike|dmg"
+			],
+			"trait": [
+				{
+					"name": "Gruumsh's Fury",
+					"entries": [
+						"The orc deals an extra 4 ({@damage 1d8}) damage when it hits with a weapon attack (included in the attacks)."
+					]
+				},
+				{
+					"name": "Fearless Aura",
+					"entries": [
+						"Deep Whisper may grant any allied creatures within 100 feet of the wielder a +4 bonus to saving throws against fear and similar spells and effects. "
+					]
+				}
+			],
+			"traitTags": [
+				"Aggressive"
+			],
+			"bonus": [
+				{
+					"name": "Aggressive",
+					"entries": [
+						"As a bonus action, the orc can move up to its speed toward a hostile creature that it can see."
+					]
+				},
+				{
+					"name": "Rallying Chant (1/Day)",
+					"entries": [
+						"The Eye of Gruumsh and up to three allies within 60 feet of them who can hear them regain 20 hit points, and these creatures ignore difficult terrain for 1 minute."
+					]
+				}
+			],
+			"group": [
+				"Bloodskull Orcs"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
 			]
 		}
 	]
