@@ -1,6 +1,6 @@
 {
 	"fileType": "5etools",
-	"siteVersion": "2.7.3",
+	"siteVersion": "2.7.5",
 	"sync": {
 		"HOMEBREW_2_STORAGE_METAS": [
 			{
@@ -165,13 +165,28 @@
 			}
 		},
 		"sublist_bestiary.html": {
-			"items": [],
-			"sources": [],
+			"items": [
+				{
+					"h": "duskgloom%20myconid%20sovereign_nightbelowidc",
+					"c": 1
+				},
+				{
+					"h": "duskgloom%20myconid%20adult_nightbelowidc",
+					"c": 3
+				},
+				{
+					"h": "duskgloom%20myconid%20spore%20servant_nightbelowidc",
+					"c": 4
+				}
+			],
+			"sources": [
+				"NightBelowIDC"
+			],
 			"saveId": "31b92afc-c0cd-40d4-b96e-ed54a8383629",
 			"playersSimple": [
 				{
 					"count": 6,
-					"level": 5
+					"level": 4
 				}
 			],
 			"isAdvanced": false,
@@ -253,63 +268,181 @@
 				},
 				"creatureBuilder": {
 					"s": {
-						"uniqueId": "c5a2451d-c1be-4662-82d4-eb7344bebee0",
-						"name": "Argripyek Bloodskull Eye of Gruumsh",
+						"name": "Duskgloom Myconid Spore Servant",
+						"source": "NightBelowIDC",
 						"size": [
+							"S",
 							"M"
 						],
-						"type": "aberration",
-						"source": "DragonHeistReworked",
+						"type": "plant",
 						"alignment": [
-							"N"
+							"U"
 						],
 						"ac": [
-							10
+							12
 						],
 						"hp": {
-							"average": 4,
-							"formula": "1d8"
+							"formula": "6d8 + 18",
+							"average": 48
 						},
 						"speed": {
-							"walk": 30
+							"walk": 20
 						},
-						"str": 10,
-						"dex": 10,
-						"con": 10,
-						"int": 10,
-						"wis": 10,
-						"cha": 10,
-						"passive": 10,
-						"cr": "0",
+						"str": 16,
+						"dex": 12,
+						"con": 16,
+						"int": 2,
+						"wis": 6,
+						"cha": 1,
+						"senses": [
+							"blindsight 30 ft."
+						],
+						"passive": 8,
+						"immune": [
+							"poison"
+						],
+						"conditionImmune": [
+							"blinded",
+							"charmed",
+							"frightened",
+							"paralyzed",
+							"poisoned"
+						],
+						"languages": [
+							"telepathy 30 ft."
+						],
+						"cr": "1",
+						"action": [
+							{
+								"name": "Slam",
+								"entries": [
+									"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage plus 2 ({@damage 1d4}) Poison damage."
+								]
+							}
+						],
+						"environment": [
+							"underdark"
+						],
+						"treasure": [
+							"any"
+						],
+						"senseTags": [
+							"B"
+						],
+						"languageTags": [
+							"TP"
+						],
+						"miscTags": [
+							"MA",
+							"AOE"
+						],
+						"hasFluff": true,
+						"hasFluffImages": true,
+						"token": {
+							"name": "Myconid Spore Servant",
+							"source": "XMM"
+						},
+						"fluff": {
+							"name": "Myconid Spore Servant",
+							"source": "XMM",
+							"entries": [
+								{
+									"type": "section",
+									"entries": [
+										"Spore servants are corpses that have been overgrown and reanimated by a myconid sovereign's spores. These fungus-infested bodies are extensions of a myconid sovereign and obey its will."
+									]
+								},
+								{
+									"type": "section",
+									"name": "Myconids",
+									"entries": [
+										"{@i Keepers of the Spore}",
+										{
+											"type": "list",
+											"style": "list-hang-notitle",
+											"items": [
+												{
+													"type": "item",
+													"name": "Habitat:",
+													"entry": "{@filter Underdark|bestiary|environment=underdark}"
+												},
+												{
+													"type": "item",
+													"name": "Treasure:",
+													"entry": "Any"
+												}
+											]
+										},
+										"Myconids dwell in remote Underdark reaches overgrown with molds and mushrooms. These ambulatory fungal creatures tend to their sanctuaries and avoid becoming embroiled in the conflicts of other creatures. They use specialized spores to communicate, to alert one another to danger, and to defend themselves. When myconids encounter others beings, they use mind-linking spores to allow nearby creatures to telepathically share thoughts. Nevertheless, myconids' goals remain mysterious to most non-fungal creatures."
+									]
+								}
+							],
+							"images": [
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "bestiary/XMM/Myconid Spore Servant.webp"
+									}
+								},
+								{
+									"type": "image",
+									"href": {
+										"type": "internal",
+										"path": "bestiary/XMM/Myconids.webp"
+									},
+									"credit": "Caroline Gariba"
+								}
+							]
+						},
+						"uniqueId": "13312bf9-b9b6-4dfa-b392-71a65dcfd592",
+						"trait": [
+							{
+								"name": "Death Burst",
+								"entries": [
+									"When the Duskgloom Myconid Spore Servant dies, it explodes in a burst of poison spores. Each creature within 5 feet of it must make a {@dc 12} Dexterity saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one."
+								]
+							}
+						],
+						"traitTags": [
+							"Death Burst"
+						],
 						"_pTypes": {
 							"types": [
-								"aberration"
+								"plant"
 							],
 							"tags": [],
-							"asText": "Aberration",
-							"asTextShort": "Aberration",
+							"asText": "Plant",
+							"asTextShort": "Plant",
 							"typeSidekick": null,
 							"tagsSidekick": [],
 							"asTextSidekick": null
 						},
-						"_pCr": "0",
+						"_pCr": "1",
 						"_fCr": [
-							"0"
+							"1"
+						],
+						"damageTags": [
+							"B",
+							"I"
+						],
+						"savingThrowForced": [
+							"dexterity"
 						]
 					},
 					"m": {
 						"isModified": false,
 						"isPersisted": true,
 						"styleHint": "one",
+						"profSave": {},
+						"profSkill": {},
 						"autoCalc": {
 							"proficiency": true,
-							"hpAverageSimple": true,
-							"hpAverageComplex": true,
+							"hpAverageSimple": false,
+							"hpAverageComplex": false,
 							"hpModifier": true,
 							"passivePerception": true
 						},
-						"profSave": {},
-						"profSkill": {},
 						"ixActiveTab__input": 0,
 						"ixActiveTab__output": 0
 					}
@@ -330,6 +463,3749 @@
 				}
 			}
 		},
+		"filterBoxState_bestiary.html": {
+			"box": {
+				"meta": {
+					"modeCombineFilters": "and",
+					"isSummaryHidden": false,
+					"isBrewDefaultHidden": false
+				},
+				"minisHidden": {},
+				"combineAs": {}
+			},
+			"filters": {
+				"Source": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isIncludeOtherSources": false
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"pillDisplayMode": 0
+					},
+					"state": {
+						"AATM": 2,
+						"AI": 2,
+						"AitFR-ISF": 2,
+						"AitFR-THP": 2,
+						"AitFR-DN": 2,
+						"AitFR-FCD": 2,
+						"AWM": 2,
+						"BAM": 2,
+						"BGDIA": 2,
+						"BGG": 2,
+						"BMT": 2,
+						"CM": 2,
+						"CoA": 2,
+						"CoS": 2,
+						"CRCotN": 2,
+						"DC": 2,
+						"DIP": 2,
+						"DitLCoT": 2,
+						"DMG": 2,
+						"DoD": 2,
+						"DoDk": 2,
+						"DoSI": 2,
+						"DSotDQ": 2,
+						"EGW": 2,
+						"ERLW": 2,
+						"ESK": 2,
+						"FTD": 2,
+						"GGR": 2,
+						"GHLoE": 2,
+						"GoS": 2,
+						"GotSF": 2,
+						"HAT-TG": 2,
+						"HftT": 2,
+						"HoL": 2,
+						"HotDQ": 2,
+						"IDRotF": 2,
+						"IMR": 2,
+						"JttRC": 2,
+						"KftGV": 2,
+						"KKW": 2,
+						"LLK": 2,
+						"LMoP": 2,
+						"LoX": 2,
+						"LR": 2,
+						"LRDT": 2,
+						"MaBJoV": 2,
+						"MCV1SC": 2,
+						"MCV2DC": 2,
+						"MCV3MC": 2,
+						"MCV4EC": 2,
+						"MisMV1": 2,
+						"MFF": 2,
+						"MGELFT": 2,
+						"MM": 2,
+						"MPMM": 2,
+						"MPP": 2,
+						"MOT": 2,
+						"MTF": 2,
+						"NRH-TCMC": 2,
+						"NRH-AVitW": 2,
+						"NRH-ASS": 2,
+						"NRH-CoI": 2,
+						"NRH-TLT": 2,
+						"NRH-AWoL": 2,
+						"NRH-AT": 2,
+						"OotA": 2,
+						"OoW": 2,
+						"PaBTSO": 2,
+						"PSA": 2,
+						"PSD": 2,
+						"PSI": 2,
+						"PSK": 2,
+						"PSX": 2,
+						"PSZ": 2,
+						"PHB": 2,
+						"PotA": 2,
+						"QftIS": 2,
+						"RMBRE": 2,
+						"RoT": 2,
+						"RtG": 2,
+						"SADS": 2,
+						"SCC": 2,
+						"SDW": 2,
+						"SKT": 2,
+						"SLW": 2,
+						"TCE": 2,
+						"TDCSR": 2,
+						"TTP": 2,
+						"TftYP": 2,
+						"ToA": 2,
+						"ToB1-2023": 2,
+						"ToFW": 2,
+						"VD": 2,
+						"VEoR": 2,
+						"VGM": 2,
+						"VRGR": 2,
+						"XGE": 2,
+						"WBtW": 2,
+						"WDH": 2,
+						"WDMM": 2,
+						"XDMG": 2,
+						"XMM": 2,
+						"XPHB": 2,
+						"HFStCM": 2,
+						"SatO": 2,
+						"ToD": 2,
+						"SjA": 2,
+						"LK": 2,
+						"ScoEE": 2,
+						"UtHftLH": 2,
+						"HBTD": 2,
+						"DragonHeistReworked": 2,
+						"NightBelowIDC": 0,
+						"WhereEvilLives": 2,
+						"FleeMortals": 2
+					},
+					"nestsHidden": {}
+				},
+				"Challenge Rating": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 35,
+						"curMin": 0,
+						"curMax": 35
+					}
+				},
+				"Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"aberration": 0,
+						"beast": 0,
+						"celestial": 0,
+						"construct": 0,
+						"dragon": 0,
+						"elemental": 0,
+						"fey": 0,
+						"fiend": 0,
+						"giant": 0,
+						"humanoid": 0,
+						"monstrosity": 0,
+						"ooze": 0,
+						"plant": 0,
+						"undead": 0
+					},
+					"nestsHidden": {}
+				},
+				"Tag": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"half-elf": 0,
+						"elf": 0,
+						"dragonborn": 0,
+						"human": 0,
+						"shapechanger": 0,
+						"halfling": 0,
+						"goblinoid": 0,
+						"wizard": 0,
+						"cleric": 0,
+						"gith": 0,
+						"warlock": 0,
+						"druid": 0,
+						"swarm": 0,
+						"lizardfolk": 0,
+						"demon": 0,
+						"devil": 0,
+						"kenku": 0,
+						"tortle": 0,
+						"tiefling": 0,
+						"dinosaur": 0,
+						"bard": 0,
+						"titan": 0,
+						"sorcerer": 0,
+						"paladin": 0,
+						"minotaur": 0,
+						"medusa": 0,
+						"yugoloth": 0,
+						"moonstone": 0,
+						"grippli": 0,
+						"tabaxi": 0,
+						"any race": 0,
+						"genasi": 0,
+						"mongrelfolk": 0,
+						"healer": 0,
+						"mage": 0,
+						"half-orc": 0,
+						"gnome": 0,
+						"dwarf": 0,
+						"kender": 0,
+						"changeling": 0,
+						"kalashtar": 0,
+						"shifter": 0,
+						"warforged": 0,
+						"gem": 0,
+						"metallic": 0,
+						"chromatic": 0,
+						"angel": 0,
+						"simic hybrid": 0,
+						"kraul": 0,
+						"merfolk": 0,
+						"bullywug": 0,
+						"triton": 0,
+						"locathah": 0,
+						"sahuagin": 0,
+						"cloud giant": 0,
+						"half-dragon": 0,
+						"half-black dragon": 0,
+						"goliath": 0,
+						"kobold": 0,
+						"orc": 0,
+						"monk": 0,
+						"aarakocra": 0,
+						"gnoll": 0,
+						"grimlock": 0,
+						"kuo-toa": 0,
+						"quaggoth": 0,
+						"thri-kreen": 0,
+						"troglodyte": 0,
+						"yuan-ti": 0,
+						"mind flayer": 0,
+						"cattle": 0,
+						"beholder": 0,
+						"inevitable": 0,
+						"hill giant": 0,
+						"leonin": 0,
+						"derro": 0,
+						"meazel": 0,
+						"nagpa": 0,
+						"drow": 0,
+						"young gem": 0,
+						"vampire": 0,
+						"archfey": 0,
+						"saurial": 0,
+						"grung": 0,
+						"fire giant": 0,
+						"firenewt": 0,
+						"frost giant": 0,
+						"stone giant": 0,
+						"storm giant": 0,
+						"xvart": 0,
+						"harengon": 0,
+						"hag": 0,
+						"shadar-kai": 0,
+						"lava child": 0,
+						"genie": 0,
+						"ogre": 0,
+						"ranger": 0,
+						"shapeshifter": 0,
+						"soldier": 0,
+						"leader": 0,
+						"skirmisher": 0,
+						"minion": 0,
+						"brute": 0,
+						"support": 0,
+						"ambusher": 0,
+						"sidekick": 0,
+						"warrior": 0,
+						"controller": 0,
+						"goblin": 0,
+						"retainer": 0,
+						"artillery": 0,
+						"companion": 0,
+						"solo": 0,
+						"hobgoblin": 0,
+						"category 3": 0,
+						"incorporeal": 0,
+						"water": 0,
+						"bugbear": 0,
+						"time raider": 0,
+						"category 6": 0,
+						"category 5": 0,
+						"category 1": 0,
+						"category 2": 0,
+						"category 4": 0,
+						"air": 0,
+						"fungus": 0,
+						"fire": 0,
+						"earth": 0,
+						"angulotl": 0,
+						"firbolg": 0,
+						"downcast": 0,
+						"fiend": 0,
+						"elemental": 0,
+						"any": 0,
+						"cursed": 0,
+						"adult chromatic": 0,
+						"unicorn": 0,
+						"blindheim": 0,
+						"dire corby": 0,
+						"jermlaine": 0,
+						"half-giant": 0,
+						"brown bear": 0,
+						"bearfolk": 0,
+						"burrowling": 0,
+						"erina": 0,
+						"lemurfolk": 0,
+						"nkosi": 0,
+						"ratfolk": 0,
+						"ravenfolk": 0,
+						"roachling": 0,
+						"subek": 0,
+						"tosculi": 0,
+						"trollkin": 0
+					},
+					"nestsHidden": {}
+				},
+				"Sidekick Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"expert": 0,
+						"spellcaster": 0,
+						"warrior": 0
+					},
+					"nestsHidden": {}
+				},
+				"Sidekick Tag": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"mage": 0,
+						"attacker": 0,
+						"healer": 0,
+						"defender": 0
+					},
+					"nestsHidden": {}
+				},
+				"Group": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Metallic Dragon": 0,
+						"Animated Objects": 0,
+						"Lycanthropes": 0,
+						"Dinosaurs": 0,
+						"Nymph": 0,
+						"Hags": 0,
+						"Angels": 0,
+						"Chromatic Dragon": 0,
+						"Homunculi": 0,
+						"Quori": 0,
+						"Gem Dragon": 0,
+						"Sphinxes": 0,
+						"Genies": 0,
+						"Beholders": 0,
+						"Modrons": 0,
+						"Chromatic Dragons": 0,
+						"Metallic Dragons": 0,
+						"Yugoloths": 0,
+						"Demons": 0,
+						"Devils": 0,
+						"Titans": 0,
+						"Goblinoids": 0,
+						"Arcane Brotherhood": 0,
+						"Bloodskull Orc": 0,
+						"Bloodskull Orcs": 0,
+						"Broken Spire Bandits": 0,
+						"Villians": 0,
+						"Villains": 0,
+						"Adranachs": 0,
+						"Ashari": 0,
+						"Skeletons": 0,
+						"Vox Machina": 0,
+						"Clasp": 0,
+						"Golem": 0,
+						"Cyclops": 0,
+						"Ravagers": 0,
+						"Remnants": 0,
+						"Rivermaw Herd": 0,
+						"Serpentfolk": 0
+					},
+					"nestsHidden": {}
+				},
+				"Environment": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"arctic": 0,
+						"coastal": 0,
+						"desert": 0,
+						"forest": 0,
+						"grassland": 0,
+						"hill": 0,
+						"mountain": 0,
+						"swamp": 0,
+						"underdark": 0,
+						"underwater": 0,
+						"urban": 0,
+						"none": 0,
+						"planar, air": 0,
+						"any": 0,
+						"planar, beastlands": 0,
+						"planar, abyss": 0,
+						"planar, acheron": 0,
+						"planar, carceri": 0,
+						"planar, gehenna": 0,
+						"planar, hades": 0,
+						"planar, nine hells": 0,
+						"planar, pandemonium": 0,
+						"planar, fire": 0,
+						"planar, shadowfell": 0,
+						"planar, feywild": 0,
+						"planar, limbo": 0,
+						"planar, earth": 0,
+						"planar, arborea": 0,
+						"planar, arcadia": 0,
+						"planar, bytopia": 0,
+						"planar, elysium": 0,
+						"planar, mount celestia": 0,
+						"planar, ysgard": 0,
+						"planar, water": 0,
+						"planar, elemental chaos": 0,
+						"planar, astral": 0,
+						"planar, mechanus": 0,
+						"planar, ethereal": 0,
+						"planar, ooze": 0,
+						"planar, magma": 0,
+						"planar, ash": 0,
+						"planar, ice": 0,
+						"planar, outlands": 0,
+						"farmland": 0,
+						"badlands": 0
+					},
+					"nestsHidden": {}
+				},
+				"Damage": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Vulnerability": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0,
+						"piercing (Conditional)": 0,
+						"slashing (Conditional)": 0,
+						"bludgeoning (Conditional)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Resistance": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0,
+						"bludgeoning (Conditional)": 0,
+						"piercing (Conditional)": 0,
+						"slashing (Conditional)": 0,
+						"Other": 0,
+						"acid (Conditional)": 0,
+						"cold (Conditional)": 0,
+						"fire (Conditional)": 0,
+						"lightning (Conditional)": 0,
+						"poison (Conditional)": 0,
+						"force (Conditional)": 0,
+						"necrotic (Conditional)": 0,
+						"psychic (Conditional)": 0,
+						"radiant (Conditional)": 0,
+						"thunder (Conditional)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Immunity": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0,
+						"bludgeoning (Conditional)": 0,
+						"piercing (Conditional)": 0,
+						"slashing (Conditional)": 0,
+						"Other": 0,
+						"fire (Conditional)": 0,
+						"acid (Conditional)": 0,
+						"cold (Conditional)": 0,
+						"force (Conditional)": 0,
+						"lightning (Conditional)": 0,
+						"necrotic (Conditional)": 0,
+						"poison (Conditional)": 0,
+						"psychic (Conditional)": 0,
+						"radiant (Conditional)": 0,
+						"thunder (Conditional)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Condition Immunity": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"blinded": 0,
+						"charmed": 0,
+						"deafened": 0,
+						"exhaustion": 0,
+						"frightened": 0,
+						"grappled": 0,
+						"incapacitated": 0,
+						"invisible": 0,
+						"paralyzed": 0,
+						"petrified": 0,
+						"poisoned": 0,
+						"prone": 0,
+						"restrained": 0,
+						"stunned": 0,
+						"unconscious": 0,
+						"disease": 0
+					},
+					"nestsHidden": {}
+				},
+				"Traits": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Aggressive": 0,
+						"Ambusher": 0,
+						"Amorphous": 0,
+						"Amphibious": 0,
+						"Antimagic Susceptibility": 0,
+						"Brute": 0,
+						"Charge": 0,
+						"Damage Absorption": 0,
+						"Death Burst": 0,
+						"Devil's Sight": 0,
+						"False Appearance": 0,
+						"Fey Ancestry": 0,
+						"Flyby": 0,
+						"Hold Breath": 0,
+						"Illumination": 0,
+						"Immutable Form": 0,
+						"Incorporeal Movement": 0,
+						"Keen Senses": 0,
+						"Legendary Resistances": 0,
+						"Light Sensitivity": 0,
+						"Magic Resistance": 0,
+						"Magic Weapons": 0,
+						"Pack Tactics": 0,
+						"Pounce": 0,
+						"Rampage": 0,
+						"Reckless": 0,
+						"Regeneration": 0,
+						"Rejuvenation": 0,
+						"Shapechanger": 0,
+						"Siege Monster": 0,
+						"Sneak Attack": 0,
+						"Spider Climb": 0,
+						"Sunlight Sensitivity": 0,
+						"Tunneler": 0,
+						"Turn Immunity": 0,
+						"Turn Resistance": 0,
+						"Undead Fortitude": 0,
+						"Water Breathing": 0,
+						"Web Sense": 0,
+						"Web Walker": 0,
+						"Unusual Nature": 0,
+						"Mimicry": 0,
+						"Camouflage": 0,
+						"Beast of Burden": 0,
+						"Spell Immunity": 0,
+						"Tree Stride": 0
+					},
+					"nestsHidden": {}
+				},
+				"Actions & Reactions": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Frightful Presence": 0,
+						"Multiattack": 0,
+						"Parry": 0,
+						"Swallow": 0,
+						"Teleport": 0,
+						"Tentacles": 0,
+						"Breath Weapon": 0,
+						"Shapechanger": 0
+					},
+					"nestsHidden": {}
+				},
+				"Miscellaneous": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Familiar": 0,
+						"AOE": 0,
+						"CUR": 0,
+						"DIS": 0,
+						"HPR": 0,
+						"MW": 0,
+						"RW": 0,
+						"MA": 0,
+						"RA": 0,
+						"MLW": 0,
+						"RNG": 0,
+						"RCH": 0,
+						"THW": 0,
+						"Bonus Actions": 0,
+						"Lair Actions": 0,
+						"Legendary": 0,
+						"Mythic": 0,
+						"Adventure NPC": 0,
+						"Spellcaster": 0,
+						"Spellcaster, Strength": 0,
+						"Spellcaster, Dexterity": 0,
+						"Spellcaster, Constitution": 0,
+						"Spellcaster, Intelligence": 0,
+						"Spellcaster, Wisdom": 0,
+						"Spellcaster, Charisma": 0,
+						"Regional Effects": 0,
+						"Reactions": 0,
+						"Reprinted": 0,
+						"Swarm": 0,
+						"Has Variants": 0,
+						"Modified Copy": 0,
+						"Has Alternate Token": 0,
+						"Has Info": 0,
+						"Has Images": 0,
+						"Has Token": 0,
+						"Has Recharge": 0,
+						"Legacy": 0,
+						"AC from Item(s)": 0,
+						"AC from Natural Armor": 0,
+						"AC from Unarmored Defense": 0,
+						"Summoned by Spell": 0,
+						"Summoned by Class": 0,
+						"Reduced Threat": 0,
+						"Named Creature": 0,
+						"SRD 5.1": 0,
+						"Basic Rules (2014)": 0,
+						"Free Rules (2024)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Spellcasting Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"F": 0,
+						"I": 0,
+						"P": 0,
+						"S": 0,
+						"O": 0,
+						"CA": 0,
+						"CB": 0,
+						"CC": 0,
+						"CD": 0,
+						"CP": 0,
+						"CR": 0,
+						"CS": 0,
+						"CL": 0,
+						"CW": 0
+					},
+					"nestsHidden": {}
+				},
+				"Spell Slot Level": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 9,
+						"curMin": 1,
+						"curMax": 9
+					}
+				},
+				"Size": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"T": 0,
+						"S": 0,
+						"M": 0,
+						"L": 0,
+						"H": 0,
+						"G": 0,
+						"V": 0
+					},
+					"nestsHidden": {}
+				},
+				"Speed": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 400,
+						"curMin": 0,
+						"curMax": 400
+					}
+				},
+				"Speed Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"walk": 0,
+						"burrow": 0,
+						"climb": 0,
+						"fly": 0,
+						"swim": 0,
+						"hover": 0
+					},
+					"nestsHidden": {}
+				},
+				"Alignment": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"L": 0,
+						"NX": 0,
+						"C": 0,
+						"G": 0,
+						"NY": 0,
+						"E": 0,
+						"N": 0,
+						"U": 0,
+						"A": 0,
+						"No Alignment": 0
+					},
+					"nestsHidden": {}
+				},
+				"Saves": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"str": 0,
+						"dex": 0,
+						"con": 0,
+						"int": 0,
+						"wis": 0,
+						"cha": 0
+					},
+					"nestsHidden": {}
+				},
+				"Skills": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"athletics": 0,
+						"acrobatics": 0,
+						"sleight of hand": 0,
+						"stealth": 0,
+						"arcana": 0,
+						"history": 0,
+						"investigation": 0,
+						"nature": 0,
+						"religion": 0,
+						"animal handling": 0,
+						"insight": 0,
+						"medicine": 0,
+						"perception": 0,
+						"survival": 0,
+						"deception": 0,
+						"intimidation": 0,
+						"performance": 0,
+						"persuasion": 0
+					},
+					"nestsHidden": {}
+				},
+				"Senses": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"B": 0,
+						"D": 0,
+						"SD": 0,
+						"T": 0,
+						"U": 0
+					},
+					"nestsHidden": {}
+				},
+				"Passive Perception": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 36,
+						"curMin": 0,
+						"curMax": 36
+					}
+				},
+				"Languages": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"AB": 0,
+						"XX": 0,
+						"X": 0,
+						"AQ": 0,
+						"AU": 0,
+						"CS": 0,
+						"CE": 0,
+						"C": 0,
+						"CSL": 0,
+						"DS": 0,
+						"DR": 0,
+						"DU": 0,
+						"D": 0,
+						"E": 0,
+						"GI": 0,
+						"GTH": 0,
+						"G": 0,
+						"GO": 0,
+						"H": 0,
+						"IG": 0,
+						"I": 0,
+						"LF": 0,
+						"O": 0,
+						"OTH": 0,
+						"P": 0,
+						"S": 0,
+						"TP": 0,
+						"T": 0,
+						"TC": 0,
+						"U": 0,
+						"None": 0
+					},
+					"nestsHidden": {}
+				},
+				"Damage Inflicted": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Damage Inflicted by Traits/Actions": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"A": 0,
+						"B": 0,
+						"C": 0,
+						"F": 0,
+						"O": 0,
+						"L": 0,
+						"N": 0,
+						"P": 0,
+						"I": 0,
+						"Y": 0,
+						"R": 0,
+						"S": 0,
+						"T": 0
+					},
+					"nestsHidden": {}
+				},
+				"Damage Inflicted by Lair Actions/Regional Effects": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"A": 0,
+						"B": 0,
+						"C": 0,
+						"F": 0,
+						"O": 0,
+						"L": 0,
+						"N": 0,
+						"P": 0,
+						"I": 0,
+						"Y": 0,
+						"R": 0,
+						"S": 0,
+						"T": 0
+					},
+					"nestsHidden": {}
+				},
+				"Damage Inflicted by Spells": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"A": 0,
+						"B": 0,
+						"C": 0,
+						"F": 0,
+						"O": 0,
+						"L": 0,
+						"N": 0,
+						"P": 0,
+						"I": 0,
+						"Y": 0,
+						"R": 0,
+						"S": 0,
+						"T": 0
+					},
+					"nestsHidden": {}
+				},
+				"Conditions Inflicted": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Conditions Inflicted by Traits/Actions": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"blinded": 0,
+						"charmed": 0,
+						"deafened": 0,
+						"exhaustion": 0,
+						"frightened": 0,
+						"grappled": 0,
+						"incapacitated": 0,
+						"invisible": 0,
+						"paralyzed": 0,
+						"petrified": 0,
+						"poisoned": 0,
+						"prone": 0,
+						"restrained": 0,
+						"stunned": 0,
+						"unconscious": 0,
+						"dazed|fleemortals": 0,
+						"dazed|FleeMortals": 0
+					},
+					"nestsHidden": {}
+				},
+				"Conditions Inflicted by Lair Actions/Regional Effects": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"blinded": 0,
+						"charmed": 0,
+						"deafened": 0,
+						"exhaustion": 0,
+						"frightened": 0,
+						"grappled": 0,
+						"incapacitated": 0,
+						"invisible": 0,
+						"paralyzed": 0,
+						"petrified": 0,
+						"poisoned": 0,
+						"prone": 0,
+						"restrained": 0,
+						"stunned": 0,
+						"unconscious": 0
+					},
+					"nestsHidden": {}
+				},
+				"Conditions Inflicted by Spells": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"blinded": 0,
+						"charmed": 0,
+						"deafened": 0,
+						"exhaustion": 0,
+						"frightened": 0,
+						"grappled": 0,
+						"incapacitated": 0,
+						"invisible": 0,
+						"paralyzed": 0,
+						"petrified": 0,
+						"poisoned": 0,
+						"prone": 0,
+						"restrained": 0,
+						"stunned": 0,
+						"unconscious": 0
+					},
+					"nestsHidden": {}
+				},
+				"Saving Throw Required": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Saving Throws Required by Traits/Actions": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"strength": 0,
+						"dexterity": 0,
+						"constitution": 0,
+						"intelligence": 0,
+						"wisdom": 0,
+						"charisma": 0
+					},
+					"nestsHidden": {}
+				},
+				"Saving Throws Required by Lair Actions/Regional Effects": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"strength": 0,
+						"dexterity": 0,
+						"constitution": 0,
+						"intelligence": 0,
+						"wisdom": 0,
+						"charisma": 0
+					},
+					"nestsHidden": {}
+				},
+				"Saving Throws Required by Spells": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"strength": 0,
+						"dexterity": 0,
+						"constitution": 0,
+						"intelligence": 0,
+						"wisdom": 0,
+						"charisma": 0
+					},
+					"nestsHidden": {}
+				},
+				"Dragon Age": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"wyrmling": 0,
+						"young": 0,
+						"adult": 0,
+						"ancient": 0,
+						"greatwyrm": 0,
+						"aspect": 0
+					},
+					"nestsHidden": {}
+				},
+				"Dragon Casting Color": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"black": 0,
+						"blue": 0,
+						"brass": 0,
+						"bronze": 0,
+						"copper": 0,
+						"deep": 0,
+						"gold": 0,
+						"green": 0,
+						"red": 0,
+						"silver": 0,
+						"white": 0
+					},
+					"nestsHidden": {}
+				},
+				"Armor Class": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 25,
+						"curMin": 0,
+						"curMax": 25
+					}
+				},
+				"Average Hit Points": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 725,
+						"curMin": 0,
+						"curMax": 725
+					}
+				},
+				"Ability Scores": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Strength": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Dexterity": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Constitution": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Intelligence": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Wisdom": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Charisma": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 1,
+						"max": 30,
+						"curMin": 1,
+						"curMax": 30
+					}
+				},
+				"Spells Known": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"detect thoughts": 0,
+						"augury": 0,
+						"mage hand": 0,
+						"message": 0,
+						"vicious mockery": 0,
+						"charm person": 0,
+						"heroism": 0,
+						"illusory script": 0,
+						"sleep": 0,
+						"unseen servant": 0,
+						"cloud of daggers": 0,
+						"invisibility": 0,
+						"command": 0,
+						"compelled duel": 0,
+						"cure wounds": 0,
+						"wrathful smite": 0,
+						"aid": 0,
+						"branding smite": 0,
+						"lesser restoration": 0,
+						"warding bond": 0,
+						"zone of truth": 0,
+						"fire bolt": 0,
+						"light": 0,
+						"prestidigitation": 0,
+						"detect magic": 0,
+						"mage armor": 0,
+						"distort value": 0,
+						"gift of gab": 0,
+						"suggestion": 0,
+						"fast friends": 0,
+						"lightning bolt": 0,
+						"greater invisibility": 0,
+						"cone of cold": 0,
+						"friends": 0,
+						"minor illusion": 0,
+						"disguise self": 0,
+						"jim's magic missile": 0,
+						"jim's glowing coin": 0,
+						"incite greed": 0,
+						"fireball": 0,
+						"conjure minor elementals": 0,
+						"polymorph": 0,
+						"mislead": 0,
+						"dancing lights": 0,
+						"darkness": 0,
+						"faerie fire": 0,
+						"chill touch": 0,
+						"eldritch blast": 0,
+						"mending": 0,
+						"thorn whip": 0,
+						"dissonant whispers": 0,
+						"fly": 0,
+						"hex": 0,
+						"misty step": 0,
+						"sending": 0,
+						"shatter": 0,
+						"alarm": 0,
+						"animal friendship": 0,
+						"hunter's mark": 0,
+						"pass without trace": 0,
+						"spike growth": 0,
+						"conjure animals": 0,
+						"guidance": 0,
+						"sacred flame": 0,
+						"spare the dying": 0,
+						"thaumaturgy": 0,
+						"bless": 0,
+						"divine favor": 0,
+						"shield of faith": 0,
+						"enhance ability": 0,
+						"hold person": 0,
+						"magic weapon": 0,
+						"silence": 0,
+						"spiritual weapon": 0,
+						"beacon of hope": 0,
+						"crusader's mantle": 0,
+						"dispel magic": 0,
+						"mass healing word": 0,
+						"spirit guardians": 0,
+						"death ward": 0,
+						"freedom of movement": 0,
+						"locate creature": 0,
+						"stoneskin": 0,
+						"dispel evil and good": 0,
+						"flame strike": 0,
+						"hold monster": 0,
+						"greater restoration": 0,
+						"legend lore": 0,
+						"acid splash": 0,
+						"poison spray": 0,
+						"shocking grasp": 0,
+						"magic missile": 0,
+						"blindness/deafness": 0,
+						"scorching ray": 0,
+						"bane": 0,
+						"guiding bolt": 0,
+						"sanctuary": 0,
+						"darkvision": 0,
+						"druidcraft": 0,
+						"produce flame": 0,
+						"entangle": 0,
+						"thunderwave": 0,
+						"flame blade": 0,
+						"moonbeam": 0,
+						"call lightning": 0,
+						"plant growth": 0,
+						"blight": 0,
+						"calm emotions": 0,
+						"revivify": 0,
+						"speak with plants": 0,
+						"teleport": 0,
+						"divination": 0,
+						"word of recall": 0,
+						"compulsion": 0,
+						"fear": 0,
+						"resistance": 0,
+						"plane shift": 0,
+						"telekinesis": 0,
+						"tongues": 0,
+						"contact other plane": 0,
+						"dominate monster": 0,
+						"forcecage": 0,
+						"dimension door": 0,
+						"arms of hadar": 0,
+						"tenser's floating disk": 0,
+						"spider climb": 0,
+						"hypnotic pattern": 0,
+						"major image": 0,
+						"stinking cloud": 0,
+						"phantasmal force": 0,
+						"mass suggestion": 0,
+						"mirror image": 0,
+						"levitate": 0,
+						"wish": 0,
+						"alter self": 0,
+						"detect evil and good": 0,
+						"wall of fire": 0,
+						"blade barrier": 0,
+						"finger of death": 0,
+						"animate dead": 0,
+						"geas": 0,
+						"raise dead": 0,
+						"imprisonment": 0,
+						"meteor swarm": 0,
+						"shield": 0,
+						"counterspell": 0,
+						"ice storm": 0,
+						"identify": 0,
+						"banishment": 0,
+						"fire shield": 0,
+						"scrying": 0,
+						"wall of force": 0,
+						"globe of invulnerability": 0,
+						"mind blank": 0,
+						"time stop": 0,
+						"protection from evil and good": 0,
+						"heal": 0,
+						"shapechange": 0,
+						"gate": 0,
+						"harm": 0,
+						"wind walk": 0,
+						"false life": 0,
+						"inflict wounds": 0,
+						"ray of sickness": 0,
+						"gentle repose": 0,
+						"ray of enfeeblement": 0,
+						"magic circle": 0,
+						"speak with dead": 0,
+						"vampiric touch": 0,
+						"antilife shell": 0,
+						"cloudkill": 0,
+						"contagion": 0,
+						"create undead": 0,
+						"true seeing": 0,
+						"divine word": 0,
+						"regenerate": 0,
+						"hellish rebuke": 0,
+						"demiplane": 0,
+						"dominate person": 0,
+						"burning hands": 0,
+						"tasha's hideous laughter": 0,
+						"confusion": 0,
+						"enthrall": 0,
+						"hallucinatory terrain": 0,
+						"otto's irresistible dance": 0,
+						"fog cloud": 0,
+						"dream": 0,
+						"gaseous form": 0,
+						"create or destroy water": 0,
+						"speak with animals": 0,
+						"commune with nature": 0,
+						"chain lightning": 0,
+						"stone shape": 0,
+						"wall of stone": 0,
+						"meld into stone": 0,
+						"control water": 0,
+						"control weather": 0,
+						"heat metal": 0,
+						"bestow curse": 0,
+						"crown of madness": 0,
+						"goodberry": 0,
+						"move earth": 0,
+						"transport via plants": 0,
+						"silent image": 0,
+						"slow": 0,
+						"mass cure wounds": 0,
+						"guardian of faith": 0,
+						"insect plague": 0,
+						"witch bolt": 0,
+						"glyph of warding": 0,
+						"seeming": 0,
+						"shillelagh": 0,
+						"longstrider": 0,
+						"animal messenger": 0,
+						"barkskin": 0,
+						"fire storm": 0,
+						"comprehend languages": 0,
+						"locate object": 0,
+						"drawmij's instant summons": 0,
+						"planar binding": 0,
+						"see invisibility": 0,
+						"clairvoyance": 0,
+						"ray of frost": 0,
+						"web": 0,
+						"evard's black tentacles": 0,
+						"conjure elemental": 0,
+						"enlarge/reduce": 0,
+						"programmed illusion": 0,
+						"mirage arcane": 0,
+						"power word stun": 0,
+						"knock": 0,
+						"purify food and drink": 0,
+						"create food and water": 0,
+						"protection from poison": 0,
+						"find the path": 0,
+						"earthquake": 0,
+						"nondetection": 0,
+						"phantom steed": 0,
+						"remove curse": 0,
+						"thunderous smite": 0,
+						"blinding smite": 0,
+						"staggering smite": 0,
+						"gust of wind": 0,
+						"animate objects": 0,
+						"commune": 0,
+						"mordenkainen's faithful hound": 0,
+						"bigby's hand": 0,
+						"mordenkainen's magnificent mansion": 0,
+						"protection from energy": 0,
+						"flaming sphere": 0,
+						"arcane eye": 0,
+						"healing word": 0,
+						"find steed": 0,
+						"eyebite": 0,
+						"blur": 0,
+						"circle of death": 0,
+						"prismatic spray": 0,
+						"incendiary cloud": 0,
+						"maze": 0,
+						"power word kill": 0,
+						"chromatic orb": 0,
+						"banishing smite": 0,
+						"destructive wave": 0,
+						"foresight": 0,
+						"expeditious retreat": 0,
+						"haste": 0,
+						"daylight": 0,
+						"forbiddance": 0,
+						"planar ally": 0,
+						"blink": 0,
+						"reverse gravity": 0,
+						"etherealness": 0,
+						"grease": 0,
+						"creation": 0,
+						"wall of ice": 0,
+						"grasping vine": 0,
+						"wall of thorns": 0,
+						"melf's acid arrow": 0,
+						"beast sense": 0,
+						"dominate beast": 0,
+						"giant insect": 0,
+						"ensnaring strike": 0,
+						"arcane lock": 0,
+						"antimagic field": 0,
+						"encode thoughts": 0,
+						"modify memory": 0,
+						"rary's telepathic bond": 0,
+						"fabricate": 0,
+						"disintegrate": 0,
+						"project image": 0,
+						"prismatic wall": 0,
+						"blade ward": 0,
+						"conjure fey": 0,
+						"shape water": 0,
+						"color spray": 0,
+						"sleet storm": 0,
+						"magic mouth": 0,
+						"detect poison and disease": 0,
+						"prayer of healing": 0,
+						"water walk": 0,
+						"wind wall": 0,
+						"awaken": 0,
+						"leomund's tiny hut": 0,
+						"resurrection": 0,
+						"heroes' feast": 0,
+						"feather fall": 0,
+						"passwall": 0,
+						"phantasmal killer": 0,
+						"searing smite": 0,
+						"elemental weapon": 0,
+						"water breathing": 0,
+						"jump": 0,
+						"feeblemind": 0,
+						"tree stride": 0,
+						"hunger of hadar": 0,
+						"arcane gate": 0,
+						"locate animals or plants": 0,
+						"continual flame": 0,
+						"symbol": 0,
+						"otiluke's resilient sphere": 0,
+						"holy aura": 0,
+						"true strike": 0,
+						"teleportation circle": 0,
+						"armor of agathys": 0,
+						"gust": 0,
+						"dust devil": 0,
+						"storm sphere": 0,
+						"mold earth": 0,
+						"earth tremor": 0,
+						"ice knife": 0,
+						"control flames": 0,
+						"create bonfire": 0,
+						"tidal wave": 0,
+						"immolation": 0,
+						"maximilian's earthen grasp": 0,
+						"erupting earth": 0,
+						"storm of vengeance": 0,
+						"feign death": 0,
+						"mordenkainen's sword": 0,
+						"sequester": 0,
+						"conjure woodland beings": 0,
+						"cordon of arrows": 0,
+						"rope trick": 0,
+						"telepathy": 0,
+						"flesh to stone": 0,
+						"sunbeam": 0,
+						"animal shapes": 0,
+						"delayed blast fireball": 0,
+						"true resurrection": 0,
+						"simulacrum": 0,
+						"true polymorph": 0,
+						"elementalism": 0,
+						"vitriolic sphere": 0,
+						"mind spike": 0,
+						"sunburst": 0,
+						"find familiar": 0,
+						"jallarzi's storm of radiance": 0,
+						"charm monster": 0,
+						"befuddlement": 0,
+						"synaptic static": 0,
+						"frostbite": 0,
+						"summon fey": 0,
+						"toll the dead": 0,
+						"cause fear": 0,
+						"arcanist's magic aura": 0,
+						"hallow": 0,
+						"grave grasp": 0,
+						"lightning lash": 0,
+						"find traps": 0,
+						"arcane lance": 0,
+						"thunder step": 0,
+						"mass heal": 0,
+						"weird": 0,
+						"aura of purity": 0,
+						"astral projection": 0,
+						"purge contamination": 0,
+						"sacrament of the falling fire": 0,
+						"delerium orb": 0,
+						"warp bolt": 0,
+						"delerium blast": 0,
+						"forced evolution": 0,
+						"conjure the deep haze": 0,
+						"siphon contamination": 0,
+						"octarine spray": 0,
+						"hunter sense": 0,
+						"suffocate": 0,
+						"consume mind": 0,
+						"magic mirror": 0,
+						"arboreal curse": 0,
+						"glibness": 0,
+						"wrack": 0,
+						"hail of thorns": 0,
+						"flame arrows": 0,
+						"absorb elements": 0,
+						"thunderclap": 0,
+						"watery sphere": 0,
+						"maelstrom": 0,
+						"otiluke's freezing sphere": 0,
+						"contingency": 0,
+						"clone": 0,
+						"abi-dalzim's horrid wilting": 0,
+						"nystul's magic aura": 0,
+						"chaos bolt": 0,
+						"enervation": 0,
+						"mental prison": 0,
+						"lightning arrow": 0
+					},
+					"nestsHidden": {}
+				},
+				"Treasure": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"arcana": 0,
+						"armaments": 0,
+						"implements": 0,
+						"relics": 0,
+						"individual": 0,
+						"any": 0
+					},
+					"nestsHidden": {}
+				},
+				"Equipment": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"light crossbow|phb": 0,
+						"longsword|phb": 0,
+						"chain shirt": 0,
+						"greatsword|phb": 0,
+						"whip|phb": 0,
+						"plate armor": 0,
+						"dagger|phb": 0,
+						"wand of wonder": 0,
+						"sickle|phb": 0,
+						"studded leather armor": 0,
+						"robe of stars": 0,
+						"longbow|phb": 0,
+						"hand crossbow|phb": 0,
+						"maul|phb": 0,
+						"shortsword|phb": 0,
+						"warhammer|phb": 0,
+						"chain mail": 0,
+						"shield": 0,
+						"breastplate": 0,
+						"+1 shortsword|dmg": 0,
+						"rapier|phb": 0,
+						"+1 studded leather armor": 0,
+						"leather armor": 0,
+						"scimitar|phb": 0,
+						"elven chain": 0,
+						"half plate armor": 0,
+						"morningstar|phb": 0,
+						"greatclub|phb": 0,
+						"musket|dmg": 0,
+						"javelin|phb": 0,
+						"pistol|dmg": 0,
+						"spear|phb": 0,
+						"trident|phb": 0,
+						"talarith": 0,
+						"heavy crossbow|phb": 0,
+						"fane-eater|bgdia": 0,
+						"obsidian flint dragon plate": 0,
+						"fane-eater": 0,
+						"mace|phb": 0,
+						"silvered pike|phb": 0,
+						"hellfire warhammer|bgdia": 0,
+						"club|phb": 0,
+						"matalotok|bgdia": 0,
+						"+1 maul|dmg": 0,
+						"+2 leather armor": 0,
+						"gauntlets of flaming fury": 0,
+						"belt of fire giant strength": 0,
+						"soul coin": 0,
+						"+1 longsword|dmg": 0,
+						"battleaxe|phb": 0,
+						"hide armor": 0,
+						"greataxe|phb": 0,
+						"scale mail": 0,
+						"glaive|phb": 0,
+						"winged boots": 0,
+						"sending stones": 0,
+						"+2 longsword": 0,
+						"shortbow|phb": 0,
+						"staff of striking": 0,
+						"dart|phb": 0,
+						"quarterstaff|phb": 0,
+						"halberd|phb": 0,
+						"+1 handaxe|dmg": 0,
+						"+1 rapier|dmg": 0,
+						"silvered shortsword|phb": 0,
+						"potion of greater healing": 0,
+						"holy water (flask)": 0,
+						"splint armor": 0,
+						"ring of warmth": 0,
+						"hat of disguise": 0,
+						"ring of mind shielding": 0,
+						"spell scroll (5th level)": 0,
+						"+2 greatsword|dmg": 0,
+						"+2 greatsword": 0,
+						"sling|phb": 0,
+						"breastplate barding": 0,
+						"lance|phb": 0,
+						"pike|phb": 0,
+						"gem of seeing": 0,
+						"hoopak|dsotdq": 0,
+						"flail|phb": 0,
+						"handaxe|phb": 0,
+						"spies' murmur": 0,
+						"light hammer|phb": 0,
+						"spell scroll (1st level)": 0,
+						"staff of fire": 0,
+						"black dragon mask": 0,
+						"hazirawn": 0,
+						"insignia of claws": 0,
+						"+1 scale mail": 0,
+						"wand of winter": 0,
+						"staff of frost": 0,
+						"laser pistol|dmg": 0,
+						"bracers of defense": 0,
+						"wand of magic missiles": 0,
+						"war pick|phb": 0,
+						"robes": 0,
+						"spell scroll (2nd level)": 0,
+						"potion of hill giant strength": 0,
+						"dimensional shackles": 0,
+						"spider staff": 0,
+						"net|phb": 0,
+						"ring mail": 0,
+						"tentacle rod": 0,
+						"wand of orcus|dmg": 0,
+						"wand of orcus": 0,
+						"+2 warhammer|dmg": 0,
+						"gauntlets of ogre power|dmg": 0,
+						"dwarven plate": 0,
+						"hooked shortspear|oota": 0,
+						"light repeating crossbow|oota": 0,
+						"boots of speed": 0,
+						"+1 flail|dmg": 0,
+						"+3 scale mail": 0,
+						"scimitar of speed": 0,
+						"dagger": 0,
+						"purple worm poison": 0,
+						"staff of defense": 0,
+						"windvane|pota": 0,
+						"ring of cold resistance": 0,
+						"potion of frost giant strength": 0,
+						"+1 dagger|dmg": 0,
+						"drown|pota": 0,
+						"ironfang|pota": 0,
+						"tinderstrike|pota": 0,
+						"heretic|qftis": 0,
+						"heretic": 0,
+						"ring of fire resistance": 0,
+						"blue dragon mask": 0,
+						"mask of the dragon queen": 0,
+						"potion of invisibility": 0,
+						"ring of lightning resistance": 0,
+						"+1 greataxe|dmg": 0,
+						"gurt's greataxe|skt": 0,
+						"+3 plate armor": 0,
+						"wand of fireballs": 0,
+						"wand of lightning bolts": 0,
+						"bag of holding": 0,
+						"robe of serpents": 0,
+						"+2 greataxe": 0,
+						"arrow-catching shield": 0,
+						"staff of swarming insects": 0,
+						"spellbook": 0,
+						"shatterspike": 0,
+						"staff of the forgotten one": 0,
+						"talisman of the sphere": 0,
+						"sphere of annihilation": 0,
+						"bookmark|toa": 0,
+						"ring of winter": 0,
+						"bookmark": 0,
+						"ring of animal influence": 0,
+						"cape of the mountebank": 0,
+						"flame tongue longsword|dmg": 0,
+						"flame tongue longsword": 0,
+						"amulet of the black skull": 0,
+						"staff of power": 0,
+						"crown of lies": 0,
+						"robe of the archmagi": 0,
+						"+2 dagger": 0,
+						"robe of scintillating colors": 0,
+						"necklace of fireballs": 0,
+						"circlet of blasting": 0,
+						"nepenthe|vrgr": 0,
+						"+1 longsword": 0,
+						"amulet of the planes": 0,
+						"+1 quarterstaff|dmg": 0,
+						"+1 quarterstaff": 0,
+						"witchlight vane": 0,
+						"witchlight watch": 0,
+						"+1 leather armor": 0,
+						"boots of levitation": 0,
+						"eldritch staff|wbtw": 0,
+						"eldritch staff": 0,
+						"steel|wbtw": 0,
+						"steel": 0,
+						"dread helm": 0,
+						"ring of feather falling": 0,
+						"wand of magic detection": 0,
+						"greatsword of sharpness": 0,
+						"boots of striding and springing": 0,
+						"ring of spell turning": 0,
+						"badge of the watch": 0,
+						"+3 rapier|dmg": 0,
+						"+3 leather armor": 0,
+						"bracer of flying daggers": 0,
+						"cloak of invisibility": 0,
+						"knave's eye patch": 0,
+						"ring of truth telling": 0,
+						"+3 rapier": 0,
+						"portable hole": 0,
+						"wand of web": 0,
+						"feather of diatryma summoning": 0,
+						"elemental gem": 0,
+						"azuredge|wdh": 0,
+						"azuredge": 0,
+						"ring of regeneration": 0,
+						"+1 dagger": 0,
+						"figurine of wondrous power, silver raven": 0,
+						"blackstaff": 0,
+						"glamoured studded leather": 0,
+						"ring of protection": 0,
+						"rod of rulership": 0,
+						"ring of invisibility": 0,
+						"ring of force resistance": 0,
+						"oversized longbow|wdh": 0,
+						"amulet of proof against detection and location": 0,
+						"robe of eyes": 0,
+						"blast scepter": 0,
+						"nine lives stealer": 0,
+						"dwarven thrower|dmg": 0,
+						"wand|xphb": 0,
+						"chain mail|xphb": 0,
+						"holy symbol|xphb": 0,
+						"light crossbow|xphb": 0,
+						"shortsword|xphb": 0,
+						"studded leather armor|xphb": 0,
+						"leather armor|xphb": 0,
+						"scimitar|xphb": 0,
+						"pistol|xphb": 0,
+						"dagger|xphb": 0,
+						"greataxe|xphb": 0,
+						"hide armor|xphb": 0,
+						"javelin|xphb": 0,
+						"chain shirt|xphb": 0,
+						"morningstar|xphb": 0,
+						"light hammer|xphb": 0,
+						"component pouch|xphb": 0,
+						"breastplate|xphb": 0,
+						"longbow|xphb": 0,
+						"pike|xphb": 0,
+						"club|xphb": 0,
+						"sickle|xphb": 0,
+						"splint armor|xphb": 0,
+						"battleaxe|xphb": 0,
+						"plate armor|xphb": 0,
+						"half plate armor|xphb": 0,
+						"shield|xphb": 0,
+						"spear|xphb": 0,
+						"shortbow|xphb": 0,
+						"longsword|xphb": 0,
+						"greatsword|xphb": 0,
+						"heavy crossbow|xphb": 0,
+						"rapier|xphb": 0,
+						"greatclub|xphb": 0,
+						"mace|xphb": 0,
+						"trident|xphb": 0,
+						"hand crossbow|xphb": 0,
+						"thieves' tools|xphb": 0,
+						"warhammer|xphb": 0,
+						"handaxe|xphb": 0,
+						"+2 ring of protection": 0,
+						"+2 flail|dmg": 0,
+						"+1 battleaxe|dmg": 0,
+						"+1 battleaxe": 0,
+						"spiked armor": 0,
+						"+1 scimitar|dmg": 0,
+						"+2 chain mail": 0,
+						"+2 sickle": 0,
+						"+1 mace|dmg": 0,
+						"+1 chain mail": 0,
+						"+1 shield": 0,
+						"+1 mace": 0,
+						"+2 longsword|dmg": 0,
+						"+2 splint armor": 0,
+						"potion of superior healing": 0,
+						"padded armor": 0,
+						"blowgun|phb": 0,
+						"mithral plate armor": 0,
+						"ranseur of torture|coa": 0,
+						"wrought-iron tower|coa": 0,
+						"wrought-iron tower": 0,
+						"scourge of shadow|coa": 0,
+						"+2 shield": 0,
+						"ring of resistance": 0,
+						"ruidium warhammer|crcotn": 0,
+						"mariner's armor": 0,
+						"ruidium dagger|crcotn": 0,
+						"ring of swimming": 0,
+						"ruidium shortsword|crcotn": 0,
+						"gloves of swimming and climbing": 0,
+						"staff of the adder": 0,
+						"ring of spell storing": 0,
+						"holy avenger longsword": 0,
+						"+3 breastplate": 0,
+						"+3 longsword": 0,
+						"lord commander's badge": 0,
+						"spymaster's signet": 0,
+						"ring of obscuring": 0,
+						"crystal ball": 0,
+						"ruinblade|imr": 0,
+						"ruinblade": 0,
+						"plate armor of fire resistance": 0,
+						"thessaltoxin": 0,
+						"polymorph blade": 0,
+						"gambler's blade longsword": 0,
+						"deck of several things": 0,
+						"blade of the medusa": 0,
+						"wave|dmg": 0,
+						"+2 plate armor": 0,
+						"cloak of protection": 0,
+						"cloak of the manta ray": 0,
+						"+2 warhammer": 0,
+						"rod of lordly might": 0,
+						"mace": 0,
+						"flame tongue": 0,
+						"+3 greataxe": 0,
+						"quiver of ehlonna": 0,
+						"handaxe": 0,
+						"+1 shortsword": 0,
+						"belt of giant strength": 0,
+						"+3 mace": 0,
+						"sun blade|dmg": 0,
+						"moonblade|dmg": 0,
+						"moonblade": 0,
+						"nightbringer|mcv2dc": 0,
+						"nightbringer": 0,
+						"+2 rod of the pact keeper": 0,
+						"red dragon scale mail": 0,
+						"hide armor of cold resistance": 0,
+						"deathwalker's ward (exalted)": 0,
+						"boots of haste": 0,
+						"whisper (exalted)": 0,
+						"belt of dwarvenkind": 0,
+						"bloodaxe": 0,
+						"dwarven thrower": 0,
+						"titanstone knuckles (exalted)": 0,
+						"circlet of wisdom": 0,
+						"spire of conflux (exalted)": 0,
+						"cabal's ruin (exalted)": 0,
+						"mace of disruption|dmg": 0,
+						"plate of the dawnmartyr (exalted)": 0,
+						"mace of disruption": 0,
+						"gauntlets of ogre power": 0,
+						"+2 studded leather armor of acid resistance": 0,
+						"mythcarver (exalted)": 0,
+						"+1 breastplate": 0,
+						"helm of brilliance": 0,
+						"robe of useful items": 0,
+						"ring of the ram": 0,
+						"rod of mercurial form": 0,
+						"bead of force": 0,
+						"broom of flying": 0,
+						"chime of opening": 0,
+						"plate barding": 0,
+						"+2 studded white dragon leather armor of cold resistance": 0,
+						"raven's slumber": 0,
+						"fenthras (exalted)": 0,
+						"+1 pike|dmg": 0
+					},
+					"nestsHidden": {}
+				}
+			}
+		},
+		"brewbuilderSettings_makebrew.html": {
+			"activeBuilder": "creatureBuilder",
+			"activeSource": "DragonHeistReworked"
+		},
+		"filterBoxState_items.html": {
+			"box": {
+				"meta": {
+					"modeCombineFilters": "and",
+					"isSummaryHidden": true,
+					"isBrewDefaultHidden": false
+				},
+				"minisHidden": {},
+				"combineAs": {}
+			},
+			"filters": {
+				"Source": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isIncludeOtherSources": false,
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"pillDisplayMode": 0
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"pillDisplayMode": 0
+					},
+					"state": {
+						"TCE": 1,
+						"FTD": 1,
+						"BMT": 1,
+						"DMG": 1,
+						"TDCSR": 1,
+						"PHB": 1,
+						"IDRotF": 1,
+						"CoA": 1,
+						"WDH": 1,
+						"BGG": 1,
+						"MOT": 1,
+						"SCC": 1,
+						"CM": 1,
+						"NRH-TLT": 1,
+						"PSX": 1,
+						"NRH-AT": 1,
+						"TftYP": 1,
+						"ToA": 1,
+						"EGW": 1,
+						"DoDk": 1,
+						"GHLoE": 1,
+						"ERLW": 1,
+						"GGR": 1,
+						"PotA": 1,
+						"SKT": 1,
+						"LLK": 1,
+						"AAG": 1,
+						"BGDIA": 1,
+						"XGE": 1,
+						"JttRC": 1,
+						"WDMM": 1,
+						"HotDQ": 1,
+						"ToD": 1,
+						"IMR": 1,
+						"CoS": 1,
+						"RoTOS": 1,
+						"WBtW": 1,
+						"SDW": 1,
+						"KftGV": 1,
+						"PaBTSO": 1,
+						"CRCotN": 1,
+						"AI": 1,
+						"GoS": 1,
+						"AitFR-AVT": 1,
+						"AitFR-FCD": 1,
+						"RMBRE": 1,
+						"TTP": 1,
+						"OotA": 1,
+						"XMtS": 1,
+						"RoT": 1,
+						"LMoP": 1,
+						"MTF": 1,
+						"DSotDQ": 1,
+						"VGM": 1,
+						"SatO": 1,
+						"DC": 1,
+						"MM": 1,
+						"SjA": 1,
+						"VRGR": 1,
+						"HAT-LMI": 1,
+						"MPMM": 1,
+						"LoX": 1,
+						"AitFR-DN": 1,
+						"MCV2DC": 1,
+						"AitFR-THP": 1,
+						"BAM": 1,
+						"EET": 1,
+						"AZfyT": 1,
+						"OGA": 1,
+						"HftT": 1,
+						"SCAG": 1,
+						"FleeMortals": 1,
+						"QftIS": 1,
+						"VEoR": 1,
+						"ToB1-2023": 1,
+						"DitLCoT": 1,
+						"XPHB": 1,
+						"UtHftLH": 0,
+						"XDMG": 1,
+						"ScoEE": 0,
+						"WhereEvilLives": 1,
+						"HBTD": 0,
+						"XMM": 1
+					},
+					"nestsHidden": {}
+				},
+				"Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"wondrous item": 0,
+						"simple weapon": 0,
+						"melee weapon": 0,
+						"instrument": 0,
+						"rod": 0,
+						"wand": 0,
+						"ring": 0,
+						"light armor": 0,
+						"adventuring gear": 0,
+						"trade good": 0,
+						"other": 0,
+						"martial weapon": 0,
+						"vehicle (air)": 0,
+						"artisan's tools": 0,
+						"food and drink": 0,
+						"treasure (gemstone)": 0,
+						"spellcasting focus": 0,
+						"treasure (art object)": 0,
+						"shield": 0,
+						"potion": 0,
+						"heavy armor": 0,
+						"medium armor": 0,
+						"poison": 0,
+						"mount": 0,
+						"illegal drug": 0,
+						"tattoo": 0,
+						"tack and harness": 0,
+						"staff": 0,
+						"renaissance": 2,
+						"explosive": 0,
+						"vehicle (space)": 0,
+						"vehicle (water)": 0,
+						"vehicle (land)": 0,
+						"ammunition": 0,
+						"ranged weapon": 0,
+						"treasure (coinage)": 0,
+						"gaming set": 0,
+						"tools": 0,
+						"modern": 2,
+						"firearm": 0,
+						"scroll": 0,
+						"generic variant": 0,
+						"futuristic": 2,
+						"tool": 0,
+						"trade bar": 2
+					},
+					"nestsHidden": {}
+				},
+				"Tier": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"none": 0,
+						"minor": 0,
+						"major": 0
+					},
+					"nestsHidden": {}
+				},
+				"Rarity": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"none": 0,
+						"common": 0,
+						"uncommon": 0,
+						"rare": 0,
+						"very rare": 0,
+						"legendary": 0,
+						"artifact": 0,
+						"varies": 0,
+						"unknown": 0,
+						"unknown (magic)": 0,
+						"other": 0
+					},
+					"nestsHidden": {}
+				},
+				"Property": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"light": 0,
+						"heavy": 0,
+						"two-handed": 0,
+						"vestige of divergence": 0,
+						"versatile": 0,
+						"thrown": 0,
+						"finesse": 0,
+						"ammunition": 0,
+						"loading": 0,
+						"reach": 0,
+						"special": 0,
+						"reload": 0,
+						"burst fire": 0,
+						"extended reach": 0,
+						"Light": 0,
+						"Heavy": 0,
+						"Two-Handed": 0,
+						"Vestige of Divergence": 0,
+						"Versatile": 0,
+						"Thrown": 0,
+						"Finesse": 0,
+						"Ammunition": 0,
+						"Loading": 0,
+						"Reach": 0,
+						"Reload": 0,
+						"Burst Fire": 0,
+						"Extended Reach": 0
+					},
+					"nestsHidden": {}
+				},
+				"Attunement": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Requires Attunement": 0,
+						"Requires Attunement By...": 0,
+						"Attunement Optional": 0,
+						"No Attunement Required": 0,
+						"Class: Artificer": 0,
+						"Class: Cleric": 0,
+						"Class: Paladin": 0,
+						"Class: Wizard": 0,
+						"Class: Sorcerer": 0,
+						"Class: Monk": 0,
+						"Class: Druid": 0,
+						"Class: Ranger": 0,
+						"Class: Bard": 0,
+						"Class: Warlock": 0,
+						"Spellcaster": 0,
+						"Alignment: Any Non-Good Alignment": 0,
+						"Background: Azorius Functionary": 0,
+						"Skill Proficiency: Arcana": 0,
+						"Alignment: Any Non-Lawful Alignment": 0,
+						"Creature Type: Humanoid": 0,
+						"Alignment: Good": 0,
+						"Background: Boros Legionnaire": 0,
+						"Alignment: Any Non-Evil Alignment": 0,
+						"Background: Dimir Operative": 0,
+						"Race: Warforged": 0,
+						"Race: Dwarf": 0,
+						"Race: Elf": 0,
+						"Alignment: Evil": 0,
+						"Race: Half-Orc (Variant; Mark of Finding)": 0,
+						"Race: Human (Variant; Mark of Finding)": 0,
+						"Background: Golgari Agent": 0,
+						"Psionics": 0,
+						"Background: Gruul Anarch": 0,
+						"Language Proficiency: Infernal": 0,
+						"Background: Izzet Engineer": 0,
+						"Race: Dwarf (Mark of Warding)": 0,
+						"Alignment: Neutral Good": 0,
+						"Race: Half-Elf": 0,
+						"Background: Orzhov Representative": 0,
+						"Size: Small": 0,
+						"Intelligence: 3 or Higher": 0,
+						"Background: Rakdos Cultist": 0,
+						"Creature Type: Fey": 0,
+						"Race: Gnome (Mark of Scribing)": 0,
+						"Background: Selesnya Initiate": 0,
+						"Background: Simic Scientist": 0,
+						"Alignment: Chaotic Good": 0,
+						"Alignment: Chaotic Evil": 0,
+						"Alignment: Lawful Neutral": 0,
+						"Alignment: Chaotic Neutral": 0,
+						"Alignment: Neutral": 0,
+						"Alignment: Lawful Good": 0,
+						"Alignment: Lawful Evil": 0,
+						"Alignment: Neutral Evil": 0,
+						"Species: Warforged": 0,
+						"Species: Dwarf": 0,
+						"Species: Elf": 0,
+						"Species: Half-Orc (Variant; Mark of Finding)": 0,
+						"Species: Human (Variant; Mark of Finding)": 0,
+						"Species: Dwarf (Mark of Warding)": 0,
+						"Species: Half-Elf": 0,
+						"Species: Gnome (Mark of Scribing)": 0,
+						"Class: Barbarian": 0
+					},
+					"nestsHidden": {}
+				},
+				"Category": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Basic": 0,
+						"Generic Variant": 0,
+						"Specific Variant": 0,
+						"Other": 0
+					},
+					"nestsHidden": {}
+				},
+				"Cost": {
+					"meta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 118,
+						"curMin": 0,
+						"curMax": 118
+					}
+				},
+				"Weight": {
+					"meta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 100,
+						"curMin": 0,
+						"curMax": 100
+					}
+				},
+				"Spellcasting Focus": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Artificer": 0,
+						"Bard": 0,
+						"Cleric": 0,
+						"Druid": 0,
+						"Paladin": 0,
+						"Ranger": 0,
+						"Sorcerer": 0,
+						"Warlock": 0,
+						"Wizard": 0
+					},
+					"nestsHidden": {}
+				},
+				"Weapon Damage Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"S": 0,
+						"B": 0,
+						"O": 0,
+						"P": 0,
+						"R": 0,
+						"F": 0,
+						"N": 0,
+						"C": 0,
+						"Y": 0
+					},
+					"nestsHidden": {}
+				},
+				"Weapon Damage Dice": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"1": 0,
+						"1d4": 0,
+						"1d6": 0,
+						"1d8": 0,
+						"1d10": 0,
+						"1d12": 0,
+						"2d6": 0,
+						"6d6": 0,
+						"2d8": 0,
+						"3d12": 0,
+						"6d8": 0,
+						"2d4": 0,
+						"2d10": 0,
+						"3d6": 0,
+						"3d8": 0
+					},
+					"nestsHidden": {}
+				},
+				"Armor Class": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"min": 0,
+						"max": 21,
+						"curMin": 0,
+						"curMax": 21
+					}
+				},
+				"Bonus": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Armor Class": 0,
+						"Proficiency Bonus": 0,
+						"Spell Attacks": 0,
+						"Spell Save DC": 0,
+						"Saving Throws": 0,
+						"Weapon Attack and Damage Rolls": 0,
+						"Weapon Attack and Damage Rolls (+1)": 0,
+						"Weapon Attack and Damage Rolls (+2)": 0,
+						"Weapon Attack and Damage Rolls (+3)": 0,
+						"Weapon Attack Rolls": 0,
+						"Weapon Attack Rolls (+1)": 0,
+						"Weapon Attack Rolls (+2)": 0,
+						"Weapon Attack Rolls (+3)": 0,
+						"Weapon Damage Rolls": 0,
+						"Weapon Damage Rolls (+1)": 0,
+						"Weapon Damage Rolls (+2)": 0,
+						"Weapon Damage Rolls (+3)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Damage": {
+					"meta": {},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"isUseDropdowns": false
+					},
+					"state": {
+						"mode": "and"
+					}
+				},
+				"Vulnerability": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0
+					},
+					"nestsHidden": {}
+				},
+				"Resistance": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0
+					},
+					"nestsHidden": {}
+				},
+				"Immunity": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"acid": 0,
+						"bludgeoning": 0,
+						"cold": 0,
+						"fire": 0,
+						"force": 0,
+						"lightning": 0,
+						"necrotic": 0,
+						"piercing": 0,
+						"poison": 0,
+						"psychic": 0,
+						"radiant": 0,
+						"slashing": 0,
+						"thunder": 0
+					},
+					"nestsHidden": {}
+				},
+				"Condition Immunity": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or"
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"blinded": 0,
+						"charmed": 0,
+						"deafened": 0,
+						"exhaustion": 0,
+						"frightened": 0,
+						"grappled": 0,
+						"incapacitated": 0,
+						"invisible": 0,
+						"paralyzed": 0,
+						"petrified": 0,
+						"poisoned": 0,
+						"prone": 0,
+						"restrained": 0,
+						"stunned": 0,
+						"unconscious": 0,
+						"disease": 0
+					},
+					"nestsHidden": {}
+				},
+				"Miscellaneous": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Ability Score Adjustment": 0,
+						"Charges": 0,
+						"Cursed": 0,
+						"Grants Language": 0,
+						"Grants Proficiency": 0,
+						"Magic": 0,
+						"Mundane": 0,
+						"Sentient": 0,
+						"Speed Adjustment": 0,
+						"Item Group": 0,
+						"Bundle": 0,
+						"Legacy": 0,
+						"Has Images": 0,
+						"Has Info": 0,
+						"Reprinted": 0,
+						"Disadvantage on Stealth": 0,
+						"Strength Requirement": 0,
+						"Emits Light, Bright": 0,
+						"Emits Light, Dim": 0,
+						"SRD": 0,
+						"Basic Rules": 0,
+						"Creates Food/Water": 0,
+						"Trinket Table": 0,
+						"Expanded Critical Range": 0,
+						"_isActive": true,
+						"_totals": {
+							"yes": 1,
+							"no": 0,
+							"ignored": 21
+						},
+						"_combineBlue": "or",
+						"_combineRed": "or",
+						"Consumable": 0,
+						"SRD 5.1": 0,
+						"Basic Rules (2014)": 0,
+						"Free Rules (2024)": 0
+					},
+					"nestsHidden": {}
+				},
+				"Recharge Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"dawn": 0,
+						"restLong": 0,
+						"restShort": 0,
+						"decade": 0,
+						"special": 0,
+						"dusk": 0,
+						"midnight": 0
+					},
+					"nestsHidden": {}
+				},
+				"Poison Type": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"ingested": 0,
+						"injury": 0,
+						"inhaled": 0,
+						"contact": 0
+					},
+					"nestsHidden": {}
+				},
+				"Mastery": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"sap|xphb": 0,
+						"vex|xphb": 0,
+						"topple|xphb": 0,
+						"push|xphb": 0,
+						"slow|xphb": 0,
+						"nick|xphb": 0,
+						"graze|xphb": 0,
+						"cleave|xphb": 0
+					},
+					"nestsHidden": {}
+				},
+				"Found On": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"Magic Item Table A": 0,
+						"Magic Item Table B": 0,
+						"Magic Item Table C": 0,
+						"Magic Item Table D": 0,
+						"Magic Item Table E": 0,
+						"Magic Item Table F": 0,
+						"Magic Item Table G": 0,
+						"Magic Item Table H": 0,
+						"Magic Item Table I": 0,
+						"Arcana - Uncommon|XDMG": 0,
+						"Relics - Uncommon|XDMG": 0,
+						"Armaments - Uncommon|XDMG": 0,
+						"Arcana - Rare|XDMG": 0,
+						"Relics - Rare|XDMG": 0,
+						"Armaments - Rare|XDMG": 0,
+						"Arcana - Very Rare|XDMG": 0,
+						"Relics - Very Rare|XDMG": 0,
+						"Armaments - Very Rare|XDMG": 0,
+						"Implements - Uncommon|XDMG": 0,
+						"Arcana - Legendary|XDMG": 0,
+						"Armaments - Legendary|XDMG": 0,
+						"Relics - Legendary|XDMG": 0,
+						"Implements - Rare|XDMG": 0,
+						"Implements - Very Rare|XDMG": 0,
+						"Arcana - Common|XDMG": 0,
+						"Implements - Common|XDMG": 0,
+						"Armaments - Common|XDMG": 0,
+						"Relics - Common|XDMG": 0,
+						"Implements - Legendary|XDMG": 0
+					},
+					"nestsHidden": {}
+				},
+				"Base Item": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"sickle__phb": 0,
+						"greataxe__phb": 0,
+						"flail__phb": 0,
+						"warhammer__phb": 0,
+						"scale mail__phb": 0,
+						"plate armor__phb": 0,
+						"battleaxe__phb": 0,
+						"quarterstaff__phb": 0,
+						"dagger__phb": 0,
+						"shield__phb": 0,
+						"greatsword__phb": 0,
+						"longsword__phb": 0,
+						"spear__phb": 0,
+						"mace__phb": 0,
+						"breastplate__phb": 0,
+						"trident__phb": 0,
+						"heavy crossbow__phb": 0,
+						"studded leather armor__phb": 0,
+						"greatclub__phb": 0,
+						"whip__phb": 0,
+						"shortbow__phb": 0,
+						"longbow__phb": 0,
+						"lance__phb": 0,
+						"shortsword__phb": 0,
+						"maul__phb": 0,
+						"leather armor__phb": 0,
+						"war pick__phb": 0,
+						"javelin__phb": 0,
+						"club__phb": 0,
+						"musket__dmg": 0,
+						"pike__phb": 0,
+						"morningstar__phb": 0,
+						"scimitar__phb": 0,
+						"dart__phb": 0,
+						"rapier__phb": 0,
+						"sling__phb": 0,
+						"pistol__dmg": 0,
+						"hand crossbow__phb": 0,
+						"chain shirt__phb": 0,
+						"antimatter rifle__dmg": 0,
+						"arrow__phb": 0,
+						"automatic pistol__dmg": 0,
+						"automatic rifle__dmg": 0,
+						"blowgun__phb": 0,
+						"blowgun needle__phb": 0,
+						"chain mail__phb": 0,
+						"crossbow bolt__phb": 0,
+						"crystal__phb": 0,
+						"double-bladed scimitar__erlw": 0,
+						"energy cell__dmg": 0,
+						"glaive__phb": 0,
+						"halberd__phb": 0,
+						"half plate armor__phb": 0,
+						"handaxe__phb": 0,
+						"hide armor__phb": 0,
+						"hooked shortspear__oota": 0,
+						"hoopak__dsotdq": 0,
+						"hunting rifle__dmg": 0,
+						"laser pistol__dmg": 0,
+						"laser rifle__dmg": 0,
+						"light crossbow__phb": 0,
+						"light hammer__phb": 0,
+						"light repeating crossbow__oota": 0,
+						"modern bullet__dmg": 0,
+						"net__phb": 0,
+						"orb__phb": 0,
+						"padded armor__phb": 0,
+						"renaissance bullet__dmg": 0,
+						"revolver__dmg": 0,
+						"ring mail__phb": 0,
+						"rod__phb": 0,
+						"shotgun__dmg": 0,
+						"sling bullet__phb": 0,
+						"spiked armor__scag": 0,
+						"splint armor__phb": 0,
+						"staff__phb": 0,
+						"wand__phb": 0,
+						"wooden staff__phb": 0,
+						"yklwa__toa": 0,
+						"mace__xphb": 0,
+						"quarterstaff__xphb": 0,
+						"shield__xphb": 0,
+						"greatclub__xphb": 0,
+						"spear__xphb": 0,
+						"arrow__xphb": 0,
+						"battleaxe__xphb": 0,
+						"blowgun__xphb": 0,
+						"bolt__xphb": 0,
+						"breastplate__xphb": 0,
+						"chain mail__xphb": 0,
+						"chain shirt__xphb": 0,
+						"club__xphb": 0,
+						"crystal__xphb": 0,
+						"dagger__xphb": 0,
+						"dart__xphb": 0,
+						"firearm bullet__xphb": 0,
+						"flail__xphb": 0,
+						"glaive__xphb": 0,
+						"greataxe__xphb": 0,
+						"greatsword__xphb": 0,
+						"halberd__xphb": 0,
+						"half plate armor__xphb": 0,
+						"hand crossbow__xphb": 0,
+						"handaxe__xphb": 0,
+						"heavy crossbow__xphb": 0,
+						"hide armor__xphb": 0,
+						"javelin__xphb": 0,
+						"lance__xphb": 0,
+						"leather armor__xphb": 0,
+						"light crossbow__xphb": 0,
+						"light hammer__xphb": 0,
+						"longbow__xphb": 0,
+						"longsword__xphb": 0,
+						"maul__xphb": 0,
+						"morningstar__xphb": 0,
+						"musket__xphb": 0,
+						"needle__xphb": 0,
+						"orb__xphb": 0,
+						"padded armor__xphb": 0,
+						"pike__xphb": 0,
+						"pistol__xphb": 0,
+						"plate armor__xphb": 0,
+						"rapier__xphb": 0,
+						"ring mail__xphb": 0,
+						"rod__xphb": 0,
+						"scale mail__xphb": 0,
+						"scimitar__xphb": 0,
+						"shortbow__xphb": 0,
+						"shortsword__xphb": 0,
+						"sickle__xphb": 0,
+						"sling__xphb": 0,
+						"sling bullet__xphb": 0,
+						"splint armor__xphb": 0,
+						"staff__xphb": 0,
+						"studded leather armor__xphb": 0,
+						"trident__xphb": 0,
+						"wand__xphb": 0,
+						"war pick__xphb": 0,
+						"warhammer__xphb": 0,
+						"whip__xphb": 0,
+						"wooden staff__xphb": 0,
+						"antimatter rifle__xdmg": 0,
+						"automatic rifle__xdmg": 0,
+						"energy cell__xdmg": 0,
+						"hunting rifle__xdmg": 0,
+						"laser pistol__xdmg": 0,
+						"laser rifle__xdmg": 0,
+						"revolver__xdmg": 0,
+						"semiautomatic pistol__xdmg": 0,
+						"shotgun__xdmg": 0
+					},
+					"nestsHidden": {}
+				},
+				"Base Source": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isIncludeOtherSources": false,
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"pillDisplayMode": 0
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true,
+						"pillDisplayMode": 0
+					},
+					"state": {
+						"DMG": 0,
+						"ERLW": 0,
+						"OotA": 0,
+						"DSotDQ": 0,
+						"SCAG": 0,
+						"ToA": 0,
+						"XPHB": 0,
+						"XDMG": 0,
+						"PHB": 0
+					},
+					"nestsHidden": {}
+				},
+				"Feature": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"replicate magic item|tce": 0
+					},
+					"nestsHidden": {}
+				},
+				"Attached Spells": {
+					"meta": {
+						"combineBlue": "or",
+						"combineRed": "or",
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"uiMeta": {
+						"isHidden": false,
+						"isMobileHeaderHidden": true
+					},
+					"state": {
+						"move earth": 0,
+						"animate objects": 0,
+						"heat metal": 0,
+						"fabricate": 0,
+						"magic weapon": 0,
+						"mending": 0,
+						"shatter": 0,
+						"enlarge/reduce": 0,
+						"feather fall": 0,
+						"flesh to stone": 0,
+						"gaseous form": 0,
+						"polymorph": 0,
+						"reverse gravity": 0,
+						"fire bolt": 0,
+						"produce flame": 0,
+						"plane shift": 0,
+						"command": 0,
+						"hold monster": 0,
+						"rime's binding ice|ftd": 0,
+						"rary's telepathic bond": 0,
+						"raulothim's psychic lance|ftd": 0,
+						"fizban's platinum shield|ftd": 0,
+						"legend lore": 0,
+						"augury": 0,
+						"divination": 0,
+						"find the path": 0,
+						"foresight": 0,
+						"locate creature": 0,
+						"locate object": 0,
+						"arcane gate": 0,
+						"dimension door": 0,
+						"gate": 0,
+						"misty step": 0,
+						"teleportation circle": 0,
+						"word of recall": 0,
+						"conjure elemental": 0,
+						"teleport": 0,
+						"ensnaring strike": 0,
+						"shield": 0,
+						"detect evil and good": 0,
+						"levitate": 0,
+						"charm person": 0,
+						"disintegrate": 0,
+						"fear": 0,
+						"finger of death": 0,
+						"hold person": 0,
+						"ray of enfeeblement": 0,
+						"sleep": 0,
+						"slow": 0,
+						"telekinesis": 0,
+						"protection from evil and good": 0,
+						"mage hand": 0,
+						"Bigby's hand": 0,
+						"eyebite": 0,
+						"haste": 0,
+						"cone of cold": 0,
+						"fireball": 0,
+						"globe of invulnerability": 0,
+						"lightning bolt": 0,
+						"magic missile": 0,
+						"wall of force": 0,
+						"dispel magic": 0,
+						"hallucinatory terrain": 0,
+						"major image": 0,
+						"phantasmal killer": 0,
+						"thunderwave": 0,
+						"dominate monster": 0,
+						"compulsion": 0,
+						"ray of frost": 0,
+						"wall of ice": 0,
+						"heroism": 0,
+						"gust of wind": 0,
+						"stone shape": 0,
+						"lesser restoration": 0,
+						"dominate beast": 0,
+						"spray of cards|bmt": 0,
+						"raise dead": 0,
+						"scrying": 0,
+						"detect thoughts": 0,
+						"sending": 0,
+						"speak with plants": 0,
+						"demiplane": 0,
+						"scorching ray": 0,
+						"web": 0,
+						"fog cloud": 0,
+						"silence": 0,
+						"blight": 0,
+						"light": 0,
+						"aura of life": 0,
+						"aura of purity": 0,
+						"banishment": 0,
+						"beacon of hope": 0,
+						"mass cure wounds": 0,
+						"wish": 0,
+						"ice storm": 0,
+						"suggestion": 0,
+						"intellect fortress|tce": 0,
+						"message": 0,
+						"mind sliver|tce": 0,
+						"tasha's mind whip|tce": 0,
+						"tenser's floating disk": 0,
+						"antimagic field": 0,
+						"time stop": 0,
+						"true resurrection": 0,
+						"knock": 0,
+						"true polymorph": 0,
+						"magic circle": 0,
+						"magic jar": 0,
+						"planar ally": 0,
+						"planar binding": 0,
+						"summon fiend|tce": 0,
+						"tasha's hideous laughter": 0,
+						"disguise self": 0,
+						"detect magic": 0,
+						"comprehend languages": 0,
+						"shocking grasp": 0,
+						"darkness": 0,
+						"daylight": 0,
+						"mirror image": 0,
+						"mislead": 0,
+						"nystul's magic aura": 0,
+						"phantasmal force": 0,
+						"silent image": 0,
+						"sunbeam": 0,
+						"dissonant whispers": 0,
+						"illusory script": 0,
+						"awaken": 0,
+						"wall of thorns": 0,
+						"transport via plants": 0,
+						"clairvoyance": 0,
+						"crown of madness": 0,
+						"conjure celestial": 0,
+						"bane": 0,
+						"bless": 0,
+						"aid": 0,
+						"hunter's mark": 0,
+						"divine favor": 0,
+						"pass without trace": 0,
+						"animal messenger": 0,
+						"burning hands": 0,
+						"contingency": 0,
+						"leomund's tiny hut": 0,
+						"identify": 0,
+						"entangle": 0,
+						"earthquake": 0,
+						"meld into stone": 0,
+						"compelled duel": 0,
+						"heroes' feast": 0,
+						"calm emotions": 0,
+						"antipathy/sympathy": 0,
+						"dominate person": 0,
+						"enthrall": 0,
+						"hypnotic pattern": 0,
+						"modify memory": 0,
+						"prismatic spray": 0,
+						"wall of fire": 0,
+						"heal": 0,
+						"elemental weapon": 0,
+						"call lightning": 0,
+						"tsunami": 0,
+						"alter self": 0,
+						"invisibility": 0,
+						"arcane eye": 0,
+						"bigby's hand": 0,
+						"maze": 0,
+						"mage armor": 0,
+						"control weather": 0,
+						"fly": 0,
+						"cure wounds": 0,
+						"protection from energy": 0,
+						"wind wall": 0,
+						"animal friendship": 0,
+						"protection from poison": 0,
+						"faerie fire": 0,
+						"shillelagh": 0,
+						"speak with animals": 0,
+						"barkskin": 0,
+						"confusion": 0,
+						"fire storm": 0,
+						"dream": 0,
+						"chaos bolt|XGE": 0,
+						"Otto's irresistible dance": 0,
+						"guiding bolt": 0,
+						"blink": 0,
+						"animate dead": 0,
+						"circle of death": 0,
+						"false life": 0,
+						"speak with dead": 0,
+						"summon undead|tce": 0,
+						"vampiric touch": 0,
+						"Leomund's secret chest": 0,
+						"create food and water": 0,
+						"warding bond": 0,
+						"guardian of faith": 0,
+						"crusader's mantle": 0,
+						"detect poison and disease": 0,
+						"dancing lights": 0,
+						"passwall": 0,
+						"summon construct|tce": 0,
+						"sleet storm": 0,
+						"greater restoration": 0,
+						"branding smite": 0,
+						"wind walk": 0,
+						"bestow curse": 0,
+						"etherealness": 0,
+						"freedom of movement": 0,
+						"death ward": 0,
+						"contact other plane": 0,
+						"find familiar": 0,
+						"summon elemental|tce": 0,
+						"water breathing": 0,
+						"arcane lock": 0,
+						"glyph of warding": 0,
+						"mordenkainen's private sanctum": 0,
+						"symbol": 0,
+						"purge contamination|dodk": 0,
+						"enhance ability": 0,
+						"hellish rebuke": 0,
+						"reincarnate": 0,
+						"otto's irresistible dance": 0,
+						"chain lightning": 0,
+						"Leomund's tiny hut": 0,
+						"stoneskin": 0,
+						"wall of stone": 0,
+						"jump": 0,
+						"create or destroy water": 0,
+						"control water": 0,
+						"Otiluke's freezing sphere": 0,
+						"spike growth": 0,
+						"see invisibility": 0,
+						"resurrection": 0,
+						"antagonize|bmt": 0,
+						"aura of vitality": 0,
+						"destructive wave": 0,
+						"hex": 0,
+						"prayer of healing": 0,
+						"revivify": 0,
+						"spare the dying": 0,
+						"flaming sphere": 0,
+						"flame strike": 0,
+						"simulacrum": 0,
+						"cloudkill": 0,
+						"expeditious retreat": 0,
+						"spirit of death|bmt": 0,
+						"spider climb": 0,
+						"delerium orb|dodk": 0,
+						"warp bolt|dodk": 0,
+						"ride the rifts|dodk": 0,
+						"delerium blast|dodk": 0,
+						"conjure the deep haze|dodk": 0,
+						"ray of contamination|dodk": 0,
+						"fortune's favor|egw": 0,
+						"pulse wave|egw": 0,
+						"gravity sinkhole|egw": 0,
+						"giant insect": 0,
+						"insect plague": 0,
+						"locate animals or plants": 0,
+						"prestidigitation": 0,
+						"purify food and drink": 0,
+						"unseen servant": 0,
+						"divine word": 0,
+						"sanctuary": 0,
+						"counterspell": 0,
+						"conjure animals": 0,
+						"summon lesser demons|XGE": 0,
+						"conjure minor elementals": 0,
+						"conjure woodland beings": 0,
+						"summon greater demon|XGE": 0,
+						"conjure fey": 0,
+						"Mordenkainen's faithful hound": 0,
+						"nondetection": 0,
+						"goodberry": 0,
+						"healing word": 0,
+						"zone of truth": 0,
+						"longstrider": 0,
+						"power word kill": 0,
+						"stinking cloud": 0,
+						"guidance": 0,
+						"find traps": 0,
+						"searing smite": 0,
+						"dispel evil and good": 0,
+						"prismatic wall": 0,
+						"true seeing": 0,
+						"arms of Hadar": 0,
+						"commune": 0,
+						"regenerate": 0,
+						"mirage arcane": 0,
+						"sacred flame": 0,
+						"find steed": 0,
+						"claws of darkness|talesfromtheshadows": 0,
+						"douse light|bookofebontides": 0,
+						"shadow bite|talesfromtheshadows": 0,
+						"shadow blindness|talesfromtheshadows": 0,
+						"black ribbons|talesfromtheshadows": 0,
+						"cloak of shadow|bookofebontides": 0,
+						"shadow armor|talesfromtheshadows": 0,
+						"shadow hands|talesfromtheshadows": 0,
+						"dark path|talesfromtheshadows": 0,
+						"darkbolt|bookofebontides": 0,
+						"negative image|talesfromtheshadows": 0,
+						"shadow puppets|talesfromtheshadows": 0,
+						"slither|bookofebontides": 0,
+						"call shadow mastiff|talesfromtheshadows": 0,
+						"shadow tendrils|talesfromtheshadows": 0,
+						"shadow trove|talesfromtheshadows": 0,
+						"black hand|talesfromtheshadows": 0,
+						"hide in one's shadow|talesfromtheshadows": 0,
+						"shadow step|bookofebontides": 0,
+						"dark dementing|talesfromtheshadows": 0,
+						"shadow gateway|bookofebontides": 0,
+						"become nightwing|talesfromtheshadows": 0,
+						"black well|talesfromtheshadows": 0,
+						"conjure shadow titan|talesfromtheshadows": 0,
+						"dying of the light|talesfromtheshadows": 0,
+						"creeping darkness|talesfromtheshadows": 0,
+						"umbral storm|talesfromtheshadows": 0,
+						"enlarge/reduce|xphb": 0,
+						"faerie fire|xphb": 0,
+						"fireball|xphb": 0,
+						"gust of wind|xphb": 0,
+						"invisibility|xphb": 0,
+						"lightning bolt|xphb": 0,
+						"phantasmal force|xphb": 0,
+						"polymorph|xphb": 0,
+						"stinking cloud|xphb": 0,
+						"summon celestial|xphb": 0,
+						"sending|xphb": 0,
+						"incendiary cloud": 0,
+						"geas": 0,
+						"tree stride": 0,
+						"douse light|BookOfEbonTides": 0,
+						"seeming": 0,
+						"cloak of shadow|BookOfEbonTides": 0,
+						"shadow gateway|BookOfEbonTides": 0,
+						"shadow step|BookOfEbonTides": 0,
+						"slither|BookOfEbonTides": 0,
+						"moonbeam": 0,
+						"child of light and darkness|BookOfEbonTides": 0,
+						"sunburst": 0,
+						"burning radiance|BookOfEbonTides": 0,
+						"searing sun|BookOfEbonTides": 0,
+						"word of misfortune|BookOfEbonTides": 0,
+						"life drain|BookOfEbonTides": 0,
+						"living shadows|BookOfEbonTides": 0,
+						"maddening whispers|BookOfEbonTides": 0,
+						"void strike|BookOfEbonTides": 0,
+						"darkbolt|BookOfEbonTides": 0,
+						"plane shift|xphb": 0,
+						"teleport|xphb": 0,
+						"haste|xphb": 0,
+						"animate dead|xphb": 0,
+						"circle of death|xphb": 0,
+						"dominate monster|xphb": 0,
+						"finger of death|xphb": 0,
+						"levitate|xphb": 0,
+						"gate|xphb": 0,
+						"dimension door|xphb": 0,
+						"raise dead|xphb": 0,
+						"knock|xphb": 0,
+						"scorching ray|xphb": 0,
+						"web|xphb": 0,
+						"scrying|xphb": 0,
+						"detect thoughts|xphb": 0,
+						"suggestion|xphb": 0,
+						"mage armor|xphb": 0,
+						"shield|xphb": 0,
+						"leomund's tiny hut|xphb": 0,
+						"mordenkainen's private sanctum|xphb": 0,
+						"otiluke's resilient sphere|xphb": 0,
+						"wall of force|xphb": 0,
+						"summon aberration|xphb": 0,
+						"summon beast|xphb": 0,
+						"summon construct|xphb": 0,
+						"summon dragon|xphb": 0,
+						"summon elemental|xphb": 0,
+						"summon fey|xphb": 0,
+						"wish|xphb": 0,
+						"magic circle|xphb": 0,
+						"magic jar|xphb": 0,
+						"planar ally|xphb": 0,
+						"planar binding|xphb": 0,
+						"summon fiend|xphb": 0,
+						"tasha's hideous laughter|xphb": 0,
+						"light|xphb": 0,
+						"daylight|xphb": 0,
+						"clairvoyance|xphb": 0,
+						"crown of madness|xphb": 0,
+						"disintegrate|xphb": 0,
+						"eyebite|xphb": 0,
+						"charm person|xphb": 0,
+						"animal messenger|xphb": 0,
+						"darkvision|xphb": 0,
+						"see invisibility|xphb": 0,
+						"sleep|xphb": 0,
+						"slow|xphb": 0,
+						"disguise self|xphb": 0,
+						"prismatic spray|xphb": 0,
+						"wall of fire|xphb": 0,
+						"comprehend languages|xphb": 0,
+						"fly|xphb": 0,
+						"protection from evil and good|xphb": 0,
+						"cure wounds|xphb": 0,
+						"ice storm|xphb": 0,
+						"wall of thorns|xphb": 0,
+						"dispel magic|xphb": 0,
+						"protection from energy|xphb": 0,
+						"stone shape|xphb": 0,
+						"wind wall|xphb": 0,
+						"animal friendship|xphb": 0,
+						"protection from poison|xphb": 0,
+						"entangle|xphb": 0,
+						"shillelagh|xphb": 0,
+						"speak with animals|xphb": 0,
+						"barkskin|xphb": 0,
+						"fog cloud|xphb": 0,
+						"confusion|xphb": 0,
+						"control weather|xphb": 0,
+						"fire storm|xphb": 0,
+						"bless|xphb": 0,
+						"greater restoration|xphb": 0,
+						"shining smite|xphb": 0,
+						"guardian of faith|xphb": 0,
+						"wind walk|xphb": 0,
+						"etherealness|xphb": 0,
+						"freedom of movement|xphb": 0,
+						"death ward|xphb": 0,
+						"detect magic|xphb": 0,
+						"gaseous form|xphb": 0,
+						"fear|xphb": 0,
+						"chain lightning|xphb": 0,
+						"feather fall|xphb": 0,
+						"earthquake|xphb": 0,
+						"stoneskin|xphb": 0,
+						"wall of stone|xphb": 0,
+						"burning hands|xphb": 0,
+						"create or destroy water|xphb": 0,
+						"tsunami|xphb": 0,
+						"wall of ice|xphb": 0,
+						"water walk|xphb": 0,
+						"jump|xphb": 0,
+						"dancing lights|xphb": 0,
+						"telekinesis|xphb": 0,
+						"magic missile|xphb": 0,
+						"detect evil and good|xphb": 0,
+						"detect poison and disease|xphb": 0,
+						"heal|xphb": 0,
+						"resurrection|xphb": 0,
+						"augury|xphb": 0,
+						"commune|xphb": 0,
+						"command|xphb": 0,
+						"cone of cold|xphb": 0,
+						"lesser restoration|xphb": 0,
+						"mass cure wounds|xphb": 0,
+						"globe of invulnerability|xphb": 0,
+						"hold monster|xphb": 0,
+						"ray of enfeeblement|xphb": 0,
+						"giant insect|xphb": 0,
+						"insect plague|xphb": 0,
+						"arcane lock|xphb": 0,
+						"conjure elemental|xphb": 0,
+						"flaming sphere|xphb": 0,
+						"mage hand|xphb": 0,
+						"passwall|xphb": 0,
+						"awaken|xphb": 0,
+						"locate animals or plants|xphb": 0,
+						"pass without trace|xphb": 0,
+						"speak with plants|xphb": 0,
+						"call lightning|xphb": 0,
+						"divine word|xphb": 0,
+						"dominate beast|xphb": 0,
+						"hold person|xphb": 0,
+						"blight|xphb": 0,
+						"power word kill|xphb": 0,
+						"speak with dead|xphb": 0,
+						"darkness|xphb": 0,
+						"locate object|xphb": 0,
+						"message|xphb": 0
+					},
+					"nestsHidden": {}
+				}
+			}
+		},
+		"SUBLIST_RESIZE_items.html": "130px",
 		"HOMEBREW_2_STORAGE": [
 			{
 				"head": {
@@ -7934,9 +11810,10 @@
 									]
 								},
 								{
-									"name": "Spear",
+									"name": "Pike +1 (Deep Whisper)",
 									"entries": [
-										"{@atk mw,rw} {@hit +5} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+										"{@atk mw,rw} {@hit +6} to hit, reach 5 ft. or range 20/60 ft., one target. {@h}9 ({@damage 1d10 + 4}) Piercing damage.",
+										"When you roll a 20 on your attack roll with Deep Whisper, the target takes an extra {@damage 1d10} acid damage."
 									]
 								}
 							],
@@ -7946,17 +11823,22 @@
 							"miscTags": [
 								"RW",
 								"MW",
-								"MLW",
-								"THW"
+								"MLW"
 							],
 							"attachedItems": [
-								"spear|phb"
+								"+1 pike|dmg"
 							],
 							"trait": [
 								{
 									"name": "Gruumsh's Fury",
 									"entries": [
 										"The orc deals an extra 4 ({@damage 1d8}) damage when it hits with a weapon attack (included in the attacks)."
+									]
+								},
+								{
+									"name": "Fearless Aura",
+									"entries": [
+										"Deep Whisper may grant any allied creatures within 100 feet of the wielder a +4 bonus to saving throws against fear and similar spells and effects. "
 									]
 								}
 							],
@@ -7990,6 +11872,468 @@
 							"savingThrowForcedSpell": [
 								"constitution",
 								"wisdom"
+							]
+						},
+						{
+							"name": "Duskgloom Myconid Adult",
+							"source": "NightBelowIDC",
+							"size": [
+								"M"
+							],
+							"type": "plant",
+							"alignment": [
+								"N",
+								"E"
+							],
+							"ac": [
+								{
+									"ac": 12,
+									"from": [
+										"natural armor"
+									]
+								}
+							],
+							"hp": {
+								"formula": "5d8 + 5",
+								"average": 27
+							},
+							"speed": {
+								"walk": 20
+							},
+							"str": 10,
+							"dex": 10,
+							"con": 12,
+							"int": 10,
+							"wis": 13,
+							"cha": 7,
+							"senses": [
+								"darkvision 120 ft."
+							],
+							"passive": 11,
+							"cr": "1",
+							"trait": [
+								{
+									"name": "Sun Sickness",
+									"entries": [
+										"While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
+									]
+								}
+							],
+							"action": [
+								{
+									"name": "Multiattack",
+									"entries": [
+										"The duskgloom myconid uses either it's Poison Spores or it's Caustic Spores, then makes a fist attack."
+									]
+								},
+								{
+									"name": "Fist",
+									"entries": [
+										"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}5 ({@damage 2d4}) bludgeoning damage plus 5 ({@damage 2d4}) poison damage."
+									]
+								},
+								{
+									"name": "Poison Spores",
+									"entries": [
+										"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage. {@actSaveSuccessOrFail} The piercer reduces any damage it takes from the fall by 20."
+									]
+								},
+								{
+									"name": "Caustic Spores (1/Day)",
+									"entries": [
+										"The duskgloom myconid releases spores in a 30-foot cone. Each creature inside the cone must succeed on a {@actSave dex} {@dc 11}  {@actSaveFail} take 3 ({@damage 1d6}) acid damage at the start of each of the duskgloom myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success."
+									]
+								}
+							],
+							"environment": [
+								"underdark"
+							],
+							"soundClip": {
+								"type": "external",
+								"url": "https://5e.tools/audio/bestiary/myconid-adult.mp3"
+							},
+							"senseTags": [
+								"SD"
+							],
+							"miscTags": [
+								"MW",
+								"AOE"
+							],
+							"hasFluff": true,
+							"hasFluffImages": true,
+							"token": {
+								"name": "Myconid Adult",
+								"source": "MM"
+							},
+							"fluff": {
+								"name": "Myconid Adult",
+								"source": "MM",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											{
+												"type": "entries",
+												"entries": [
+													"Myconids are intelligent, ambulatory fungi that live in the Underdark, seek enlightenment, and deplore violence. If approached peacefully, myconids gladly provide shelter or allow safe passage through their colonies.",
+													{
+														"name": "Circles and Melds",
+														"type": "entries",
+														"entries": [
+															"The largest myconid in a colony is its sovereign, which presides over one or more social groups called circles. A circle consists of twenty or more myconids that work, live, and meld together.",
+															"A meld is a form of communal meditation that allows myconids to transcend their dull subterranean existence. The myconids' rapport spores bind the participants into a group consciousness. Hallucination spores then induce a shared dream that provides entertainment and social interaction. Myconids consider melding to be the purpose of their existence. They use it in the pursuit of higher consciousness, collective union, and spiritual apotheosis. Myconids also use their rapport spores to communicate telepathically with other sentient creatures."
+														]
+													},
+													{
+														"name": "Myconid Reproduction",
+														"type": "entries",
+														"entries": [
+															"Like other fungi, myconids reproduce by mundane sporing. They carefully control their spores' release to avoid overpopulation."
+														]
+													}
+												]
+											}
+										]
+									}
+								],
+								"images": [
+									{
+										"type": "image",
+										"href": {
+											"type": "internal",
+											"path": "bestiary/MM/Myconids.webp"
+										},
+										"credit": "Hector Ortiz"
+									}
+								]
+							},
+							"uniqueId": "fda68969-8890-42c6-a94f-09c0f67e8fda",
+							"languages": [
+								"Telepathy 240 ft."
+							],
+							"actionTags": [
+								"Multiattack"
+							],
+							"damageTags": [
+								"A",
+								"B",
+								"I"
+							],
+							"savingThrowForced": [
+								"dexterity"
+							]
+						},
+						{
+							"name": "Duskgloom Myconid Sovereign",
+							"source": "NightBelowIDC",
+							"size": [
+								"L"
+							],
+							"type": "plant",
+							"alignment": [
+								"N",
+								"E"
+							],
+							"ac": [
+								13
+							],
+							"hp": {
+								"formula": "7d10 + 14",
+								"average": 52
+							},
+							"speed": {
+								"walk": 30
+							},
+							"str": 12,
+							"dex": 10,
+							"con": 14,
+							"int": 13,
+							"wis": 15,
+							"cha": 10,
+							"senses": [
+								"darkvision 120 ft."
+							],
+							"passive": 12,
+							"languages": [
+								"telepathy 240 ft."
+							],
+							"cr": "3",
+							"trait": [
+								{
+									"name": "Sun Sickness",
+									"entries": [
+										"While in sunlight, the myconid has {@variantrule Disadvantage|XPHB} on {@variantrule D20 Test|XPHB|D20 Tests}. The myconid dies if it spends more than 1 hour in sunlight."
+									]
+								}
+							],
+							"action": [
+								{
+									"name": "Multiattack",
+									"entries": [
+										"The duskgloom myconid uses either its Hallucination Spores or its Caustic Spores, then makes a fist attack."
+									]
+								},
+								{
+									"name": "Slam",
+									"entries": [
+										"{@atkr m} {@hit 3}, reach 5 ft. {@h}6 ({@damage 2d4 + 1}) Bludgeoning damage plus 5 ({@damage 2d4}) Poison damage."
+									]
+								},
+								{
+									"name": "Animating Spores (3/Day)",
+									"entries": [
+										"The duskgloom myconid releases spores at a Medium or Small corpse within 5 feet of it that wasn't a Construct or an Undead. In 24 hours, the corpse rises as a {@creature Myconid Spore Servant|XMM}. The corpse stays animate for {@dice 1d4 + 1} weeks or until destroyed, and it can't be animated again in this way."
+									]
+								},
+								{
+									"name": "Caustic Spores (Recharge on 5 or 6)",
+									"entries": [
+										"The duskgloom myconid releases spores in a 30-foot cone. Each creature inside the cone must succeed on a {@actSave dex} {@dc 12}  {@actSaveFail} take 7 ({@damage 2d6}) acid damage at the start of each of the duskgloom myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success."
+									]
+								},
+								{
+									"name": "Hallucination Spores",
+									"entries": [
+										"The myconid ejects spores at one creature it can see within 5 feet of it. The target must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} for 1 minute. The {@condition poisoned} target is {@condition incapacitated} while it hallucinates. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+									]
+								}
+							],
+							"environment": [
+								"underdark"
+							],
+							"treasure": [
+								"any"
+							],
+							"soundClip": {
+								"type": "external",
+								"url": "https://5e.tools/audio/bestiary/myconid-sovere.mp3"
+							},
+							"senseTags": [
+								"SD"
+							],
+							"actionTags": [
+								"Multiattack"
+							],
+							"languageTags": [
+								"TP"
+							],
+							"miscTags": [
+								"MA",
+								"AOE"
+							],
+							"conditionInflict": [
+								"incapacitated",
+								"poisoned"
+							],
+							"hasFluff": true,
+							"hasFluffImages": true,
+							"token": {
+								"name": "Myconid Sovereign",
+								"source": "XMM"
+							},
+							"fluff": {
+								"name": "Myconid Sovereign",
+								"source": "XMM",
+								"entries": [
+									{
+										"type": "section",
+										"entries": [
+											"Myconid sovereigns resemble towering myconid adults with elaborate fungal growths. They direct their lesser kin and see to the health and growth of vast fungal blooms."
+										]
+									},
+									{
+										"type": "section",
+										"name": "Myconids",
+										"entries": [
+											"{@i Keepers of the Spore}",
+											{
+												"type": "list",
+												"style": "list-hang-notitle",
+												"items": [
+													{
+														"type": "item",
+														"name": "Habitat:",
+														"entry": "{@filter Underdark|bestiary|environment=underdark}"
+													},
+													{
+														"type": "item",
+														"name": "Treasure:",
+														"entry": "Any"
+													}
+												]
+											},
+											"Myconids dwell in remote Underdark reaches overgrown with molds and mushrooms. These ambulatory fungal creatures tend to their sanctuaries and avoid becoming embroiled in the conflicts of other creatures. They use specialized spores to communicate, to alert one another to danger, and to defend themselves. When myconids encounter others beings, they use mind-linking spores to allow nearby creatures to telepathically share thoughts. Nevertheless, myconids' goals remain mysterious to most non-fungal creatures."
+										]
+									}
+								],
+								"images": [
+									{
+										"type": "image",
+										"href": {
+											"type": "internal",
+											"path": "bestiary/XMM/Myconids.webp"
+										},
+										"credit": "Caroline Gariba"
+									}
+								]
+							},
+							"uniqueId": "a9f105c2-7cc5-4bc4-aa0b-031beb2c26a6",
+							"damageTags": [
+								"A",
+								"B",
+								"I"
+							],
+							"savingThrowForced": [
+								"constitution",
+								"dexterity"
+							]
+						},
+						{
+							"name": "Duskgloom Myconid Spore Servant",
+							"source": "NightBelowIDC",
+							"size": [
+								"S",
+								"M"
+							],
+							"type": "plant",
+							"alignment": [
+								"U"
+							],
+							"ac": [
+								12
+							],
+							"hp": {
+								"formula": "6d8 + 18",
+								"average": 48
+							},
+							"speed": {
+								"walk": 20
+							},
+							"str": 16,
+							"dex": 12,
+							"con": 16,
+							"int": 2,
+							"wis": 6,
+							"cha": 1,
+							"senses": [
+								"blindsight 30 ft."
+							],
+							"passive": 8,
+							"immune": [
+								"poison"
+							],
+							"conditionImmune": [
+								"blinded",
+								"charmed",
+								"frightened",
+								"paralyzed",
+								"poisoned"
+							],
+							"languages": [
+								"telepathy 30 ft."
+							],
+							"cr": "1",
+							"action": [
+								{
+									"name": "Slam",
+									"entries": [
+										"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage plus 2 ({@damage 1d4}) Poison damage."
+									]
+								}
+							],
+							"environment": [
+								"underdark"
+							],
+							"treasure": [
+								"any"
+							],
+							"senseTags": [
+								"B"
+							],
+							"languageTags": [
+								"TP"
+							],
+							"miscTags": [
+								"MA",
+								"AOE"
+							],
+							"hasFluff": true,
+							"hasFluffImages": true,
+							"token": {
+								"name": "Myconid Spore Servant",
+								"source": "XMM"
+							},
+							"fluff": {
+								"name": "Myconid Spore Servant",
+								"source": "XMM",
+								"entries": [
+									{
+										"type": "section",
+										"entries": [
+											"Spore servants are corpses that have been overgrown and reanimated by a myconid sovereign's spores. These fungus-infested bodies are extensions of a myconid sovereign and obey its will."
+										]
+									},
+									{
+										"type": "section",
+										"name": "Myconids",
+										"entries": [
+											"{@i Keepers of the Spore}",
+											{
+												"type": "list",
+												"style": "list-hang-notitle",
+												"items": [
+													{
+														"type": "item",
+														"name": "Habitat:",
+														"entry": "{@filter Underdark|bestiary|environment=underdark}"
+													},
+													{
+														"type": "item",
+														"name": "Treasure:",
+														"entry": "Any"
+													}
+												]
+											},
+											"Myconids dwell in remote Underdark reaches overgrown with molds and mushrooms. These ambulatory fungal creatures tend to their sanctuaries and avoid becoming embroiled in the conflicts of other creatures. They use specialized spores to communicate, to alert one another to danger, and to defend themselves. When myconids encounter others beings, they use mind-linking spores to allow nearby creatures to telepathically share thoughts. Nevertheless, myconids' goals remain mysterious to most non-fungal creatures."
+										]
+									}
+								],
+								"images": [
+									{
+										"type": "image",
+										"href": {
+											"type": "internal",
+											"path": "bestiary/XMM/Myconid Spore Servant.webp"
+										}
+									},
+									{
+										"type": "image",
+										"href": {
+											"type": "internal",
+											"path": "bestiary/XMM/Myconids.webp"
+										},
+										"credit": "Caroline Gariba"
+									}
+								]
+							},
+							"uniqueId": "13312bf9-b9b6-4dfa-b392-71a65dcfd592",
+							"trait": [
+								{
+									"name": "Death Burst",
+									"entries": [
+										"When the Duskgloom Myconid Spore Servant dies, it explodes in a burst of poison spores. Each creature within 5 feet of it must make a {@dc 12} Dexterity saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one."
+									]
+								}
+							],
+							"traitTags": [
+								"Death Burst"
+							],
+							"damageTags": [
+								"B",
+								"I"
+							],
+							"savingThrowForced": [
+								"dexterity"
 							]
 						}
 					]
