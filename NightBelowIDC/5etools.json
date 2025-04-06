@@ -268,112 +268,124 @@
 				},
 				"creatureBuilder": {
 					"s": {
-						"name": "Duskgloom Myconid Spore Servant",
+						"name": "Duskgloom Myconid Adult",
 						"source": "NightBelowIDC",
 						"size": [
-							"S",
 							"M"
 						],
 						"type": "plant",
 						"alignment": [
-							"U"
+							"N",
+							"E"
 						],
 						"ac": [
-							12
+							{
+								"ac": 12,
+								"from": [
+									"natural armor"
+								]
+							}
 						],
 						"hp": {
-							"formula": "6d8 + 18",
-							"average": 48
+							"formula": "5d8 + 5",
+							"average": 27
 						},
 						"speed": {
 							"walk": 20
 						},
-						"str": 16,
-						"dex": 12,
-						"con": 16,
-						"int": 2,
-						"wis": 6,
-						"cha": 1,
+						"str": 10,
+						"dex": 10,
+						"con": 12,
+						"int": 10,
+						"wis": 13,
+						"cha": 7,
 						"senses": [
-							"blindsight 30 ft."
+							"darkvision 120 ft."
 						],
-						"passive": 8,
-						"immune": [
-							"poison"
-						],
-						"conditionImmune": [
-							"blinded",
-							"charmed",
-							"frightened",
-							"paralyzed",
-							"poisoned"
-						],
-						"languages": [
-							"telepathy 30 ft."
-						],
+						"passive": 11,
 						"cr": "1",
+						"trait": [
+							{
+								"name": "Sun Sickness",
+								"entries": [
+									"While in sunlight, the myconid has disadvantage on ability checks, attack rolls, and saving throws. The myconid dies if it spends more than 1 hour in direct sunlight."
+								]
+							}
+						],
 						"action": [
 							{
-								"name": "Slam",
+								"name": "Multiattack",
 								"entries": [
-									"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage plus 2 ({@damage 1d4}) Poison damage."
+									"The duskgloom myconid uses either it's Poison Spores or it's Caustic Spores, then makes a fist attack."
+								]
+							},
+							{
+								"name": "Fist",
+								"entries": [
+									"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}5 ({@damage 2d4}) bludgeoning damage plus 5 ({@damage 2d4}) poison damage."
+								]
+							},
+							{
+								"name": "Poison Spores",
+								"entries": [
+									"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage."
+								]
+							},
+							{
+								"name": "Caustic Spores (1/Day)",
+								"entries": [
+									"The duskgloom myconid releases spores in a 30-foot cone. Each creature inside the cone must succeed on a {@actSave dex} {@dc 11}  {@actSaveFail} take 3 ({@damage 1d6}) acid damage at the start of each of the duskgloom myconid's turns. A creature can repeat the saving throw at the end of its turn, ending the effect on itself on a success."
 								]
 							}
 						],
 						"environment": [
 							"underdark"
 						],
-						"treasure": [
-							"any"
-						],
+						"soundClip": {
+							"type": "external",
+							"url": "https://5e.tools/audio/bestiary/myconid-adult.mp3"
+						},
 						"senseTags": [
-							"B"
-						],
-						"languageTags": [
-							"TP"
+							"SD"
 						],
 						"miscTags": [
-							"MA",
+							"MW",
 							"AOE"
 						],
 						"hasFluff": true,
 						"hasFluffImages": true,
 						"token": {
-							"name": "Myconid Spore Servant",
-							"source": "XMM"
+							"name": "Myconid Adult",
+							"source": "MM"
 						},
 						"fluff": {
-							"name": "Myconid Spore Servant",
-							"source": "XMM",
+							"name": "Myconid Adult",
+							"source": "MM",
 							"entries": [
 								{
-									"type": "section",
+									"type": "entries",
 									"entries": [
-										"Spore servants are corpses that have been overgrown and reanimated by a myconid sovereign's spores. These fungus-infested bodies are extensions of a myconid sovereign and obey its will."
-									]
-								},
-								{
-									"type": "section",
-									"name": "Myconids",
-									"entries": [
-										"{@i Keepers of the Spore}",
 										{
-											"type": "list",
-											"style": "list-hang-notitle",
-											"items": [
+											"type": "entries",
+											"entries": [
+												"Myconids are intelligent, ambulatory fungi that live in the Underdark, seek enlightenment, and deplore violence. If approached peacefully, myconids gladly provide shelter or allow safe passage through their colonies.",
 												{
-													"type": "item",
-													"name": "Habitat:",
-													"entry": "{@filter Underdark|bestiary|environment=underdark}"
+													"name": "Circles and Melds",
+													"type": "entries",
+													"entries": [
+														"The largest myconid in a colony is its sovereign, which presides over one or more social groups called circles. A circle consists of twenty or more myconids that work, live, and meld together.",
+														"A meld is a form of communal meditation that allows myconids to transcend their dull subterranean existence. The myconids' rapport spores bind the participants into a group consciousness. Hallucination spores then induce a shared dream that provides entertainment and social interaction. Myconids consider melding to be the purpose of their existence. They use it in the pursuit of higher consciousness, collective union, and spiritual apotheosis. Myconids also use their rapport spores to communicate telepathically with other sentient creatures."
+													]
 												},
 												{
-													"type": "item",
-													"name": "Treasure:",
-													"entry": "Any"
+													"name": "Myconid Reproduction",
+													"type": "entries",
+													"entries": [
+														"Like other fungi, myconids reproduce by mundane sporing. They carefully control their spores' release to avoid overpopulation."
+													]
 												}
 											]
-										},
-										"Myconids dwell in remote Underdark reaches overgrown with molds and mushrooms. These ambulatory fungal creatures tend to their sanctuaries and avoid becoming embroiled in the conflicts of other creatures. They use specialized spores to communicate, to alert one another to danger, and to defend themselves. When myconids encounter others beings, they use mind-linking spores to allow nearby creatures to telepathically share thoughts. Nevertheless, myconids' goals remain mysterious to most non-fungal creatures."
+										}
 									]
 								}
 							],
@@ -382,30 +394,18 @@
 									"type": "image",
 									"href": {
 										"type": "internal",
-										"path": "bestiary/XMM/Myconid Spore Servant.webp"
-									}
-								},
-								{
-									"type": "image",
-									"href": {
-										"type": "internal",
-										"path": "bestiary/XMM/Myconids.webp"
+										"path": "bestiary/MM/Myconids.webp"
 									},
-									"credit": "Caroline Gariba"
+									"credit": "Hector Ortiz"
 								}
 							]
 						},
-						"uniqueId": "13312bf9-b9b6-4dfa-b392-71a65dcfd592",
-						"trait": [
-							{
-								"name": "Death Burst",
-								"entries": [
-									"When the Duskgloom Myconid Spore Servant dies, it explodes in a burst of poison spores. Each creature within 5 feet of it must make a {@dc 12} Dexterity saving throw, taking 4 ({@damage 1d8}) poison damage on a failed save, or half as much damage on a successful one."
-								]
-							}
+						"uniqueId": "fda68969-8890-42c6-a94f-09c0f67e8fda",
+						"languages": [
+							"Telepathy 240 ft."
 						],
-						"traitTags": [
-							"Death Burst"
+						"actionTags": [
+							"Multiattack"
 						],
 						"_pTypes": {
 							"types": [
@@ -423,6 +423,7 @@
 							"1"
 						],
 						"damageTags": [
+							"A",
 							"B",
 							"I"
 						],
@@ -438,12 +439,12 @@
 						"profSkill": {},
 						"autoCalc": {
 							"proficiency": true,
-							"hpAverageSimple": false,
-							"hpAverageComplex": false,
+							"hpAverageSimple": true,
+							"hpAverageComplex": true,
 							"hpModifier": true,
 							"passivePerception": true
 						},
-						"ixActiveTab__input": 0,
+						"ixActiveTab__input": 4,
 						"ixActiveTab__output": 0
 					}
 				},
@@ -11935,7 +11936,7 @@
 								{
 									"name": "Poison Spores",
 									"entries": [
-										"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage. {@actSaveSuccessOrFail} The piercer reduces any damage it takes from the fall by 20."
+										"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage."
 									]
 								},
 								{

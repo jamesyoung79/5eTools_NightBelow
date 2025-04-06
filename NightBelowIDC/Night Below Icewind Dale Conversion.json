@@ -6898,7 +6898,7 @@
 				{
 					"name": "Poison Spores",
 					"entries": [
-						"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage. {@actSaveSuccessOrFail} The piercer reduces any damage it takes from the fall by 20."
+						"The duskgloom myconid ejects spores at one creature it can see. {@actSave dex} {@dc 11}, reach 5 ft. {@actSaveFail} 7 ({@damage 2d6}) Poison damage."
 					]
 				},
 				{
