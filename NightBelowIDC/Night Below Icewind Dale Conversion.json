@@ -3235,14 +3235,14 @@
 			],
 			"ac": [
 				{
-					"ac": 14,
+					"ac": 17,
 					"from": [
-						"{@item chain shirt|xphb}",
+						"{@item +1 chain mail|xdmg}",
 						"{@item +1 battleaxe|xdmg}"
 					]
 				},
 				{
-					"ac": 16,
+					"ac": 19,
 					"from": [
 						"{@item shield|xphb}"
 					],
@@ -3251,25 +3251,25 @@
 				}
 			],
 			"hp": {
-				"formula": "5d8 + 10",
-				"average": 32
+				"formula": "6d8 + 12",
+				"average": 39
 			},
 			"speed": {
 				"walk": 30
 			},
 			"str": 13,
-			"dex": 13,
+			"dex": 12,
 			"con": 14,
 			"int": 12,
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+1",
-				"perception": "+1",
-				"religion": "+1",
-				"medicine": "+1"
+				"athletics": "+3",
+				"perception": "+3",
+				"religion": "+3",
+				"medicine": "+3"
 			},
-			"passive": 11,
+			"passive": 13,
 			"languages": [
 				"Common"
 			],
@@ -3330,7 +3330,8 @@
 						"0": {
 							"spells": [
 								"{@spell light|XPHB}",
-								"{@spell spare the dying|XPHB}"
+								"{@spell spare the dying|XPHB}",
+								"{@spell word of radiance|XPHB}"
 							]
 						},
 						"1": {
@@ -3350,13 +3351,17 @@
 				"O"
 			],
 			"cr": "1/2",
-			"level": 3,
+			"level": 4,
 			"isNpc": true,
 			"damageTags": [
 				"P",
 				"S"
 			],
+			"damageTagsSpell": [
+				"R"
+			],
 			"savingThrowForcedSpell": [
+				"constitution",
 				"wisdom"
 			]
 		},
@@ -4706,36 +4711,36 @@
 			],
 			"ac": [
 				{
-					"ac": 14,
+					"ac": 18,
 					"from": [
-						"{@item chain shirt|xphb}",
+						"{@item +2 chain mail|xdmg}",
 						"{@item +1 longsword|xdmg}"
 					]
 				},
 				{
-					"ac": 16,
+					"ac": 20,
 					"from": [
-						"{@item shield|xphb}"
+						"{@item +1 shield|xdmg}"
 					],
 					"condition": "equipped",
 					"braces": true
 				}
 			],
 			"hp": {
-				"formula": "5d8 + 10",
-				"average": 32
+				"formula": "6d8 + 12",
+				"average": 39
 			},
 			"speed": {
 				"walk": 30
 			},
-			"str": 13,
+			"str": 14,
 			"dex": 12,
-			"con": 14,
+			"con": 15,
 			"int": 12,
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+3",
+				"athletics": "+4",
 				"perception": "+3",
 				"nature": "+3",
 				"animal handling": "+3"
@@ -4754,7 +4759,7 @@
 				{
 					"name": "Longsword +1",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) slashing damage, or 7 ({@damage 1d10 + 2}) slashing damage if used with two hands."
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
 					]
 				},
 				{
@@ -4788,7 +4793,7 @@
 					]
 				}
 			],
-			"level": 3,
+			"level": 4,
 			"attachedItems": [
 				"+1 longsword|dmg",
 				"longbow|phb"
@@ -6294,7 +6299,6 @@
 			],
 			"languageTags": [
 				"C",
-				"X",
 				"D"
 			],
 			"miscTags": [
@@ -6311,7 +6315,10 @@
 						"tag": "dwarf",
 						"prefix": "Mountain"
 					},
-					"Sidekick"
+					{
+						"tag": "Sidekick",
+						"prefix": "Attacker"
+					}
 				]
 			},
 			"ac": [
@@ -6345,7 +6352,7 @@
 			},
 			"passive": 14,
 			"languages": [
-				"any one language (usually Common)",
+				"Common",
 				"Dwarvish"
 			],
 			"trait": [
@@ -7294,6 +7301,868 @@
 			],
 			"savingThrowForced": [
 				"dexterity"
+			]
+		},
+		{
+			"name": "Brandur 'Kenny' Redcloak",
+			"source": "NightBelowIDC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "sidekick",
+						"prefix": "expert"
+					}
+				]
+			},
+			"alignment": [
+				"L",
+				"N"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "3d8 + 3",
+				"average": 16
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 12,
+			"con": 12,
+			"int": 10,
+			"wis": 11,
+			"cha": 10,
+			"passive": 12,
+			"languages": [
+				"Common"
+			],
+			"gear": [
+				"chain shirt|xphb",
+				"shield|xphb",
+				"spear|xphb"
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atkr m,r} {@hit 3}, reach 5 ft. or range 20/60 ft. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
+					]
+				}
+			],
+			"treasure": [
+				"armaments",
+				"individual"
+			],
+			"languageTags": [
+				"C"
+			],
+			"miscTags": [
+				"RA",
+				"MA",
+				"MLW",
+				"THW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"attachedItems": [
+				"spear|phb"
+			],
+			"cr": "1/2",
+			"level": 1,
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"skill": {
+				"perception": "+2",
+				"sleight of hand": "+3",
+				"stealth": "+3",
+				"insight": "+2",
+				"athletics": "+3",
+				"medicine": "+2"
+			},
+			"trait": [
+				{
+					"name": "Not Dead Yet (Recharges after a Long Rest)",
+					"entries": [
+						"If damage reduces Kenny to 0 hit points, he drops to 1 hit point instead and gains advantage on attack rolls until the end of his next turn."
+					]
+				},
+				{
+					"name": "Brave",
+					"entries": [
+						"Kenny has advantage on saving throws against being {@condition frightened}."
+					]
+				}
+			],
+			"save": {
+				"dex": "+3"
+			},
+			"bonus": [
+				{
+					"name": "Helpful",
+					"entries": [
+						"Kenny is adept at giving well-timed assistance he can take the Help action as a bonus action."
+					]
+				}
+			],
+			"isNpc": true,
+			"reaction": [
+				{
+					"name": "Not Again! (2/Day)",
+					"entries": [
+						"When Kenny fails a saving throw, it can reroll the {@dice d20}. It must use the new roll."
+					]
+				}
+			],
+			"isNamedCreature": true,
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Darkmantle",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				11
+			],
+			"hp": {
+				"average": 22,
+				"formula": "5d6 + 5"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 13,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"skill": {
+				"stealth": "+3"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 10,
+			"cr": "1/2",
+			"action": [
+				{
+					"name": "Crush",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage, and the darkmantle attaches to the target. If the target is a Medium or smaller creature and the darkmantle had {@variantrule Advantage|XPHB} on the attack roll, it covers the target, which has the {@condition Blinded|XPHB} condition and is suffocating while the darkmantle is attached in this way.",
+						"While attached to a target, the darkmantle can attack only the target but has {@variantrule Advantage|XPHB} on its attack rolls. Its {@variantrule Speed|XPHB} becomes 0, it can't benefit from any bonus to its {@variantrule Speed|XPHB}, and it moves with the target.",
+						"A creature can take an action to try to detach the darkmantle from itself, doing so with a successful {@dc 13} Strength ({@skill Athletics|XPHB}) check. On its turn, the darkmantle can detach itself by using 5 feet of movement."
+					]
+				},
+				{
+					"name": "Darkness Aura (1/Day)",
+					"entries": [
+						"Magical {@variantrule Darkness|XPHB} fills a 15-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the darkmantle. This effect lasts while the darkmantle maintains {@status Concentration|XPHB} on it, up to 10 minutes. Darkvision can't penetrate this area, and no light can illuminate it."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"blinded"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Darkmantle",
+				"source": "XMM"
+			},
+			"trait": [
+				{
+					"name": "Echolocation",
+					"entries": [
+						"The darkmantle can't use its blindsight while {@condition deafened}."
+					]
+				},
+				{
+					"name": "False Appearance",
+					"entries": [
+						"While the darkmantle remains motionless, it is indistinguishable from a cave formation such as a stalactite or stalagmite."
+					]
+				}
+			],
+			"traitTags": [
+				"False Appearance"
+			],
+			"damageTags": [
+				"B"
+			]
+		},
+		{
+			"name": "Deep Gnome (Svirfneblin) Bandit",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item chain shirt|xphb}",
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "5d6 + 10",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 12,
+			"wis": 10,
+			"cha": 9,
+			"skill": {
+				"investigation": "+3",
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The gnome's innate spellcasting ability is Intelligence (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell nondetection} (self only)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blindness/deafness}",
+							"{@spell blur}",
+							"{@spell disguise self}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Stone Camouflage",
+					"entries": [
+						"The gnome has advantage on Dexterity ({@skill Stealth}) checks made to hide in rocky terrain."
+					]
+				},
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic."
+					]
+				},
+				{
+					"name": "Poisoned Weapon",
+					"entries": [
+						"The first target hit with a weapon attack must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "War Pick",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/svirfneblin.mp3"
+			},
+			"attachedItems": [
+				"war pick|phb"
+			],
+			"traitTags": [
+				"Camouflage"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"G",
+				"T",
+				"U"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Deep gnomes, or svirfneblin, live far below the world's surface in twisting warrens and sculpted caverns. They survive by virtue of their stealth, cleverness, and tenacity. Their gray skin allows them to blend in with surrounding stonework. They are also surprisingly heavy and strong for their size. An average adult weighs 100 to 120 pounds and stands 3 feet tall.",
+									"A typical svirfneblin enclave contains several hundred deep gnomes and is strongly fortified. Secret tunnels lead to and from the settlement, and the deep gnomes use these as evacuation routes when the enclave comes under attack.",
+									{
+										"name": "Established Gender Roles",
+										"type": "entries",
+										"entries": [
+											"Male svirfneblin are bald, while females have stringy gray hair. Traditionally, females run the enclaves while males scour the outskirts in search of enemies and deposits of precious gemstones."
+										]
+									},
+									{
+										"name": "Gemstone Harvesters",
+										"type": "entries",
+										"entries": [
+											"Svirfneblin cherish fine gemstones, especially rubies, which they harvest from mines deep in the Underdark. The hunt for gems often brings them into conflict with beholders, drow, kuo-toa, duergar, and mind flayers. Of all their natural enemies, deep gnomes fear and despise the murderous, demon worshiping drow the most."
+										]
+									},
+									{
+										"name": "Earth Friends",
+										"type": "entries",
+										"entries": [
+											"Deep gnomes are often encountered in the company of creatures from the Elemental Plane of Earth. Some svirfneblin can summon such creatures. Earth creatures guard svirfneblin settlements, especially xorn enticed to service with the promise of gems to feed on."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Deep Gnome (Svirfneblin).webp"
+						}
+					}
+				]
+			},
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"The Deep Gnome Bandit takes the Dash, Disengage, or Hide action."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Deep Gnome (Svirfneblin) Glaiver",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d6 + 14",
+				"average": 38
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 12,
+			"wis": 10,
+			"cha": 9,
+			"skill": {
+				"investigation": "+3",
+				"perception": "+2",
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"cr": "1",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The gnome's innate spellcasting ability is Intelligence (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell nondetection} (self only)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blindness/deafness}",
+							"{@spell blur}",
+							"{@spell disguise self}"
+						]
+					},
+					"ability": "int"
+				}
+			],
+			"trait": [
+				{
+					"name": "Stone Camouflage",
+					"entries": [
+						"The gnome has advantage on Dexterity ({@skill Stealth}) checks made to hide in rocky terrain."
+					]
+				},
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic."
+					]
+				},
+				{
+					"name": "Pack Tactics",
+					"entries": [
+						"The deep gnome (svirfneblin) spear brute has advantage on an attack roll against a creature if at least one of the deep gnome (svirfneblin) spear brute's allies is within 5 feet of the creature and the ally isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Poisoned Weapon",
+					"entries": [
+						"The first target hit must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} for 1 minute. The target can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success"
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Glaive",
+					"entries": [
+						"{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d10 + 2}) Slashing damage. {@itemMastery Graze}: If the Deep Gnome Glaiver misses the attack, it deals 2 Slashing damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/svirfneblin.mp3"
+			},
+			"attachedItems": [
+				"glaive|phb"
+			],
+			"traitTags": [
+				"Camouflage",
+				"Pack Tactics"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"G",
+				"T",
+				"U"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflict": [
+				"poisoned"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Deep gnomes, or svirfneblin, live far below the world's surface in twisting warrens and sculpted caverns. They survive by virtue of their stealth, cleverness, and tenacity. Their gray skin allows them to blend in with surrounding stonework. They are also surprisingly heavy and strong for their size. An average adult weighs 100 to 120 pounds and stands 3 feet tall.",
+									"A typical svirfneblin enclave contains several hundred deep gnomes and is strongly fortified. Secret tunnels lead to and from the settlement, and the deep gnomes use these as evacuation routes when the enclave comes under attack.",
+									{
+										"name": "Established Gender Roles",
+										"type": "entries",
+										"entries": [
+											"Male svirfneblin are bald, while females have stringy gray hair. Traditionally, females run the enclaves while males scour the outskirts in search of enemies and deposits of precious gemstones."
+										]
+									},
+									{
+										"name": "Gemstone Harvesters",
+										"type": "entries",
+										"entries": [
+											"Svirfneblin cherish fine gemstones, especially rubies, which they harvest from mines deep in the Underdark. The hunt for gems often brings them into conflict with beholders, drow, kuo-toa, duergar, and mind flayers. Of all their natural enemies, deep gnomes fear and despise the murderous, demon worshiping drow the most."
+										]
+									},
+									{
+										"name": "Earth Friends",
+										"type": "entries",
+										"entries": [
+											"Deep gnomes are often encountered in the company of creatures from the Elemental Plane of Earth. Some svirfneblin can summon such creatures. Earth creatures guard svirfneblin settlements, especially xorn enticed to service with the promise of gems to feed on."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Deep Gnome (Svirfneblin).webp"
+						}
+					}
+				]
+			},
+			"damageTags": [
+				"S"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Deep Gnome (Svirfneblin) Crime Boss Zekka",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"gnome"
+				]
+			},
+			"alignment": [
+				"N",
+				"G"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 15,
+					"condition": "with {@spell mage armor}",
+					"braces": true
+				}
+			],
+			"hp": {
+				"formula": "9d6 + 18",
+				"average": 49
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 12,
+			"dex": 14,
+			"con": 14,
+			"int": 16,
+			"wis": 10,
+			"cha": 12,
+			"skill": {
+				"investigation": "+5",
+				"perception": "+2",
+				"stealth": "+4",
+				"history": "+5",
+				"arcana": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"languages": [
+				"Gnomish",
+				"Terran",
+				"Undercommon"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The Zekka's innate spellcasting ability is Intelligence (spell save {@dc 13}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell nondetection} (self only)"
+					],
+					"daily": {
+						"1e": [
+							"{@spell blindness/deafness}",
+							"{@spell blur}",
+							"{@spell disguise self}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Zekka casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+					],
+					"will": [
+						"{@spell dancing lights|XPHB}",
+						"{@spell mage hand|XPHB}",
+						"{@spell minor illusion|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell disguise self|XPHB}",
+							"{@spell invisibility|XPHB}",
+							"{@spell mage armor|XPHB}",
+							"{@spell major image|XPHB}",
+							"{@spell phantasmal force|XPHB}",
+							"{@spell phantom steed|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Stone Camouflage",
+					"entries": [
+						"The gnome has advantage on Dexterity ({@skill Stealth}) checks made to hide in rocky terrain."
+					]
+				},
+				{
+					"name": "Gnome Cunning",
+					"entries": [
+						"The gnome has advantage on Intelligence, Wisdom, and Charisma saving throws against magic."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Zekka makes two Arcane Burst attacks."
+					]
+				},
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atk ms,rs} {@hit 5} to hit, reach 5 ft. or range 120 ft., one target. {@h}14 ({@damage 2d10 + 3}) psychic damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/svirfneblin.mp3"
+			},
+			"traitTags": [
+				"Camouflage"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"G",
+				"T",
+				"U"
+			],
+			"spellcastingTags": [
+				"I",
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"blinded",
+				"deafened"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM"
+			},
+			"fluff": {
+				"name": "Deep Gnome (Svirfneblin)",
+				"source": "MM",
+				"entries": [
+					{
+						"type": "entries",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									"Deep gnomes, or svirfneblin, live far below the world's surface in twisting warrens and sculpted caverns. They survive by virtue of their stealth, cleverness, and tenacity. Their gray skin allows them to blend in with surrounding stonework. They are also surprisingly heavy and strong for their size. An average adult weighs 100 to 120 pounds and stands 3 feet tall.",
+									"A typical svirfneblin enclave contains several hundred deep gnomes and is strongly fortified. Secret tunnels lead to and from the settlement, and the deep gnomes use these as evacuation routes when the enclave comes under attack.",
+									{
+										"name": "Established Gender Roles",
+										"type": "entries",
+										"entries": [
+											"Male svirfneblin are bald, while females have stringy gray hair. Traditionally, females run the enclaves while males scour the outskirts in search of enemies and deposits of precious gemstones."
+										]
+									},
+									{
+										"name": "Gemstone Harvesters",
+										"type": "entries",
+										"entries": [
+											"Svirfneblin cherish fine gemstones, especially rubies, which they harvest from mines deep in the Underdark. The hunt for gems often brings them into conflict with beholders, drow, kuo-toa, duergar, and mind flayers. Of all their natural enemies, deep gnomes fear and despise the murderous, demon worshiping drow the most."
+										]
+									},
+									{
+										"name": "Earth Friends",
+										"type": "entries",
+										"entries": [
+											"Deep gnomes are often encountered in the company of creatures from the Elemental Plane of Earth. Some svirfneblin can summon such creatures. Earth creatures guard svirfneblin settlements, especially xorn enticed to service with the promise of gems to feed on."
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MM/Deep Gnome (Svirfneblin).webp"
+						}
+					}
+				]
+			},
+			"actionTags": [
+				"Multiattack"
+			],
+			"bonus": [
+				{
+					"name": "Displacement {@recharge 5}",
+					"entries": [
+						"The illusionist projects an illusion that makes the illusionist appear to be standing in a place a few inches from its actual location, causing any creature to have disadvantage on attack rolls against the illusionist. The effect lasts for 1 minute, and it ends early if the illusionist takes damage, if it is {@condition incapacitated}, or if its speed becomes 0."
+					]
+				}
+			],
+			"damageTags": [
+				"Y"
+			],
+			"damageTagsSpell": [
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"intelligence"
 			]
 		}
 	]
