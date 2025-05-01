@@ -3257,17 +3257,17 @@
 			"speed": {
 				"walk": 30
 			},
-			"str": 13,
+			"str": 14,
 			"dex": 12,
-			"con": 14,
+			"con": 15,
 			"int": 12,
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+3",
-				"perception": "+3",
+				"athletics": "+4",
 				"religion": "+3",
-				"medicine": "+3"
+				"medicine": "+3",
+				"perception": "+3"
 			},
 			"passive": 13,
 			"languages": [
@@ -8163,6 +8163,943 @@
 			"savingThrowForcedSpell": [
 				"constitution",
 				"intelligence"
+			]
+		},
+		{
+			"name": "Shadow Spirit",
+			"source": "NightBelowIDC",
+			"summonedBySpell": "Summon Shadowspawn|TCE",
+			"summonedBySpellLevel": 3,
+			"size": [
+				"M"
+			],
+			"type": "elemental",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				10
+			],
+			"hp": {
+				"special": "35"
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 15,
+			"int": 4,
+			"wis": 10,
+			"cha": 16,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 10,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"necrotic",
+				"thunder"
+			],
+			"conditionImmune": [
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"trait": [
+				{
+					"name": "Terror Frenzy",
+					"entries": [
+						"The spirit has advantage on attack rolls against {@condition frightened} creatures."
+					]
+				},
+				{
+					"name": "Weight of Sorrow",
+					"entries": [
+						"Any creature that starts its turn within 5 feet of the spirit has its speed reduced by 20 feet until the start of that creature's next turn."
+					]
+				},
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The shadow can move through a space as narrow as 1 inch without expending extra movement to do so."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The spirit makes two attacks, 2 Chilling Rends or Chilling Rend and Dreadful Scream."
+					]
+				},
+				{
+					"name": "Chilling Rend",
+					"entries": [
+						"{@atk mw} {@hit +3}  to hit, reach 5 ft., one target. {@h} 9({@damage 1d12 + 3}) cold damage."
+					]
+				},
+				{
+					"name": "Dreadful Scream (1/Day)",
+					"entries": [
+						"The spirit screams. Each creature within 30 feet of it must succeed on a {@dc 13} Wisdom saving throw or be {@condition frightened} for 1 minute. The {@condition frightened} creature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Shadow Stealth",
+					"entries": [
+						"While in dim light or darkness, the spirit takes the Hide action."
+					]
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"miscTags": [
+				"MW",
+				"AOE"
+			],
+			"conditionInflict": [
+				"frightened"
+			],
+			"hasFluffImages": true,
+			"token": {
+				"name": "Shadow Spirit",
+				"source": "TCE"
+			},
+			"fluff": {
+				"name": "Shadow Spirit",
+				"source": "TCE",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/TCE/Summon Shadowspawn.webp"
+						}
+					}
+				]
+			},
+			"cr": "1/2",
+			"immune": [
+				"necrotic",
+				"poison"
+			],
+			"traitTags": [
+				"Amorphous"
+			],
+			"savingThrowForced": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Drow Warrior",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"elf"
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item studded leather armor|phb|studded leather}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 39
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 13,
+			"dex": 16,
+			"con": 14,
+			"int": 11,
+			"wis": 13,
+			"cha": 14,
+			"save": {
+				"dex": "+7",
+				"con": "+5",
+				"wis": "+4"
+			},
+			"skill": {
+				"perception": "+5",
+				"stealth": "+7"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"type": "spellcasting",
+					"headerEntries": [
+						"The drow's spellcasting ability is Charisma (spell save {@dc 12}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}",
+							"{@spell levitate} (self only)"
+						]
+					},
+					"ability": "cha"
+				}
+			],
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The drow makes two Scimitar attacks."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) Slashing damage plus 10 ({@damage 3d6}) poison damage.  When making attack action with the Scimitar the Drow Warrior may use the {@itemMastery Nick} bonus action."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 7} to hit, range 30/120 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage, and the target must succeed on a {@dc 13} Constitution saving throw or be {@condition poisoned} for 1 hour. If the saving throw fails by 5 or more, the target is also {@condition unconscious} while {@condition poisoned} in this way. The target wakes up if it takes damage or if another creature takes an action to shake it awake."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Parry",
+					"entries": [
+						"The drow adds 3 to its AC against one melee attack that would hit it. To do so, the drow must see the attacker and be wielding a melee weapon."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"scimitar|phb"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"E",
+				"U"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"conditionInflict": [
+				"poisoned",
+				"unconscious"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"bonus": [
+				{
+					"name": "Scimitar Nick",
+					"entries": [
+						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6+3}) Slashing damage."
+					]
+				}
+			],
+			"token": {
+				"name": "Drow Warrior",
+				"source": ""
+			},
+			"damageTags": [
+				"I",
+				"P",
+				"S"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Junior Drow Priestess of Lolth",
+			"source": "NightBelowIDC",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"X",
+				"E"
+			],
+			"spellcastingTags": [
+				"CC",
+				"I"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf"
+				]
+			},
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"{@item chain shirt|phb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 12,
+			"con": 14,
+			"int": 13,
+			"wis": 16,
+			"cha": 13,
+			"skill": {
+				"medicine": "+7",
+				"perception": "+7",
+				"persuasion": "+3",
+				"religion": "+5"
+			},
+			"passive": 17,
+			"languages": [
+				"any two languages",
+				"Elvish"
+			],
+			"cr": "4",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The priestess is a 5th-level spellcaster. Its spellcasting ability is Wisdom (spell save {@dc 13}, {@hit 5} to hit with spell attacks). The priestess has the following cleric spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell light}",
+								"{@spell sacred flame}",
+								"{@spell thaumaturgy}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell cure wounds}",
+								"{@spell guiding bolt}",
+								"{@spell sanctuary}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell lesser restoration}",
+								"{@spell spiritual weapon}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell conjure animals} (2 {@creature giant spider|mm|giant spiders})",
+								"{@spell dispel magic}",
+								"{@spell spirit guardians}"
+							],
+							"slots": 2
+						}
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The junior drow priestess of lolth's innate spellcasting ability is Charisma (spell save {@dc 11}). The junior drow priestess of lolth can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Divine Eminence",
+					"entries": [
+						"As a bonus action, the priestess can expend a spell slot to cause its melee weapon attacks to magically deal an extra 10 ({@damage 3d6}) radiant damage to a target on a hit. This benefit lasts until the end of the turn. If the priestess expends a spell slot of 2nd level or higher, the extra damage increases by {@damage 1d6} for each level above 1st."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"The junior drow priestess of lolth has advantage on saving throws against being {@condition charmed}, and magic can't put the junior drow priestess of lolth to sleep."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the junior drow priestess of lolth has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Scourge",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage plus 14 ({@damage 4d6})  poison damage."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"token": {
+				"name": "Junior Drow Priestess of Lolth",
+				"source": "WDMM"
+			},
+			"damageTags": [
+				"P",
+				"R"
+			],
+			"damageTagsSpell": [
+				"N",
+				"O",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Drow Spy",
+			"source": "NightBelowIDC",
+			"traitTags": [
+				"Fey Ancestry",
+				"Sneak Attack",
+				"Sunlight Sensitivity"
+			],
+			"spellcastingTags": [
+				"I"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf"
+				]
+			},
+			"alignment": [
+				"A"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "6d8",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 15,
+			"con": 10,
+			"int": 12,
+			"wis": 14,
+			"cha": 16,
+			"skill": {
+				"insight": "+4",
+				"sleight of hand": "+4",
+				"stealth": "+4",
+				"deception": "+7",
+				"investigation": "+5",
+				"persuasion": "+7",
+				"perception": "+6"
+			},
+			"passive": 16,
+			"languages": [
+				"any two languages",
+				"Elvish"
+			],
+			"cr": "1",
+			"trait": [
+				{
+					"name": "Sneak Attack (1/Turn)",
+					"entries": [
+						"The spy deals an extra 7 ({@damage 2d6}) damage when it hits a target with a weapon attack and has advantage on the attack roll, or when the target is within 5 feet of an ally of the spy that isn't {@condition incapacitated} and the spy doesn't have disadvantage on the attack roll."
+					]
+				},
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"The drow spy has advantage on saving throws against being {@condition charmed}, and magic can't put the drow spy to sleep."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the drow spy has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The spy makes two melee attacks."
+					]
+				},
+				{
+					"name": "Scimitar",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage."
+					]
+				},
+				{
+					"name": "Hand Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 30/120 ft., one target. {@h}5 ({@damage 1d6 + 2}) piercing damage. When making attack action with the Scimitar the Drow Spy may use the {@itemMastery Nick} bonus action."
+					]
+				}
+			],
+			"attachedItems": [
+				"hand crossbow|phb",
+				"scimitar|phb"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"X",
+				"E"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"spellcasting": [
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The drow spy's innate spellcasting ability is Charisma (spell save {@dc 13}). The drow spy can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell darkness}",
+							"{@spell faerie fire}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"senseTags": [
+				"SD"
+			],
+			"bonus": [
+				{
+					"name": "Scimitar Nick",
+					"entries": [
+						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6+3}) Slashing damage."
+					]
+				},
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"On each of its turns, the spy can use a bonus action to take the Dash, Disengage, or Hide action."
+					]
+				}
+			],
+			"token": {
+				"name": "Drow Spy",
+				"source": ""
+			},
+			"damageTags": [
+				"P",
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Drow Mage Apprentice",
+			"source": "NightBelowIDC",
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"drow",
+					"elf"
+				],
+				"note": "(Wizard)"
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@spell mage armor}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8",
+				"average": 45
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 14,
+			"con": 10,
+			"int": 16,
+			"wis": 13,
+			"cha": 12,
+			"save": {
+				"int": "+5",
+				"wis": "+3"
+			},
+			"skill": {
+				"arcana": "+7",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "3",
+			"gear": [
+				"component pouch|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The drow is a 10th-level spellcaster. Its spellcasting ability is Intelligence (spell save {@dc 13}, {@hit 5} to hit with spell attacks). The drow has the following wizard spells prepared:"
+					],
+					"will": [
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Prestidigitation|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Disguise Self|XPHB}",
+							"{@spell Ice Knife|XPHB}",
+							"{@spell Mage Armor|XPHB} (included in AC)",
+							"{@spell Thunderwave|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Innate Spellcasting",
+					"headerEntries": [
+						"The drow's spellcasting ability is Charisma (spell save {@dc 11}). It can innately cast the following spells, requiring no material components:"
+					],
+					"will": [
+						"{@spell dancing lights|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell dancing lights|XPHB}",
+							"{@spell darkness|XPHB}",
+							"{@spell levitate|XPHB} (self only)",
+							"{@spell web|XPHB}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 5}, reach 5 ft. or range 120 ft. {@h}14 ({@damage 2d10 + 3}) Force damage."
+					]
+				}
+			],
+			"environment": [
+				"underwater"
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"languageTags": [
+				"E",
+				"U"
+			],
+			"spellcastingTags": [
+				"CW",
+				"I"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"trait": [
+				{
+					"name": "Fey Ancestry",
+					"entries": [
+						"The drow has advantage on saving throws against being {@condition charmed}, and magic can't put the drow to sleep."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the drow has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"traitTags": [
+				"Fey Ancestry",
+				"Sunlight Sensitivity"
+			],
+			"bonus": [
+				{
+					"name": "Summon Demon (1/Day)",
+					"entries": [
+						"The drow magically summons a {@creature quasit}, or attempts to summon a {@creature shadow demon} with a {@chance 50|50 percent|50% summoning chance} chance of success. The summoned demon appears in an unoccupied space within 60 feet of its summoner, acts as an ally of its summoner, and can't summon other demons. It remains for 10 minutes, until it or its summoner dies, or until its summoner dismisses it as an action."
+					]
+				}
+			],
+			"token": {
+				"name": "Drow Mage Apprentice",
+				"source": ""
+			},
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"C",
+				"F",
+				"P",
+				"T"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Hook Horror",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 75,
+				"formula": "10d10 + 20"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 15,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"save": {
+				"con": "+4"
+			},
+			"skill": {
+				"perception": "+5"
+			},
+			"senses": [
+				"blindsight 120 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 15,
+			"languages": [
+				"Hook Horror"
+			],
+			"cr": "3",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The hook horror makes two attacks, any combination of Hook and Impale. The hook horror cannot make a hook to make a Hook or Impale attack if a victim is impaled on it."
+					]
+				},
+				{
+					"name": "Hook",
+					"entries": [
+						"{@atkr m} {@hit 6}, reach 10 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage. If the target is a Large or smaller creature, the hook horror moves the target 5 feet straight toward or away from itself."
+					]
+				},
+				{
+					"name": "Impale",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h} 9 ({@damage 1d10 + 4}) Piercing damage, and the target is {@condition grappled} (escape {@dc 15}). Until this grapple ends, the creature is {@condition restrained}, and the hook horror can't use this hook to impale another target."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"OTH"
+			],
+			"miscTags": [
+				"MA",
+				"RCH",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Hook Horror",
+				"source": ""
+			},
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"trait": [
+				{
+					"name": "Echolocation",
+					"entries": [
+						"The hook horror can't use its blindsight while {@condition deafened}."
+					]
+				},
+				{
+					"name": "Twist and Bite",
+					"entries": [
+						"Any creature {@condition grappled} by the hook horror's impale attack automatically takes 9 ({@damage 1d10 + 4}) Piercing damage at the start of their turn."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
 			]
 		}
 	]
