@@ -8894,8 +8894,9 @@
 						"1e": [
 							"{@spell Disguise Self|XPHB}",
 							"{@spell Ice Knife|XPHB}",
-							"{@spell Mage Armor|XPHB} (included in AC)",
-							"{@spell Thunderwave|XPHB}"
+							"{@spell mage armor|XPHB}",
+							"{@spell Thunderwave|XPHB}",
+							"{@spell web|XPHB}"
 						]
 					},
 					"ability": "int",
@@ -8911,10 +8912,9 @@
 					],
 					"daily": {
 						"1e": [
-							"{@spell dancing lights|XPHB}",
 							"{@spell darkness|XPHB}",
-							"{@spell levitate|XPHB} (self only)",
-							"{@spell web|XPHB}"
+							"{@spell faerie fire|XPHB}",
+							"{@spell levitate|XPHB} (self only)"
 						]
 					},
 					"ability": "cha",
