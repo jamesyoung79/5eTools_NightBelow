@@ -9101,6 +9101,95 @@
 			"damageTags": [
 				"P"
 			]
+		},
+		{
+			"name": "Aged Greater Basilisk",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "12d8 + 24",
+				"average": 78
+			},
+			"speed": {
+				"walk": 20
+			},
+			"str": 16,
+			"dex": 8,
+			"con": 15,
+			"int": 2,
+			"wis": 8,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 9,
+			"cr": "5",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The basilisk makes two bite attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 6}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage.  On successful hit the target must succeed on a {@dc 13} Constitution saving throw or be {@condition poisoned} for 1 hour."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Petrifying Gaze {@recharge 3}",
+					"entries": [
+						"{@actSave con} {@dc 13}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. If the basilisk sees its reflection within the {@variantrule Cone [Area of Effect]|XPHB|Cone}, the basilisk must make this save. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition and repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition instead of the {@condition Restrained|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"treasure": [
+				"any"
+			],
+			"senseTags": [
+				"D"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"conditionInflict": [
+				"petrified",
+				"poisoned",
+				"restrained"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"actionTags": [
+				"Multiattack"
+			],
+			"isNamedCreature": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"I",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
 		}
 	]
 }
