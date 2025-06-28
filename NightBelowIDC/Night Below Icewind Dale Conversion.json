@@ -3251,8 +3251,8 @@
 				}
 			],
 			"hp": {
-				"formula": "6d8 + 12",
-				"average": 39
+				"formula": "7d8 + 14",
+				"average": 45
 			},
 			"speed": {
 				"walk": 30
@@ -3264,12 +3264,12 @@
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+4",
-				"religion": "+3",
-				"medicine": "+3",
-				"perception": "+3"
+				"religion": "+4",
+				"perception": "+4",
+				"medicine": "+4",
+				"athletics": "+5"
 			},
-			"passive": 13,
+			"passive": 14,
 			"languages": [
 				"Common"
 			],
@@ -3283,13 +3283,13 @@
 				{
 					"name": "+1 Battleaxe",
 					"entries": [
-						"{@atk mw} {@hit +4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
+						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit +3} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
+						"{@atk rw} {@hit +5} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
 					]
 				}
 			],
@@ -3324,7 +3324,7 @@
 				{
 					"name": "Spellcasting",
 					"headerEntries": [
-						"Lyntern casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 11}):"
+						"Lyntern casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 12}):"
 					],
 					"spells": {
 						"0": {
@@ -3350,9 +3350,9 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"cr": "1/2",
-			"level": 4,
+			"level": 5,
 			"isNpc": true,
+			"cr": "5",
 			"damageTags": [
 				"P",
 				"S"
@@ -4727,8 +4727,8 @@
 				}
 			],
 			"hp": {
-				"formula": "6d8 + 12",
-				"average": 39
+				"formula": "7d8 + 14",
+				"average": 45
 			},
 			"speed": {
 				"walk": 30
@@ -4740,12 +4740,12 @@
 			"wis": 12,
 			"cha": 12,
 			"skill": {
-				"athletics": "+4",
-				"perception": "+3",
-				"nature": "+3",
-				"animal handling": "+3"
+				"athletics": "+5",
+				"perception": "+4",
+				"nature": "+4",
+				"animal handling": "+4"
 			},
-			"passive": 13,
+			"passive": 14,
 			"languages": [
 				"Common"
 			],
@@ -4781,7 +4781,7 @@
 				"RW",
 				"RNG"
 			],
-			"cr": "1/2",
+			"cr": "5",
 			"save": {
 				"dex": "+3"
 			},
@@ -4793,7 +4793,7 @@
 					]
 				}
 			],
-			"level": 4,
+			"level": 5,
 			"attachedItems": [
 				"+1 longsword|dmg",
 				"longbow|phb"
@@ -4807,6 +4807,14 @@
 				}
 			],
 			"isNpc": true,
+			"reaction": [
+				{
+					"name": "Defender",
+					"entries": [
+						"The sidekick can use its reaction to impose disadvantage on the attack roll of a creature within 5 feet of it whose target isn't the sidekick, provided the sidekick can see the attacker."
+					]
+				}
+			],
 			"damageTags": [
 				"P",
 				"S"
@@ -6331,26 +6339,26 @@
 				}
 			],
 			"hp": {
-				"formula": "3d8 + 6",
-				"average": 19
+				"formula": "6d8 + 12",
+				"average": 39
 			},
 			"speed": {
 				"walk": 25
 			},
-			"str": 17,
+			"str": 18,
 			"dex": 10,
 			"con": 14,
 			"int": 11,
-			"wis": 11,
+			"wis": 12,
 			"cha": 13,
 			"skill": {
-				"perception": "+4",
-				"nature": "+4",
 				"stealth": "+2",
-				"survival": "+2",
-				"athletics": "+5"
+				"survival": "+3",
+				"athletics": "+6",
+				"nature": "+4",
+				"perception": "+5"
 			},
-			"passive": 14,
+			"passive": 15,
 			"languages": [
 				"Common",
 				"Dwarvish"
@@ -6391,7 +6399,7 @@
 				{
 					"name": "+1 Battleaxe",
 					"entries": [
-						"{@atk mw} {@hit +8} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
+						"{@atk mw} {@hit +9} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
 					]
 				}
 			],
@@ -6421,7 +6429,7 @@
 					]
 				}
 			],
-			"level": 3,
+			"level": 4,
 			"cr": "1/2",
 			"isNpc": true,
 			"damageTags": [
@@ -6448,8 +6456,8 @@
 				}
 			],
 			"hp": {
-				"formula": "8d10 + 40",
-				"average": 84
+				"formula": "7d10 + 35",
+				"average": 73
 			},
 			"speed": {
 				"walk": 30
@@ -9288,6 +9296,331 @@
 				"N",
 				"P",
 				"S"
+			]
+		},
+		{
+			"name": "Ice Troll Two Headed Shaman",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "giant",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d10 + 40",
+				"average": 84
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 13,
+			"con": 20,
+			"int": 8,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"perception": "+4",
+				"religion": "+2"
+			},
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"resist": [
+				"cold"
+			],
+			"languages": [
+				"Giant"
+			],
+			"cr": "6",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The ice troll shaman casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"will": [
+						"{@spell Thaumaturgy|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Bless|XPHB}",
+							"{@spell Hold Person|XPHB}",
+							"{@spell Spiritual Weapon|XPHB}",
+							"{@spell Tongues|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bitter Cold",
+					"entries": [
+						"If the target takes any cold damage from the ice trolls attack, the target must succeed on a  {@dc 15} Constitution saving throw or have disadvantage on its attack rolls until the end of its next turn."
+					]
+				},
+				{
+					"name": "Keen Smell",
+					"entries": [
+						"The ice troll has advantage on Wisdom ({@skill Perception}) checks that rely on smell."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The ice troll regains 15 Hit Points at the start of each of its turns. If the ice troll takes Acid or Fire damage, this trait doesn't function on the troll's next turn. The ice troll dies only if it starts its turn with 0 Hit Points and doesn't regenerate."
+					]
+				},
+				{
+					"name": "Two Heads",
+					"entries": [
+						"The ice troll shaman has advantage on {@status Concentration|XPHB} checks and can easily maintain {@status Concentration|XPHB} on multiple spells."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The ice troll shaman makes three attacks: one with its bite and two with a Rimehammer or Rhimeaxe. The ice troll shaman's second head can cast a spell as part of the action. The ice troll will only result to using claws if unarmed."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage plus 4 ({@damage 1d8}) cold damage."
+					]
+				},
+				{
+					"name": "Rimehammer",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) bludgeoning damage plus 3 ({@damage 1d6}) cold damage. On successful hit the target must succeed on a {@dc 15} Constitution saving throw or be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Rimeaxe",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d12 + 4}) slashing damage, plus 3 ({@damage 1d6}) cold damage. On successful hit the ice troll can make an addition {@atk mw} {@hit 7} to hit, reach 5 ft., one additional different target. {@h}6 ({@damage 1d12 }) slashing damage, plus 3 ({@damage 1d6}) cold damage. "
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}11 ({@damage 2d6 + 4}) slashing damage."
+					]
+				},
+				{
+					"name": "Frozen Slime Spit {@recharge 5}",
+					"entries": [
+						"The ice troll spits frozen slime at one creature it can see within 15 feet of it. The target must make a {@dc 12} Dexterity saving throw, taking 7 ({@damage 2d6 + 1}) cold damage on failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"arctic",
+				"underwater"
+			],
+			"treasure": [
+				"any"
+			],
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"GI"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflictSpell": [
+				"paralyzed"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"save": {
+				"wis": "+4"
+			},
+			"traitTags": [
+				"Keen Senses",
+				"Regeneration"
+			],
+			"actionHeader": [
+				"An Ice troll either carries a Rimehammer or Rhimeaxe."
+			],
+			"conditionInflict": [
+				"prone"
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"B",
+				"C",
+				"P",
+				"S"
+			],
+			"damageTagsSpell": [
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Aquatic Cave Otyugh",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "12d10 + 48",
+				"average": 114
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 18,
+			"dex": 11,
+			"con": 19,
+			"int": 6,
+			"wis": 13,
+			"cha": 6,
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Otyugh; telepathy 120 ft. (doesn't allow the receiving creature to respond telepathically)"
+			],
+			"cr": "6",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The otyugh makes one Bite attack and two Tentacle attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 7}, reach 5 ft. {@h}12 ({@damage 2d8 + 4}) Piercing damage, and the target has the {@condition Poisoned|XPHB} condition. Whenever the {@condition Poisoned|XPHB} target finishes a {@variantrule Long Rest|XPHB}, it is subjected to the following effect. {@actSave con} {@dc 15}. {@actSaveFail} The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by 5 ({@dice 1d10}) and doesn't return to normal until the {@condition Poisoned|XPHB} condition ends on the target. {@actSaveSuccess} The {@condition Poisoned|XPHB} condition ends."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atkr m} {@hit 7}, reach 10 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13}) from one of two tentacles."
+					]
+				},
+				{
+					"name": "Tentacle Slam",
+					"entries": [
+						"{@actSave con} {@dc 15}, each creature {@condition Grappled|XPHB} by the otyugh. {@actSaveFail} 17 ({@damage 3d8 + 4}) Bludgeoning damage, and the target has the {@condition Stunned|XPHB} condition until the start of the otyugh's next turn. {@actSaveSuccess} Half damage only."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"underwater"
+			],
+			"treasure": [
+				"any"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Tentacles"
+			],
+			"languageTags": [
+				"OTH",
+				"TP"
+			],
+			"miscTags": [
+				"MA",
+				"RCH",
+				"AOE"
+			],
+			"conditionInflict": [
+				"grappled",
+				"poisoned",
+				"stunned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"save": {
+				"con": "+7"
+			},
+			"skill": {
+				"perception": "+4"
+			},
+			"resist": [
+				"cold",
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The aquatic cave otyugh can breathe air and water."
+					]
+				},
+				{
+					"name": "Diseased Miasma (Aura)",
+					"entries": [
+						"At the start of each of the aquatic cave otyugh's turns, each creature within 10 feet of the otyugh, they must succeed on a {@dc 14} Constitution saving throw or be {@condition Poisoned|XPHB} until the start of their next turn. "
+					]
+				}
+			],
+			"traitTags": [
+				"Amphibious"
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
 			]
 		}
 	]
