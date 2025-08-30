@@ -3251,8 +3251,8 @@
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "8d8 + 16",
+				"average": 52
 			},
 			"speed": {
 				"walk": 30
@@ -3277,19 +3277,19 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Lyntern makes two battleaxe or short bow attacks."
+						"Lyntern makes three battleaxe or short bow attacks."
 					]
 				},
 				{
 					"name": "+1 Battleaxe",
 					"entries": [
-						"{@atk mw} {@hit +5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
+						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
 					]
 				},
 				{
 					"name": "Shortbow",
 					"entries": [
-						"{@atk rw} {@hit +5} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
+						"{@atk rw} {@hit +4} to hit, range 80/320 ft., one target. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
 					]
 				}
 			],
@@ -3341,6 +3341,12 @@
 								"{@spell sanctuary|XPHB}"
 							],
 							"slots": 3
+						},
+						"2": {
+							"spells": [
+								"{@spell prayer of healing|XPHB}"
+							],
+							"slots": 2
 						}
 					},
 					"ability": "wis",
@@ -3350,9 +3356,9 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"level": 5,
+			"level": 6,
 			"isNpc": true,
-			"cr": "5",
+			"cr": "6",
 			"damageTags": [
 				"P",
 				"S"
@@ -4471,7 +4477,7 @@
 				"formula": "9d8 + 27"
 			},
 			"speed": {
-				"walk": 0,
+				"walk": 5,
 				"fly": {
 					"number": 60,
 					"condition": "(hover)"
@@ -4527,15 +4533,21 @@
 			"cr": "5",
 			"trait": [
 				{
-					"name": "Agonizing Phasing.",
-					"entries": [
-						"The wraith can move through other creatures and objects as if they were difficult terrain. The wraith takes 5 ({@damage 1d10}) force damage if they end their turn inside an object. A creature must make a {@dc 14} Constitution saving throw or takes 5 ({@damage 1d10}) psychic damage the first time a wraith passes through them on a turn or half as much on a successful save."
-					]
-				},
-				{
 					"name": "Sunlight Sensitivity",
 					"entries": [
 						"While in sunlight, the wraith has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				},
+				{
+					"name": "Create Wraith",
+					"entries": [
+						"When a humanoid has been killed or one within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a {@creature Wraith} in the space of its corpse or in the nearest unoccupied space. The {@creature Wraith} is under the creating wraith's control. The wraith can have no more than seven wraiths under its control at one time."
+					]
+				},
+				{
+					"name": "Incorporeal Movement",
+					"entries": [
+						"The wraith can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
 					]
 				}
 			],
@@ -4543,9 +4555,7 @@
 				{
 					"name": "Agonizing Touch.",
 					"entries": [
-						"Agonizing Touch. Melee Spell Attack: {@hit 6} to hit, reach 5 ft., one creature. {@h}14 ({@damage 4d6}) psychic damage, and the target must succeed on a {@dc 14} Wisdom saving throw or be {@condition dazed|FleeMortals} (save ends at end of turn).",
-						"Each time a target {@condition dazed|FleeMortals} in this way fails a saving throw to end the condition, their hit point maximum is halved. This effect is cumulative, and the reduction lasts until the target finishes a short or long rest.",
-						"If a Humanoid dies within 1 minute of being hit by this attack, their spirit rises as a {@creature specter}  under the wraith's control in an unoccupied space nearest to where that Humanoid died"
+						"{@atk ms} {@hit 6} to hit, reach 5 ft., one creature. {@h}10 ({@damage 3d6}) psychic damage, and the target must succeed on a {@dc 14} Wisdom saving throw or be {@condition dazed|FleeMortals} (save ends at end of turn) and its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken."
 					]
 				}
 			],
@@ -4572,6 +4582,9 @@
 			],
 			"conditionInflict": [
 				"dazed|fleemortals"
+			],
+			"miscTags": [
+				"MA"
 			],
 			"damageTags": [
 				"O",
@@ -4718,7 +4731,7 @@
 					]
 				},
 				{
-					"ac": 20,
+					"ac": 21,
 					"from": [
 						"{@item +1 shield|xdmg}"
 					],
@@ -4727,8 +4740,8 @@
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "8d8 + 16",
+				"average": 52
 			},
 			"speed": {
 				"walk": 30
@@ -4753,19 +4766,19 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Lyntern makes two Longsword attacks or Longbow attacks."
+						"Lyntern makes three Longsword attacks or Longbow attacks."
 					]
 				},
 				{
 					"name": "Longsword +1",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) slashing damage, or 8 ({@damage 1d10 + 3}) slashing damage if used with two hands."
 					]
 				},
 				{
 					"name": "Longbow",
 					"entries": [
-						"{@atk rw} {@hit +3} to hit, range 150/600 ft., one target. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
+						"{@atk rw} {@hit +4} to hit, range 150/600 ft., one target. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
 					]
 				}
 			],
@@ -4781,7 +4794,7 @@
 				"RW",
 				"RNG"
 			],
-			"cr": "5",
+			"cr": "6",
 			"save": {
 				"dex": "+3"
 			},
@@ -4791,9 +4804,15 @@
 					"entries": [
 						"Lyntern Parlfray has advantage on saving throws against being {@condition charmed}, {@condition frightened}, {@condition grappled}, or {@condition restrained} while it is within 5 feet of at least one ally."
 					]
+				},
+				{
+					"name": "Improved Critical",
+					"entries": [
+						"Lyntern's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+					]
 				}
 			],
-			"level": 5,
+			"level": 6,
 			"attachedItems": [
 				"+1 longsword|dmg",
 				"longbow|phb"
@@ -5626,10 +5645,10 @@
 			]
 		},
 		{
-			"name": "Giant Cave Lizard",
+			"name": "Cave Lizard",
 			"source": "NightBelowIDC",
 			"size": [
-				"L"
+				"M"
 			],
 			"type": "beast",
 			"alignment": [
@@ -5644,8 +5663,8 @@
 				}
 			],
 			"hp": {
-				"average": 19,
-				"formula": "3d10 + 3"
+				"formula": "4d8 + 4",
+				"average": 22
 			},
 			"speed": {
 				"walk": 30,
@@ -5669,13 +5688,7 @@
 				{
 					"name": "Bite",
 					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage. Deals an additional {@damage 1d8} damage on a critical hit and is eligible to use Locked Jaw Thrash against the same target next round."
-					]
-				},
-				{
-					"name": "Locked Jaw Thrash",
-					"entries": [
-						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target previously hit by Locked Jaw Thrash or eligible critical hit . {@h}10 ({@damage 2d8 + 2}) piercing damage. "
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage. Deals an additional 4 {@damage 1d8} damage on a critical hit.  If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}), and it has the {@condition Restrained|XPHB} condition until the grapple ends. While the target is {@condition grappled} this way it takes 10 ({@damage 2d8 + 2}) piercing damage at the start of the lizard's turn. The lizard can only {@condition Grappled|XPHB} one creature this way."
 					]
 				}
 			],
@@ -5705,6 +5718,10 @@
 			],
 			"group": [
 				"Bloodskull Orcs"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
 			],
 			"damageTags": [
 				"P"
@@ -6296,7 +6313,7 @@
 			]
 		},
 		{
-			"name": "Snagger",
+			"name": "Snagger the legend",
 			"source": "NightBelowIDC",
 			"alignment": [
 				"L",
@@ -6339,8 +6356,8 @@
 				}
 			],
 			"hp": {
-				"formula": "6d8 + 12",
-				"average": 39
+				"formula": "7d8 + 14",
+				"average": 45
 			},
 			"speed": {
 				"walk": 25
@@ -6352,13 +6369,13 @@
 			"wis": 12,
 			"cha": 13,
 			"skill": {
-				"stealth": "+2",
-				"survival": "+3",
-				"athletics": "+6",
-				"nature": "+4",
-				"perception": "+5"
+				"athletics": "+7",
+				"perception": "+7",
+				"nature": "+3",
+				"stealth": "+3",
+				"survival": "+4"
 			},
-			"passive": 15,
+			"passive": 17,
 			"languages": [
 				"Common",
 				"Dwarvish"
@@ -6429,8 +6446,154 @@
 					]
 				}
 			],
-			"level": 4,
-			"cr": "1/2",
+			"level": 5,
+			"cr": "5",
+			"isNpc": true,
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Snagger",
+			"source": "NightBelowIDC",
+			"alignment": [
+				"L",
+				"N"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"D"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "dwarf",
+						"prefix": "Mountain"
+					},
+					{
+						"tag": "Sidekick",
+						"prefix": "Attacker"
+					}
+				]
+			},
+			"ac": [
+				{
+					"ac": 19,
+					"from": [
+						"{@item +2 splint armor|xdmg}"
+					]
+				},
+				{
+					"ac": 22,
+					"from": [
+						"{@item +1 shield|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d8 + 14",
+				"average": 45
+			},
+			"speed": {
+				"walk": 25
+			},
+			"str": 18,
+			"dex": 10,
+			"con": 14,
+			"int": 11,
+			"wis": 12,
+			"cha": 13,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+7",
+				"nature": "+3",
+				"stealth": "+3",
+				"survival": "+4"
+			},
+			"passive": 17,
+			"languages": [
+				"Common",
+				"Dwarvish"
+			],
+			"trait": [
+				{
+					"name": "Keen Hearing and Sight",
+					"entries": [
+						"The dwarf has advantage on Wisdom ({@skill Perception}) checks that rely on hearing or sight."
+					]
+				},
+				{
+					"name": "Dwarven Resilience",
+					"entries": [
+						"The battlehammer dwarf has advantage on saving throws against poison, and has resistance against poison damage."
+					]
+				},
+				{
+					"name": "Warrior Sidekick (Attacker)",
+					"entries": [
+						"Snagger gains a +2 bonus to all attack rolls."
+					]
+				},
+				{
+					"name": "Improved Critical",
+					"entries": [
+						"Snagger's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The dwarf makes two melee attacks or two ranged attacks."
+					]
+				},
+				{
+					"name": "+1 Battleaxe",
+					"entries": [
+						"{@atk mw} {@hit +10} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
+					]
+				}
+			],
+			"attachedItems": [
+				"+1 battleaxe|dmg"
+			],
+			"traitTags": [
+				"Keen Senses"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"resist": [
+				"poison"
+			],
+			"save": {
+				"con": "+4"
+			},
+			"bonus": [
+				{
+					"name": "Second Wind",
+					"entries": [
+						"Snagger can use a bonus action on its turn to regain hit points equal to {@dice 1d10} + its level in this class. Once it uses this feature, it must finish a short or long rest before it can use it again."
+					]
+				}
+			],
+			"level": 5,
+			"cr": "5",
 			"isNpc": true,
 			"damageTags": [
 				"S"
@@ -9621,6 +9784,2698 @@
 			],
 			"savingThrowForced": [
 				"constitution"
+			]
+		},
+		{
+			"name": "Grell (Feral)",
+			"source": "NightBelowIDC",
+			"page": 157,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Abduct",
+					"entries": [
+						"The grell needn't spend extra movement to move a creature it is grappling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grell makes one Beak attack and one Paralyzing Tentacles attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Paralyzing Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 10 ft. {@h}7 ({@damage 1d10 + 2}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}) from two of ten tentacles. The target is also subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Grell Phalanx",
+			"source": "NightBelowIDC",
+			"page": 157,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 12,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Abduct",
+					"entries": [
+						"The grell needn't spend extra movement to move a creature it is grappling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grell makes one Beak attack and one Paralyzing Tentacles attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Paralyzing Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 10 ft. {@h}7 ({@damage 1d10 + 2}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}) from two of ten tentacles. The target is also subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"miscTags": [
+				"MA",
+				"RCH",
+				"MLW"
+			],
+			"conditionInflict": [
+				"dazed|fleemortals",
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"bonus": [
+				{
+					"name": "Lightning Lance {@recharge 4}",
+					"entries": [
+						"The target must make a {@dc 11} Dexterity saving throw. On a failed save, a creature takes 10 ({@damage 3d6})  lightning damage and is {@condition dazed|FleeMortals} until the end of their next turn. On a successful save, a creature takes half as much damage and isn't {@condition dazed|FleeMortals}."
+					]
+				}
+			],
+			"bonusHeader": [
+				"There is a 50% chance that a Grell Phalanx has a Lightning Lance. Lightning Lance begins charged after rolling initiative."
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Grell Philosopher",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12,
+				{
+					"ac": 20,
+					"from": [
+						"ring of armor"
+					],
+					"braces": true
+				}
+			],
+			"hp": {
+				"average": 55,
+				"formula": "10d8 + 10"
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 14,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"perception": "+4",
+				"stealth": "+6"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 14,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "4",
+			"trait": [
+				{
+					"name": "Abduct",
+					"entries": [
+						"The grell needn't spend extra movement to move a creature it is grappling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grell makes one Beak attack and one Paralyzing Tentacles attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Paralyzing Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 4}, reach 10 ft. {@h}7 ({@damage 1d10 + 2}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}) from two of ten tentacles. The target is also subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The grell philosopher is a 3rd level caster. Its spellcasting ability is Intelligence (spell save {@dc 12}, +4 to hit with spell attacks). It has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell mage hand|XPHB}",
+								"{@spell ray of frost|XPHB}",
+								"{@spell shocking grasp|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell charm person|XPHB}",
+								"{@spell shield|XPHB}",
+								"{@spell sleep|XPHB}"
+							],
+							"slots": 0
+						},
+						"2": {
+							"spells": [
+								"{@spell darkness|XPHB}",
+								"{@spell mirror image|XPHB}"
+							],
+							"slots": 0
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"C",
+				"L"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Grell Champion",
+			"source": "NightBelowIDC",
+			"page": 157,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"formula": "15d8 + 15",
+				"average": 82
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 13,
+			"int": 16,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+8"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Abduct",
+					"entries": [
+						"The grell needn't spend extra movement to move a creature it is grappling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grell makes one Beak attack and one Paralyzing Tentacles attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Paralyzing Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 10 ft. {@h}7 ({@damage 1d10 + 2}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}) from two of ten tentacles. The target is also subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"miscTags": [
+				"MA",
+				"RCH",
+				"MLW"
+			],
+			"conditionInflict": [
+				"dazed|fleemortals",
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The grell champion is a 6th level caster. Its spellcasting ability is Intelligence (spell save {@dc 14}, +6 to hit with spell attacks). It has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt|XPHB}",
+								"{@spell mage hand|XPHB}",
+								"{@spell shocking grasp|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell magic missile|XPHB}",
+								"{@spell shield|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell mirror image|XPHB}",
+								"{@spell web|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell dispel magic|XPHB}",
+								"{@spell lightning bolt|XPHB}",
+								"{@spell stinking cloud|XPHB}"
+							],
+							"slots": 3
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"bonusHeader": [
+				"There is a 50% chance that a Grell Champion has a Lightning Lance. Lightning Lance begins charged after rolling initiative. "
+			],
+			"bonus": [
+				{
+					"name": "Lightning Lance {@recharge 4}",
+					"entries": [
+						"The target must make a {@dc 14} Dexterity saving throw. On a failed save, a creature takes 10 ({@damage 3d6})  lightning damage and is {@condition dazed|FleeMortals} until the end of their next turn. On a successful save, a creature takes half as much damage and isn't {@condition dazed|FleeMortals}."
+					]
+				}
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Grell Patriarch",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "15d8 + 30",
+				"average": 97
+			},
+			"speed": {
+				"walk": 10,
+				"fly": {
+					"number": 30,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 15,
+			"dex": 14,
+			"con": 14,
+			"int": 19,
+			"wis": 11,
+			"cha": 9,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+8"
+			},
+			"senses": [
+				"blindsight 120 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning"
+			],
+			"conditionImmune": [
+				"blinded",
+				"prone"
+			],
+			"languages": [
+				"Deep Speech"
+			],
+			"cr": "6",
+			"trait": [
+				{
+					"name": "Abduct",
+					"entries": [
+						"The grell needn't spend extra movement to move a creature it is grappling."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The grell patriarch has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The grell makes one Beak attack and one Paralyzing Tentacles attack."
+					]
+				},
+				{
+					"name": "Beak",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+					]
+				},
+				{
+					"name": "Paralyzing Tentacles",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 10 ft. {@h}7 ({@damage 1d10 + 2}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12}) from two of ten tentacles. The target is also subjected to the following effect. {@actSave con} {@dc 12}. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"B"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"DS"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"paralyzed",
+				"poisoned"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The grell patriarch is a 7th level caster. Its spellcasting ability is Intelligence (spell save {@dc 15}, +7 to hit with spell attacks). It has the following spells prepared:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell fire bolt|XPHB}",
+								"{@spell mage hand|XPHB}"
+							]
+						},
+						"1": {
+							"spells": [
+								"{@spell burning hands|XPHB}",
+								"{@spell magic missile|XPHB}",
+								"{@spell shield|XPHB}"
+							],
+							"slots": 4
+						},
+						"2": {
+							"spells": [
+								"{@spell invisibility|XPHB}",
+								"{@spell mirror image|XPHB}",
+								"{@spell phantasmal force|XPHB}",
+								"{@spell web|XPHB}"
+							],
+							"slots": 3
+						},
+						"3": {
+							"spells": [
+								"{@spell dispel magic|XPHB}",
+								"{@spell lightning bolt|XPHB}",
+								"{@spell slow|XPHB}"
+							],
+							"slots": 3
+						},
+						"4": {
+							"spells": [
+								"{@spell Evard's black tentacles|XPHB}"
+							],
+							"slots": 1
+						}
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTags": [
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"F",
+				"L",
+				"O",
+				"Y"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"intelligence",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Deepspawn",
+			"source": "NightBelowIDC",
+			"size": [
+				"H"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"condition": "Natural armor"
+				},
+				{
+					"ac": 19,
+					"from": [
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 112",
+				"average": 216
+			},
+			"speed": {
+				"walk": 20,
+				"swim": 20,
+				"climb": 20
+			},
+			"initiative": {
+				"proficiency": 2
+			},
+			"str": 26,
+			"dex": 20,
+			"con": 24,
+			"int": 17,
+			"wis": 18,
+			"cha": 10,
+			"skill": {
+				"perception": "+8",
+				"stealth": "+9"
+			},
+			"senses": [
+				"tremorsense 30 ft.",
+				"darkvision 120 ft."
+			],
+			"passive": 18,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned",
+				"prone"
+			],
+			"languages": [
+				"Aquan",
+				"Common",
+				"Draconic",
+				"Deep Speech",
+				"Giant",
+				"Undercommon",
+				"Telepathy 120ft. (only with its spawn)"
+			],
+			"cr": "10",
+			"trait": [
+				{
+					"name": "Tentacles",
+					"entries": [
+						"The deepspawn has three massive tentacles which it often uses to wield various weapons. It is strong enough to wield any weapon in one of these tentacles, even if it is a two-handed weapon such as a greataxe. If the deepspawn takes 25 or more slashing damage in a single round, one of its tentacles (chosen by the attacker) is severed. It regrows a severed tentacle in {@dice 1d10} days."
+					]
+				},
+				{
+					"name": "Spawn",
+					"entries": [
+						"Once every {@dice 4d6} days, a deepspawn can create a perfect copy of any large or smaller creature native to the Material Plane it has previously consumed. It does not have to have consumed the entire creature, eating something as small as a finger is enough to enable the spawning process. The spawning process takes 1 minute to complete and the spawned creature is identical to the original except it has only dim memories of the original creature’s life and it is fanatically loyal to the deepspawn that created it.",
+						"Deepspawn are often accompanied by one to three of its spawn at any given time. You can roll on the table below to randomly determine which creatures are with the deepspawn or simply choose a few creatures you feel would be appropriate."
+					]
+				},
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The deepspawn has advantage on saving throws against spells and other magical effects."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The deepspawn makes a number of attacks equal to the number of tentacles it has, up to 3 weapon or tentacle attacks and 3 bite attacks. The deepspawn may replace one bite attack to cast a spell."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}14 ({@damage 1d12 + 8}) piercing damage, and the target is {@condition grappled} (escape {@dc 20}). Until this grapple ends, the creature is {@condition restrained}, and the deepspawn can't constrict another target with each of its mouths."
+					]
+				},
+				{
+					"name": "Greataxe",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}14 ({@damage 1d12 + 8}) slashing damage."
+					]
+				},
+				{
+					"name": "Morningstar",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}12 ({@damage 1d8 + 8}) slashing damage."
+					]
+				},
+				{
+					"name": "Tentacle",
+					"entries": [
+						"{@atk mw} {@hit 12} to hit, reach 10 ft., one target. {@h}11 ({@damage 1d6 + 8}) bludgeoning damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/grell.mp3"
+			},
+			"senseTags": [
+				"T",
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Swallow",
+				"Tentacles"
+			],
+			"languageTags": [
+				"AQ",
+				"C",
+				"DR",
+				"DS",
+				"GI",
+				"U"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Grell",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Grell",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Grell",
+						"entries": [
+							"{@i Bizarre Hunter That Travels between Worlds}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"With barbed tentacles sprouting from their brain-shaped bodies, grells hunt the lightless depths. These silent predators defy gravity, allowing them to strike from unexpected places, and they perceive their surroundings via sound and electrical fields. Their tentacles secrete paralytic venom, which prevents most creatures ambushed by grells from crying out before being dragged into the dark and consumed.",
+							"Grells are sapient beings, but their intellects and motivations are alien to most. They typically cooperate with one another only to defeat more powerful prey. Most demonstrate no interest in creating things or in communicating with other creatures, including their own kind.",
+							"Many grells pursue methods of traveling between worlds and planes of existence. They sometimes slip onto star-faring vessels or enter portals heedless of their destination. Roll on or choose a result from the Grell Explorations table to inspire why grells seek passage between realms.",
+							{
+								"type": "table",
+								"caption": "Grell Explorations",
+								"colLabels": [
+									"1d6",
+									"Grells Travel Because They Are..."
+								],
+								"colStyles": [
+									"col-2 text-center",
+									"col-10"
+								],
+								"rows": [
+									[
+										"1",
+										"Advanced viruses, each the clone of all other grell. They exist only to feed and spread."
+									],
+									[
+										"2",
+										"The larvae of another creature and require electrically charged environs to reproduce."
+									],
+									[
+										"3",
+										"Seeking to escape some catastrophe or terror lurking in the depths."
+									],
+									[
+										"4",
+										"Supernaturally connected to ravenous alien beings and serve as their feeding appendages."
+									],
+									[
+										"5",
+										"Vestiges of an ancient evil that will return if grells collectively consume enough creatures."
+									],
+									[
+										"6",
+										"Without souls, but convinced they can attain souls by eating certain beings."
+									]
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"For meal, my hunger grinds within my teeth. For might, my hunger clenches in my grip. But for what we're told we mustn't know, my hunger snaps a raptor's beak and makes my mind a muscle that knows only how to chew."
+										],
+										"by": "Evard",
+										"from": "Eighth Eye of the Necrophilosopher"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Grell.webp"
+						},
+						"credit": "Domenico Cava"
+					}
+				]
+			},
+			"save": {
+				"wis": "+8",
+				"con": "+11"
+			},
+			"variant": [
+				{
+					"name": "Random Spawns",
+					"entries": [
+						{
+							"type": "table",
+							"caption": "Random Spawn",
+							"colLabels": [
+								"{@dice d8}",
+								"Spawn"
+							],
+							"colStyles": [
+								"col-2 text-center",
+								"col-10"
+							],
+							"rows": [
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 1
+										}
+									},
+									"Displacer Beast"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 2
+										}
+									},
+									"Minotaur"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 3
+										}
+									},
+									"Manticore"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 4
+										}
+									},
+									"Troll"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 5
+										}
+									},
+									"Ettin"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 6
+										}
+									},
+									"Bulette"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 7
+										}
+									},
+									"Giant Crocodile"
+								],
+								[
+									{
+										"type": "cell",
+										"roll": {
+											"exact": 8
+										}
+									},
+									"NPC Adventurer"
+								]
+							]
+						}
+					],
+					"type": "variant"
+				}
+			],
+			"traitTags": [
+				"Magic Resistance"
+			],
+			"miscTags": [
+				"MW",
+				"RCH",
+				"MLW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"attachedItems": [
+				"greataxe|phb",
+				"morningstar|phb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The deepspawn casts one of the following spells using Wisdom as its spellcasting ability (spell save {@dc 16})."
+					],
+					"daily": {
+						"1": [
+							"{@spell heal|XPHB} (self only)"
+						],
+						"3": [
+							"{@spell hold monster|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"damageTags": [
+				"B",
+				"P",
+				"S"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Mustard Jelly",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": {
+				"type": "ooze",
+				"tags": [
+					"Ambusher"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				8
+			],
+			"hp": {
+				"formula": "9d10 + 45",
+				"average": 94
+			},
+			"speed": {
+				"walk": 40
+			},
+			"str": 15,
+			"dex": 12,
+			"con": 20,
+			"int": 8,
+			"wis": 6,
+			"cha": 6,
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"cold"
+			],
+			"immune": [
+				{
+					"immune": [
+						"force",
+						"lightning",
+						"poison",
+						"slashing"
+					]
+				},
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The jelly can move through a space as narrow as 1 inch without expending extra movement to do so."
+					]
+				},
+				{
+					"name": "Miasma",
+					"entries": [
+						"{@actSave con} {@dc 14}, any creature that starts its turn in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mustard jelly. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and movement reduced by 10 feet until the start of its next turn."
+					]
+				},
+				{
+					"name": "Split and Rejoin",
+					"entries": [
+						"The jelly splits into two new Mustard Jellies. Each new jelly is one size smaller than the original jelly and acts on its {@variantrule Initiative|XPHB}. The original jelly's {@variantrule Hit Points|XPHB} are divided between the new jellies and combined when rejoins back into the large creature."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack.",
+					"entries": [
+						"The mustard jelly makes two Pseudopod attacks."
+					]
+				},
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) bludgeoning damage and 7 ({@damage 2d6}) Acid damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"traitTags": [
+				"Amorphous",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"skill": {
+				"acrobatics": "+4",
+				"stealth": "+7"
+			},
+			"conditionInflict": [
+				"poisoned"
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Crystal Ooze",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "ooze",
+				"tags": [
+					"ambusher"
+				]
+			},
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				9
+			],
+			"hp": {
+				"formula": "4d8 + 8",
+				"average": 26
+			},
+			"speed": {
+				"walk": 10,
+				"climb": 10,
+				"swim": 15
+			},
+			"str": 12,
+			"dex": 8,
+			"con": 14,
+			"int": 1,
+			"wis": 6,
+			"cha": 2,
+			"skill": {
+				"stealth": "+3"
+			},
+			"senses": [
+				"blindsight 60 ft."
+			],
+			"passive": 8,
+			"resist": [
+				"acid",
+				"cold",
+				"fire"
+			],
+			"conditionImmune": [
+				"blinded",
+				"charmed",
+				"deafened",
+				"exhaustion",
+				"frightened",
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"cr": "1/2",
+			"trait": [
+				{
+					"name": "Amorphous",
+					"entries": [
+						"The ooze can move through a space as narrow as 1 inch without expending extra movement to do so."
+					]
+				},
+				{
+					"name": "Invisible in Water",
+					"entries": [
+						"The crystal ooze has the  {@condition Invisible} condition while fully immersed in water."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Pseudopod",
+					"entries": [
+						"{@atkr m} {@hit 3}, reach 5 ft. {@h}10 ({@damage 2d8 + 1}) Poison damage. If the target is a creature that isn't an elf, it is subjected to the following effect. {@actSave con} {@dc 10}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/gray-ooze.mp3"
+			},
+			"traitTags": [
+				"Amorphous"
+			],
+			"senseTags": [
+				"B"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Gray Ooze",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Gray Ooze",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"entries": [
+							"Gray oozes appear in areas affected by unpredictable magic. Magic-users who fail in their attempts to bind elemental spirits to the bodies of Constructs might also accidentally create gray oozes."
+						]
+					},
+					{
+						"type": "section",
+						"name": "Gray Oozes",
+						"entries": [
+							"{@i Hungry Slimes and Magical Failures}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"Gray oozes are predatory, corrosive slimes that blend in with stony surroundings."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Gray Oozes.webp"
+						},
+						"credit": "Mark Behm"
+					}
+				]
+			},
+			"conditionInflict": [
+				"paralyzed"
+			],
+			"damageTags": [
+				"I"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Giant Cave Lizard",
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"source": "NightBelowIDC",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 12,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "7d10 + 14",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 14,
+			"int": 2,
+			"wis": 10,
+			"cha": 5,
+			"passive": 10,
+			"cr": "3",
+			"senses": [
+				"darkvision 30 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The lizard can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb"
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}20 ({@damage 5d6 + 3}) piercing damage and the target. Deals an additional 7 ({@damage 2d6}) piercing damage on a critical hit. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13}), and it has the {@condition Restrained|XPHB} condition until the grapple ends. While the target is {@condition grappled} this way it takes 20 ({@damage 5d6 + 3}) piercing damage at the start of the lizard's turn. The creature can only {@condition Grappled|XPHB} one creature this way."
+					]
+				}
+			],
+			"miscTags": [
+				"MW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"restrained"
+			],
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Spectre",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "undead",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				12
+			],
+			"hp": {
+				"formula": "16d8 + 48",
+				"average": 120
+			},
+			"speed": {
+				"walk": 30,
+				"fly": {
+					"number": 50,
+					"condition": "(hover)"
+				},
+				"canHover": true
+			},
+			"str": 1,
+			"dex": 16,
+			"con": 16,
+			"int": 12,
+			"wis": 14,
+			"cha": 15,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 12,
+			"resist": [
+				"acid",
+				"cold",
+				"fire",
+				"lightning",
+				"thunder"
+			],
+			"immune": [
+				{
+					"immune": [
+						"cold",
+						"necrotic",
+						"poison"
+					]
+				},
+				{
+					"immune": [
+						"bludgeoning",
+						"piercing",
+						"slashing"
+					],
+					"note": "from nonmagical attacks",
+					"cond": true
+				}
+			],
+			"conditionImmune": [
+				"charmed",
+				"exhaustion",
+				"grappled",
+				"paralyzed",
+				"petrified",
+				"poisoned",
+				"prone",
+				"restrained",
+				"unconscious"
+			],
+			"languages": [
+				"understands Common plus one other language but can't speak"
+			],
+			"cr": "7",
+			"trait": [
+				{
+					"name": "Agonizing Phasing",
+					"entries": [
+						"The spectre can move through other creatures and objects as if they were difficult terrain. The spectre takes 5 ({@damage 1d10}) force damage if they end their turn inside an object. A creature must make a {@dc 14} Constitution saving throw or takes 5 ({@damage 1d10}) psychic damage the first time a spectre passes through them on a turn or half as much on a successful save."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the specter has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+					]
+				},
+				{
+					"name": "Create Spectre",
+					"entries": [
+						"When a humanoid has been killed or one within 10 feet of it that has been dead for no longer than 1 minute and died violently. The target's spirit rises as a {@creature Spectre} in the space of its corpse or in the nearest unoccupied space. The {@creature Spectre} is under the creating spectre's control. The spectre can have no more than seven spectres under its control at one time."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Life Drain",
+					"entries": [
+						"{@atk ms} {@hit 6} to hit, reach 5 ft., one creature. {@h}17 ({@damage 5d6}) psychic damage, and the target must succeed on a {@dc 14} Wisdom saving throw or be {@condition dazed|FleeMortals} (save ends at end of turn) and its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"urban"
+			],
+			"traitTags": [
+				"Incorporeal Movement",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"C",
+				"CS",
+				"X"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"fluff": {
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "external",
+							"url": "https://5e.tools/img/bestiary/XMM/Specter.webp"
+						}
+					}
+				]
+			},
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"alias": [
+				"Specter"
+			],
+			"conditionInflict": [
+				"dazed|fleemortals"
+			],
+			"damageTags": [
+				"O",
+				"Y"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Lurker Above",
+			"source": "NightBelowIDC",
+			"size": [
+				"L"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 14,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 68,
+				"formula": "8d10 + 24"
+			},
+			"speed": {
+				"walk": 20,
+				"fly": 40
+			},
+			"str": 17,
+			"dex": 14,
+			"con": 17,
+			"int": 2,
+			"wis": 13,
+			"cha": 4,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"blindsight 30 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"cr": "3",
+			"trait": [
+				{
+					"name": "False Appearance",
+					"entries": [
+						"If the Lurker Above is motionless on a wall or ceiling at the start of combat, it has advantage on its initiative roll. Moreover, if a creature hasn't observed the  Lurker Above move or act, that creature must succeed on a {@dc 18} Intelligence ({@skill Investigation}) check to discern that the trapper isn't part of the floor, wall, or ceiling."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Smother",
+					"entries": [
+						"One Large or smaller creature within 10 feet of the Lurker Above must succeed on a {@dc 13} Dexterity saving throw or be {@condition grappled} (escape {@dc 14}). Until the grapple ends, the target takes 13 ({@damage 3d6 + 3}) bludgeoning damage plus 3 ({@damage 1d6}) acid damage at the start of each of its turns. While {@condition grappled} in this way, the target is {@condition restrained}, {@condition blinded}, and deprived of air. The Lurker Above can smother only one creature at a time."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/trapper.mp3"
+			},
+			"traitTags": [
+				"False Appearance",
+				"Spider Climb"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"conditionInflict": [
+				"blinded",
+				"grappled",
+				"restrained"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Trapper",
+				"source": "MPMM"
+			},
+			"fluff": {
+				"name": "Trapper",
+				"source": "MPMM",
+				"entries": [
+					"A trapper is a manta-like creature that usually lurks in subterranean environments. It can change the color and texture of its tough, outward-facing side to help it blend in with its surroundings, while its soft, inward-facing side clings to the floor, wall, or ceiling in its hunting territory. It remains motionless as it waits for prey to come close. When a target is within its reach, it peels itself away from the surface and wraps around its prey, crushing, smothering, and then digesting it. Only a scattering of bones, metal, treasure, and other indigestible bits is left behind.",
+					"A trapper's ability to alter the color and texture of its outer side enables it to blend in with any surface made of stone, earth, or wood, masking its presence to any but the most rigorous scrutiny. It can't change its texture to that of a grassy or snow-covered surface, but it is just cunning enough to change its color to match and then conceal itself under a thin layer of vegetation or actual snow.",
+					"A trapper that lurks on the floor of its hunting grounds can cover any remains there with its body, making them look like irregularities in the surface. The creature might instead attach itself to a nearby wall or a ceiling, using the remnants as bait; any creature that stops to investigate the bones for valuables becomes the trapper's next meal.",
+					"A trapper needs to eat a {@race halfling}-sized meal once per week to remain sated. Given a steady supply of food, trappers are content to stay in one place, making them a threat along well-traveled dungeon corridor and on routes through the wilderness that see a lot of traffic. When prey is scarce, a trapper enters a state of hibernation that can last for months, though it is still aware when prey comes near. A trapper on the verge of starvation might defy its instincts and abandon its old territory in search of better hunting."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPMM/Trapper.webp"
+						},
+						"credit": "Dave Dorman"
+					}
+				]
+			},
+			"damageTags": [
+				"A",
+				"B"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			]
+		},
+		{
+			"name": "Quaggoth",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Quaggoth",
+					"Soldier"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				13
+			],
+			"hp": {
+				"average": 45,
+				"formula": "6d8 + 18"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 16,
+			"int": 6,
+			"wis": 12,
+			"cha": 7,
+			"skill": {
+				"athletics": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 11,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Bloodied Fury",
+					"entries": [
+						"While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The quaggoth makes two Claw attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage, or 13 ({@damage 3d6 + 3}) Slashing damage if the quaggoth is {@variantrule Bloodied|XPHB}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Quaggoth Jald",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Quaggoth",
+					"Brute"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				14
+			],
+			"hp": {
+				"formula": "9d8 + 36",
+				"average": 76
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 18,
+			"dex": 14,
+			"con": 18,
+			"int": 6,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"athletics": "+6"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "3",
+			"trait": [
+				{
+					"name": "Bloodied Fury",
+					"entries": [
+						"While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The quaggoth makes two Claw attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft.  {@h}8 ({@damage 1d8 + 4}) Slashing damage, or 13 ({@damage 3d8 + 3}) Slashing damage if the quaggoth jald is {@variantrule Bloodied|XPHB}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"S"
+			]
+		},
+		{
+			"name": "Quaggoth Thonot",
+			"source": "NightBelowIDC",
+			"page": 251,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"Quaggoth",
+					"Controller"
+				]
+			},
+			"alignment": [
+				"C",
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 67,
+				"formula": "9d8 + 27"
+			},
+			"speed": {
+				"walk": 30,
+				"climb": 30
+			},
+			"str": 17,
+			"dex": 12,
+			"con": 16,
+			"int": 6,
+			"wis": 14,
+			"cha": 7,
+			"skill": {
+				"athletics": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 12,
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The quaggoth casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"will": [
+						"{@spell Mage Hand|XPHB} (the hand is Invisible)",
+						"{@spell Minor Illusion|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell cure wounds|XPHB}",
+							"{@spell enlarge/reduce|XPHB}",
+							"{@spell heat metal|XPHB}",
+							"{@spell mirror image|XPHB}"
+						],
+						"2": [
+							"{@spell mind sliver|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Psionic Defense (3/Day)",
+					"headerEntries": [
+						"The quaggoth casts {@spell Feather Fall|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, requiring no spell components and using the same spellcasting ability as Spellcasting."
+					],
+					"daily": {
+						"3": [
+							"{@spell Feather Fall|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Bloodied Fury",
+					"entries": [
+						"While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The quaggoth makes two Claw attacks."
+					]
+				},
+				{
+					"name": "Claw",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage plus 5 ({@damage 2d4}) Psychic damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/quaggoth-thonot.mp3"
+			},
+			"senseTags": [
+				"SD"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Quaggoth Thonot",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Quaggoth Thonot",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"entries": [
+							"Quaggoth thonots possess psionic abilities, which they use to give themselves an edge in combat and to coerce the service of other quaggoths."
+						]
+					},
+					{
+						"type": "section",
+						"name": "Quaggoths",
+						"entries": [
+							"{@i Unpredictable Subterranean Stalkers}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "None"
+									}
+								]
+							},
+							"Beastly hunters endemic to subterranean depths, quaggoths scrape harsh existences from the Underdark. While they can survive on bitter lichens and toxic fungi, they viciously attack anything they can make a meal of, from giant spiders to explorers. Quaggoths sometimes serve as muscle for Underdark-dwelling villains.",
+							"Quaggoths frequently collect in small bands led by the most fearsome group member. These bands are proud and quick to hold grudges. Anyone who harms a quaggoth—or who is suspected of doing so—earns the enmity of that quaggoth's band regardless of reason or fault. These grudges sometimes extend to whole communities rather than individuals. Generations of quaggoths might seek revenge against a settlement's inhabitants for decades-old slights. Only the leader of a quaggoth band can demand that a grudge ends."
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Quaggoth Thonot.webp"
+						}
+					},
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Quaggoths.webp"
+						},
+						"credit": "Daarken"
+					}
+				]
+			},
+			"damageTags": [
+				"S",
+				"Y"
+			],
+			"damageTagsSpell": [
+				"F",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"intelligence"
 			]
 		}
 	]
