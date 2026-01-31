@@ -13140,6 +13140,1022 @@
 			"savingThrowForced": [
 				"constitution"
 			]
+		},
+		{
+			"name": "Azzuzir the Behir",
+			"source": "NightBelowIDC",
+			"size": [
+				"H"
+			],
+			"type": "monstrosity",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 17,
+					"from": [
+						"{@item ring of protection|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d12 + 64",
+				"average": 200
+			},
+			"speed": {
+				"walk": 50,
+				"climb": 50
+			},
+			"str": 23,
+			"dex": 16,
+			"con": 18,
+			"int": 13,
+			"wis": 14,
+			"cha": 12,
+			"skill": {
+				"perception": "+6",
+				"stealth": "+7"
+			},
+			"senses": [
+				"Darkvision 90 ft."
+			],
+			"passive": 16,
+			"immune": [
+				"lightning"
+			],
+			"languages": [
+				"Draconic"
+			],
+			"cr": "11",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The behir makes one Bite attack and uses Constrict."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atkr m} {@hit 10}, reach 10 ft. {@h}19 ({@damage 2d12 + 6}) Piercing damage plus 11 ({@damage 2d10}) Lightning damage."
+					]
+				},
+				{
+					"name": "Constrict",
+					"entries": [
+						"{@actSave str} {@dc 18}, one Large or smaller creature the behir can see within 5 feet. {@actSaveFail} 28 ({@damage 5d8 + 6}) Bludgeoning damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 16}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+					]
+				},
+				{
+					"name": "Lightning Breath {@recharge 5}",
+					"entries": [
+						"{@actSave dex} {@dc 16}, each creature in a 90-foot-long, 5-foot-wide {@variantrule Line [Area of Effect]|XPHB|Line}. {@actSaveFail} 66 ({@damage 12d10}) Lightning damage. {@actSaveSuccess} Half damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Swallow",
+					"entries": [
+						"{@actSave dex} {@dc 18}, one Large or smaller creature {@condition Grappled|XPHB} by the behir (the behir can have only one creature swallowed at a time). {@actSaveFail} The behir swallows the target, which is no longer {@condition Grappled|XPHB}. While swallowed, a creature has the {@condition Blinded|XPHB} and {@condition Restrained|XPHB} conditions, has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the behir, and takes 21 ({@damage 6d6}) Acid damage at the start of each of the behir's turns.",
+						"If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a {@dc 14} Constitution saving throw at the end of that turn or regurgitate the creature, which falls in a space within 10 feet of the behir and has the {@condition Prone|XPHB} condition. If the behir dies, a swallowed creature is no longer {@condition Restrained|XPHB} and can escape from the corpse by using 15 feet of movement, exiting {@condition Prone|XPHB}."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"treasure": [
+				"any"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/behir.mp3"
+			},
+			"senseTags": [
+				"D"
+			],
+			"actionTags": [
+				"Breath Weapon",
+				"Multiattack",
+				"Swallow"
+			],
+			"languageTags": [
+				"DR"
+			],
+			"miscTags": [
+				"MA",
+				"RCH"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone",
+				"restrained"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Behir",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Behir",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Behir",
+						"entries": [
+							"{@i Lightning-Spewing Glutton}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "Any"
+									}
+								]
+							},
+							"Twelve-legged, reptilian predators, behirs endlessly hunt for their next meal. Their short legs propel them quickly across floors and walls. Any prey that behirs can't chase down, they blast with breaths of powerful lightning.",
+							"Legends claim the first behirs were magically created by storm giants during an ancient, multiversal conflict between giants and dragons. The giants used their mastery of weather to alter the essence of blue dragons. The results were the first behirs, which served as hunters with a particular taste for dragon eggs.",
+							"Behirs live in sprawling cave systems and elaborate ruins where they can make the most of their exceptional mobility. They are mindful of areas where dragons dwell, as most dragons view behirs as dangerous abominations and attack them on sight. Nevertheless, behirs occasionally hunt for dragon lairs in the hope of finding and devouring unhatched dragon eggs.",
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"You wouldn't believe all the great stuff I've swallowed! Now just climb on in here, and you can keep whatever you find."
+										],
+										"by": "Lludd, Behir"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Behir.webp"
+						},
+						"credit": "Andrea Piparo"
+					}
+				]
+			},
+			"save": {
+				"int": "+2",
+				"str": "+7",
+				"dex": "+4",
+				"con": "+5",
+				"wis": "+3",
+				"cha": "+2"
+			},
+			"damageTags": [
+				"A",
+				"B",
+				"L",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity",
+				"strength"
+			]
+		},
+		{
+			"name": "Groznyj",
+			"source": "NightBelowIDC",
+			"page": 0,
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Fighter",
+						"prefix": "Human"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 22,
+					"from": [
+						"{@item +1 plate armor|xdmg}",
+						"{@item +1 shield|xdmg}",
+						"{@item ring of free action|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 30",
+				"average": 75
+			},
+			"speed": {
+				"walk": 30
+			},
+			"initiative": {
+				"proficiency": 1
+			},
+			"str": 18,
+			"dex": 12,
+			"con": 16,
+			"int": 8,
+			"wis": 9,
+			"cha": 7,
+			"skill": {
+				"athletics": "+7",
+				"perception": "+2"
+			},
+			"passive": 12,
+			"languages": [
+				"Common plus one other language"
+			],
+			"cr": "5",
+			"gear": [
+				"greatsword|xphb",
+				"heavy crossbow|xphb",
+				"splint armor|xphb"
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"Groznyj makes two melee attacks."
+					]
+				},
+				{
+					"name": "Long sword +2",
+					"entries": [
+						"{@atkr m} {@hit 9}, reach 5 ft. {@h}12 ({@damage 1d8 + 8}) Slashing damage. Scores a critical hit on a 19-20."
+					]
+				}
+			],
+			"treasure": [
+				"armaments"
+			],
+			"actionTags": [
+				"Multiattack",
+				"Parry"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"miscTags": [
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"save": {
+				"str": "+7",
+				"con": "+6"
+			},
+			"group": [
+				"The Slavers"
+			],
+			"trait": [
+				{
+					"name": "Action Surge (Recharges on a short rest)",
+					"entries": [
+						"Groznyj can take one additional action on its turn."
+					]
+				},
+				{
+					"name": "Bleeding Cut",
+					"entries": [
+						"Once on his turn, when Groznyj hits a target, he can inflict a wound that continues to bleed. The target takes 7 ({@damage 2d6}) damage immediately and at the beginning of their turn until they make a {@dc 14} Constitution saving throw, spend an action to bind it, or receive magical healing of any kind. Multiple instances of bleeding cut stack."
+					]
+				},
+				{
+					"name": "Ring of Free Action",
+					"entries": [
+						"Difficult terrain doesn't cost Groznyj extra Movement. In addition, magic can neither reduce his speed nor cause him to be {@condition paralyzed} or {@condition restrained}."
+					]
+				},
+				{
+					"name": "Second Wind (Recharge on short rest)",
+					"entries": [
+						"Groznyj can use a bonus action to regain {@dice 1d10 + 7} hit points."
+					]
+				}
+			],
+			"damageTags": [
+				"S"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Farayenel",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "fighter / wizard",
+						"prefix": "Elf"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item +2 chain mail|xdmg}",
+						"{@item +2 shortsword|xdmg}",
+						"{@item +2 shortbow|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d8 + 16",
+				"average": 52
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 14,
+			"int": 16,
+			"wis": 10,
+			"cha": 8,
+			"skill": {
+				"arcana": "+6",
+				"perception": "+3"
+			},
+			"passive": 13,
+			"languages": [
+				"Common plus one other language"
+			],
+			"cr": "5",
+			"gear": [
+				"component pouch|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"Farayenel is a 5th level spellcaster. Her spellcasting ability is Intelligence (spell save {@dc 14}, {@hit 6} to hit with spell attacks). She has the following spells prepared:"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Blade Ward|XPHB}",
+						"{@spell Fire Bolt|XPHB}",
+						"{@spell Light|XPHB}",
+						"{@spell Mage Hand|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Fireball|XPHB}",
+							"{@spell Tasha's Hideous Laughter|XPHB|hideous laughter}",
+							"{@spell Mirror Image|XPHB}",
+							"{@spell Web|XPHB}"
+						],
+						"2e": [
+							"{@spell Magic Missile|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Scrolls",
+					"displayAs": "action",
+					"daily": {
+						"1": [
+							"{@spell Melf's Acid Arrow|XPHB|acid arrow}",
+							"{@spell Blink|XPHB}",
+							"{@spell Globe of Invulnerability|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 5}, reach 5 ft. or range 120 ft. {@h}14 ({@damage 2d10 + 3}) Force damage."
+					]
+				},
+				{
+					"name": "Shortsword +2",
+					"entries": [
+						"{@atk mw} {@hit +8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) Piercing damage."
+					]
+				},
+				{
+					"name": "Shortbow +2",
+					"entries": [
+						"{@atk rw} {@hit +8} to hit, range 80/320 ft., one target. {@h}8 ({@damage 1d6 + 5}) Piercing damage and the target must make a {@dc 15} Constitution saving throw or be {@condition poisoned} for 1 minute. While {@condition poisoned}, the target is also {@condition paralyzed}. The target can make a new saving throw at the beginning of each of their turns."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA",
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"group": [
+				"The Slavers"
+			],
+			"save": {
+				"int": "+6",
+				"wis": "+3"
+			},
+			"attachedItems": [
+				"+2 shortbow|dmg",
+				"+2 shortsword|dmg"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned"
+			],
+			"trait": [
+				{
+					"name": "Second Wind (Recharge on short rest)",
+					"entries": [
+						"Farayenel can use a bonus action to regain {@dice 1d10 + 1} hit points."
+					]
+				}
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"A",
+				"F",
+				"O"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Haragswald, cleric of Cyric",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "cleric",
+						"prefix": "Human"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 21,
+					"from": [
+						"{@item +1 chain mail|xdmg}",
+						"{@item +2 shield|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 10,
+			"con": 14,
+			"int": 9,
+			"wis": 18,
+			"cha": 8,
+			"skill": {
+				"religion": "+1"
+			},
+			"passive": 16,
+			"languages": [
+				"Common plus one other language"
+			],
+			"cr": "3",
+			"gear": [
+				"chain shirt|xphb",
+				"holy symbol|xphb",
+				"mace|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The priest casts one of the following spells, using Wisdom as the spellcasting ability:"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Chill Touch|XPHB}",
+						"{@spell Light|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Guiding Bolt|XPHB}",
+							"{@spell Spirit Guardians|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Divine Aid (3/Day)",
+					"headerEntries": [
+						"The priest casts {@spell Bless|XPHB}, {@spell Dispel Magic|XPHB}, {@spell Healing Word|XPHB}, or {@spell Lesser Restoration|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Bless|XPHB}",
+							"{@spell Cure Wounds|XPHB}",
+							"{@spell Dispel Magic|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Flail +2",
+					"entries": [
+						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 +4}) Bludgeoning damage plus 4 ({@damage 1d8}) necrotic damage."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"individual",
+				"relics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"attachedItems": [
+				"+2 flail|dmg"
+			],
+			"save": {
+				"wis": "+6"
+			},
+			"group": [
+				"The Slavers"
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"trait": [
+				{
+					"name": "Touch of Death (2 uses, recharges on short rest)",
+					"entries": [
+						"When Haragswald hits with a melee attack, he can deal 21 extra necrotic damage."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"N"
+			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"wisdom"
+			]
+		},
+		{
+			"name": "Prentyss",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "Rogue",
+						"prefix": "Half Elf"
+					}
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item +3 leather armor|xdmg}",
+						"{@item ring of invisibility|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 12",
+				"average": 66
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 18,
+			"con": 12,
+			"int": 14,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"dex": "+6",
+				"int": "+4"
+			},
+			"skill": {
+				"stealth": "+6",
+				"perception": "+6"
+			},
+			"passive": 14,
+			"languages": [
+				"any one language (usually Common) plus thieves' cant"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Evasion",
+					"entries": [
+						"When Prentyss is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, She instead takes no damage if it succeeds on the saving throw and only half damage if it fails, provided she isn't {@condition incapacitated}."
+					]
+				},
+				{
+					"name": "Sneak Attack",
+					"entries": [
+						"Once per turn, if Prentyss makes a weapon attack with advantage or an ally within 5ft, she inflicts an extra 17  ({@damage 5d6}) damage on a hit."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Ring of Invisibility",
+					"entries": [
+						"As an action Prentyss can become {@condition invisible} until she attacks, removes the ring, or uses a bonus action to become visible."
+					]
+				},
+				{
+					"name": "Shortsword +1",
+					"entries": [
+						"{@atk mw} {@hit +8} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d6 + 5}) Piercing damage."
+					]
+				},
+				{
+					"name": "Shortbow +1",
+					"entries": [
+						"{@atk rw} {@hit +8} to hit, range 80/320 ft., one target. {@h}8 ({@damage 1d6 + 5}) Piercing damage."
+					]
+				}
+			],
+			"bonus": [
+				{
+					"name": "Cunning Action",
+					"entries": [
+						"The thief takes the {@action Dash}, {@action Disengage}, or {@action Hide} action."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Uncanny Dodge",
+					"entries": [
+						"The thief halves the damage that it takes from an attack that hits it. The thief must be able to see the attacker."
+					]
+				}
+			],
+			"environment": [
+				"urban"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X",
+				"TC"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"senses": [
+				"darkvision 60 ft.",
+				"see invisibility"
+			],
+			"senseTags": [
+				"D"
+			],
+			"traitTags": [
+				"Sneak Attack"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"attachedItems": [
+				"+1 shortbow|dmg",
+				"+1 shortsword|dmg"
+			],
+			"group": [
+				"The Slavers"
+			],
+			"tokenHref": {
+				"type": "internal",
+				"path": ""
+			},
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Crystenna",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "wizard",
+						"prefix": "Human"
+					}
+				]
+			},
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item cloak of protection +2|xdmg}"
+					]
+				},
+				{
+					"ac": 16,
+					"from": [
+						"with Mage Armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 20",
+				"average": 65
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 8,
+			"dex": 12,
+			"con": 14,
+			"int": 18,
+			"wis": 14,
+			"cha": 10,
+			"save": {
+				"int": "+9",
+				"wis": "+7",
+				"cha": "+2",
+				"con": "+4",
+				"dex": "+4",
+				"str": "+1"
+			},
+			"passive": 12,
+			"languages": [
+				"Common and any three languages"
+			],
+			"cr": "5",
+			"gear": [
+				"wand|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Light|XPHB}",
+						"{@spell Mage Armor|XPHB} (included in AC)",
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Prestidigitation|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Fireball|XPHB} (level 4 version)",
+							"{@spell Haste|XPHB}"
+						],
+						"1e": [
+							"{@spell Dimension Door|XPHB}",
+							"{@spell Lightning Bolt|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "reaction",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Fire Bolt",
+					"entries": [
+						"{@atkr m,r} {@hit 7}, reach 5 ft. or range 120 ft. {@h}11 ({@damage 2d10}) fire  damage."
+					]
+				},
+				{
+					"name": "Shocking Grasp",
+					"entries": [
+						"{@atkr m,r} {@hit 7} (advantage on attack if target is metal armored), reach 5 ft., one target. {@h}9 ({@damage 2d8}) lightning damage."
+					]
+				},
+				{
+					"name": "Wand of Magic Missiles",
+					"entries": [
+						"As an action, Crystenna can expend a charge from the wand to cast magic missile. The wand has 7 charges."
+					]
+				}
+			],
+			"environment": [
+				"any"
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"skill": {
+				"arcana": "+7"
+			},
+			"trait": [
+				{
+					"name": "Rod of Absorption",
+					"entries": [
+						"Crystenna can use the rod, which has 5 levels stored, to cast any spell she has prepared without using a spell slot, so long as she pays the level of the spell from the rod's stored levels. Casting this way takes the normal action the spell requires."
+					]
+				},
+				{
+					"name": "Sculpt Spells",
+					"entries": [
+						"When Crystenna casts an area effect spell, she may designate 1 + spell level creatures she can see. Those creatures automatically succeed at saving throws against the spell, and take no damage if a successful save would normally result in half damage."
+					]
+				}
+			],
+			"traitTags": [
+				"Damage Absorption"
+			],
+			"reaction": [
+				{
+					"name": "Rod of Absorption",
+					"entries": [
+						"While holding the rod, Crystenna can use her reaction to absorb a spell cast directly at her (not area effect). The spell's levels are stored in the rod and taken from the remaining absorption total (9). Once 9 levels of spells have been absorbed, the rod can't absorb any more, though it can use the stored levels until they are exhausted"
+					]
+				}
+			],
+			"tokenHref": {
+				"type": "external",
+				"url": ""
+			},
+			"group": [
+				"The Slavers"
+			],
+			"damageTags": [
+				"L"
+			],
+			"damageTagsSpell": [
+				"F",
+				"L",
+				"O"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity"
+			]
 		}
 	]
 }
