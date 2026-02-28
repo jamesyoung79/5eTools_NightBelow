@@ -3251,8 +3251,8 @@
 				}
 			],
 			"hp": {
-				"formula": "8d8 + 16",
-				"average": 52
+				"formula": "9d8 + 18",
+				"average": 58
 			},
 			"speed": {
 				"walk": 30
@@ -3277,7 +3277,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"Lyntern makes three battleaxe or short bow attacks."
+						"Lyntern makes two battleaxe or short bow attacks."
 					]
 				},
 				{
@@ -3315,6 +3315,12 @@
 					"entries": [
 						"Lyntern Parlfray has advantage on saving throws against being {@condition charmed}, {@condition frightened}, {@condition grappled}, or {@condition restrained} while it is within 5 feet of at least one ally."
 					]
+				},
+				{
+					"name": "Potent Cantrips",
+					"entries": [
+						"The sidekick can add its spellcasting ability modifier to the damage it deals with any cantrip."
+					]
 				}
 			],
 			"save": {
@@ -3340,13 +3346,13 @@
 								"{@spell cure wounds|XPHB}",
 								"{@spell sanctuary|XPHB}"
 							],
-							"slots": 3
+							"slots": 4
 						},
 						"2": {
 							"spells": [
 								"{@spell prayer of healing|XPHB}"
 							],
-							"slots": 2
+							"slots": 3
 						}
 					},
 					"ability": "wis",
@@ -3356,9 +3362,9 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"level": 6,
+			"level": 7,
 			"isNpc": true,
-			"cr": "6",
+			"cr": "7",
 			"damageTags": [
 				"P",
 				"S"
@@ -6350,14 +6356,19 @@
 				{
 					"ac": 19,
 					"from": [
-						"{@item +1 chain mail|xdmg}",
-						"{@item shield|xphb}"
+						"{@item +2 splint armor|xdmg}"
+					]
+				},
+				{
+					"ac": 23,
+					"from": [
+						"{@item +2 shield|xdmg}"
 					]
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "9d8 + 18",
+				"average": 58
 			},
 			"speed": {
 				"walk": 25
@@ -6404,13 +6415,19 @@
 					"entries": [
 						"Snagger's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
 					]
+				},
+				{
+					"name": "Battle Readiness",
+					"entries": [
+						"Snagger  has advantage on initiative rolls."
+					]
 				}
 			],
 			"action": [
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The dwarf makes two melee attacks or two ranged attacks."
+						"Snagger makes two melee attacks or two ranged attacks."
 					]
 				},
 				{
@@ -6446,8 +6463,8 @@
 					]
 				}
 			],
-			"level": 5,
-			"cr": "5",
+			"level": 7,
+			"cr": "7",
 			"isNpc": true,
 			"damageTags": [
 				"S"
@@ -6489,21 +6506,21 @@
 			},
 			"ac": [
 				{
-					"ac": 19,
+					"ac": 20,
 					"from": [
-						"{@item +2 splint armor|xdmg}"
+						"{@item +2 plate armor|xdmg}"
 					]
 				},
 				{
-					"ac": 22,
+					"ac": 24,
 					"from": [
-						"{@item +1 shield|xdmg}"
+						"{@item +2 shield|xdmg}"
 					]
 				}
 			],
 			"hp": {
-				"formula": "7d8 + 14",
-				"average": 45
+				"formula": "9d8 + 18",
+				"average": 58
 			},
 			"speed": {
 				"walk": 25
@@ -6550,13 +6567,19 @@
 					"entries": [
 						"Snagger's attack rolls score a critical hit on a roll of 19 or 20 on the {@dice d20}."
 					]
+				},
+				{
+					"name": "Battle Readiness",
+					"entries": [
+						"Snagger has advantage on initiative rolls."
+					]
 				}
 			],
 			"action": [
 				{
-					"name": "Multiattack",
+					"name": "Extra Attack",
 					"entries": [
-						"The dwarf makes two melee attacks or two ranged attacks."
+						"Snagger makes two melee attacks or two ranged attacks."
 					]
 				},
 				{
@@ -6592,8 +6615,8 @@
 					]
 				}
 			],
-			"level": 5,
-			"cr": "5",
+			"level": 7,
+			"cr": "7",
 			"isNpc": true,
 			"damageTags": [
 				"S"
@@ -14154,6 +14177,657 @@
 			],
 			"savingThrowForcedSpell": [
 				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Derro",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"QftIS"
+			],
+			"size": [
+				"S"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "Typically ",
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"{@item scale mail|xphb}"
+					]
+				},
+				{
+					"ac": 18,
+					"from": [
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d6 + 6",
+				"average": 27
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 10,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 5,
+			"cha": 9,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The derro has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Hooked Spear",
+					"entries": [
+						"{@atk mw} {@hit 2} to hit, reach 5 ft., one target. {@h}3 ({@damage 1d6}) piercing damage. If the target is Medium or smaller, the derro can choose to deal no damage and knock it {@condition prone}."
+					]
+				},
+				{
+					"name": "Light Crossbow",
+					"entries": [
+						"{@atk rw} {@hit 4} to hit, range 80/320 ft., one target. {@h}6 ({@damage 1d8 + 2}) piercing damage and the target must succeed on a {@dc 12} Constitution saving throw or be {@condition poisoned} for 1 minute. Until this poison ends, the target is enfeebled and  subtracts {@dice 1d8} from all of its damage rolls. The target can repeat the saving throw at the end of each of its turns, ending the poison on a success."
+					]
+				}
+			],
+			"environment": [
+				"mountain",
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/derro.mp3"
+			},
+			"attachedItems": [
+				"light crossbow|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"miscTags": [
+				"MW",
+				"MLW",
+				"RW",
+				"RNG"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Derro",
+				"source": "MPMM"
+			},
+			"fluff": {
+				"name": "Derro",
+				"source": "MPMM",
+				"entries": [
+					{
+						"type": "quote",
+						"entries": [
+							"Mind flayers must be stopped. They have visited horrors on countless worlds, and entire groups of people have been mutated by illithid experiments. Such are the derro.",
+							"Whenever I've met them, I refuse to fight, no matter how violent they might be. I think of the dwarves they once were. and I must confess that even I have shed tears."
+						],
+						"by": "Mordenkainen"
+					},
+					"Derro slink through the subterranean realms, seeking places that are safe from the perils of the Underdark. Equal parts fearful and vicious, bands of these dwarf-kin prey on those weaker than themselves, while giving simpering obeisance to any creatures they deem more powerful. A lone derro may seem pitiable, but a cackling, spitting, growling, howling horde of them is horrifying to behold.",
+					"Fractious in groups and individually weak, derro would have died out long ago but for two elements of their character. They are cautious and distrustful, which serves them well as they navigate the dangers of the Underdark and its societies. They also have a stronger-than-normal tendency to develop sorcerous power. Individuals who do so usually serve as leaders and are known as savants.",
+					"Grandiose fantasies and rampant fanaticism have obscured derro's true origin, even among themselves. Most dwarves don't recognize derro as kin, but the legends that derro tell about their people and the story that duergar believe share a grain of truth. According to the histories of some duergar, derro are descended from a dwarven community that was left behind when the others escaped the rule of mind flayers. These remnants were so distorted by the mind flayers' psionic power that the dwarves became Aberrations.",
+					"Derro tell their own stories of flight and survival in the Underdark, in which mind flayers aren't always the enemy. They tell of two brothers, the gods Diirinka and Diinkarazan, and of how Diirinka cleverly betrayed his sibling so that he could steal magical power from the evil they escaped. The danger the brothers are said to face in this legend varies, depending on whatever foe the savants want to lead their people against, yet the essence of the story remains the same: a lesson of survival at any price and an example of how deceitfulness and cruelty can be virtues."
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPMM/Derro.webp"
+						},
+						"width": 743,
+						"height": 1000
+					}
+				]
+			},
+			"conditionInflict": [
+				"poisoned"
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Derro Renegade Chieftain Savant",
+			"source": "NightBelowIDC",
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "Typically ",
+			"ac": [
+				{
+					"ac": 18,
+					"from": [
+						"{@item scale mail|xphb}",
+						"{@item ring of protection|xdmg}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d6 + 14",
+				"average": 63
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 15,
+			"wis": 5,
+			"cha": 16,
+			"skill": {
+				"stealth": "+5"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The derro casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell mage hand}",
+						"{@spell message}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Cloudkill|XPHB}",
+							"{@spell Crown of Madness|XPHB}",
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell invisibility}",
+							"{@spell sleep}",
+							"{@spell spider climb}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The derro has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Chromatic Beam",
+					"entries": [
+						"The derro launches a brilliant beam of magical energy in a 5-foot-wide line that is 60 feet long. Each creature in the line must make a {@dc 12} Dexterity saving throw, taking 21 ({@damage 6d6}) radiant damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/derro-savant.mp3"
+			},
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"unconscious"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Derro Savant",
+				"source": "MPMM"
+			},
+			"fluff": {
+				"name": "Derro Savant",
+				"source": "MPMM",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPMM/Derro Savant.webp"
+						},
+						"credit": "Bryan Syme",
+						"width": 623,
+						"height": 1000
+					}
+				],
+				"entries": [
+					{
+						"type": "quote",
+						"entries": [
+							"Mind flayers must be stopped. They have visited horrors on countless worlds, and entire groups of people have been mutated by illithid experiments. Such are the derro.",
+							"Whenever I've met them, I refuse to fight, no matter how violent they might be. I think of the dwarves they once were. and I must confess that even I have shed tears."
+						],
+						"by": "Mordenkainen"
+					},
+					"Derro slink through the subterranean realms, seeking places that are safe from the perils of the Underdark. Equal parts fearful and vicious, bands of these dwarf-kin prey on those weaker than themselves, while giving simpering obeisance to any creatures they deem more powerful. A lone derro may seem pitiable, but a cackling, spitting, growling, howling horde of them is horrifying to behold.",
+					"Fractious in groups and individually weak, derro would have died out long ago but for two elements of their character. They are cautious and distrustful, which serves them well as they navigate the dangers of the Underdark and its societies. They also have a stronger-than-normal tendency to develop sorcerous power. Individuals who do so usually serve as leaders and are known as savants.",
+					"Grandiose fantasies and rampant fanaticism have obscured derro's true origin, even among themselves. Most dwarves don't recognize derro as kin, but the legends that derro tell about their people and the story that duergar believe share a grain of truth. According to the histories of some duergar, derro are descended from a dwarven community that was left behind when the others escaped the rule of mind flayers. These remnants were so distorted by the mind flayers' psionic power that the dwarves became Aberrations.",
+					"Derro tell their own stories of flight and survival in the Underdark, in which mind flayers aren't always the enemy. They tell of two brothers, the gods Diirinka and Diinkarazan, and of how Diirinka cleverly betrayed his sibling so that he could steal magical power from the evil they escaped. The danger the brothers are said to face in this legend varies, depending on whatever foe the savants want to lead their people against, yet the essence of the story remains the same: a lesson of survival at any price and an example of how deceitfulness and cruelty can be virtues."
+				]
+			},
+			"save": {
+				"str": "+0",
+				"dex": "+3",
+				"con": "+2",
+				"int": "+3",
+				"wis": "-2",
+				"cha": "+7"
+			},
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"damageTagsSpell": [
+				"I"
+			],
+			"savingThrowForced": [
+				"dexterity"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Giant Flying Spider (Derro Mount)",
+			"source": "NightBelowIDC",
+			"speed": {
+				"walk": 30,
+				"climb": 30,
+				"fly": 40
+			},
+			"size": [
+				"L"
+			],
+			"type": "beast",
+			"alignment": [
+				"U"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"Metal Barding"
+					]
+				}
+			],
+			"hp": {
+				"formula": "6d10 + 6",
+				"average": 39
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 12,
+			"int": 2,
+			"wis": 11,
+			"cha": 4,
+			"skill": {
+				"stealth": "+7"
+			},
+			"senses": [
+				"blindsight 10 ft.",
+				"darkvision 60 ft."
+			],
+			"passive": 10,
+			"cr": "2",
+			"trait": [
+				{
+					"name": "Spider Climb",
+					"entries": [
+						"The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+					]
+				},
+				{
+					"name": "Web Sense",
+					"entries": [
+						"While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+					]
+				},
+				{
+					"name": "Web Walker",
+					"entries": [
+						"The spider ignores movement restrictions caused by webbing."
+					]
+				},
+				{
+					"name": "Iron Barding",
+					"entries": [
+						"The spider has disadvantage on Dexterity ({@skill Stealth}) checks."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one creature. {@h}7 ({@damage 1d8 + 3}) piercing damage, and the target must make a {@dc 11} Constitution saving throw, taking 9 ({@damage 2d8}) poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but {@condition poisoned} for 1 hour, even after regaining hit points, and is {@condition paralyzed} while {@condition poisoned} in this way."
+					]
+				},
+				{
+					"name": "Flying Stomp",
+					"entries": [
+						"The spider moves up to its fly speed to a creature it can see and stomps all enemies within 5ft. with its iron boots. The target must succeed on a {@dc 12} Dexterity saving throw or take 20 ({@damage 3d10 + 4}) bludgeoning damage and be knocked {@condition prone}."
+					]
+				},
+				{
+					"name": "Web {@recharge 5}",
+					"entries": [
+						"{@atk rw} {@hit 5} to hit, range 30/60 ft., one creature. {@h}The target is {@condition restrained} by webbing. As an action, the {@condition restrained} target can make a {@dc 12} Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+					]
+				}
+			],
+			"traitTags": [
+				"Spider Climb",
+				"Web Sense",
+				"Web Walker"
+			],
+			"senseTags": [
+				"B",
+				"D"
+			],
+			"miscTags": [
+				"MW",
+				"RW"
+			],
+			"conditionInflict": [
+				"paralyzed",
+				"poisoned",
+				"prone",
+				"restrained"
+			],
+			"token": {
+				"name": "Giant Flying Spider",
+				"source": "WDMM"
+			},
+			"damageTags": [
+				"B",
+				"I",
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution",
+				"dexterity"
+			]
+		},
+		{
+			"name": "Derro Savant",
+			"source": "NightBelowIDC",
+			"page": 92,
+			"size": [
+				"S"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"sorcerer"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"alignmentPrefix": "Typically ",
+			"ac": [
+				{
+					"ac": 13,
+					"from": [
+						"{@item leather armor|PHB}"
+					]
+				}
+			],
+			"hp": {
+				"average": 36,
+				"formula": "8d6 + 8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 12,
+			"int": 11,
+			"wis": 5,
+			"cha": 14,
+			"skill": {
+				"stealth": "+4"
+			},
+			"senses": [
+				"darkvision 120 ft."
+			],
+			"passive": 7,
+			"languages": [
+				"Dwarvish",
+				"Undercommon"
+			],
+			"cr": "3",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The derro casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 12}):"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell mage hand}",
+						"{@spell message}",
+						"{@spell prestidigitation}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell invisibility}",
+							"{@spell sleep}",
+							"{@spell spider climb}"
+						]
+					},
+					"ability": "cha",
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Magic Resistance",
+					"entries": [
+						"The derro has advantage on saving throws against spells and other magical effects."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the derro has disadvantage on attack rolls, as well as on Wisdom ({@skill Perception}) checks that rely on sight."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Quarterstaff",
+					"entries": [
+						"{@atk mw} {@hit 1} to hit, reach 5 ft., one target. {@h}2 ({@damage 1d6 - 1}) bludgeoning damage."
+					]
+				},
+				{
+					"name": "Chromatic Beam",
+					"entries": [
+						"The derro launches a brilliant beam of magical energy in a 5-foot-wide line that is 60 feet long. Each creature in the line must make a {@dc 12} Dexterity saving throw, taking 21 ({@damage 6d6}) radiant damage on a failed save, or half as much damage on a successful one."
+					]
+				}
+			],
+			"environment": [
+				"underdark"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/derro-savant.mp3"
+			},
+			"attachedItems": [
+				"quarterstaff|phb"
+			],
+			"traitTags": [
+				"Magic Resistance",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD"
+			],
+			"languageTags": [
+				"D",
+				"U"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"MLW"
+			],
+			"conditionInflictSpell": [
+				"invisible",
+				"unconscious"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Derro Savant",
+				"source": "MPMM"
+			},
+			"fluff": {
+				"name": "Derro Savant",
+				"source": "MPMM",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/MPMM/Derro Savant.webp"
+						},
+						"credit": "Bryan Syme",
+						"width": 623,
+						"height": 1000
+					}
+				],
+				"entries": [
+					{
+						"type": "quote",
+						"entries": [
+							"Mind flayers must be stopped. They have visited horrors on countless worlds, and entire groups of people have been mutated by illithid experiments. Such are the derro.",
+							"Whenever I've met them, I refuse to fight, no matter how violent they might be. I think of the dwarves they once were. and I must confess that even I have shed tears."
+						],
+						"by": "Mordenkainen"
+					},
+					"Derro slink through the subterranean realms, seeking places that are safe from the perils of the Underdark. Equal parts fearful and vicious, bands of these dwarf-kin prey on those weaker than themselves, while giving simpering obeisance to any creatures they deem more powerful. A lone derro may seem pitiable, but a cackling, spitting, growling, howling horde of them is horrifying to behold.",
+					"Fractious in groups and individually weak, derro would have died out long ago but for two elements of their character. They are cautious and distrustful, which serves them well as they navigate the dangers of the Underdark and its societies. They also have a stronger-than-normal tendency to develop sorcerous power. Individuals who do so usually serve as leaders and are known as savants.",
+					"Grandiose fantasies and rampant fanaticism have obscured derro's true origin, even among themselves. Most dwarves don't recognize derro as kin, but the legends that derro tell about their people and the story that duergar believe share a grain of truth. According to the histories of some duergar, derro are descended from a dwarven community that was left behind when the others escaped the rule of mind flayers. These remnants were so distorted by the mind flayers' psionic power that the dwarves became Aberrations.",
+					"Derro tell their own stories of flight and survival in the Underdark, in which mind flayers aren't always the enemy. They tell of two brothers, the gods Diirinka and Diinkarazan, and of how Diirinka cleverly betrayed his sibling so that he could steal magical power from the evil they escaped. The danger the brothers are said to face in this legend varies, depending on whatever foe the savants want to lead their people against, yet the essence of the story remains the same: a lesson of survival at any price and an example of how deceitfulness and cruelty can be virtues."
+				]
+			},
+			"damageTags": [
+				"B",
+				"R"
+			],
+			"savingThrowForced": [
 				"dexterity"
 			]
 		}
