@@ -16103,6 +16103,368 @@
 			"savingThrowForced": [
 				"strength"
 			]
+		},
+		{
+			"name": "Ixzan",
+			"source": "NightBelowIDC",
+			"page": 225,
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "8d6 + 8",
+				"average": 36
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "2",
+			"action": [
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d6 + 3}) piercing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the Ixzan, the Ixzan can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"miscTags": [
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Ixitxachitl",
+				"source": "OotA"
+			},
+			"fluff": {
+				"name": "Ixitxachitl",
+				"source": "OotA",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Ixitxachitl",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"Ixitxachitl (pronounced ick-zit-zah-chit-ul) are aquatic creatures resembling manta rays, with small, clawed hands at the ends of their \"wings\" and black eyes gleaming with sinister intelligence. Many creatures mistake ixitxachitl for common manta rays, but this can prove a deadly mistake. The ixitxachitl are as evil as they are cunning, leading to their common nickname \"demon rays.\" They inhabit bodies of fresh and salt water, but their violent nature means that little is known of them.",
+											{
+												"name": "Struggle for Survival",
+												"entries": [
+													"Ixitxachitl emerge from eggs as tiny creatures little more than a hand span in width. From that time onward, they struggle to survive at all costs, growing throughout their lives. Those ixitxachitl that master the secrets of survival gain powers of regeneration and feed on the life force of other creatures."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "All Consuming",
+												"type": "entries",
+												"entries": [
+													"Ixitxachitl hollow out coral reefs or other natural aquatic formations to create labyrinthine dens, often compelling aid from captured aquatic species they enslave. They typically strip an area bare before moving on to new fertile grounds, leaving their abandoned dens behind. Schools of ixitxachitl often war on other aquatic creatures to claim feeding grounds and territory."
+												]
+											},
+											{
+												"name": "Demon Worshipers",
+												"type": "entries",
+												"entries": [
+													"The ixitxachitl venerate and serve various demons, particularly Demogorgon, whom they consider their patron and creator. They have an intense rivalry with the merrow over which of them are the greatest and most favored servants of the Prince of Demons."
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/OotA/Ixitxachitl.webp"
+						},
+						"width": 300,
+						"height": 406
+					}
+				]
+			},
+			"damageTags": [
+				"P"
+			]
+		},
+		{
+			"name": "Ixzan Mage",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d6 + 16",
+				"average": 72
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 16,
+			"con": 13,
+			"int": 17,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 14,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "6",
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The Ixzan mage makes three Arcane Burst attacks."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}4 ({@damage 1d6 + 1}) piercing damage."
+					]
+				},
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}16 ({@damage 3d8 + 3}) Force damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"miscTags": [
+				"MW",
+				"RA",
+				"MA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Ixitxachitl",
+				"source": "OotA"
+			},
+			"fluff": {
+				"name": "Ixitxachitl",
+				"source": "OotA",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Ixitxachitl",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"Ixitxachitl (pronounced ick-zit-zah-chit-ul) are aquatic creatures resembling manta rays, with small, clawed hands at the ends of their \"wings\" and black eyes gleaming with sinister intelligence. Many creatures mistake ixitxachitl for common manta rays, but this can prove a deadly mistake. The ixitxachitl are as evil as they are cunning, leading to their common nickname \"demon rays.\" They inhabit bodies of fresh and salt water, but their violent nature means that little is known of them.",
+											{
+												"name": "Struggle for Survival",
+												"entries": [
+													"Ixitxachitl emerge from eggs as tiny creatures little more than a hand span in width. From that time onward, they struggle to survive at all costs, growing throughout their lives. Those ixitxachitl that master the secrets of survival gain powers of regeneration and feed on the life force of other creatures."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "All Consuming",
+												"type": "entries",
+												"entries": [
+													"Ixitxachitl hollow out coral reefs or other natural aquatic formations to create labyrinthine dens, often compelling aid from captured aquatic species they enslave. They typically strip an area bare before moving on to new fertile grounds, leaving their abandoned dens behind. Schools of ixitxachitl often war on other aquatic creatures to claim feeding grounds and territory."
+												]
+											},
+											{
+												"name": "Demon Worshipers",
+												"type": "entries",
+												"entries": [
+													"The ixitxachitl venerate and serve various demons, particularly Demogorgon, whom they consider their patron and creator. They have an intense rivalry with the merrow over which of them are the greatest and most favored servants of the Prince of Demons."
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/OotA/Ixitxachitl.webp"
+						},
+						"width": 300,
+						"height": 406
+					}
+				]
+			},
+			"skill": {
+				"arcana": "+9",
+				"history": "+6",
+				"perception": "+4"
+			},
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"displayAs": "action",
+					"rest": {
+						"2e": [
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell Fireball|XPHB}",
+							"{@spell Invisibility|XPHB}",
+							"{@spell Levitate|XPHB}",
+							"{@spell Mirror Image|XPHB}",
+							"{@spell Phantasmal Force|XPHB}"
+						],
+						"1e": [
+							"{@spell Cone of Cold|XPHB}",
+							"{@spell Evard's Black Tentacles|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Misty Step (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"rest": {
+						"3e": [
+							"{@spell Misty Step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "reaction",
+					"rest": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"Y"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"intelligence",
+				"strength"
+			]
 		}
 	]
 }
