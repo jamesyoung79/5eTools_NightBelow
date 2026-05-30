@@ -3235,39 +3235,39 @@
 			],
 			"ac": [
 				{
-					"ac": 17,
+					"ac": 20,
 					"from": [
-						"{@item +1 chain mail|xdmg}",
-						"{@item +1 battleaxe|xdmg}"
+						"{@item +2 plate armor|xdmg}",
+						"{@item +2 longsword|xdmg}"
 					]
 				},
 				{
-					"ac": 19,
+					"ac": 23,
 					"from": [
-						"{@item shield|xphb}"
+						"{@item +1 shield|xdmg}"
 					],
 					"condition": "equipped",
 					"braces": true
 				}
 			],
 			"hp": {
-				"formula": "9d8 + 18",
-				"average": 58
+				"formula": "10d8 + 30",
+				"average": 75
 			},
 			"speed": {
 				"walk": 30
 			},
-			"str": 14,
+			"str": 15,
 			"dex": 12,
-			"con": 15,
+			"con": 16,
 			"int": 12,
 			"wis": 12,
 			"cha": 12,
 			"skill": {
 				"religion": "+4",
 				"perception": "+4",
-				"medicine": "+4",
-				"athletics": "+5"
+				"athletics": "+5",
+				"medicine": "+4"
 			},
 			"passive": 14,
 			"languages": [
@@ -3281,9 +3281,9 @@
 					]
 				},
 				{
-					"name": "+1 Battleaxe",
+					"name": "+2 Longsword",
 					"entries": [
-						"{@atk mw} {@hit +6} to hit, reach 5 ft., one target. {@h}6 ({@damage 1d8 + 2}) Slashing damage."
+						"{@atk mw} {@hit +7} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d8 + 4}) Slashing damage."
 					]
 				},
 				{
@@ -3323,9 +3323,6 @@
 					]
 				}
 			],
-			"save": {
-				"wis": "+1"
-			},
 			"spellcasting": [
 				{
 					"name": "Spellcasting",
@@ -3362,9 +3359,12 @@
 			"spellcastingTags": [
 				"O"
 			],
-			"level": 7,
+			"level": 8,
 			"isNpc": true,
-			"cr": "7",
+			"cr": "8",
+			"save": {
+				"wis": "+4"
+			},
 			"damageTags": [
 				"P",
 				"S"
@@ -6367,24 +6367,24 @@
 				}
 			],
 			"hp": {
-				"formula": "9d8 + 18",
-				"average": 58
+				"formula": "10d8 + 30",
+				"average": 75
 			},
 			"speed": {
 				"walk": 25
 			},
 			"str": 18,
 			"dex": 10,
-			"con": 14,
+			"con": 16,
 			"int": 11,
 			"wis": 12,
 			"cha": 13,
 			"skill": {
 				"athletics": "+7",
-				"perception": "+7",
 				"nature": "+3",
 				"stealth": "+3",
-				"survival": "+4"
+				"survival": "+4",
+				"perception": "+7"
 			},
 			"passive": 17,
 			"languages": [
@@ -6419,7 +6419,7 @@
 				{
 					"name": "Battle Readiness",
 					"entries": [
-						"Snagger  has advantage on initiative rolls."
+						"Snagger has advantage on initiative rolls."
 					]
 				}
 			],
@@ -6431,14 +6431,14 @@
 					]
 				},
 				{
-					"name": "+1 Battleaxe",
+					"name": "+2 Battleaxe",
 					"entries": [
-						"{@atk mw} {@hit +9} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d8 + 5}) Slashing damage."
+						"{@atk mw} {@hit +10} to hit, reach 5 ft., one target. {@h}10 ({@damage 1d8 + 6}) Slashing damage."
 					]
 				}
 			],
 			"attachedItems": [
-				"+1 battleaxe|dmg"
+				"+2 battleaxe|dmg"
 			],
 			"traitTags": [
 				"Keen Senses"
@@ -6452,9 +6452,6 @@
 			"resist": [
 				"poison"
 			],
-			"save": {
-				"con": "+4"
-			},
 			"bonus": [
 				{
 					"name": "Second Wind",
@@ -6463,9 +6460,12 @@
 					]
 				}
 			],
-			"level": 7,
-			"cr": "7",
+			"level": 8,
+			"cr": "8",
 			"isNpc": true,
+			"save": {
+				"con": "+6"
+			},
 			"damageTags": [
 				"S"
 			]
@@ -14829,6 +14829,1279 @@
 			],
 			"savingThrowForced": [
 				"dexterity"
+			]
+		},
+		{
+			"name": "Darafayen",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"DrDe",
+				"EFA",
+				"FRAiF",
+				"FRHoF",
+				"LFL",
+				"NF",
+				"UtHftLH"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					{
+						"tag": "wizard",
+						"prefix": "Rockseer Elf"
+					}
+				]
+			},
+			"alignment": [
+				"N"
+			],
+			"ac": [
+				15
+			],
+			"hp": {
+				"average": 81,
+				"formula": "18d8"
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 9,
+			"dex": 14,
+			"con": 11,
+			"int": 17,
+			"wis": 12,
+			"cha": 11,
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Common",
+				"Elvish",
+				"Undercommon"
+			],
+			"cr": "6",
+			"gear": [
+				"wand|xphb"
+			],
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Light|XPHB}",
+						"{@spell Mage Armor|XPHB} (included in AC)",
+						"{@spell Mage Hand|XPHB}",
+						"{@spell Prestidigitation|XPHB}"
+					],
+					"daily": {
+						"2e": [
+							"{@spell Lightning Bolt|XPHB} (level 4 version)",
+							"{@spell Slow|XPHB}"
+						],
+						"1e": [
+							"{@spell Stone Shape|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Misty Step (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Misty Step|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "reaction",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The mage makes three Arcane Burst attacks."
+					]
+				},
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}16 ({@damage 3d8 + 3}) Force damage."
+					]
+				}
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"E",
+				"U"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"trait": [
+				{
+					"name": "Stone Walk (3/Day)",
+					"entries": [
+						"The Darafayen can walk through nonmagical, unworked earth and stone. While doing so, the Darafayen doesn't disturb the material she moves through."
+					]
+				}
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"isNpc": true,
+			"damageTags": [
+				"O"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Kuo-toa Order of the Claw Monitor",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"EFA",
+				"FRAiF"
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				16
+			],
+			"hp": {
+				"formula": "14d8 + 28",
+				"average": 91
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 14,
+			"int": 12,
+			"wis": 14,
+			"cha": 11,
+			"skill": {
+				"religion": "+4",
+				"perception": "+8"
+			},
+			"senses": [
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
+			],
+			"passive": 18,
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "5",
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The kuo-toa can breathe air and water."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the kuo-toa has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+					]
+				},
+				{
+					"name": "Lobster Claw Transformation",
+					"entries": [
+						"The Kuo-toa Order of the Claw Monitor can transform their hands in to lobster claws at will."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"If the kuo-toa order of the claw monitor is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the kuo-toa order of the claw monitor instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The kuo-toa makes two Bone Whip attacks or Lobster Claw attacks."
+					]
+				},
+				{
+					"name": "Bone Whip",
+					"entries": [
+						"{@atkr m} {@hit 5}, reach 10 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage plus 7 ({@damage 2d6}) Lightning damage, and the target can't make {@action Opportunity Attack|XPHB|Opportunity Attacks} until the start of the kuo-toa's next turn."
+					]
+				},
+				{
+					"name": "Lobster Claw",
+					"entries": [
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}10 ({@damage 2d8 + 3}) bludgeoning damage."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"underdark"
+			],
+			"treasure": [
+				"relics"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/kuo-toa-monitor.opus"
+			},
+			"traitTags": [
+				"Amphibious",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"miscTags": [
+				"MA",
+				"RCH",
+				"MLW",
+				"MW"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Kuo-toa Monitor",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Kuo-toa Monitor",
+				"source": "XMM",
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Kuo-toa Whip and Monitor.webp"
+						},
+						"credit": "Eric Belisle",
+						"width": 2550,
+						"height": 1704
+					}
+				],
+				"entries": [
+					{
+						"type": "section",
+						"entries": [
+							"Kuo-toa monitors control the day-to-day life of weaker kuo-toa, directing their work and worship. They also train beasts or monsters in the kuo-toa's service—such as chuuls or giant crabs—and command them in battle. Archpriests bless monitors with the power to control their underlings and to subdue foes with electricity channeled through their bizarre whips."
+						]
+					},
+					{
+						"type": "section",
+						"name": "Kuo-toa",
+						"entries": [
+							"{@i Fishlike Fanatics of the Deep}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Coastal|bestiary|environment=coastal}, {@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "{@table Random Magic Items - Relics|XDMG|Relics}"
+									}
+								]
+							},
+							"Kuo-toa have slimy, humanoid bodies and the heads of goggle-eyed deep-sea fish. They claim they once dominated whole worlds, their empires spanning land and sea under the blessings of piscine gods. The kuo-toa can't say what disaster brought their glorious civilization to an end, but elves, humans, mind flayers, and the kuo-toan gods bear the brunt of their blame. From the lands and seas of the surface, the kuo-toa retreated into cavernous trenches and Underdark seas. In these hidden realms, kuo-toa brood over all they've lost and forgotten, nursing plots to avenge themselves for slights that might never have occurred.",
+							"Kuo-toa hate the civilizations of the surface and the Underdark, believing themselves to be victims of age-old slights and ongoing conspiracies. Kuo-toa undertake contrived plots to propel themselves to dominance, often kidnapping people to learn their secrets or making dubious sacrifices to bizarre gods. To facilitate such plots, kuo-toa try to capture creatures alive using nets or strange weapons. Drow, dwarves, and gnomes dwelling in the Underdark, as well as surface communities near submerged subterranean passages, are frequent targets for kuo-toa raids and other plots.",
+							"Kuo-toa frequently serve depraved masterminds such as aboleths and krakens. Such kuo-toa believe these powerful creatures are avatars of kuo-toan deities or gods in their own right. Kuo-toa might temporarily ally with other evil creatures, but these alliances shift as kuo-toa leaders interpret omens from their unpredictable deities.",
+							{
+								"type": "entries",
+								"name": "Kuo-toa Deities",
+								"entries": [
+									"Kuo-toa ever seek to placate their inscrutable deities. However, few kuo-toa can agree on the identities of their gods, and little consistency exists between kuo-toa communities. Only Blibdoolpoolp the Sea Mother, a figure with a human body but the head and claws of a crayfish, sees broad worship.",
+									"Lacking information about what their other gods look like, kuo-toa priests invent new forms for them, creating divine idols with whatever objects are at hand. But whether these kuo-toa priests draw power from belief or delusion, aberrant talent, or a stranger supernatural source, some power answers their petitions. Roll twice on or choose results from the Kuo-toa Deity Features table to inspire how kuo-toa represent a deity.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Deity Features",
+										"isNameGenerator": true,
+										"colLabels": [
+											"1d10",
+											"The Deity's Head Is Like A...",
+											"The Deity's Body Is Like A..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-5",
+											"col-5"
+										],
+										"rows": [
+											[
+												"1",
+												"Barnacle",
+												"Hermit crab"
+											],
+											[
+												"2",
+												"Crab claw",
+												"Jellyfish"
+											],
+											[
+												"3",
+												"Hagfish",
+												"Kuo-toa"
+											],
+											[
+												"4",
+												"Moray eel",
+												"Mantis shrimp"
+											],
+											[
+												"5",
+												"Sea anemone",
+												"Merfolk"
+											],
+											[
+												"6",
+												"Shark",
+												"Plesiosaurus"
+											],
+											[
+												"7",
+												"Sunfish",
+												"Sea cucumber"
+											],
+											[
+												"8",
+												"Tentacle",
+												"Ship's figurehead"
+											],
+											[
+												"9",
+												"Treasure chest",
+												"Squid"
+											],
+											[
+												"10",
+												"Viperfish",
+												"Whale"
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Kuo-toa Sanctuaries",
+								"entries": [
+									"Kuo-toa typically organize their communities around sites they believe to be important to their deities. These might be structures or series of caverns, and most feature both air-filled and submerged chambers. Important places within these sites suggest the rituals of kuo-toa faiths, the demands of kuo-toa deities, or the whims of omen-seeking archpriests. As with kuo-toa deities, the features of these locations vary between communities. Roll on or choose a result from the Kuo-toa Ritual Sites table to inspire features and suggest adventures within a kuo-toa community.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Ritual Sites",
+										"colLabels": [
+											"1d8",
+											"The Kuo-toa Community Features..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"An arena scattered with weapons made from crustacean shells."
+											],
+											[
+												"2",
+												"A gallery of hibernating chuuls."
+											],
+											[
+												"3",
+												"A garden of mussels and tide pool creatures that whisper secrets."
+											],
+											[
+												"4",
+												"A hidden shrine with a patchwork depiction of a new kuo-toa deity."
+											],
+											[
+												"5",
+												"The lavish chamber of an animal or monster said to be prophetic, lucky, or literate."
+											],
+											[
+												"6",
+												"A pool filled with jellyfish, eels, or fish roe that glow in organized patterns."
+											],
+											[
+												"7",
+												"A punishment chamber exposed to the light of the surface."
+											],
+											[
+												"8",
+												"A towering statue of a kuo-toa deity."
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"When the Corpse Moon rises and the Chum-Tide washes in, up rise the Gogglers from their pits beneath the waves. Burbling and noisome they come, fishing night's shores as we do dawn's waves."
+										],
+										"by": "Tak Merakin, Harbor Master of the Styes"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			"save": {
+				"dex": "+5",
+				"wis": "+5"
+			},
+			"reaction": [
+				{
+					"name": "Deflect Attacks",
+					"entries": [
+						"When an attack roll hits the Kuo-Toa it can take a Reaction to reduce the attack's total damage against it. The reduction equals {@dice 1d10 + 7}."
+					]
+				}
+			],
+			"conditionImmune": [
+				"frightened"
+			],
+			"damageTags": [
+				"B",
+				"L",
+				"S"
+			]
+		},
+		{
+			"name": "Kuo-toa Eye of Blibdoolpoolp",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"EFA"
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				15,
+				{
+					"ac": 17,
+					"from": [
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "18d8 + 54",
+				"average": 129
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 14,
+			"con": 16,
+			"int": 13,
+			"wis": 16,
+			"cha": 14,
+			"skill": {
+				"perception": "+9",
+				"religion": "+4"
+			},
+			"senses": [
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
+			],
+			"passive": 19,
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The kuo-toa casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Detect Magic|XPHB}",
+						"{@spell Thaumaturgy|XPHB}"
+					],
+					"daily": {
+						"1e": [
+							"{@spell Divination|XPHB}",
+							"{@spell Hold Monster|XPHB} (level 6 version)",
+							"{@spell Lightning Bolt|XPHB}",
+							"{@spell Scrying|XPHB}",
+							"{@spell Tongues|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Shield of Faith (2/Day)",
+					"headerEntries": [
+						"The kuo-toa casts {@spell Shield of Faith|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"2": [
+							"{@spell Shield of Faith|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "reaction",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The kuo-toa can breathe air and water."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the kuo-toa has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+					]
+				},
+				{
+					"name": "Evasion",
+					"entries": [
+						"If the kuo-toa eye of blibdoolpoolp is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the kuo-toa eye of blibdoolpoolp instead takes no damage if it succeeds on the saving throw, and only half damage if it fails."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The kuo-toa makes three Strange Scepter attacks."
+					]
+				},
+				{
+					"name": "Strange Scepter",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}20 ({@damage 5d6 + 3}) Lightning damage."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"underdark"
+			],
+			"treasure": [
+				"relics"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/kuo-toa-archpriest.opus"
+			},
+			"traitTags": [
+				"Amphibious",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"U"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"paralyzed",
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Kuo-toa Archpriest",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Kuo-toa Archpriest",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"entries": [
+							"Kuo-toa archpriests lead kuo-toa communities by interpreting omens and messages from their strange gods. They wear grotesque ceremonial regalia honoring their deities. Archpriests channel their faith into spells to support their followers."
+						]
+					},
+					{
+						"type": "section",
+						"name": "Kuo-toa",
+						"entries": [
+							"{@i Fishlike Fanatics of the Deep}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Coastal|bestiary|environment=coastal}, {@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "{@table Random Magic Items - Relics|XDMG|Relics}"
+									}
+								]
+							},
+							"Kuo-toa have slimy, humanoid bodies and the heads of goggle-eyed deep-sea fish. They claim they once dominated whole worlds, their empires spanning land and sea under the blessings of piscine gods. The kuo-toa can't say what disaster brought their glorious civilization to an end, but elves, humans, mind flayers, and the kuo-toan gods bear the brunt of their blame. From the lands and seas of the surface, the kuo-toa retreated into cavernous trenches and Underdark seas. In these hidden realms, kuo-toa brood over all they've lost and forgotten, nursing plots to avenge themselves for slights that might never have occurred.",
+							"Kuo-toa hate the civilizations of the surface and the Underdark, believing themselves to be victims of age-old slights and ongoing conspiracies. Kuo-toa undertake contrived plots to propel themselves to dominance, often kidnapping people to learn their secrets or making dubious sacrifices to bizarre gods. To facilitate such plots, kuo-toa try to capture creatures alive using nets or strange weapons. Drow, dwarves, and gnomes dwelling in the Underdark, as well as surface communities near submerged subterranean passages, are frequent targets for kuo-toa raids and other plots.",
+							"Kuo-toa frequently serve depraved masterminds such as aboleths and krakens. Such kuo-toa believe these powerful creatures are avatars of kuo-toan deities or gods in their own right. Kuo-toa might temporarily ally with other evil creatures, but these alliances shift as kuo-toa leaders interpret omens from their unpredictable deities.",
+							{
+								"type": "entries",
+								"name": "Kuo-toa Deities",
+								"entries": [
+									"Kuo-toa ever seek to placate their inscrutable deities. However, few kuo-toa can agree on the identities of their gods, and little consistency exists between kuo-toa communities. Only Blibdoolpoolp the Sea Mother, a figure with a human body but the head and claws of a crayfish, sees broad worship.",
+									"Lacking information about what their other gods look like, kuo-toa priests invent new forms for them, creating divine idols with whatever objects are at hand. But whether these kuo-toa priests draw power from belief or delusion, aberrant talent, or a stranger supernatural source, some power answers their petitions. Roll twice on or choose results from the Kuo-toa Deity Features table to inspire how kuo-toa represent a deity.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Deity Features",
+										"isNameGenerator": true,
+										"colLabels": [
+											"1d10",
+											"The Deity's Head Is Like A...",
+											"The Deity's Body Is Like A..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-5",
+											"col-5"
+										],
+										"rows": [
+											[
+												"1",
+												"Barnacle",
+												"Hermit crab"
+											],
+											[
+												"2",
+												"Crab claw",
+												"Jellyfish"
+											],
+											[
+												"3",
+												"Hagfish",
+												"Kuo-toa"
+											],
+											[
+												"4",
+												"Moray eel",
+												"Mantis shrimp"
+											],
+											[
+												"5",
+												"Sea anemone",
+												"Merfolk"
+											],
+											[
+												"6",
+												"Shark",
+												"Plesiosaurus"
+											],
+											[
+												"7",
+												"Sunfish",
+												"Sea cucumber"
+											],
+											[
+												"8",
+												"Tentacle",
+												"Ship's figurehead"
+											],
+											[
+												"9",
+												"Treasure chest",
+												"Squid"
+											],
+											[
+												"10",
+												"Viperfish",
+												"Whale"
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Kuo-toa Sanctuaries",
+								"entries": [
+									"Kuo-toa typically organize their communities around sites they believe to be important to their deities. These might be structures or series of caverns, and most feature both air-filled and submerged chambers. Important places within these sites suggest the rituals of kuo-toa faiths, the demands of kuo-toa deities, or the whims of omen-seeking archpriests. As with kuo-toa deities, the features of these locations vary between communities. Roll on or choose a result from the Kuo-toa Ritual Sites table to inspire features and suggest adventures within a kuo-toa community.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Ritual Sites",
+										"colLabels": [
+											"1d8",
+											"The Kuo-toa Community Features..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"An arena scattered with weapons made from crustacean shells."
+											],
+											[
+												"2",
+												"A gallery of hibernating chuuls."
+											],
+											[
+												"3",
+												"A garden of mussels and tide pool creatures that whisper secrets."
+											],
+											[
+												"4",
+												"A hidden shrine with a patchwork depiction of a new kuo-toa deity."
+											],
+											[
+												"5",
+												"The lavish chamber of an animal or monster said to be prophetic, lucky, or literate."
+											],
+											[
+												"6",
+												"A pool filled with jellyfish, eels, or fish roe that glow in organized patterns."
+											],
+											[
+												"7",
+												"A punishment chamber exposed to the light of the surface."
+											],
+											[
+												"8",
+												"A towering statue of a kuo-toa deity."
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"When the Corpse Moon rises and the Chum-Tide washes in, up rise the Gogglers from their pits beneath the waves. Burbling and noisome they come, fishing night's shores as we do dawn's waves."
+										],
+										"by": "Tak Merakin, Harbor Master of the Styes"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Kuo-toa Archpriest.webp"
+						},
+						"credit": "Eric Belisle",
+						"width": 2550,
+						"height": 1650
+					}
+				]
+			},
+			"immune": [
+				"poison"
+			],
+			"conditionImmune": [
+				"poisoned"
+			],
+			"reaction": [
+				{
+					"name": "Sticky Shield",
+					"entries": [
+						"{@actTrigger} A creature misses the kuo-toa with a melee attack roll using a weapon. {@actResponse d}{@actSave str} {@dc 14, the triggering creature. {@actSaveFail} The attack's weapon sticks to the kuo-toa's shield. If the target doesn't let go of the weapon, the target has the {@condition Grappled|XPHB} condition while the weapon is stuck (escape {@dc 11}). While stuck, the weapon can't be used. The target can take an action to make a {@dc 11} Strength ({@skill Athletics|XPHB}) check, freeing the weapon on a success}"
+					]
+				}
+			],
+			"conditionInflict": [
+				"grappled"
+			],
+			"damageTags": [
+				"L"
+			],
+			"damageTagsSpell": [
+				"L"
+			],
+			"savingThrowForced": [
+				"strength"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Kuo-toa Myrmidon",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"EFA",
+				"FRAiF"
+			],
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"N",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 15,
+					"from": [
+						"{@item scale mail|xphb}"
+					]
+				},
+				{
+					"ac": 17,
+					"from": [
+						"{@item shield|xphb}"
+					]
+				}
+			],
+			"hp": {
+				"formula": "12d8 + 24",
+				"average": 74
+			},
+			"speed": {
+				"walk": 30,
+				"swim": 30
+			},
+			"str": 16,
+			"dex": 12,
+			"con": 14,
+			"int": 11,
+			"wis": 12,
+			"cha": 10,
+			"senses": [
+				"Darkvision 120 ft.",
+				"Truesight 30 ft."
+			],
+			"passive": 13,
+			"languages": [
+				"Undercommon"
+			],
+			"cr": "4",
+			"gear": [
+				"spear|xphb"
+			],
+			"trait": [
+				{
+					"name": "Amphibious",
+					"entries": [
+						"The kuo-toa can breathe air and water."
+					]
+				},
+				{
+					"name": "Sunlight Sensitivity",
+					"entries": [
+						"While in sunlight, the kuo-toa has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+					]
+				}
+			],
+			"action": [
+				{
+					"name": "Spear",
+					"entries": [
+						"{@atkr m,r} {@hit 5}, reach 5 ft. or range 20/60 ft. {@h}5 ({@damage 1d8 + 3}) Piercing damage."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Sticky Shield",
+					"entries": [
+						"{@actTrigger} A creature misses the kuo-toa with a melee attack roll using a weapon. {@actResponse d}{@actSave str} {@dc 13}, the triggering creature. {@actSaveFail} The attack's weapon sticks to the kuo-toa's shield. If the target doesn't let go of the weapon, the target has the {@condition Grappled|XPHB} condition while the weapon is stuck (escape {@dc 11}). While stuck, the weapon can't be used. The target can take an action to make a {@dc 11} Strength ({@skill Athletics|XPHB}) check, freeing the weapon on a success."
+					]
+				},
+				{
+					"name": "Intercept Attack",
+					"entries": [
+						"In response to another creature within 5 feet of it being hit by an attack roll, the clockwork gives that creature a +5 bonus to its AC against that attack, potentially causing a miss. To use this ability, the clockwork must be able to see the creature and the attacker."
+					]
+				}
+			],
+			"environment": [
+				"coastal",
+				"underdark"
+			],
+			"treasure": [
+				"relics"
+			],
+			"soundClip": {
+				"type": "external",
+				"url": "https://5e.tools/audio/bestiary/kuo-toa.opus"
+			},
+			"traitTags": [
+				"Amphibious",
+				"Sunlight Sensitivity"
+			],
+			"senseTags": [
+				"SD",
+				"U"
+			],
+			"languageTags": [
+				"U"
+			],
+			"miscTags": [
+				"RA",
+				"MA",
+				"MLW",
+				"THW"
+			],
+			"conditionInflict": [
+				"grappled",
+				"prone"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Kuo-toa",
+				"source": "XMM"
+			},
+			"fluff": {
+				"name": "Kuo-toa",
+				"source": "XMM",
+				"entries": [
+					{
+						"type": "section",
+						"entries": [
+							"Kuo-toa loot ruins and raid communities near their dwellings in the Underdark. Their shields are coated in sticky slime, which they use to disarm their foes, and they employ slimy nets to entrap victims. They usually strive to take their enemies alive and drag captives to their hidden lairs.",
+							"Most kuo-toa follow the orders of their more powerful leaders out of a combination of faith and fear. In rare cases, a kuo-toa might abandon its community to live as a hermit or wanderer. Such kuo-toa might know much about the Underdark, but they live in fear of the strange gods they forsook."
+						]
+					},
+					{
+						"type": "section",
+						"name": "Kuo-toa",
+						"entries": [
+							"{@i Fishlike Fanatics of the Deep}",
+							{
+								"type": "list",
+								"style": "list-hang-notitle",
+								"items": [
+									{
+										"type": "item",
+										"name": "Habitat:",
+										"entry": "{@filter Coastal|bestiary|environment=coastal}, {@filter Underdark|bestiary|environment=underdark}"
+									},
+									{
+										"type": "item",
+										"name": "Treasure:",
+										"entry": "{@table Random Magic Items - Relics|XDMG|Relics}"
+									}
+								]
+							},
+							"Kuo-toa have slimy, humanoid bodies and the heads of goggle-eyed deep-sea fish. They claim they once dominated whole worlds, their empires spanning land and sea under the blessings of piscine gods. The kuo-toa can't say what disaster brought their glorious civilization to an end, but elves, humans, mind flayers, and the kuo-toan gods bear the brunt of their blame. From the lands and seas of the surface, the kuo-toa retreated into cavernous trenches and Underdark seas. In these hidden realms, kuo-toa brood over all they've lost and forgotten, nursing plots to avenge themselves for slights that might never have occurred.",
+							"Kuo-toa hate the civilizations of the surface and the Underdark, believing themselves to be victims of age-old slights and ongoing conspiracies. Kuo-toa undertake contrived plots to propel themselves to dominance, often kidnapping people to learn their secrets or making dubious sacrifices to bizarre gods. To facilitate such plots, kuo-toa try to capture creatures alive using nets or strange weapons. Drow, dwarves, and gnomes dwelling in the Underdark, as well as surface communities near submerged subterranean passages, are frequent targets for kuo-toa raids and other plots.",
+							"Kuo-toa frequently serve depraved masterminds such as aboleths and krakens. Such kuo-toa believe these powerful creatures are avatars of kuo-toan deities or gods in their own right. Kuo-toa might temporarily ally with other evil creatures, but these alliances shift as kuo-toa leaders interpret omens from their unpredictable deities.",
+							{
+								"type": "entries",
+								"name": "Kuo-toa Deities",
+								"entries": [
+									"Kuo-toa ever seek to placate their inscrutable deities. However, few kuo-toa can agree on the identities of their gods, and little consistency exists between kuo-toa communities. Only Blibdoolpoolp the Sea Mother, a figure with a human body but the head and claws of a crayfish, sees broad worship.",
+									"Lacking information about what their other gods look like, kuo-toa priests invent new forms for them, creating divine idols with whatever objects are at hand. But whether these kuo-toa priests draw power from belief or delusion, aberrant talent, or a stranger supernatural source, some power answers their petitions. Roll twice on or choose results from the Kuo-toa Deity Features table to inspire how kuo-toa represent a deity.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Deity Features",
+										"isNameGenerator": true,
+										"colLabels": [
+											"1d10",
+											"The Deity's Head Is Like A...",
+											"The Deity's Body Is Like A..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-5",
+											"col-5"
+										],
+										"rows": [
+											[
+												"1",
+												"Barnacle",
+												"Hermit crab"
+											],
+											[
+												"2",
+												"Crab claw",
+												"Jellyfish"
+											],
+											[
+												"3",
+												"Hagfish",
+												"Kuo-toa"
+											],
+											[
+												"4",
+												"Moray eel",
+												"Mantis shrimp"
+											],
+											[
+												"5",
+												"Sea anemone",
+												"Merfolk"
+											],
+											[
+												"6",
+												"Shark",
+												"Plesiosaurus"
+											],
+											[
+												"7",
+												"Sunfish",
+												"Sea cucumber"
+											],
+											[
+												"8",
+												"Tentacle",
+												"Ship's figurehead"
+											],
+											[
+												"9",
+												"Treasure chest",
+												"Squid"
+											],
+											[
+												"10",
+												"Viperfish",
+												"Whale"
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "entries",
+								"name": "Kuo-toa Sanctuaries",
+								"entries": [
+									"Kuo-toa typically organize their communities around sites they believe to be important to their deities. These might be structures or series of caverns, and most feature both air-filled and submerged chambers. Important places within these sites suggest the rituals of kuo-toa faiths, the demands of kuo-toa deities, or the whims of omen-seeking archpriests. As with kuo-toa deities, the features of these locations vary between communities. Roll on or choose a result from the Kuo-toa Ritual Sites table to inspire features and suggest adventures within a kuo-toa community.",
+									{
+										"type": "table",
+										"caption": "Kuo-toa Ritual Sites",
+										"colLabels": [
+											"1d8",
+											"The Kuo-toa Community Features..."
+										],
+										"colStyles": [
+											"col-2 text-center",
+											"col-10"
+										],
+										"rows": [
+											[
+												"1",
+												"An arena scattered with weapons made from crustacean shells."
+											],
+											[
+												"2",
+												"A gallery of hibernating chuuls."
+											],
+											[
+												"3",
+												"A garden of mussels and tide pool creatures that whisper secrets."
+											],
+											[
+												"4",
+												"A hidden shrine with a patchwork depiction of a new kuo-toa deity."
+											],
+											[
+												"5",
+												"The lavish chamber of an animal or monster said to be prophetic, lucky, or literate."
+											],
+											[
+												"6",
+												"A pool filled with jellyfish, eels, or fish roe that glow in organized patterns."
+											],
+											[
+												"7",
+												"A punishment chamber exposed to the light of the surface."
+											],
+											[
+												"8",
+												"A towering statue of a kuo-toa deity."
+											]
+										]
+									}
+								]
+							},
+							{
+								"type": "insetReadaloud",
+								"entries": [
+									{
+										"type": "quote",
+										"entries": [
+											"When the Corpse Moon rises and the Chum-Tide washes in, up rise the Gogglers from their pits beneath the waves. Burbling and noisome they come, fishing night's shores as we do dawn's waves."
+										],
+										"by": "Tak Merakin, Harbor Master of the Styes"
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/XMM/Kuo-toa.webp"
+						},
+						"credit": "Eric Belisle",
+						"width": 1320,
+						"height": 1650
+					}
+				]
+			},
+			"save": {
+				"con": "+4"
+			},
+			"skill": {
+				"perception": "+3",
+				"athletics": "+5"
+			},
+			"bonus": [
+				{
+					"name": "Shield Bash",
+					"entries": [
+						"{@actSave str} {@dc 13}, one creature within 5 feet that the kuo-toa can see. {@actSaveFail} 8 ({@damage 2d4 + 3}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+					]
+				}
+			],
+			"damageTags": [
+				"B",
+				"P"
+			],
+			"savingThrowForced": [
+				"strength"
 			]
 		}
 	]
