@@ -16259,8 +16259,8 @@
 				}
 			],
 			"hp": {
-				"formula": "16d6 + 16",
-				"average": 72
+				"formula": "12d8 + 24",
+				"average": 78
 			},
 			"speed": {
 				"walk": 0,
@@ -16268,7 +16268,7 @@
 			},
 			"str": 12,
 			"dex": 16,
-			"con": 13,
+			"con": 14,
 			"int": 17,
 			"wis": 13,
 			"cha": 7,
@@ -16285,7 +16285,7 @@
 				{
 					"name": "Multiattack",
 					"entries": [
-						"The Ixzan mage makes three Arcane Burst attacks."
+						"The Ixzan mage makes three Arcane Burst or bite attacks."
 					]
 				},
 				{
@@ -16305,8 +16305,8 @@
 				{
 					"name": "Barbed Tail",
 					"entries": [
-						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
-						"{@atk mw} {@hit 5} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d8 + 3}) piercing damage."
+						"When a creature provokes an opportunity attack from the ixzan, the ixzan can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
 					]
 				}
 			],
@@ -16400,9 +16400,8 @@
 							"{@spell Dispel Magic|XPHB}",
 							"{@spell Fireball|XPHB}",
 							"{@spell Invisibility|XPHB}",
-							"{@spell Levitate|XPHB}",
 							"{@spell Mirror Image|XPHB}",
-							"{@spell Phantasmal Force|XPHB}"
+							"{@spell Phantasmal Killer|XPHB}"
 						],
 						"1e": [
 							"{@spell Cone of Cold|XPHB}",
@@ -16415,7 +16414,7 @@
 				{
 					"name": "Misty Step (3/Day)",
 					"headerEntries": [
-						"The mage casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+						"The mage casts {@spell Misty Step|XPHB},{@spell Levitate|XPHB} ,{@spell Water Breathing|XPHB}  using the same spellcasting ability as Spellcasting."
 					],
 					"displayAs": "bonus",
 					"hidden": [
@@ -16423,7 +16422,9 @@
 					],
 					"rest": {
 						"3e": [
-							"{@spell Misty Step|XPHB}"
+							"{@spell Levitate|XPHB}",
+							"{@spell Misty Step|XPHB}",
+							"{@spell Water Breathing|XPHB} as Air Breathing"
 						]
 					},
 					"type": "spellcasting"
@@ -16449,6 +16450,10 @@
 			"actionTags": [
 				"Multiattack"
 			],
+			"save": {
+				"int": "+6",
+				"wis": "+4"
+			},
 			"damageTags": [
 				"O",
 				"P"
@@ -16462,8 +16467,777 @@
 			"savingThrowForcedSpell": [
 				"constitution",
 				"dexterity",
-				"intelligence",
-				"strength"
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Ixzan Demonray of Ilxendren",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"DrDe",
+				"DrDe-SD",
+				"DrDe-TDoN",
+				"EFA",
+				"FRAiF",
+				"FRHoF",
+				"LFL"
+			],
+			"size": [
+				"M"
+			],
+			"type": {
+				"type": "aberration",
+				"tags": [
+					"Ixzan"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "10d8 + 30",
+				"average": 75
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 12,
+			"dex": 18,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 7,
+			"skill": {
+				"perception": "+9",
+				"religion": "+7",
+				"intimidation": "+1",
+				"stealth": "+7"
+			},
+			"passive": 19,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "5",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The Ixzan Demonray of Ilxendren casts one of the following spells, using Wisdom as the spellcasting ability {@dc 14}:"
+					],
+					"displayAs": "action",
+					"will": [
+						"{@spell Chill Touch|XPHB} ",
+						"{@spell Thaumaturgy|XPHB}"
+					],
+					"daily": {
+						"1": [
+							"{@spell Enervation|XGE}",
+							"{@spell Spirit Guardians|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Divine Aid (3/Day)",
+					"headerEntries": [
+						"The Ixzan Demonray of Ilxendren casts {@spell Bless|XPHB}, {@spell Dispel Magic|XPHB}, {@spell Healing Word|XPHB}, or {@spell Lesser Restoration|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Bless|XPHB}",
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell Healing Word|XPHB}",
+							"{@spell Lesser Restoration|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The ixzan priest makes two attacks, using bite or Chill Touch in any combination."
+					]
+				},
+				{
+					"name": "Bite",
+					"entries": [
+						"{@atk mw} {@hit 3} to hit, reach 5 ft., one target. {@h}7 ({@damage 1d6 + 4}) piercing damage."
+					]
+				},
+				{
+					"name": "Chill Touch",
+					"entries": [
+						"{@atkr r} {@hit 6}, range 60 ft. {@h}12 ({@damage 2d10}) Necrotic damage, and it can't regain Hit Points until the end of your next turn."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"underwater",
+				"any"
+			],
+			"treasure": [
+				"individual",
+				"relics"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"RA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"senseTags": [
+				"D"
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixzan, the ixzan can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 7} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage."
+					]
+				}
+			],
+			"save": {
+				"wis": "+6"
+			},
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Vampiric Ixzan",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"average": 44,
+				"formula": "8d8 + 8"
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 13,
+			"int": 12,
+			"wis": 13,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 11,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "4",
+			"action": [
+				{
+					"name": "Vampiric Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h} 11 ({@damage 2d8 + 2}) piercing damage. The target must succeed on a {@dc 12} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken, and the ixzan regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"miscTags": [
+				"MW",
+				"HPR"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "Vampiric Ixitxachitl",
+				"source": "OotA"
+			},
+			"fluff": {
+				"name": "Vampiric Ixitxachitl",
+				"source": "OotA",
+				"entries": [
+					{
+						"type": "section",
+						"name": "Ixitxachitl",
+						"entries": [
+							{
+								"type": "entries",
+								"entries": [
+									{
+										"type": "entries",
+										"entries": [
+											"Ixitxachitl (pronounced ick-zit-zah-chit-ul) are aquatic creatures resembling manta rays, with small, clawed hands at the ends of their \"wings\" and black eyes gleaming with sinister intelligence. Many creatures mistake ixitxachitl for common manta rays, but this can prove a deadly mistake. The ixitxachitl are as evil as they are cunning, leading to their common nickname \"demon rays.\" They inhabit bodies of fresh and salt water, but their violent nature means that little is known of them.",
+											{
+												"name": "Struggle for Survival",
+												"entries": [
+													"Ixitxachitl emerge from eggs as tiny creatures little more than a hand span in width. From that time onward, they struggle to survive at all costs, growing throughout their lives. Those ixitxachitl that master the secrets of survival gain powers of regeneration and feed on the life force of other creatures."
+												],
+												"type": "entries"
+											},
+											{
+												"name": "All Consuming",
+												"type": "entries",
+												"entries": [
+													"Ixitxachitl hollow out coral reefs or other natural aquatic formations to create labyrinthine dens, often compelling aid from captured aquatic species they enslave. They typically strip an area bare before moving on to new fertile grounds, leaving their abandoned dens behind. Schools of ixitxachitl often war on other aquatic creatures to claim feeding grounds and territory."
+												]
+											},
+											{
+												"name": "Demon Worshipers",
+												"type": "entries",
+												"entries": [
+													"The ixitxachitl venerate and serve various demons, particularly Demogorgon, whom they consider their patron and creator. They have an intense rivalry with the merrow over which of them are the greatest and most favored servants of the Prince of Demons."
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				],
+				"images": [
+					{
+						"type": "image",
+						"href": {
+							"type": "internal",
+							"path": "bestiary/OotA/Ixitxachitl.webp"
+						},
+						"width": 300,
+						"height": 406
+					}
+				]
+			},
+			"trait": [
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"If the vampire ixzan fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The vampiric ixzan regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight. If the vampiric ixzan takes radiant damage or damage from {@item Holy Water (Flask)|PHB|holy water}, this trait doesn't function at the start of the vampiric ixzan's next turn."
+					]
+				},
+				{
+					"name": "Sunlight Weakness",
+					"entries": [
+						"While in sunlight, the vampiric ixzan has disadvantage on attack rolls, ability checks, and saving throws."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"resist": [
+				"necrotic"
+			],
+			"damageTags": [
+				"P"
+			],
+			"savingThrowForced": [
+				"constitution"
+			]
+		},
+		{
+			"name": "Vampiric Ixzan Mage",
+			"source": "NightBelowIDC",
+			"referenceSources": [
+				"DrDe",
+				"DrDe-BtS",
+				"DrDe-DotSC",
+				"EFA",
+				"FRAiF",
+				"FRHoF",
+				"LFL",
+				"NF",
+				"UtHftLH"
+			],
+			"size": [
+				"S",
+				"M"
+			],
+			"type": {
+				"type": "humanoid",
+				"tags": [
+					"wizard"
+				]
+			},
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "16d8 + 48",
+				"average": 120
+			},
+			"speed": {
+				"walk": 30
+			},
+			"str": 14,
+			"dex": 16,
+			"con": 16,
+			"int": 17,
+			"wis": 13,
+			"cha": 7,
+			"save": {
+				"int": "+6",
+				"wis": "+4",
+				"con": "+6"
+			},
+			"skill": {
+				"arcana": "+6",
+				"history": "+6",
+				"perception": "+4"
+			},
+			"passive": 14,
+			"languages": [
+				"Common and any three languages"
+			],
+			"cr": "8",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+					],
+					"displayAs": "action",
+					"daily": {
+						"2e": [
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell Fireball|XPHB} (level 4 version)",
+							"{@spell Invisibility|XPHB}",
+							"{@spell Mirror Image|XPHB}",
+							"{@spell Phantasmal Killer|XPHB}"
+						],
+						"1e": [
+							"{@spell Cone of Cold|XPHB}",
+							"{@spell Evard's Black Tentacles|XPHB}"
+						]
+					},
+					"ability": "int",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Misty Step (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Misty Step|XPHB}, {@spell Levitate|XPHB}, {@spell Water Breathing|XPHB} using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3e": [
+							"{@spell Levitate|XPHB}",
+							"{@spell Misty Step|XPHB}",
+							"{@spell Water Breathing|XPHB} as Air Breathing"
+						]
+					},
+					"type": "spellcasting"
+				},
+				{
+					"name": "Protective Magic (3/Day)",
+					"headerEntries": [
+						"The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "reaction",
+					"hidden": [
+						"daily"
+					],
+					"daily": {
+						"3": [
+							"{@spell Counterspell|XPHB}",
+							"{@spell Shield|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The vampiric ixzan mage makes three Arcane Burst or two Arcane Bursts and one Vampiric Bite attacks."
+					]
+				},
+				{
+					"name": "Vampiric Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h} 12 ({@damage 2d8 + 3}) piercing damage. The target must succeed on a {@dc 14} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken, and the ixzan regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
+					]
+				},
+				{
+					"name": "Arcane Burst",
+					"entries": [
+						"{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}16 ({@damage 3d8 + 3}) Force damage."
+					]
+				}
+			],
+			"environment": [
+				"underdark",
+				"underwater",
+				"any"
+			],
+			"treasure": [
+				"arcana",
+				"individual"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"languageTags": [
+				"C",
+				"X"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"HPR",
+				"RA",
+				"MA"
+			],
+			"conditionInflictSpell": [
+				"invisible"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"resist": [
+				"necrotic"
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixzan, the ixzan can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}8 ({@damage 1d10 + 3}) piercing damage."
+					]
+				}
+			],
+			"trait": [
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The vampiric ixzan mage regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight. If the vampiric ixzan mage takes radiant damage or damage from {@item Holy Water (Flask)|PHB|holy water}, this trait doesn't function at the start of the vampiric ixzan mage's next turn."
+					]
+				},
+				{
+					"name": "Sunlight Weakness",
+					"entries": [
+						"While in sunlight, the vampiric ixzan has disadvantage on attack rolls, ability checks, and saving throws."
+					]
+				},
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"If the vampire ixzan mage fails a saving throw, it can choose to succeed instead."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"damageTags": [
+				"O",
+				"P"
+			],
+			"damageTagsSpell": [
+				"B",
+				"C",
+				"F",
+				"Y"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"constitution",
+				"dexterity",
+				"strength",
+				"wisdom"
+			]
+		},
+		{
+			"name": "Vampiric Ixzan Demonray of Ilxendren",
+			"source": "NightBelowIDC",
+			"size": [
+				"M"
+			],
+			"type": "aberration",
+			"alignment": [
+				"C",
+				"E"
+			],
+			"ac": [
+				{
+					"ac": 16,
+					"from": [
+						"natural armor"
+					]
+				}
+			],
+			"hp": {
+				"formula": "14d8 + 42",
+				"average": 105
+			},
+			"speed": {
+				"walk": 0,
+				"swim": 30
+			},
+			"str": 14,
+			"dex": 18,
+			"con": 16,
+			"int": 12,
+			"wis": 16,
+			"cha": 7,
+			"senses": [
+				"darkvision 60 ft."
+			],
+			"passive": 19,
+			"languages": [
+				"Abyssal",
+				"Ixitxachitl"
+			],
+			"cr": "7",
+			"spellcasting": [
+				{
+					"name": "Spellcasting",
+					"headerEntries": [
+						"The Ixzan Demonray of Ilxendren casts one of the following spells, using Wisdom as the spellcasting ability {@dc 14}:"
+					],
+					"spells": {
+						"0": {
+							"spells": [
+								"{@spell Chill Touch|XPHB}",
+								"{@spell Thaumaturgy|XPHB}"
+							]
+						}
+					},
+					"daily": {
+						"1e": [
+							"{@spell Enervation|XGE}",
+							"{@spell Spirit Guardians|XPHB}"
+						]
+					},
+					"ability": "wis",
+					"type": "spellcasting"
+				},
+				{
+					"name": "Divine Aid (3/Day)",
+					"headerEntries": [
+						"The Ixzan Demonray of Ilxendren casts {@spell Bless|XPHB}, {@spell Dispel Magic|XPHB}, {@spell Healing Word|XPHB}, or {@spell Lesser Restoration|XPHB}, using the same spellcasting ability as Spellcasting."
+					],
+					"displayAs": "bonus",
+					"daily": {
+						"3e": [
+							"{@spell Bless|XPHB}",
+							"{@spell Dispel Magic|XPHB}",
+							"{@spell Healing Word|XPHB}",
+							"{@spell Lesser Restoration|XPHB}"
+						]
+					},
+					"type": "spellcasting"
+				}
+			],
+			"action": [
+				{
+					"name": "Multiattack",
+					"entries": [
+						"The ixzan priest makes three attacks, using Vampiric Bite or Chill Touch in any combination."
+					]
+				},
+				{
+					"name": "Vampiric Bite",
+					"entries": [
+						"{@atk mw} {@hit 4} to hit, reach 5 ft., one target. {@h} 11 ({@damage 2d8 + 2}) piercing damage. The target must succeed on a {@dc 12} Constitution saving throw or its hit point maximum is reduced by an amount equal to the damage taken, and the ixzan regains hit points equal to that amount. The reduction lasts until the target finishes a long rest. The target dies if its hit point maximum is reduced to 0."
+					]
+				},
+				{
+					"name": "Chill Touch",
+					"entries": [
+						"{@atkr r} {@hit 6}, range 60 ft. {@h}12 ({@damage 2d10}) Necrotic damage, and it can't regain Hit Points until the end of your next turn."
+					]
+				}
+			],
+			"reaction": [
+				{
+					"name": "Barbed Tail",
+					"entries": [
+						"When a creature provokes an opportunity attack from the ixitxachitl, the ixitxachitl can make the following attack instead of using its bite.",
+						"{@atk mw} {@hit 6} to hit, reach 5 ft., one target. {@h}9 ({@damage 1d10 + 4}) piercing damage."
+					]
+				}
+			],
+			"senseTags": [
+				"D"
+			],
+			"languageTags": [
+				"AB",
+				"OTH"
+			],
+			"spellcastingTags": [
+				"O"
+			],
+			"miscTags": [
+				"MW",
+				"HPR",
+				"RA"
+			],
+			"hasFluff": true,
+			"hasFluffImages": true,
+			"token": {
+				"name": "",
+				"source": ""
+			},
+			"environment": [
+				"underdark",
+				"underwater"
+			],
+			"save": {
+				"wis": "+6",
+				"con": "+6"
+			},
+			"skill": {
+				"intimidation": "+1",
+				"perception": "+9",
+				"religion": "+4",
+				"stealth": "+7"
+			},
+			"resist": [
+				"necrotic"
+			],
+			"actionTags": [
+				"Multiattack"
+			],
+			"trait": [
+				{
+					"name": "Legendary Resistance (1/Day)",
+					"entries": [
+						"If the vampire ixzan fails a saving throw, it can choose to succeed instead."
+					]
+				},
+				{
+					"name": "Regeneration",
+					"entries": [
+						"The vampiric ixzan regains 10 hit points at the start of its turn if it has at least 1 hit point and isn't in sunlight. If the vampiric ixzan takes radiant damage or damage from {@item Holy Water (Flask)|PHB|holy water}, this trait doesn't function at the start of the vampiric ixzan's next turn."
+					]
+				},
+				{
+					"name": "Sunlight Weakness",
+					"entries": [
+						"While in sunlight, the vampiric ixzan has disadvantage on attack rolls, ability checks, and saving throws."
+					]
+				}
+			],
+			"traitTags": [
+				"Legendary Resistances",
+				"Regeneration"
+			],
+			"damageTags": [
+				"N",
+				"P"
+			],
+			"damageTagsSpell": [
+				"N",
+				"R"
+			],
+			"savingThrowForced": [
+				"constitution"
+			],
+			"savingThrowForcedSpell": [
+				"dexterity",
+				"wisdom"
 			]
 		}
 	]
